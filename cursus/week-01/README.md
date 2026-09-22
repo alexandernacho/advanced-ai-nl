@@ -59,3 +59,5 @@ Drie vragen, een halve pagina. Template: `post-template.md`. Deze week telt de i
 1. Opzet af.
 2. Post plus pull request, tegen vrijdag 25 september.
 3. Lees `cursus/beoordeling/build-brief.md` met je AI. Vraag het om drie ideeën voor wat jij kan bouwen. Breng ze mee.
+
+hack
