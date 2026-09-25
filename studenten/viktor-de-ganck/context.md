@@ -16,13 +16,13 @@
 
 ## Wat ik al kan
 - Git/GitHub: gebruikt om de website van mijn bachelorproef te bouwen en te publiceren
-- Programmeren: geen effectieve code zelf geschreven, eerder vibe coden. Die website bouwde ik samen met Claude Code en Claude Cowork.
+- Programmeren: geen effectieve code zelf geschreven, eerder vibe coden. Website gebouwd met Claude Code en Claude Cowork.
 - AI-tools: werk vooral met Claude. Heb ook ChatGPT, Gemini en Copilot gebruikt.
 
 ## Dit vak
-- Richting: marktonderzoek en analyse, met AI als hulp om informatie samen te brengen. Mogelijk bouw ik hier een eigen tool voor.
+- Richting: marktonderzoek en analyse, met AI als hulp om informatie samen te brengen.
 - Traject: 4 ECTS
 - Doel: AI efficiënter en slimmer inzetten in mijn dagelijks leven, vooral voor marktonderzoek.
 
 ## Doe dit niet
-- Onnodig veel tokens verbruiken, bijvoorbeeld met overlange documenten of antwoorden.
+- Onnodig veel tokens verbruiken, bijvoorbeeld met lange/grote documenten werken in de chatbot.
