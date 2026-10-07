@@ -10,3 +10,5 @@ Elke run, elk resultaat, elke wijziging. Wis nooit een fout.
 | 2026-10-07 | v2 | Regel B herschreven met een "want": zonder CE mag je het niet verkopen in de EU, risico op blokkering en onverkoopbare stock | | | |
 | 2026-10-07 | v2 | Telregel bovenaan de testset: label en juiste risico moeten kloppen, extra risico met echt citaat is geen fout, verzonnen citaat is altijd F2 | | T07 kan extra risico B uitlokken | |
 | 2026-10-07 | v2 | Telregel aangevuld: bij `NO-GO` moeten alle verwachte risico's erbij, een gemist risico is F3 | | T08 is de eerste input met twee verwachte risico's (A, B) | |
+| 2026-10-07 | v2 | Buurtest met Kobe op T07, T08, T10. Hij las alleen de prompt | 0 op 3 gelijk | T07: B i.p.v. D (zag geen supplement door "Snoepgoed"). T08: A, miste B (knuffel = speelgoed?). T10: ONZEKER door twijfel over nikkel, dat niet op de pagina staat | Mijn drie antwoorden blijven. Drie regels in de prompt |
+| 2026-10-07 | v2 | Na de buurtest: beslisregel 4 (twee omschrijvingen → die met het meeste risico), speelgoedregel bij B, "want" bij beslisregel 3 (twijfel over een risico is geen ONZEKER) | | | Run 1: vijf inputs |

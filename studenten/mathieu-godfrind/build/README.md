@@ -49,4 +49,4 @@ Het label is juist of fout, en elk citaat staat op de pagina of niet. Twee mense
 | Versie | Datum | Wat veranderde | Waarom |
 |---|---|---|---|
 | v1 | 2026-09-30 | Eerste prompt met vier risico's en drie labels | |
-| v2 | 2026-10-07 | Vier voorbeelden, citatenregel voor CE aangepast, regel B met een "want" | Audit: bouwsteen 4 ontbrak |
+| v2 | 2026-10-07 | Vier voorbeelden, citatenregel voor CE aangepast, regel B met een "want". Na de buurtest: beslisregel 4, speelgoedregel, "want" bij beslisregel 3 | Audit: bouwsteen 4 ontbrak. Buurtest: 0 op 3 gelijk |
