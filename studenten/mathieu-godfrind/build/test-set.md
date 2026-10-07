@@ -535,6 +535,8 @@ Beschrijving: geen
 ### T06
 Link: https://www.alibaba.com/product-detail/New-Unique-Desktop-Portable-Hand-Fan_1601270556301.html
 
+De rest van de beschrijving staat in foto's en een video.
+
 ```
 Titel: Draagbare mini handventilator met type-C oplaadpoort, voor thuis, auto en buitengebruik, elektrische voeding, plastic, huishoudelijk
 
@@ -542,7 +544,6 @@ Beschrijving:
 Waarschuwing/Disclaimer
 Dit product heeft de relevante productkwalificatie (en)/licentie (en) van bepaalde toepasselijke landen verworven.
 Disclaimer: Alibaba.com geeft geen verklaring of bevestiging dat dit product volledig voldoet aan alle toepasselijke wet- en regelgeving; of dat enige kwalificatie/licentie daarvan echt, nauwkeurig en effectief is; of dat de verworven relevante kwalificatie(s)/licentie(s) voldoende zijn. Kopers wordt geadviseerd om voorafgaand aan de aankoop de relevante informatie in te winnen bij de verkoper om na te gaan of dit product voldoet aan de toepasselijke wet- en regelgeving van hun eigen land.
-(de rest van de beschrijving staat in foto's en een video)
 
 Specificaties:
 Type: Handventilator
