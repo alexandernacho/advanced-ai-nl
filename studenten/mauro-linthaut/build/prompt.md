@@ -12,7 +12,7 @@ Geef voor elk veld de waarde en de letterlijke zin of tabelregel uit het KID waa
 5. **Uitstapkosten**: idem.
 6. **Gevolgde index**: alleen de naam van de index, niet de uitleg eromheen.
 7. **Uitkerend of accumulerend**: staat er dat dividenden worden uitgekeerd, schrijf uitkerend. Staat er dat ze worden herbelegd, schrijf accumulerend. Staat het er niet, schrijf niet vermeld.
-8. **Ongunstig scenario**: in de tabel met prestatiescenario's, de kolom van de aanbevolen bewaartermijn (niet de kolom van één jaar). Geef het bedrag in euro dat je terugkrijgt en het gemiddelde rendement per jaar in procent. Dit kan negatief zijn.
+8. **Ongunstig scenario**: in de tabel met prestatiescenario's, de kolom van de aanbevolen bewaartermijn (niet de kolom van één jaar). Geef het bedrag dat je terugkrijgt, met de munt uit het KID (dat kan euro of een andere munt zijn), en het gemiddelde rendement per jaar in procent. Dit kan negatief zijn.
 
 ## Regels
 - Gebruik alleen wat in het KID staat. Reken niets uit en gebruik geen kennis uit je training, want je zou dan een getal geven dat niet uit dit document komt.
@@ -33,7 +33,7 @@ Instapkosten: <%> | bron: "<letterlijke zin>"
 Uitstapkosten: <%> | bron: "<letterlijke zin>"
 Gevolgde index: <naam> | bron: "<letterlijke zin>"
 Uitkerend of accumulerend: <uitkerend|accumulerend> | bron: "<letterlijke zin>"
-Ongunstig scenario: <bedrag in euro> en <% per jaar> | bron: "<letterlijke tabelregel>"
+Ongunstig scenario: <bedrag + munt> en <% per jaar> | bron: "<letterlijke tabelregel>"
 ```
 
 Bij een veld dat niet in het KID staat: `<veldnaam>: niet vermeld`.
