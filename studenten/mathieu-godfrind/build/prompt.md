@@ -1,4 +1,4 @@
-# Prompt v2 — Leveranciersproduct screenen voor bol.com
+# Prompt v3 — Leveranciersproduct screenen voor bol.com
 
 Gebruik: open een nieuw gesprek, plak alles onder de lijn, en plak onderaan de tekst van één productpagina.
 
@@ -45,6 +45,8 @@ UITLEG: <één zin>
 ```
 
 Bij `GO` of `ONZEKER`: schrijf `RISICO'S: geen`.
+
+Zeg in je uitleg alleen dingen die op de pagina staan. Staat het gewicht of de afmeting er niet, schrijf dan niet "licht" of "klein". Want de verkoper vertrouwt op de uitleg, en een aanname kan fout zijn bij een product dat in het echt wel zwaar is.
 
 ## Voorbeelden
 

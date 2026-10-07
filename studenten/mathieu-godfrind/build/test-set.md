@@ -15,11 +15,11 @@ Juiste antwoord = label (`GO` / `NO-GO` / `ONZEKER`) en bij `NO-GO` de risico's 
 | T03 | USB-oplader 20W — zie T03 hieronder | GO | Het is een oplader met CE-markering, zonder merknaam van een ander merk, klein en niet breekbaar. | GO | GO |
 | T04 | Glazen parfumflesjes — zie T04 hieronder | NO-GO (C) | De flesjes zijn van glas en dus breekbaar, wat verzending duurder maakt en tot meer retours door breuk leidt. | NO-GO (C) | NO-GO (C) |
 | T05 | Vage titel + foto — zie T05 hieronder | ONZEKER | De titel is een reeks zoekwoorden en de specificaties zijn bijna leeg, dus uit de tekst weet je niet wat het product is of waaruit het bestaat. | ONZEKER | ONZEKER |
-| T06 | Mini handventilator — zie T06 hieronder | GO | Het is elektronica met CE-certificaat, eigen merk XIQI, licht en van plastic. De lithiumbatterij is ingebouwd en niet los, dus dat telt niet als risico C. Lastig punt: de tool kan de batterij toch als verzendrisico zien. Tweede valkuil: de tool kan door de disclaimer denken dat CE niet zeker is. Maar de disclaimer is een standaardtekst van Alibaba die niets over dit product zegt, en CE staat er gewoon bij. | | |
-| T07 | Collageen gummies — zie T07 hieronder | NO-GO (D) | Het is een voedingssupplement, en dat is beperkt op bol.com. De titel zegt zelf "Gezondheidssupplementen". Lastig punt: bij de specificaties staat "Gummy Candy" en "Snoepgoed", dus de tool kan denken dat het gewoon snoep is en GO zeggen. | | |
-| T08 | Pluche Monster Energy-pop — zie T08 hieronder | NO-GO (A, B) | A: de knuffel gebruikt de naam en de look van Monster Energy, een merk van iemand anders. B: het is speelgoed en er staat geen CE. Lastige punten: de merknaam is XINLI, dus de tool kan denken dat er geen merkprobleem is. Er staat "14 Jaar & up", dus de tool kan denken dat het geen speelgoed is. En "Verantwoordelijke EU-persoon" klinkt als in orde, maar het is geen CE. | | |
-| T09 | LED-bureaulamp, pagina in het Frans — zie T09 hieronder | NO-GO (B) | Het is een lamp op netstroom, dus elektronica, en er staat nergens CE. Lastige punten: de pagina is in het Frans, dus de tool moet letterlijk in het Frans citeren en niet vertalen. In de titel staat "norme américaine", dat is geen CE. En "Prise: US/EU/UK" klinkt alsof het voor Europa in orde is, maar een EU-stekker is geen CE. | | |
-| T10 | Metalen sleutelhanger, korte input — zie T10 hieronder | GO | Het is een metalen sleutelhanger zonder merk van iemand anders, geen elektronica, niet breekbaar en niet verboden. Lastig punt: er staat weinig tekst, dus de tool kan ONZEKER zeggen. Maar het is wel duidelijk wat het product is en van welk materiaal, dus ONZEKER is hier fout. | | |
+| T06 | Mini handventilator — zie T06 hieronder | GO | Het is elektronica met CE-certificaat, eigen merk XIQI, licht en van plastic. De lithiumbatterij is ingebouwd en niet los, dus dat telt niet als risico C. Lastig punt: de tool kan de batterij toch als verzendrisico zien. Tweede valkuil: de tool kan door de disclaimer denken dat CE niet zeker is. Maar de disclaimer is een standaardtekst van Alibaba die niets over dit product zegt, en CE staat er gewoon bij. | GO | |
+| T07 | Collageen gummies — zie T07 hieronder | NO-GO (D) | Het is een voedingssupplement, en dat is beperkt op bol.com. De titel zegt zelf "Gezondheidssupplementen". Lastig punt: bij de specificaties staat "Gummy Candy" en "Snoepgoed", dus de tool kan denken dat het gewoon snoep is en GO zeggen. | NO-GO (D) | |
+| T08 | Pluche Monster Energy-pop — zie T08 hieronder | NO-GO (A, B) | A: de knuffel gebruikt de naam en de look van Monster Energy, een merk van iemand anders. B: het is speelgoed en er staat geen CE. Lastige punten: de merknaam is XINLI, dus de tool kan denken dat er geen merkprobleem is. Er staat "14 Jaar & up", dus de tool kan denken dat het geen speelgoed is. En "Verantwoordelijke EU-persoon" klinkt als in orde, maar het is geen CE. | NO-GO (A, B) | |
+| T09 | LED-bureaulamp, pagina in het Frans — zie T09 hieronder | NO-GO (B) | Het is een lamp op netstroom, dus elektronica, en er staat nergens CE. Lastige punten: de pagina is in het Frans, dus de tool moet letterlijk in het Frans citeren en niet vertalen. In de titel staat "norme américaine", dat is geen CE. En "Prise: US/EU/UK" klinkt alsof het voor Europa in orde is, maar een EU-stekker is geen CE. | NO-GO (B) | |
+| T10 | Metalen sleutelhanger, korte input — zie T10 hieronder | GO | Het is een metalen sleutelhanger zonder merk van iemand anders, geen elektronica, niet breekbaar en niet verboden. Lastig punt: er staat weinig tekst, dus de tool kan ONZEKER zeggen. Maar het is wel duidelijk wat het product is en van welk materiaal, dus ONZEKER is hier fout. | GO | |
 
 ## Inputs
 
@@ -777,3 +777,75 @@ OORDEEL: ONZEKER
 RISICO'S: geen
 UITLEG: De pagina toont niet wat het product is of waaruit het bestaat: alleen algemene termen als "Fotogeschenken" en vier uiteenlopende producttypes (kantoor, huishoudelijk, elektronisch, novelty), zonder beschrijving, materiaal of CE-informatie.
 ```
+
+## Antwoorden van de tool (v2, claude.ai)
+
+### T06 run 1
+```
+OORDEEL: GO
+RISICO'S: geen
+UITLEG: Elektronisch product met batterij, maar CE staat vermeld in de certificaten ("Declaration of Conformity - CE-gecertificeerd"), het merk XIQI is geen kopie, de batterij zit in het toestel (geen losse batterij) en het product is klein, licht en niet breekbaar.
+```
+
+Beoordeling: juist.
+
+### T07 run 1
+```
+OORDEEL: NO-GO
+RISICO'S:
+
+D: "Dit collageen gummies-supplement is ontworpen voor dagelijkse schoonheidsverzorging" — De pagina noemt het product zelf een supplement, en voedingssupplementen zijn beperkt of verboden op bol.com.
+D: "Gezondheidssupplementen" — De titel zegt ook dat het om gezondheidssupplementen gaat, ondanks de specificatie "Snoepgoed"; bij tegenstrijdige omschrijvingen geldt de omschrijving met het meeste risico.
+UITLEG: De pagina noemt het product een supplement (naast "Snoepgoed"), dus behandel je het als supplement, en dat wordt op bol.com geblokkeerd.
+```
+
+Beoordeling: juist. Opvallend: twee keer risico D, elk met een ander echt citaat.
+
+### T08 run 1
+```
+OORDEEL: NO-GO
+RISICO'S:
+
+A: "Monsters Energy Shape: Authentiek ontwerp geeft de iconische energiedranklook weer." — Het product bootst het merk Monster Energy na, ook in "Personages: Monster-energie".
+B: "Pluche Monster Energy pop 23CM-27CM Super Witte Energy Drink Vorm Schattig Kussen Speelgoed" — De pagina noemt het zelf pluche, pop en speelgoed, en CE niet vermeld.
+UITLEG: Namaak van het merk Monster Energy, en speelgoed (ook al staat er "14 Jaar & up") zonder CE-vermelding.
+```
+
+Beoordeling: juist.
+
+### T09 run 1
+```
+OORDEEL: NO-GO
+RISICO'S:
+
+B: "Puissance: AC 110v-220v" — Elektrisch apparaat met netstroom en USB-poort, CE niet vermeld.
+UITLEG: Elektrische bureaulamp zonder CE-vermelding en dus niet verkoopbaar in de EU.
+```
+
+Beoordeling: juist.
+
+### T10 run 1
+```
+OORDEEL: GO
+RISICO'S: geen
+UITLEG: Een blanco metalen sleutelhanger zonder merk, elektronica, batterij of vloeistof; licht en niet breekbaar.
+```
+
+Beoordeling: juist. Opvallend: de tool zegt "licht", maar er staat geen gewicht in de input. Geen verzonnen citaat (niet tussen aanhalingstekens), wel een aanname.
+
+## Antwoorden van de tool (v3, claude.ai)
+
+### T10 opnieuw (na de wijziging)
+```
+OORDEEL: GO
+RISICO'S: geen
+UITLEG: Een metalen sleutelhanger ("Metaaltype: Roestvrij staal of zinklegering") zonder merknaam of "style"/"like"-woorden, zonder elektronica of batterij, en zonder vermelding van breekbaarheid, vloeistof of verboden categorie.
+```
+
+Beoordeling: juist. "licht" is weg. Opvallend: de tool past de regel breder toe dan ik vroeg. Hij schrijft nu "zonder vermelding van breekbaarheid" in plaats van "niet breekbaar". Dat is voorzichtiger, maar ook wat omslachtig, want een metalen sleutelhanger is gewoon niet breekbaar.
+
+## Succespercentage
+
+- v1: 10 op 10 juist (n = 5, 2 runs), T01–T05
+- v2: 5 op 5 juist (n = 5, 1 run), T06–T10
+- v3: 1 op 1 juist (n = 1, 1 run), alleen T10 opnieuw na de wijziging
