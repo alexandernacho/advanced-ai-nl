@@ -2,6 +2,12 @@
 
 Juiste antwoord = label (`GO` / `NO-GO` / `ONZEKER`) en bij `NO-GO` de risico's (A, B, C, D). Ingevuld vóór de eerste run.
 
+**Wanneer is een antwoord juist?**
+- Het label moet kloppen.
+- Bij `NO-GO` moeten alle verwachte risico's erbij staan. Een gemist risico is een fout (F3), ook als het label klopt. Want als ik één probleem oplos, wil ik weten dat er nog een tweede is.
+- Een extra risico telt niet als fout, zolang het citaat echt op de pagina staat. Ik noteer het wel als opvallend.
+- Staat een citaat niet op de pagina, dan is het altijd een fout (F2), ook als het label klopt.
+
 | ID | Input | Juiste antwoord | Waarom | Run 1 | Run 2 |
 |---|---|---|---|---|---|
 | T01 | Tote bag — zie T01 hieronder | GO | Het is een gewone katoenen tas zonder merknaam, geen elektronica, licht en niet breekbaar, dus geen van de vier risico's. "Patronen: Cartoon" is op zich geen probleem, maar het is goed als de tool het aankaart. | GO | GO |
@@ -9,6 +15,11 @@ Juiste antwoord = label (`GO` / `NO-GO` / `ONZEKER`) en bij `NO-GO` de risico's 
 | T03 | USB-oplader 20W — zie T03 hieronder | GO | Het is een oplader met CE-markering, zonder merknaam van een ander merk, klein en niet breekbaar. | GO | GO |
 | T04 | Glazen parfumflesjes — zie T04 hieronder | NO-GO (C) | De flesjes zijn van glas en dus breekbaar, wat verzending duurder maakt en tot meer retours door breuk leidt. | NO-GO (C) | NO-GO (C) |
 | T05 | Vage titel + foto — zie T05 hieronder | ONZEKER | De titel is een reeks zoekwoorden en de specificaties zijn bijna leeg, dus uit de tekst weet je niet wat het product is of waaruit het bestaat. | ONZEKER | ONZEKER |
+| T06 | Mini handventilator — zie T06 hieronder | GO | Het is elektronica met CE-certificaat, eigen merk XIQI, licht en van plastic. De lithiumbatterij is ingebouwd en niet los, dus dat telt niet als risico C. Lastig punt: de tool kan de batterij toch als verzendrisico zien. Tweede valkuil: de tool kan door de disclaimer denken dat CE niet zeker is. Maar de disclaimer is een standaardtekst van Alibaba die niets over dit product zegt, en CE staat er gewoon bij. | GO | |
+| T07 | Collageen gummies — zie T07 hieronder | NO-GO (D) | Het is een voedingssupplement, en dat is beperkt op bol.com. De titel zegt zelf "Gezondheidssupplementen". Lastig punt: bij de specificaties staat "Gummy Candy" en "Snoepgoed", dus de tool kan denken dat het gewoon snoep is en GO zeggen. | NO-GO (D) | |
+| T08 | Pluche Monster Energy-pop — zie T08 hieronder | NO-GO (A, B) | A: de knuffel gebruikt de naam en de look van Monster Energy, een merk van iemand anders. B: het is speelgoed en er staat geen CE. Lastige punten: de merknaam is XINLI, dus de tool kan denken dat er geen merkprobleem is. Er staat "14 Jaar & up", dus de tool kan denken dat het geen speelgoed is. En "Verantwoordelijke EU-persoon" klinkt als in orde, maar het is geen CE. | NO-GO (A, B) | |
+| T09 | LED-bureaulamp, pagina in het Frans — zie T09 hieronder | NO-GO (B) | Het is een lamp op netstroom, dus elektronica, en er staat nergens CE. Lastige punten: de pagina is in het Frans, dus de tool moet letterlijk in het Frans citeren en niet vertalen. In de titel staat "norme américaine", dat is geen CE. En "Prise: US/EU/UK" klinkt alsof het voor Europa in orde is, maar een EU-stekker is geen CE. | NO-GO (B) | |
+| T10 | Metalen sleutelhanger, korte input — zie T10 hieronder | GO | Het is een metalen sleutelhanger zonder merk van iemand anders, geen elektronica, niet breekbaar en niet verboden. Lastig punt: er staat weinig tekst, dus de tool kan ONZEKER zeggen. Maar het is wel duidelijk wat het product is en van welk materiaal, dus ONZEKER is hier fout. | GO | |
 
 ## Inputs
 
@@ -521,6 +532,177 @@ Afbeeldingen bewerken(+ vanaf /Min. bestelling: 1.000 sets)
 Beschrijving: geen
 ```
 
+### T06
+Link: https://www.alibaba.com/product-detail/New-Unique-Desktop-Portable-Hand-Fan_1601270556301.html
+
+De rest van de beschrijving staat in foto's en een video.
+
+```
+Titel: Draagbare mini handventilator met type-C oplaadpoort, voor thuis, auto en buitengebruik, elektrische voeding, plastic, huishoudelijk
+
+Beschrijving:
+Waarschuwing/Disclaimer
+Dit product heeft de relevante productkwalificatie (en)/licentie (en) van bepaalde toepasselijke landen verworven.
+Disclaimer: Alibaba.com geeft geen verklaring of bevestiging dat dit product volledig voldoet aan alle toepasselijke wet- en regelgeving; of dat enige kwalificatie/licentie daarvan echt, nauwkeurig en effectief is; of dat de verworven relevante kwalificatie(s)/licentie(s) voldoende zijn. Kopers wordt geadviseerd om voorafgaand aan de aankoop de relevante informatie in te winnen bij de verkoper om na te gaan of dit product voldoet aan de toepasselijke wet- en regelgeving van hun eigen land.
+
+Specificaties:
+Type: Handventilator
+Voedingsbron: USB, Elektrisch
+Werktijd: 1-2 uur
+Batterijcapaciteit (mAh): 800
+Windsnelheid: vijf
+Materiaal: Kunststof
+Besturingsmethode: Knop
+installatie: Handheld
+Spanning (V): 5
+Vermogen (W): 5
+Prive-schimmel: JA
+Garantie: Geen
+Verpakkingssoorten: kleurendoos
+Toepassing: Hotel, Auto, Buiten, Garage, Huishouden
+Batterijen Inbegrepen: JA
+App-gestuurd: NEE
+Land van herkomst: Guangdong, China
+Merknaam: XIQI
+Afmetingen: 16,2*3,6*13,2CM
+Modelnummer: 12
+Productnaam: Draagbare desktopventilator
+Oplaadmodus: Type-C
+Batterijtype: 18650 lithiumbatterij
+Oplaadtijd: 2 uur
+Gebruikstijd: 2-3 uur
+Productgewicht: 174 gram
+enkele pakket maat: 21.4X8.8X18.4 cm
+enkele brutogewicht: 0.4 kg
+
+Certificaten:
+Declaration of Conformity - CE-gecertificeerd
+CE - Voldoet aan de EU-normen
+FCC - Elektromagnetische compatibiliteit
+RoHS - Conform RoHS
+94/62/EC - EU-conforme verpakking
+EMC - Elektromagnetische compatibiliteit
+REACH - REACH-gecertificeerd
+```
+
+### T07
+Link: https://www.alibaba.com/product-detail/Daynee-Collagen-Gummies-Vitamin-Herbal-Label_1600900188417.html
+
+```
+Titel: Daynee Collageen Gummies Vitamine Kruiden Labelontwerp Gezondheidssupplementen Snoepjes Gummies Shanghai Flesverpakking cartoon roze
+
+Beschrijving:
+Waarschuwing/Disclaimer
+Dit product heeft de relevante productkwalificatie (en)/licentie (en) van bepaalde toepasselijke landen verworven.
+Beauty Collagen Gummies voor dagelijkse verzorging. Dit collageen gummies-supplement is ontworpen voor dagelijkse schoonheidsverzorging, met de nadruk op huid-, haar- en nagelondersteuning. Het is geschikt voor merken van schoonheidssupplementen, wellnesswinkels, online verkopers en private label gummy-productlijnen.
+Schoonheid van Binnen Positionering: Dit product kan gepositioneerd worden als een handige 'schoonheid van binnen' gummy voor consumenten die de voorkeur geven aan een eenvoudige, dagelijkse routine in plaats van tabletten, capsules of poeder.
+Huid-, Haar- en Nagelondersteuning. Speciaal ontwikkeld voor mooie nagels en krachtig haar, een gladde huid, gezond gewrichts- en botweefsel, en dagelijkse voeding voor een stralende schoonheid.
+Gummies met natuurlijke aardbeiensmaak. De aardbeiensmaak maakt het product leuker dan traditionele tabletten of capsules.
+60 veganistische gummies per fles. Elke fles bevat 60 veganistische gummies, geschikt voor detailhandel, monstertesten, cadeausets, schoonheidspakketten en planning van nabestellingen.
+2 Gummies Dagelijkse Routine. Aanbevolen portie is 2 gummies per dag.
+Ondersteuning voor private label-verpakkingen. Wij ondersteunen private label-aanpassingen, waaronder merklogo, flessenlabel, flesgrootte, dopkleur, smaakrichting, gummykleur, buitendoos.
+OEM ODM Bulk Groothandel Levering. Geschikt voor beautymerken, supplementdistributeurs, Amazon-verkopers, TikTok-verkopers, online winkels en B2B-kopers.
+
+Specificaties:
+type: Gummy Candy
+smaak: Fruitig
+Verpakking: Fles
+functie: Normaal
+vorm: Cartoon
+kleur: Roze
+type product: Snoepgoed
+opslag type: Kamertemperatuur
+Specificatie: 3g*60gummies/fles
+houdbaarheid: 24 maanden
+Fabrikant: Dagnee
+Ingrediënten: Natuurlijke aardbeiensmaak
+Content: Collageenpeptiden, vitamine C, vitamine E, D-biotine
+Gebruiksaanwijzing: Klaar om te eten
+plaats van herkomst: Shanghai, China
+naam van het merk: Daynee
+modelnummer: R22
+Productnaam: Collageen gummies
+OEM: accepteren
+Andere naam: Huidblekende L-Glutathion Gummies
+Trefwoord: Collageen gomachtig
+enkele pakket maat: 15X5X5 cm
+enkele brutogewicht: 0.21 kg
+```
+
+### T08
+Link: https://www.alibaba.com/product-detail/Plush-Doll-Monster-Energy-23CM-27CM_1601931802984.html
+
+```
+Titel: Pluche Monster Energy pop 23CM-27CM Super Witte Energy Drink Vorm Schattig Kussen Speelgoed Gewassen PP Katoen Gevuld OEM groothandel
+
+Beschrijving:
+Verantwoordelijke EU-persoon
+Superzacht pluche: biedt ongeëvenaard comfort en gezelligheid.
+Monsters Energy Shape: Authentiek ontwerp geeft de iconische energiedranklook weer.
+23-27 cm hoogte: perfecte maat voor gemakkelijk dragen en tentoonstellen.
+Katoenen vulling: zorgt voor zachtheid en duurzaamheid.
+Kleurrijk en schattig: ideaal als cadeau of decoratie.
+
+Specificaties:
+Leeftijdscategorie: 14 Jaar & up
+Personages: Monster-energie
+type: drinkend speelgoed
+Hoogte: 23CM-27CM
+Hoofdmateriaal: Super zacht pluche
+materiaal: korte pluche
+Acg Naam: Monster-energie
+Vulling: PP-katoen
+Geslacht: Unisex
+functie: COMFORTER
+Technieken: Washed
+gelegenheid: Halloween
+voering materiaal: Spandex/elastaan
+modelnummer: XL-drinking
+plaats van herkomst: Anhui, China
+Waslabel: Katoen
+naam van het merk: XINLI
+Productnaam: Pluche pop
+Gebruik: Mooi cadeau
+Grootte: 23CM-27CM
+Kleur: Kleurrijk
+Trefwoord: Zacht gevuld plsh-speelgoed
+Stijl: Leuk en Speels
+Verpakking: OPP-zak
+enkele pakket maat: 35X25X2 cm
+enkele brutogewicht: 0.150 kg
+```
+
+### T09
+Link: https://french.alibaba.com/product-detail/LED-Eye-Protection-Desk-Lamp-with-1601696226086.html
+
+```
+Titel: Lampe de bureau LED avec protection oculaire, grande horloge, calendrier, veilleuse, norme américaine, avec ports de charge pour la maison, l...
+
+Description du produit
+Nom de l'article : Lampe de bureau LED avec protection des yeux, grande horloge et calendrier, veilleuse
+Puissance: AC 110v-220v
+Prise: US/EU/UK
+USB TYPE C: 5V2A
+Température de couleur: 3000/4500/6000
+Matériau: PP et PC
+```
+
+### T10
+Link: https://www.alibaba.com/product-detail/Custom-Metal-Keychain-Blank-Heat-Transfer_1601624454473.html
+
+Korte input: alleen de titel en zes regels uit de kenmerken. Een echte korte pagina vond ik niet, want Alibaba-pagina's zijn bijna altijd lang. Ik heb de rest van de pagina zelf weggelaten. Dit is wat een verkoper ziet als hij snel kijkt zonder te scrollen.
+
+```
+Titel: Gepersonaliseerde metalen sleutelhanger blank voor hittetransferdruk logo sleutelhanger roestvrijstalen sleutelhanger blank
+
+Producttype: Carabiner Keychain
+Metaaltype: Roestvrij staal of zinklegering
+Bedrukking: UV-printen
+vorm: Rond
+materiaal: Metaal
+plaats van herkomst: Guangdong, China
+```
+
 ## Antwoorden van de tool (v1, claude.ai)
 
 ### T01 run 1
@@ -595,3 +777,75 @@ OORDEEL: ONZEKER
 RISICO'S: geen
 UITLEG: De pagina toont niet wat het product is of waaruit het bestaat: alleen algemene termen als "Fotogeschenken" en vier uiteenlopende producttypes (kantoor, huishoudelijk, elektronisch, novelty), zonder beschrijving, materiaal of CE-informatie.
 ```
+
+## Antwoorden van de tool (v2, claude.ai)
+
+### T06 run 1
+```
+OORDEEL: GO
+RISICO'S: geen
+UITLEG: Elektronisch product met batterij, maar CE staat vermeld in de certificaten ("Declaration of Conformity - CE-gecertificeerd"), het merk XIQI is geen kopie, de batterij zit in het toestel (geen losse batterij) en het product is klein, licht en niet breekbaar.
+```
+
+Beoordeling: juist.
+
+### T07 run 1
+```
+OORDEEL: NO-GO
+RISICO'S:
+
+D: "Dit collageen gummies-supplement is ontworpen voor dagelijkse schoonheidsverzorging" — De pagina noemt het product zelf een supplement, en voedingssupplementen zijn beperkt of verboden op bol.com.
+D: "Gezondheidssupplementen" — De titel zegt ook dat het om gezondheidssupplementen gaat, ondanks de specificatie "Snoepgoed"; bij tegenstrijdige omschrijvingen geldt de omschrijving met het meeste risico.
+UITLEG: De pagina noemt het product een supplement (naast "Snoepgoed"), dus behandel je het als supplement, en dat wordt op bol.com geblokkeerd.
+```
+
+Beoordeling: juist. Opvallend: twee keer risico D, elk met een ander echt citaat.
+
+### T08 run 1
+```
+OORDEEL: NO-GO
+RISICO'S:
+
+A: "Monsters Energy Shape: Authentiek ontwerp geeft de iconische energiedranklook weer." — Het product bootst het merk Monster Energy na, ook in "Personages: Monster-energie".
+B: "Pluche Monster Energy pop 23CM-27CM Super Witte Energy Drink Vorm Schattig Kussen Speelgoed" — De pagina noemt het zelf pluche, pop en speelgoed, en CE niet vermeld.
+UITLEG: Namaak van het merk Monster Energy, en speelgoed (ook al staat er "14 Jaar & up") zonder CE-vermelding.
+```
+
+Beoordeling: juist.
+
+### T09 run 1
+```
+OORDEEL: NO-GO
+RISICO'S:
+
+B: "Puissance: AC 110v-220v" — Elektrisch apparaat met netstroom en USB-poort, CE niet vermeld.
+UITLEG: Elektrische bureaulamp zonder CE-vermelding en dus niet verkoopbaar in de EU.
+```
+
+Beoordeling: juist.
+
+### T10 run 1
+```
+OORDEEL: GO
+RISICO'S: geen
+UITLEG: Een blanco metalen sleutelhanger zonder merk, elektronica, batterij of vloeistof; licht en niet breekbaar.
+```
+
+Beoordeling: juist. Opvallend: de tool zegt "licht", maar er staat geen gewicht in de input. Geen verzonnen citaat (niet tussen aanhalingstekens), wel een aanname.
+
+## Antwoorden van de tool (v3, claude.ai)
+
+### T10 opnieuw (na de wijziging)
+```
+OORDEEL: GO
+RISICO'S: geen
+UITLEG: Een metalen sleutelhanger ("Metaaltype: Roestvrij staal of zinklegering") zonder merknaam of "style"/"like"-woorden, zonder elektronica of batterij, en zonder vermelding van breekbaarheid, vloeistof of verboden categorie.
+```
+
+Beoordeling: juist. "licht" is weg. Opvallend: de tool past de regel breder toe dan ik vroeg. Hij schrijft nu "zonder vermelding van breekbaarheid" in plaats van "niet breekbaar". Dat is voorzichtiger, maar ook wat omslachtig, want een metalen sleutelhanger is gewoon niet breekbaar.
+
+## Succespercentage
+
+- v1: 10 op 10 juist (n = 5, 2 runs), T01–T05
+- v2: 5 op 5 juist (n = 5, 1 run), T06–T10
+- v3: 1 op 1 juist (n = 1, 1 run), alleen T10 opnieuw na de wijziging
