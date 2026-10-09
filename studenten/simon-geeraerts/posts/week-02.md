@@ -2,7 +2,7 @@
 
 ## Wat bouw ik?
 
-Klanten kunnen zien wanneer hun bestelde Ford ongeveer bij Ford Geeraerts aankomt.
+Ik bouw een assistent waarmee klanten kunnen zien wanneer hun bestelde Ford ongeveer bij Ford Geeraerts aankomt. De klant stelt eerst zijn vraag en geeft daarna zijn vijfcijferige bestelbonnummer en de naam op de bestelling. De assistent zoekt de bestelling op in een Excelbestand en toont het model, de huidige status en de verwachte aankomstdatum bij de garage. Die datum is geen afhaal- of leveringsdatum: de verkoper maakt daar later afspraken over met de klant. Als er nog geen aankomstdatum bekend is, zegt de assistent dat duidelijk zodat de klant later opnieuw kan kijken.
 
 ## Waarom een taalmodel?
 
