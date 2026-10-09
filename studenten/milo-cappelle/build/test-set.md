@@ -1,0 +1,11 @@
+# Testset
+
+Bron: bekendmakingen van openbare onderzoeken omgevingsvergunning, Vlaamse gemeenten. Adressen en namen van aanvragers weggelaten.
+
+| ID | Input | Interessant | Soort werk | Waarom | Run 1 | Run 2 |
+|---|---|---|---|---|---|---|
+| T01 | Aanvraag voor: stedenbouwkundige handelingen, het verkavelen van gronden. Kort omschreven: bijstellen van verkaveling met name splitsen van lot 11 in 2 loten, reliëfwijziging, aanleggen van keermuren en regulariseren van wijzigen van inplanting opritten. *(Zonnebeke, 2026)* | ja | grondwerk | Wij hebben al vaker keermuren geplaatst, al wordt dit niet vaak gedaan, en een reliëfwijziging moet volgens mij met een kraan gebeuren. | ja, grondwerk | ja, grondwerk |
+| T02 | Aanvraag voor: stedenbouwkundige handelingen. Kort omschreven: nivellering akkerland in functie van verbeterd bodembeheer. *(Zonnebeke, 2026)* | ja | grondwerk | Nivelleren doen we vaak bij grondwerken, als het groot genoeg is om met de kraan te doen. | onzeker, grondwerk | onzeker, grondwerk |
+| T03 | Aanvraag voor: stedenbouwkundige handelingen. Kort omschreven: verbouwen en uitbreiden van meergezinswoning na slopen van bestaande aanbouw. *(Zonnebeke, 2026)* | onzeker | afbraak | Het slopen van een aanbouw wordt vaak gedaan, maar ik heb geen idee hoe groot de aanbouw is. | onzeker, afbraak | onzeker, afbraak |
+| T04 | Aanvraag voor: stedenbouwkundige handelingen, de exploitatie van een of meerdere ingedeelde inrichtingen of activiteiten. Kort omschreven: bouwen van een gesloten mestsilo en 2 sleufsilo's, afbraak stallen, aanleggen extra verharding en regularisatie bedrijfsgebouwen en verharding. *(Zonnebeke, 2026)* | ja | beide | Afbraak van stallen is afbraakwerk, en de verharding erna is grondwerk. | ja, beide | ja, beide |
+| T05 | Aanvraag voor: stedenbouwkundige handelingen, de exploitatie van een of meerdere ingedeelde inrichtingen of activiteiten. Kort omschreven: bouwen stal, bijgebouw, voedersilo's en kelders, aanleg talud, wadi en vijver, verharding en keermuur, wijzigen van een varkens- en pluimveehouderij. *(Ieper, beslissing 2026)* | ja | grondwerk | Aanleg van talud, wadi en vijver, verharding en keermuur zijn allemaal dingen die wij doen bij grondwerken. | ja, grondwerk | ja, grondwerk |
