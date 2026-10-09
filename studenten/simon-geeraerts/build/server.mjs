@@ -137,7 +137,7 @@ const server = createServer(async (request, response) => {
         return send(response, 400, { error: fromGarage("stel eerst je vraag over de bestelling.") });
       }
       if (typeof orderNumber !== "string" || !orderNumber.trim()) {
-        return send(response, 200, { answer: fromGarage("mag ik uw bestelbonnummer van vijf cijfers, alstublieft?") });
+        return send(response, 200, { answer: fromGarage("mag ik uw bestelbonnummer van vijf cijfers, alstublieft? Vindt u dit nummer niet terug, neem dan contact op met Ford Geeraerts.") });
       }
       if (!isValidOrderNumber(orderNumber)) {
         return send(response, 400, { error: fromGarage("een bestelbonnummer bestaat uit precies vijf cijfers.") });

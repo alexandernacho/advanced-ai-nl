@@ -1,10 +1,10 @@
 # Build — Chatassistent voor de aankomst van een bestelde wagen
 
-1. **Taak:** een chatassistent op de website van de garage beantwoordt klantvragen over wanneer een bestelde wagen aankomt.
+1. **Taak:** klanten laten zien wanneer hun bestelde Ford ongeveer bij Ford Geeraerts aankomt.
 2. **Invoer:** de klantvraag, het vijfcijferige bestelbonnummer op de bestelbon, de naam waarop de wagen gekocht is en fictieve bestel- en leveringsgegevens uit een Excelbestand. De assistent vraagt eerst vriendelijk om het bestelbonnummer en daarna om de naam.
-3. **Uitvoer:** de geregistreerde verwachte aankomstdatum bij de garage, duidelijk als verwachting en niet als leverings- of afhaaldatum. De verkoper neemt contact op om een datum voor de levering aan de klant vast te leggen; de planning hangt onder meer af van ombouw, reiniging, nummerplaten en papieren. De assistent berekent geen afhaaldatum. Bij ontbrekende of onduidelijke gegevens meldt de assistent dat hij de aankomstdatum niet kan bevestigen.
-4. **AI:** een taalmodel begrijpt de klantvraag en formuleert het antwoord met uitsluitend de beschikbare bestelgegevens.
-5. **Controle:** Simon vergelijkt elk antwoord met de bijbehorende bestelgegevens, ook bij onbekende bestelnummers en ontbrekende datums.
+3. **Uitvoer:** model, huidige status en verwachte aankomstdatum. Bij geen match krijgt de klant een duidelijke melding. Is er nog geen datum, dan meldt de assistent dat duidelijk; de klant kan later opnieuw kijken.
+4. **AI:** een taalmodel begrijpt de vraag van de klant en formuleert het antwoord in gewone taal. De gegevens uit Excel zijn altijd de bron van waarheid.
+5. **Controle:** Simon vergelijkt elk antwoord met de juiste rij in Excel en controleert of de AI niets verzint.
 
 ## Vijf inputideeën van Simon
 
