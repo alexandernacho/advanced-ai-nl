@@ -37,3 +37,15 @@
 
 - Toegevoegd: een demomodus zonder API-sleutel, zodat Simon de klantstroom met fictieve gegevens kan testen.
 - De demo vermeldt duidelijk dat het antwoord nog zonder AI wordt gemaakt.
+
+## v1.7 — 9 oktober 2026
+
+- Gemeten: 3 op 5 juist (n = 5, 1 run). Twee antwoorden misten de naam Ford Geeraerts; beide kregen foutcode F3 (gemist).
+- Gewijzigd: elk antwoord krijgt nu de vaste aanhef “Ford Geeraerts”.
+- Hertest: de twee eerdere F3-fouten zijn allebei opgelost (2 op 2).
+
+## v1.8 — 9 oktober 2026
+
+- Buurtest: een medestudent vond de regel over de vaste uitleg na aankomst tegenstrijdig met het voorbeeld.
+- Gewijzigd: de AI noemt alleen status en verwachte aankomst; de toepassing voegt daarna de uitleg over afhaling toe.
+- Hertest met de medestudent: de verdeling is nu duidelijk.
