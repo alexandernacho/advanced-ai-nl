@@ -32,9 +32,9 @@ Rundergehakt, hamburgerbroodjes, cheddar of andere smeltkaas, sla, tomaat, ajuin
 
 Rijst, kipfilet, ajuin, kookroom of kokosmelk, currypoeder, olie of boter, zout, peper en paprika. Knoflook, wortel, erwtjes en broccoli zijn optioneel.
 
-### 7. Croque monsieur
+### 7. Tosti met kip en kaas
 
-Brood, ham, kaas en boter. Mayonaise, mosterd, sla en tomaat zijn optioneel.
+Brood, kipfilet, kaas en boter. Mayonaise, mosterd, sla en tomaat zijn optioneel.
 
 ### 8. Romige pasta met zalm
 

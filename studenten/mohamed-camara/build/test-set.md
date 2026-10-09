@@ -1,0 +1,9 @@
+# Testset
+
+| ID | Input | Juiste antwoord | Waarom | Run 1 | Run 2 |
+|---|---|---|---|---|---|
+| T01 | macaroni, boter, bloem, melk, geraspte kaas, zout | Bijna mogelijk: Mac & cheese — ontbreekt: peper. | Enkel peper ontbreekt. | VOLLEDIG MOGELIJK: (geen). BIJNA MOGELIJK: Mac & cheese — ontbreekt: peper. | VOLLEDIG MOGELIJK: (geen). BIJNA MOGELIJK: Mac & cheese — ontbreekt: peper. |
+| T02 | brood, kipfilet, kaas, boter | Volledig mogelijk: Tosti met kip en kaas. | Alle nodige ingrediënten zijn aanwezig. | VOLLEDIG MOGELIJK: Tosti met kip en kaas. BIJNA MOGELIJK: (geen). | VOLLEDIG MOGELIJK: Tosti met kip en kaas. BIJNA MOGELIJK: (geen). |
+| T03 | spaghetti, kipfilet, tomatensaus, ui, olijfolie of boter, zout, peper, paprikapoeder | Bijna mogelijk: Spaghetti met kip en tomatensaus — ontbreekt: Italiaanse kruiden of oregano. | Enkel Italiaanse kruiden of oregano ontbreekt. | VOLLEDIG MOGELIJK: (geen). BIJNA MOGELIJK: Spaghetti met kip en tomatensaus — ontbreekt: Italiaanse kruiden of oregano. | VOLLEDIG MOGELIJK: (geen). BIJNA MOGELIJK: Spaghetti met kip en tomatensaus — ontbreekt: Italiaanse kruiden of oregano. |
+| T04 | bagel, hummus, kipfilet, eieren, tomaat, olie of boter, zout, peper, paprikapoeder | Volledig mogelijk: Bagel met kip, hummus en omelet. | Alle ingrediënten zijn aanwezig. | VOLLEDIG MOGELIJK: Bagel met kip, hummus en omelet. BIJNA MOGELIJK: (geen). | VOLLEDIG MOGELIJK: Bagel met kip, hummus en omelet. BIJNA MOGELIJK: (geen). |
+| T05 | aardappelen, kipfilet, eieren, krop sla of een zak gemengde sla, tomaten, komkommer, ajuin, olie of boter, zout, peper, paprikapoeder, olijfolie, citroensap of azijn, mosterd | Volledig mogelijk: Aardappelsalade met kip en ei. | Alle nodige ingrediënten zijn aanwezig. | VOLLEDIG MOGELIJK: Aardappelsalade met kip en ei. BIJNA MOGELIJK: (geen). | VOLLEDIG MOGELIJK: Aardappelsalade met kip en ei. BIJNA MOGELIJK: (geen). |

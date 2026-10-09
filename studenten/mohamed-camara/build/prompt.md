@@ -29,8 +29,8 @@ LUNCH EN SNELLE GERECHTEN
 1. Bagel met kip, hummus en omelet
    - bagel, hummus, kipfilet, eieren, tomaat, olie of boter, zout, peper, paprikapoeder
 
-2. Croque monsieur
-   - brood, ham, kaas, boter
+2. Tosti met kip en kaas
+   - brood, kipfilet, kaas, boter
 
 3. Cheeseburger met frietjes
    - rundergehakt, hamburgerbroodjes, cheddar of andere smeltkaas, sla, tomaat, ajuin, augurken, zout, peper, diepvriesfrietjes, mayonaise, ketchup, mosterd
@@ -63,10 +63,10 @@ HOOFDMAALTIJDEN
 VOORBEELDEN
 
 VOORBEELD 1
-Foto toont: een brood, een pak gesneden ham, een stuk kaas, een pakje boter.
+Foto toont: brood, kipfilet, kaas en boter.
 
 VOLLEDIG MOGELIJK
-- Croque monsieur
+- Tosti met kip en kaas
 
 BIJNA MOGELIJK
 - (geen)
