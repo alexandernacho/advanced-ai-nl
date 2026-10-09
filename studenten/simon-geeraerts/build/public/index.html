@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ford Geeraerts — Leveringsassistent</title>
+    <style>
+      :root { font-family: Inter, Arial, sans-serif; color: #14213d; background: #f2f5f8; }
+      body { margin: 0; min-height: 100vh; display: grid; place-items: center; }
+      main { width: min(680px, calc(100% - 32px)); background: white; border-radius: 18px; padding: 32px; box-shadow: 0 12px 35px #14213d20; }
+      h1 { margin: 0 0 8px; font-size: 1.7rem; } p { line-height: 1.5; }
+      .notice { background: #eef5ff; border-left: 4px solid #0866c6; padding: 12px; border-radius: 4px; }
+      label { display: block; font-weight: 700; margin-top: 16px; }
+      input, textarea, button { box-sizing: border-box; width: 100%; font: inherit; border-radius: 8px; }
+      input, textarea { border: 1px solid #b5c1cf; margin-top: 6px; padding: 11px; } textarea { min-height: 110px; resize: vertical; }
+      button { margin-top: 20px; padding: 12px; background: #0866c6; color: white; border: 0; font-weight: 700; cursor: pointer; }
+      button:disabled { opacity: .6; cursor: wait; } #answer { margin-top: 20px; padding: 16px; border-radius: 8px; background: #f5f7f9; white-space: pre-wrap; }
+      .demo { color: #536273; font-size: .9rem; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Ford Geeraerts: wanneer komt mijn wagen aan?</h1>
+      <p>Stel eerst je vraag. De assistent vraagt daarna om je bestelgegevens en geeft alleen de verwachte aankomst bij de garage, geen afhaaldatum.</p>
+      <p class="notice"><strong>Demo:</strong> deze versie gebruikt uitsluitend fictieve bestelgegevens. Zolang geen API-sleutel is ingesteld, toont ze ook een voorbeeldantwoord zonder AI.</p>
+      <form id="chat-form">
+        <label for="orderNumber">Bestelbonnummer</label>
+        <input id="orderNumber" name="orderNumber" autocomplete="off" inputmode="numeric" pattern="[0-9]{5}" placeholder="bv. 10481" />
+        <label for="buyerName">Naam op de bestelbon</label>
+        <input id="buyerName" name="buyerName" autocomplete="name" placeholder="bv. Emma Peeters" />
+        <label for="question">Je vraag</label>
+        <textarea id="question" name="question" required>Wanneer komt mijn wagen aan?</textarea>
+        <button>Vraag levering na</button>
+      </form>
+      <p class="demo">Typ eerst alleen je vraag. De assistent vraagt daarna om je vijfcijferige bestelbonnummer en de naam op de bestelling. Testgegevens: 10481 / Lotte Vermeulen, 10723 / Bram De Wilde, 10916 / Sofie Martens.</p>
+      <div id="answer" aria-live="polite">Vul je gegevens in om te starten.</div>
+    </main>
+    <script>
+      const form = document.querySelector("#chat-form");
+      const answer = document.querySelector("#answer");
+      const button = form.querySelector("button");
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        button.disabled = true;
+        answer.textContent = "De bestelling wordt gecontroleerd…";
+        const data = Object.fromEntries(new FormData(form));
+        try {
+          const response = await fetch("/api/chat", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(data) });
+          const result = await response.json();
+          answer.textContent = result.answer || result.error;
+        } catch {
+          answer.textContent = "De assistent is tijdelijk niet bereikbaar.";
+        } finally { button.disabled = false; }
+      });
+    </script>
+  </body>
+</html>
