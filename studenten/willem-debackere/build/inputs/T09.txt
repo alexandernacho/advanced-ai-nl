@@ -1,0 +1,49 @@
+=== https://woontheater.be/en/bespoke-solid-furniture/
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-9VBWWFPZDV');
+ Bespoke solid furniture - Woontheater 
+ Customized interiors
+ Selected items
+ Unique pieces
+ Projects
+ About us
+ Contact
+ menu
+ nl
+ en
+ Bespoke Solid Furniture 
+ Bespoke Solid Furniture
+ Discover our exclusive customised creations.
+ Your taste and interior design requirements are unique. This is why we do not come up with a hundred and one different designs. We dedicate time to listening to you so that we understand your needs. We advise you about colours and materials. And design pieces of furniture that meet all your requirements: from tables and shelves to fitted wardrobes. You are guaranteed unequalled craftsmanship and a great deal of attention to harmony and pure, beautiful lines. 
+ Contact us
+ Familiar with colour
+ MORE THAN SIMPLE PAINTING TECHNIQUES
+ We dye the wood we use by hand in the colour of your choosing. Do you prefer a timelessly minimalist look or a quirky weathered finish that bears testimony to the passing of time? Every piece of furniture is finished in our workshops with precision and respect for the unique nature of the material.
+ Realisations
+ Contact
+ Get in touch
+ Don't hesitate to visit us in one of our showrooms in Blaasveld or Antwerp. We'll be more than happy to assist!
+ Contact Us
+ Book an appointment
+ ×
+ Customized interiors | Blaasveld 
+ Appointment at home
+ Bespoke & Design (our collection is also available in store)
+ Mechelsesteenweg 450 
+ 2830 Blaasveld (Belgium) 
+ Unique Collections - Authentic pieces & design
+ Kloosterstraat 14 
+ 2000 Antwerpen 
+ Solid kitchens
+ Bespoke solid furniture
+ Collection
+ Unique Pieces
+ Projects
+ About us
+ Subscribe to our newsletter for exclusive promotions, news and new collection items.
+ Leave this field empty if you're human: 
+ &copy; Copyrights 2026
+ site by
+ We use cookies to ensure that we give you the best experience on our website. If you continue to use this site we will assume that you are happy with it. Ok 
