@@ -15,6 +15,7 @@ Regels:
 - Voorspel de beurskoers niet.
 - Gaat het bericht over extra geld voor defensie dat met besparingen elders betaald wordt, kies dan positief, want voor defensiebedrijven telt alleen of hun deel van het budget stijgt.
 - Bouwt een defensiebedrijf een nieuwe fabriek of breidt het uit, kies dan positief, want een bedrijf breidt pas uit als het meer bestellingen verwacht.
+- Gaat het bericht over gesprekken of onderhandelingen zonder akkoord, kies dan onzeker, want pas een getekend akkoord verandert de vraag naar defensie. Gesprekken kunnen ook mislukken.
 - Twijfel je tussen twee labels? Kies `onzeker`. Gok niet.
 
 ## Voorbeelden
