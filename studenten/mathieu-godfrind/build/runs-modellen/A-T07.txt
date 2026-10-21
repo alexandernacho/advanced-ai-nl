@@ -1,0 +1,17 @@
+```
+OORDEEL: NO-GO
+RISICO'S:
+- D: "Dit collageen gummies-supplement is ontworpen voor dagelijkse schoonheidsverzorging" — De pagina noemt het zelf een supplement, en voedingssupplementen zijn beperkt of verboden op bol.com.
+- D: "type product: Snoepgoed" — Dezelfde pagina noemt het ook snoepgoed, maar bij twee omschrijvingen gebruik je die met het meeste risico, dus supplement.
+- B: "Gebruiksaanwijzing: Klaar om te eten" — Het is een product dat je inneemt voor huid, haar en nagels, en CE niet vermeld is; maar voor eetwaren geldt CE niet, dus dit is geen geldig risico.
+UITLEG: Het is een voedingssupplement (collageenpeptiden, vitaminen, "Gezondheidssupplementen" in de titel), en die zijn beperkt op bol.com.
+```
+
+Correctie: het laatste risico (B) hoort er niet bij, want CE is niet van toepassing op eetwaren. Dit is het juiste antwoord:
+
+```
+OORDEEL: NO-GO
+RISICO'S:
+- D: "Dit collageen gummies-supplement is ontworpen voor dagelijkse schoonheidsverzorging" — De pagina noemt het zelf een supplement, en voedingssupplementen zijn beperkt op bol.com.
+UITLEG: De pagina noemt het product zowel "Snoepgoed" als supplement, en dan geldt de omschrijving met het meeste risico: voedingssupplement.
+```
