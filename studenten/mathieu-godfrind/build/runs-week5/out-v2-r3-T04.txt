@@ -1,0 +1,4 @@
+OORDEEL: NO-GO
+RISICO'S:
+- C: "Glass" — Glas is breekbaar.
+UITLEG: Het basismateriaal is glas, dus het is breekbaar; er is geen merk van iemand anders en geen elektronica of ander risico op de pagina.

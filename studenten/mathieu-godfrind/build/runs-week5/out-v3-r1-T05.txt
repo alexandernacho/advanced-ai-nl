@@ -1,0 +1,4 @@
+OORDEEL: NO-GO
+RISICO'S:
+- B: "Promotionele Elektronische Producten" — Het product wordt als elektronisch product genoemd, CE niet vermeld.
+UITLEG: De pagina noemt het product elektronisch maar vermeldt geen CE, dus het mag niet zomaar in de EU verkocht worden.
