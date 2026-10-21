@@ -1,0 +1,12 @@
+```
+ETF: Invesco MSCI World Equal Weight UCITS ETF
+
+Risico-indicator: 4 | bron: "Nous avons classé ce produit dans la classe de risque 4 sur 7, qui est une classe de risque moyenne."
+Aanbevolen bewaartermijn: 5 jaar | bron: "Période de détention recommandée: 5 années"
+Lopende kosten per jaar: 0,25% | bron: "0,20% de la valeur de votre investissement par an." en "0,05% de la valeur de votre investissement par an."
+Instapkosten: 0% | bron: "Nous ne facturons pas de coût d’entrée pour ce produit, mais la personne qui vous vend le produit peut le faire."
+Uitstapkosten: 0% | bron: "Nous ne facturons pas de coût de sortie pour ce produit, mais la personne qui vous vend le produit peut le faire."
+Gevolgde index: MSCI World Equal Weighted Index | bron: "Pour atteindre l’objectif d’investissement, le Fonds cherchera à répliquer la performance de rendement total net de l’Indice MSCI World Equal Weighted Index (l’« Indice ») hors frais, commissions et coûts de transaction."
+Uitkerend of accumulerend: accumulerend | bron: "Cette Catégorie d’actions ne vous verse pas de revenu, mais le réinvestit pour accroître votre capital, conformément aux objectifs annoncés."
+Ongunstig scenario: 10.650 USD en 1,27% per jaar | bron: "10 650 USD 1,27 %"
+```

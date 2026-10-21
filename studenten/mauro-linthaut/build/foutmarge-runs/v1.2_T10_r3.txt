@@ -1,0 +1,12 @@
+```
+ETF: Vanguard FTSE All-World UCITS ETF
+
+Risico-indicator: 4 | bron: "Wij hebben dit Fonds ingedeeld in klasse 4 uit 7, een middelmatige risicoklasse."
+Aanbevolen bewaartermijn: 5 jaar | bron: "Aanbevolen periode van bezit: 5 jaar"
+Lopende kosten per jaar: 0,16% | bron: "0.14% van de waarde van uw belegging per jaar. Dit is een raming op basis van de werkelijke kosten in het afgelopen jaar, waarbij rekening is gehouden met alle bekende toekomstige veranderingen." en "0.02% van de waarde van uw belegging per jaar. Dit is een schatting van de kosten die wij oplopen wanneer wij de onderliggende beleggingen voor het Fonds kopen en verkopen."
+Instapkosten: 0% | bron: "Voor het Fonds zijn geen instapkosten verschuldigd."
+Uitstapkosten: 0% | bron: "Voor dit Fonds worden geen uitstapkosten in rekening gebracht, maar de persoon die u het Fonds verkoopt kan dat wel doen."
+Gevolgde index: FTSE All-World Index | bron: "Het Fonds hanteert een strategie van passief beheer - of indexering - van beleggen door het fysiek verkrijgen van effecten en streeft ernaar de resultaten van de FTSE All-World Index (de 'Index') te volgen."
+Uitkerend of accumulerend: accumulerend | bron: "De inkomsten uit ETF-aandelen zullen worden herbelegd en weerspiegeld in de prijs van aandelen in de ETF."
+Ongunstig scenario: 12.170 USD en 4,01% per jaar | bron: "Ongunstig Wat u kunt terugkrijgen na kosten Gemiddeld rendement per jaar 7,940 USD -20.60% 12,170 USD 4.01%"
+```
