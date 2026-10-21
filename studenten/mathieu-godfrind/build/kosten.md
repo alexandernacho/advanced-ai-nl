@@ -9,6 +9,8 @@ Gemeten op 14 oktober 2026. Prompt v3, input T01 (tote bag). Antwoord: GO, juist
 | Haiku 5.5 (gemeten) | 48.600 | 53.900 in + 1.400 uit | 5.300 in + 1.400 uit | $0,0012 (€0,0011) | $0,10 (€0,09) | $0,98 (€0,89) | $98,40 (€88,56) |
 | Haiku 4.5 (tabelprijs) | | | 5.300 in + 1.400 uit | $0,0123 (€0,0111) | $0,98 (€0,89) | $9,84 (€8,86) | $984 (€885,60) |
 
+Gecorrigeerd in week 5: ik gebruikte Haiku 5.5 (zie /cost en posts/week-04.md). De prijs $0,10 in en $0,50 uit per miljoen tokens had ik afgeleid uit /cost. De tabel van week 5 bevestigt die prijs. Mijn runs blijven ver onder de grens van 100.000 tokens per vraag. De rij Haiku 4.5 is alleen een vergelijking.
+
 - **Context** = cache read + cache write van de T01-run (31.500 + 17.100). `/context` werkte niet: in deze cursus start dat de context-skill.
 - **Jouw deel** = de gewone input + output van de T01-run. Dat is wat een bedrijf via de API zou sturen.
 - **Kost per run, Haiku 5.5:** 5.300 × $0,10/M + 1.400 × $0,50/M = $0,0012.
@@ -46,7 +48,7 @@ De "ok"-run liep in de achtergrond (`claude -p`). Daar stuurt Claude Code minder
 
 ## Open vragen
 
-- **Prijs van Haiku 5.5:** niet in de tabel van de cursus. Afgeleid uit `/cost`: $0,10 input, $0,50 output, $0,20 cache schrijven, $0,01 cache lezen per miljoen tokens. Beide runs kloppen hiermee. Nog checken op de prijspagina van Anthropic.
+- **Prijs van Haiku 5.5:** niet in de tabel van de cursus. Afgeleid uit `/cost`: $0,10 input, $0,50 output, $0,20 cache schrijven, $0,01 cache lezen per miljoen tokens. Beide runs kloppen hiermee. Nog checken op de prijspagina van Anthropic. Opgelost in week 5: staat nu in de cursustabel, zelfde prijs.
 - **Welk model voor de memo?** `/model haiku` geeft Haiku 5.5, de demo gebruikt Haiku 4.5. Vragen aan de docent.
 - **Volume per maand:** 80 is een schatting. Na een maand echt zoeken: tellen.
 - **Uurkost:** 13 euro bij Brand Activators. Bruto of netto? Nakijken op de loonbrief.
