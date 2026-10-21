@@ -23,3 +23,16 @@ De lopende kosten zijn al aangepast vóór Run 1 (optellen, met twee voorbeelden
 
 ## Week 4
 Kosten gemeten en uitgerekend hoe duur alles is: kost per run, per maand (1x, 10x, 1.000x) en de waarde tegenover het werk met de hand. Details in `kosten.md`.
+
+## Week 5: testset v2 (21 oktober 2026)
+Testset gegroeid van 10 naar 30 (set v2: T01–T30). T11–T29 zijn geschreven met het antwoord vooraf; T30 volgt. T01–T10 zijn niet aangeraakt.
+
+**Keuze vóór de run (geen correctie):** bij een actief beheerd fonds zonder gevolgde index (T26, T27, T28, T29) is het juiste antwoord op "Gevolgde index" **"niet vermeld"**. Eerst stond bij T26 en T27 "geen". Ik heb dat veranderd omdat mijn prompt-regel "Staat een veld er niet in, schrijf niet vermeld" zegt en omdat ik dan voor alle vier dezelfde term gebruik. Er is nog geen run gedaan op T11–T30, het antwoord is dus niet aangepast aan wat mijn tool zei.
+
+**Run op set v2 (21 oktober 2026):** prompt v1.2 (`build/prompt.md`, ongewijzigd) op T01–T30, één run, Sonnet 5.5, `claude -p --tools ""`, nieuwe sessie per run. Score: **30 op 30 inputs volledig juist, 240 op 240 velden (set v2, 1 run).** T01–T10: 10 op 10. T11–T30: 20 op 20. Geen verwacht antwoord aangepast na de run, de prompt niet aangepast. Ik heb de uitvoer van T25, T26, T28, T12 en T30 zelf nagelezen: ze kloppen. Het nieuwe scorescript (`set-v2-runs/score_v2.py`) geeft op de oude v1.2-uitvoer dezelfde score als `score.py` (80 op 80 voor run 1, 79 op 80 voor run 3), dus het scoort hetzelfde.
+
+**T31 toegevoegd (21 oktober 2026):** Nordea Global Private Equity (geen ETF, instap en uitstap 3% maximum, prestatievergoeding apart, 10 jaar, drie scenariokolommen). Antwoord vooraf in `test-set.md`, daarna één run met dezelfde prompt v1.2: 8 op 8 velden juist. Set v2 is nu T01–T31: **31 op 31 inputs, 248 op 248 velden (1 run)**. `score_v2.py` is vóór de run aangepast zodat instap en uitstap ook een ander getal dan 0 kunnen zijn (de oude regel liet alleen 0 toe); de score van T01–T30 bleef 240 op 240.
+
+**T32 toegevoegd (21 oktober 2026):** Aspect Diversified Trends Fund (geen ETF, uitkerend of accumulerend staat er niet in, prestatievergoeding apart, minimum bewaartermijn). Antwoord vooraf in `test-set.md`, daarna één run met dezelfde prompt v1.2: 8 op 8 velden juist. Set v2 is nu T01–T32: **32 op 32 inputs, 256 op 256 velden (1 run)**.
+
+**Bronnen T31 en T32 (21 oktober 2026):** T31 (Nordea Global Private Equity) kwam van Fundconnect, T32 (Aspect Diversified Trends) van Kneip. Eerder stond hier "Nordea" en "Aspect Capital": dat waren de namen van de fondsen, niet van de bron. Dit is een correctie van de bron, geen verandering van antwoord of prompt. Claude heeft de antwoorden van T31 en T32 nagekeken tegen de pdf en ze klopten.

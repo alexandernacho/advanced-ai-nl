@@ -53,6 +53,23 @@ small,.note{color:var(--mute);font-size:.85rem}
 </section>
 
 <section>
+<h2>Mijn testset groeit: van 10 naar 32 inputs (set v2)</h2>
+<div class="row">
+<div><div class="big good">32 van 32</div><div class="lab">KID's volledig juist, prompt v1.2 ongewijzigd. 256 van 256 velden. n = 32 inputs, 1 run (set v2).</div></div>
+<div><div class="big">22 nieuw</div><div class="lab">T11 tot T32. Antwoord vooraf geschreven, de prompt niet bijgestuurd op deze inputs.</div></div>
+</div>
+<div class="scroll"><table>
+<tr><th>Groep</th><th class="n">Aantal</th><th>Wat</th></tr>
+<tr><td>Oud (T01–T10)</td><td class="n">10</td><td>De tien van week 2, onaangeroerd.</td></tr>
+<tr><td>Echt (T11–T20)</td><td class="n">10</td><td>ETF's die ik zelf opzocht op Saxo Investor.</td></tr>
+<tr><td>Rand (T21–T25, T30, T31)</td><td class="n">7</td><td>Engels, Duits en Italiaans; EUR en GBP; bewaartermijn van 30 dagen, 3 en 7 jaar; een private-equity fonds met 3% instap.</td></tr>
+<tr><td>Onzeker (T26–T29, T32)</td><td class="n">5</td><td>Actieve fondsen zonder index, twee factsheets die geen KID zijn, en een KID waar uitkerend of accumulerend niet in staat.</td></tr>
+</table></div>
+<p><b>Wat de score niet zegt:</b> mijn tool maakte op deze 32 inputs geen enkele fout, ook niet op de moeilijke. Daardoor kan de set geen verbetering meer laten zien: hij meet een plafond. Eén run is bovendien geen bewijs, want v1.2 schommelde eerder al tussen 9 en 10 van 10.</p>
+<p class="note">T31 en T32 (en daarmee de score 32/32) heb ik toegevoegd nadat de run op T01–T30 al klaar was (30/30), zonder de prompt aan te passen. Een score op set v1 en op set v2 vergelijk ik niet. Bron: <code>test-set.md</code>.</p>
+</section>
+
+<section>
 <h2>Drie setups, één run per input</h2>
 <div class="scroll"><table>
 <tr><th>Setup</th><th class="n">Score</th><th class="n">KID's juist</th><th class="n">Kost per run</th><th class="n">Per jaar (72)</th></tr>
@@ -82,14 +99,14 @@ small,.note{color:var(--mute);font-size:.85rem}
 <tr><td>Winst per ETF</td><td>9,8 min bij 10/10 · 8,6 min bij 9/10</td></tr>
 <tr><td>Volume</td><td>72 per jaar (48 tot 144), eigen schatting</td></tr>
 <tr><td>Uren per jaar</td><td>11,8 u · 10,3 u</td></tr>
-<tr><td>Uurkost</td><td>€15 per uur (aanname)</td></tr>
-<tr><td>Waarde</td><td>€177 · €154</td></tr>
+<tr><td>Uurkost</td><td>€22,50 per uur voor de werkgever (mijn bruto uurloon €15 × 1,5; eerst €15, gecorrigeerd in week 5)</td></tr>
+<tr><td>Waarde</td><td>€265 · €232</td></tr>
 <tr><td>Kost van de tool</td><td>± €2,61 per jaar (gemeten tokens, Sonnet 5.5)</td></tr>
-<tr><td><b>Netto per jaar</b></td><td><b>± €174 bij 10/10 · ± €152 bij 9/10</b></td></tr>
+<tr><td><b>Netto per jaar</b></td><td><b>± €262 bij 10/10 · ± €230 bij 9/10</b></td></tr>
 </table></div>
-<p><b>Bereik:</b> ± €152 tot ± €174 per jaar. De foutmarge verschuift het netto maar met ± €22.</p>
-<p><b>Zwakste cijfer: de nakijktijd van 2 min.</b> Geschat, niet gemeten, en de tool maakte fouten in het scenario. Is het 5 min, dan blijft er ± €120 netto over. Het volume weegt ook zwaarder dan de score: bij 48 per jaar ± €101 tot ± €116, bij 144 per jaar ± €304 tot ± €349.</p>
-<p class="note">Bron: <code>kosten.md</code>. Handwerk, nakijktijd, volume en uurkost zijn schattingen. Draaien en tokens zijn gemeten.</p>
+<p><b>Bereik:</b> ± €230 tot ± €262 per jaar. De foutmarge verschuift het netto maar met ± €32.</p>
+<p><b>Zwakste cijfer: de nakijktijd van 2 min.</b> Geschat, niet gemeten, en de tool maakte fouten in het scenario. Is het 5 min, dan blijft er ± €177 netto over bij 10/10 en ± €144 bij 9/10. Het volume weegt ook zwaarder dan de score: bij 48 per jaar ± €153 tot ± €175, bij 144 per jaar ± €459 tot ± €524.</p>
+<p class="note">Bron: <code>kosten.md</code>. Handwerk, nakijktijd, volume en uurkost zijn schattingen. Draaien en tokens zijn gemeten. Eerst rekende ik met €15 per uur (bruto), gecorrigeerd in week 5 naar de kost voor de werkgever (× 1,5).</p>
 </section>
 
 <p class="note">Alle cijfers komen uit mijn eigen bestanden in <code>build/</code>. Wat ik niet gemeten heb, staat er niet.</p>

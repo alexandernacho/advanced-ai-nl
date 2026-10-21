@@ -57,11 +57,13 @@ Tool: Sonnet 5.5, medium (setup A in `modellen.md`). Score: v1.2, 9 tot 10 van 1
 | Winst per ETF | **9,8 min** bij 10/10 · **8,6 min** bij 9/10 | berekend |
 | Volume | 72 per jaar (48 tot 144) | eigen schatting, `scenario.md` |
 | Uren per jaar | **11,8 u** bij 10/10 · **10,3 u** bij 9/10 | berekend |
-| Uurkost | **€15 per uur** | aanname van mij |
-| Waarde | **€177** bij 10/10 · **€154** bij 9/10 | berekend |
+| Uurkost | **€22,50 per uur voor de werkgever** (€15 bruto × 1,5). Gecorrigeerd in week 5: eerst €15 | aanname: mijn bruto uurloon × 1,5 (README week 5, stap 6) |
+| Waarde | **€265** bij 10/10 · **€232** bij 9/10. Gecorrigeerd in week 5: eerst €177 en €154 | berekend |
 | Kost van de tool | 72 × €0,036 = **± €2,61 per jaar** | `modellen.md` (gemeten tokens, README-prijs) |
-| Netto per jaar | **± €174** bij 10/10 · **± €152** bij 9/10 | berekend |
-| Bereik | **± €152 tot ± €174** per jaar | foutmarge |
-| Zwakste cijfer | **Nakijken: 2 min.** Geschat, en de tool maakte fouten in het scenario. Is het 5 min, dan blijft er ± €120 netto over (bereik 9 tot 10 van 10: zelfde schakel). | berekend |
+| Netto per jaar | **± €262** bij 10/10 · **± €230** bij 9/10. Gecorrigeerd in week 5: eerst ± €174 en ± €152 | berekend |
+| Bereik | **± €230 tot ± €262** per jaar. Gecorrigeerd in week 5: eerst ± €152 tot ± €174 | foutmarge |
+| Zwakste cijfer | **Nakijken: 2 min.** Geschat, en de tool maakte fouten in het scenario. Is het 5 min, dan blijft er ± €177 netto over bij 10/10 en ± €144 bij 9/10. Gecorrigeerd in week 5: eerst ± €120 (met €15 per uur). | berekend |
 
-**Wat zwaarder weegt dan de foutmarge:** de foutmarge verschuift het netto met ± €22. Het volume doet veel meer: bij 48 per jaar ± €101 tot ± €116, bij 144 per jaar ± €304 tot ± €349. Ook de nakijktijd weegt zwaarder dan de score.
+**Wat zwaarder weegt dan de foutmarge:** de foutmarge verschuift het netto met ± €32. Het volume doet veel meer: bij 48 per jaar ± €153 tot ± €175, bij 144 per jaar ± €459 tot ± €524. Ook de nakijktijd weegt zwaarder dan de score.
+
+**Gecorrigeerd in week 5:** ik rekende eerst met €15 per uur, mijn bruto uurloon. De README vraagt de kost voor de werkgever: bruto × 1,5 = €22,50. Alle cijfers van deze value chain zijn daarom opnieuw berekend. De oude waarden staan er telkens bij. De eerdere kopjes in dit bestand (week 4, "Waarde: met de hand of met de tool?" en "Vanaf welk volume doet de kost ertoe?") staan nog op €15.

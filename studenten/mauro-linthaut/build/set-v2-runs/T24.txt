@@ -1,0 +1,12 @@
+```
+ETF: iShares Core FTSE 100 UCITS ETF GBP (Acc)
+
+Risico-indicator: 4 | bron: "Nous avons classé ce produit dans la classe de risque 4 sur 7, qui est une classe de risque moyenne."
+Aanbevolen bewaartermijn: 5 jaar | bron: "Période de détention recommandée : 5 ans"
+Lopende kosten per jaar: 0,11% | bron: "Frais de gestion et autres coûts administratifs ou frais d’exploitation. 0,07 % de la valeur de votre investissement par an." en "Coûts de transaction 0,04 % de la valeur de votre investissement par an."
+Instapkosten: 0% | bron: "Nous ne vous demandons pas de frais d’entrée."
+Uitstapkosten: 0% | bron: "Nous ne vous demandons pas de frais de sortie."
+Gevolgde index: FTSE 100 Index | bron: "Le Fonds vise un rendement sur votre investissement, en combinant croissance du capital et revenu des actifs du Fonds, qui soit similaire au rendement du FTSE 100 Index, l’indice de référence du Fonds (Indice)."
+Uitkerend of accumulerend: accumulerend | bron: "Vos actions seront des actions de capitalisation (c'est-à-dire que les revenus seront inclus dans leur valeur)."
+Ongunstig scenario: 11.290 GBP en 2,5% per jaar | bron: "Défavorable** Ce que vous pourriez obtenir après déduction des coûts 7.950 GBP 11.290 GBP Rendement annuel moyen -20,5 % 2,5 %"
+```

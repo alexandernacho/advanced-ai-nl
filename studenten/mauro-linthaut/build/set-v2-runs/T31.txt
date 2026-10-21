@@ -1,0 +1,10 @@
+ETF: Nordea Specialised Investment Fund, SICAV-FIS – Global Private Equity Fund - BT - EUR Share Class
+
+Risico-indicator: 6 | bron: "We have classified this Fund as 6 out of 7, which is the second-highest risk class."
+Aanbevolen bewaartermijn: 10 jaar | bron: "Recommended Holding period: 10 years."
+Lopende kosten per jaar: 3,35% | bron: "3.35% of the value of your investment per year. This is an estimate based on actual costs over the last year, or on expected costs if the share class was recently launched." en "0.00% of the value of your investment per year. This is an estimate of the costs incurred when we buy and sell the underlying investments for the product."
+Instapkosten: 3,00% (maximum) | bron: "3.00% maximum is stated in the sub-fund's prospectus. This fee may be charged as a maximum by the AIFM or the person selling you the product."
+Uitstapkosten: 3,00% (maximum) | bron: "3.00% maximum is stated in the sub-fund's prospectus. This fee is not charged on a regular basis but could be applied in situations such as an investor redeeming before the recommended holding period."
+Gevolgde index: niet vermeld
+Uitkerend of accumulerend: accumulerend | bron: "Distribution policy: This share class is not distributing dividends. Income from investments is reinvested."
+Ongunstig scenario: 9.970 EUR en -0,03% per jaar | bron: "If you exit after 10 years - EUR 6 010 -4.96% EUR 9 970 -0.03% EUR 27 800 10.77% EUR 36 000 13.67%"

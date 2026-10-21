@@ -1,0 +1,12 @@
+```
+ETF: VanEck Uranium and Nuclear Technologies UCITS ETF
+
+Risico-indicator: 5 | bron: "We hebben dit product ingedeeld in klasse 5 uit 7; dat is een middelgroot-hoge risicoklasse"
+Aanbevolen bewaartermijn: 5 jaar | bron: "Aanbevolen periode van bezit: 5 jaar"
+Lopende kosten per jaar: 0,56% | bron: "0,55 % van de waarde van uw belegging per jaar. Dit is een schatting op basis van de feitelijke kosten van het afgelopen jaar." en "0,01 % van de waarde van uw belegging per jaar. Dit is een schatting van de kosten die ontstaan wanneer we de onderliggende beleggingen voor het product kopen en verkopen."
+Instapkosten: 0% | bron: "Wij brengen geen instapkosten in rekening."
+Uitstapkosten: 0% | bron: "Wij brengen voor dit product geen uitstapkosten in rekening, maar de persoon die u het product verkoopt, doet dat misschien wel."
+Gevolgde index: MarketVector Global Uranium and Nuclear Energy Infrastructure Index | bron: "De beleggingsdoelstelling van het product is om de MarketVector™ Global Uranium and Nuclear Energy Infrastructure Index (de "Index") te repliceren, vóór kosten en vergoedingen."
+Uitkerend of accumulerend: accumulerend | bron: "Uitkeringsbeleid: Opbrengsten herbelegd"
+Ongunstig scenario: 13.140 USD en 5,61% per jaar | bron: "USD 13.140 5,61 %"
+```

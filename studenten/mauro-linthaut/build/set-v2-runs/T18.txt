@@ -1,0 +1,12 @@
+```
+ETF: L&G Cyber Security UCITS ETF
+
+Risico-indicator: 5 | bron: "We hebben dit product ingedeeld in klasse 5 uit 7; dat is een middelgroot-hoge risicoklasse."
+Aanbevolen bewaartermijn: 5 jaar | bron: "Aanbevolen periode van bezit: 5 (Jaar)"
+Lopende kosten per jaar: 0,76% | bron: "0.69% van de waarde van uw belegging per jaar. Dit is een schatting op basis van de feitelijke kosten van het afgelopen jaar." en "0.07% van de waarde van uw belegging per jaar. Dit is een schatting van de kosten die ontstaan wanneer we de onderliggende beleggingen voor het product kopen en verkopen."
+Instapkosten: 0% | bron: "Wij vragen geen entreegeld."
+Uitstapkosten: 0% | bron: "Wij brengen voor dit product geen uitstapkosten in rekening, maar de persoon die u het product verkoopt, doet dat misschien wel."
+Gevolgde index: ISE Cyber Security UCITS Index Net Total Return | bron: "Het Fonds wordt passief beheerd en streeft ernaar de prestaties van de ISE Cyber Security® UCITS Index Net Total Return (de "Index") te evenaren, vóór aftrek van kosten en vergoedingen."
+Uitkerend of accumulerend: accumulerend | bron: "Alle opbrengsten die voortkomen uit de beleggingen van het Fonds, worden in het Fonds herbelegd."
+Ongunstig scenario: 12.220 USD en 4,1% per jaar | bron: "12,220 USD 4.1%"
+```
