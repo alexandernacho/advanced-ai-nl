@@ -1,0 +1,4 @@
+OORDEEL: NO-GO
+RISICO'S:
+- B: "Promotionele Elektronische Producten" — De pagina noemt het product ook elektronisch en er is geen lijst met certificaten, dus CE niet vermeld.
+UITLEG: De pagina noemt het product zowel kantoor-, huishoud- als elektronisch product, dus behandel je het als elektronica, en daarvoor staat geen CE op de pagina.

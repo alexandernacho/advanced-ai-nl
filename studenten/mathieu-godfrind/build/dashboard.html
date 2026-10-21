@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mijn dashboard, week 5</title>
+<style>
+  :root {
+    --bg: #f7f7f5;
+    --card: #ffffff;
+    --text: #1d1d1b;
+    --muted: #6b6b66;
+    --line: #dcdcd6;
+    --accent: #2f6f5e;
+    --warn: #a4442a;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #161614;
+      --card: #20201d;
+      --text: #efefea;
+      --muted: #a3a39c;
+      --line: #3a3a35;
+      --accent: #7fc4ae;
+      --warn: #e58b6f;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #161614;
+    --card: #20201d;
+    --text: #efefea;
+    --muted: #a3a39c;
+    --line: #3a3a35;
+    --accent: #7fc4ae;
+    --warn: #e58b6f;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.5;
+  }
+  main { max-width: 680px; margin: 0 auto; padding: 16px; }
+  h1 { font-size: 1.5rem; margin: 8px 0 4px; }
+  h2 { font-size: 1.1rem; margin: 0 0 8px; color: var(--accent); }
+  p.sub { color: var(--muted); margin: 0 0 16px; }
+  section {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 14px;
+  }
+  .big { font-size: 1.8rem; font-weight: 700; color: var(--accent); }
+  .muted { color: var(--muted); font-size: 0.9rem; }
+  .warn { color: var(--warn); }
+  .table-wrap { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+  th, td { text-align: left; padding: 6px 4px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--muted); font-weight: 600; }
+  td.num, th.num { text-align: right; white-space: nowrap; }
+  tr.total td { font-weight: 700; border-bottom: none; }
+  ul { padding-left: 18px; margin: 6px 0; }
+  li { margin: 2px 0; }
+  code { font-size: 0.9em; }
+</style>
+</head>
+<body>
+<main>
+
+<h1>Mijn dashboard, week 5</h1>
+<p class="sub">Score, claim, modellen en value chain van mijn screeningstool voor Vinted. Cijfers uit mijn eigen bestanden in <code>build/</code>.</p>
+
+<section>
+  <h2>1. Mijn score en de foutmarge</h2>
+  <p>Mijn tool op 13 inputs (T01 tot T13), 3 runs per versie, model claude-haiku-5-5. Zelfde inputs voor beide versies.</p>
+  <div class="table-wrap">
+  <table>
+    <tr><th>Versie</th><th class="num">Run 1</th><th class="num">Run 2</th><th class="num">Run 3</th><th class="num">Foutmarge (min–max)</th></tr>
+    <tr><td>v2</td><td class="num">13/13</td><td class="num">12/13</td><td class="num">12/13</td><td class="num">12–13 (92–100%)</td></tr>
+    <tr><td>v3</td><td class="num">12/13</td><td class="num">12/13</td><td class="num">12/13</td><td class="num">12–12 (92%)</td></tr>
+  </table>
+  </div>
+  <p class="muted">Gemeten op label en risico's. Bij v3 zit in elke run één fout: T05 (vage titel). Het hoort ONZEKER te zijn, maar de tool zegt in alle drie de runs NO-GO.</p>
+</section>
+
+<section>
+  <h2>2. Mijn claim uit week 3</h2>
+  <p><em>"Het was nog altijd GO en het woord licht was weg."</em></p>
+  <p><strong>Bevestigd, maar het verschil is klein.</strong> 2 foute keren <code>licht</code> bij v2 (allebei in run 2) tegen 0 bij v3, op 39 antwoorden elk.</p>
+  <p class="muted">Het gaat om de uitleg, niet om het label. Bij v2 was "licht" 11 keer te lezen; 2 keer was er geen gewicht op de pagina. Bij v3 was het 1 keer, en daar stond het gewicht wel op de pagina (0.3 kg). Op het label is v3 niet beter dan v2 (v2 12–13, v3 12).</p>
+</section>
+
+<section>
+  <h2>3. Welk model? Drie setups, één run elk</h2>
+  <p>Mijn gok vóór de runs: Opus is het beste, Haiku is goed genoeg voor Vinted.</p>
+  <div class="table-wrap">
+  <table>
+    <tr><th>Setup</th><th>Model</th><th>Effort</th><th class="num">Score</th><th class="num">Kost per run</th><th>Binnen foutmarge?</th></tr>
+    <tr><td>A</td><td>Sonnet 5.5</td><td>medium</td><td class="num">10/13</td><td class="num">nog niet gemeten</td><td class="warn">Nee: onder 12–12 van v3</td></tr>
+    <tr><td>B</td><td>Haiku 5.5</td><td>standaard</td><td class="num">12/13</td><td class="num">nog niet gemeten</td><td>Ja</td></tr>
+    <tr><td>C</td><td>Opus 5.5</td><td>standaard</td><td class="num">12/13</td><td class="num">nog niet gemeten</td><td>Ja</td></tr>
+  </table>
+  </div>
+  <ul>
+    <li><strong>Gok 1, "Opus is best":</strong> klopt niet. Opus en Haiku scoren gelijk (12 op 13).</li>
+    <li><strong>Gok 2, "Haiku is goed genoeg":</strong> klopt. Zelfde score als Opus, en het goedkoopste.</li>
+    <li><strong>Sonnet</strong> scoort het slechtst (10 op 13), dat had ik niet verwacht.</li>
+  </ul>
+  <p class="muted">Elk model maar één run, dus dit is geen bewijs. De kost per run per setup is niet gemeten.</p>
+</section>
+
+<section>
+  <h2>4. Kosten van de tool</h2>
+  <table>
+    <tr><th>Post</th><th class="num">Waarde</th></tr>
+    <tr><td>Kost per run (Haiku 5.5)</td><td class="num">$0,0012 (€0,0011)</td></tr>
+    <tr><td>Kost per jaar (960 runs)</td><td class="num">€1,06</td></tr>
+  </table>
+  <p class="muted">Prijs $0,10 per miljoen input-tokens en $0,50 per miljoen output-tokens, zoals in de cursustabel van week 5. Koers 0,90 euro per dollar (aanname uit de cursus).</p>
+</section>
+
+<section>
+  <h2>5. Value chain: hoeveel tijd en geld wint mijn tool?</h2>
+  <div class="table-wrap">
+  <table>
+    <tr><th>Stap</th><th>Berekening</th><th class="num">Uitkomst</th></tr>
+    <tr><td>1. Met de hand</td><td>Geschat</td><td class="num">4 min 50 s</td></tr>
+    <tr><td>2. Met de tool</td><td>2 min draaien + fouten herstellen (1/13 van 4 min 50)</td><td class="num">2 min 22 s</td></tr>
+    <tr><td>3. Winst per taak</td><td>4 min 50 − 2 min 22</td><td class="num">2 min 28 s</td></tr>
+    <tr><td>4. Volume</td><td>Geschat</td><td class="num">960 per jaar</td></tr>
+    <tr><td>5. Uren per jaar</td><td>2 min 28 s × 960</td><td class="num">39,4 uur</td></tr>
+    <tr><td>6. Uurkost werkgever</td><td>13 euro bruto × 1,5 (vuistregel)</td><td class="num">€19,50</td></tr>
+    <tr><td>7. Kost van de tool</td><td>Per jaar, zie punt 4</td><td class="num">€1,06</td></tr>
+    <tr class="total"><td>8. Netto per jaar</td><td>€768 − €1</td><td class="num">€767</td></tr>
+  </table>
+  </div>
+</section>
+
+<section>
+  <h2>6. Bereik en zwakste cijfer</h2>
+  <p><strong>Bereik:</strong> met mijn laagste score (12 op 13) is het netto €767 per jaar, met mijn hoogste (13 op 13) €883 per jaar. Dat is ± €767 tot €883.</p>
+  <p><strong>Zwakste cijfer:</strong> de 4 min 50 met de hand. Als dat de helft is (2 min 25 s), daalt het netto naar <strong>€71 per jaar</strong>.</p>
+  <p>Dat verschil van ± €696 is veel groter dan de foutmarge van ± €116. Het zwakste cijfer is dus mijn handtijd, niet de score.</p>
+  <p class="muted">Bij de halvering is aangenomen dat het fouten herstellen meedaalt, omdat dat aan dezelfde handtijd hangt.</p>
+</section>
+
+</main>
+</body>
+</html>

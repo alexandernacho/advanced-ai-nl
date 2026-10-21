@@ -1,0 +1,4 @@
+OORDEEL: NO-GO
+RISICO'S:
+- C: "Glass" — Het basismateriaal is glas, en glas is breekbaar.
+UITLEG: Glas is breekbaar, dus het product is moeilijk te verzenden.

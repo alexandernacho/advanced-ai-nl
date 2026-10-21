@@ -1,0 +1,4 @@
+OORDEEL: NO-GO
+RISICO'S:
+- C: "Glass" — Het product is een glazen parfumfles, en glas is breekbaar.
+UITLEG: Glazen flesjes zijn breekbaar en de pagina vermeldt geen verpakking die dat opvangt.
