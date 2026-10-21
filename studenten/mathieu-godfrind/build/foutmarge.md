@@ -44,3 +44,5 @@ Mijn claim uit week 3: Het was nog altijd GO en het woord licht was weg.
 **Bevestigd of ingetrokken:** Bevestigd, maar het verschil is klein: 2 foute keren licht bij v2 (allebei in run 2) tegen 0 bij v3, op 39 antwoorden elk. Mijn claim gaat over de uitleg, niet over het label. In de uitleg zei v2 11 keer licht op 39 antwoorden, waarvan 2 keer fout: geen gewicht op de pagina (T03 run 2 en T10 run 2). v3 zei 1 keer licht, en dat was niet fout (T01 run 1, het gewicht 0.3 kg staat op de pagina). Licht mag als het gewicht op de pagina staat. De labelscores (v2 12-13, v3 12) overlappen, dus op het label is v3 niet beter.
 
 Opmerking: T05 is bij beide versies het zwakke punt. v2 was er 2 van de 3 keer fout, v3 3 van de 3 keer. Dat is het verschil tussen de twee versies op deze inputs.
+
+Zelf nagekeken: out-v2-r1-T05 (ONZEKER) is juist. out-v3-r1-T05 (NO-GO, B) is F1: verkeerd label, maar het citaat staat echt op de pagina. Ik ben het eens met de scoring.
