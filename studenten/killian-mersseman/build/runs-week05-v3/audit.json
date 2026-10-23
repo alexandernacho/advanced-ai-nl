@@ -1,0 +1,977 @@
+[
+  {
+    "id": "T01-run1",
+    "seconds": 60.66,
+    "usage": {
+      "input_tokens": 45972,
+      "cached_input_tokens": 8960,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1597,
+      "reasoning_output_tokens": 39
+    },
+    "item_types": [
+      "agent_message",
+      "error"
+    ],
+    "records": [
+      {
+        "ticker": "NVO",
+        "metric": "FCF",
+        "start": "2026-04-01",
+        "end": "2026-06-30",
+        "period_type": "Kwartaal",
+        "value": 42524,
+        "currency": "DKK",
+        "method": "Gerapporteerd",
+        "definition": "Vanaf 2026: net cash generated from operating activities minus purchase of property, plant and equipment.",
+        "source": "NVO-2026-06-30.pdf",
+        "page": "Gedrukte/pdf-pagina 37, Appendix 7 — Free cash flow; pagina 3, Financial highlights; pagina 27, Appendix 2",
+        "evidence": "Oorspronkelijke schaal: DKK million. Q2 2026 operationele kasstroom 55,199; aankopen materiële vaste activa (12,675); gerapporteerde FCF 42,524. Rekenkundige controle: 55199 - 12675 = 42524.",
+        "status": "Nog te controleren",
+        "note": "Afzonderlijke kwartaal-FCF beschikbaar. Definitie gewijzigd vanaf 2026; vergelijkende cijfers zijn herzien. Aankopen immateriële activa worden niet afgetrokken in deze definitie. Vanaf 1 januari 2026 worden ontvangen rente onder investeringskasstromen en betaalde rente onder financieringskasstromen gepresenteerd; voorheen vielen beide onder operationele kasstromen."
+      },
+      {
+        "ticker": "NVO",
+        "metric": "Schuld",
+        "start": null,
+        "end": "2026-06-30",
+        "period_type": "Peildatum",
+        "value": 140127,
+        "currency": "DKK",
+        "method": "Berekend",
+        "definition": "Boekwaarde van kortlopende plus langlopende Borrowings, inclusief de daarin opgenomen leaseverplichtingen; zonder aftrek van kasmiddelen of effecten.",
+        "source": "NVO-2026-06-30.pdf",
+        "page": "Gedrukte/pdf-pagina 28, Appendix 3 — Condensed balance sheet; pagina 37, Appendix 7 — Net debt; pagina 14, Bonds",
+        "evidence": "Oorspronkelijke schaal: DKK million. Langlopende Borrowings 121,794 plus kortlopende Borrowings 18,333 = 140,127. De nettoschuldreconciliatie vermeldt 8,622 aan leaseverplichtingen binnen Borrowings. Exclusief deze leases bedraagt Borrowings 140127 - 8622 = 131505; dit is geen nettoschuld.",
+        "status": "Onzeker",
+        "note": "De balans levert beide looptijdcomponenten, maar geen verdere uitsplitsing van Borrowings. Operationele leases: niet afzonderlijk gekwantificeerd. Financiële leases: niet afzonderlijk gekwantificeerd. Het gezamenlijke leasebedrag van 8622 is inbegrepen; verdeling naar categorie en looptijd ontbreekt. Renteloze obligaties zijn niet afzonderlijk geïdentificeerd; eventuele daarin opgenomen boekwaarden worden niet wegens een nulcoupon uitgesloten. Volledigheid van deze afbakening kan uit het rapport niet definitief worden vastgesteld. De nominale EUR- en CHF-obligatiebedragen op pagina 14 worden niet bij de boekwaarden opgeteld."
+      },
+      {
+        "ticker": "NVO",
+        "metric": "Omzetgroei",
+        "start": "2026-04-01",
+        "end": "2026-06-30",
+        "period_type": "Kwartaal",
+        "value": 0.02,
+        "currency": null,
+        "method": "Gerapporteerd",
+        "definition": "Gerapporteerde groei van IFRS-netto-omzet in DKK tegenover hetzelfde kwartaal vorig jaar; geen aangepaste omzetgroei en geen constante valuta.",
+        "source": "NVO-2026-06-30.pdf",
+        "page": "Gedrukte/pdf-pagina 4, Q2 and H1 2026 reported sales; pagina 26, Appendix 1 — Condensed income statement; pagina 34, Appendix 7 — Net sales and operating profit growth at CER",
+        "evidence": "Oorspronkelijke schaal omzet: DKK million. Q2 2026 Net sales 78,488; Q2 2025 Net sales 76,857. Gerapporteerde groei in DKK: 2%, opgeslagen als 0.02. Afzonderlijke controle: (78488 / 76857 - 1) circa 0.02122123, oftewel 2.122123%. Controleberekening minus gerapporteerde groei: circa +0.122123 procentpunt. Afzonderlijke gerapporteerde groei bij constante valuta: 3%, oftewel 0.03.",
+        "status": "Nog te controleren",
+        "note": "Geen oorzaak toegekend aan het verschil tussen controleberekening en gerapporteerd percentage. Vergelijkingsperiode: 2025-04-01 t/m 2025-06-30. Volgens pagina 4 bevat Q2 2025 een 340B-provisievrijval; Q2 2026 niet. De hoofdwaarde blijft de gerapporteerde omzetgroei."
+      }
+    ]
+  },
+  {
+    "id": "T01-run2",
+    "seconds": 46.44,
+    "usage": {
+      "input_tokens": 45972,
+      "cached_input_tokens": 8960,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1580,
+      "reasoning_output_tokens": 43
+    },
+    "item_types": [
+      "agent_message",
+      "error"
+    ],
+    "records": [
+      {
+        "ticker": "NVO",
+        "metric": "FCF",
+        "start": "2026-04-01",
+        "end": "2026-06-30",
+        "period_type": "Kwartaal",
+        "value": 42524,
+        "currency": "DKK",
+        "method": "Gerapporteerd",
+        "definition": "Net cash generated from operating activities minus Purchase of property, plant and equipment.",
+        "source": "NVO-2026-06-30.pdf",
+        "page": "Gedrukte/pdf-pagina 3, Performance highlights; 37, Appendix 7 — Free cash flow; 27, Appendix 2 — Condensed cash flow statement",
+        "evidence": "Oorspronkelijke schaal: DKK million. Q2 2026: operationele kasstroom 55,199; aankopen materiële vaste activa (12,675); gerapporteerde FCF 42,524. Reconciliatie: 55199 - 12675 = 42524.",
+        "status": "Nog te controleren",
+        "note": "Afzonderlijke kwartaal-FCF beschikbaar. Vanaf 2026 geldt deze FCF-definitie; vergelijkende cijfers zijn herzien. De eerdere FCF-definitie wordt niet volledig beschreven in dit rapport. Vanaf 1 januari 2026 zijn ontvangen rente en betaalde rente ingedeeld bij respectievelijk investerings- en financieringskasstromen in plaats van operationele kasstromen. Geen aanvullende aftrek van immateriële activa of leasebetalingen toegepast."
+      },
+      {
+        "ticker": "NVO",
+        "metric": "Schuld",
+        "start": null,
+        "end": "2026-06-30",
+        "period_type": "Peildatum",
+        "value": 140127,
+        "currency": "DKK",
+        "method": "Berekend",
+        "definition": "Som van de boekwaarden van kortlopende en langlopende Borrowings, inclusief de daarin opgenomen leaseverplichtingen; zonder aftrek van liquide middelen of effecten.",
+        "source": "NVO-2026-06-30.pdf",
+        "page": "Gedrukte/pdf-pagina 28, Appendix 3 — Condensed balance sheet; 37, Appendix 7 — Net debt; 14, Bonds",
+        "evidence": "Oorspronkelijke schaal: DKK million. Borrowings non-current 121,794 plus Borrowings current 18,333: 121794 + 18333 = 140127. De net-debtreconciliatie vermeldt een add-back van lease liabilities van 8,622; deze zijn dus inbegrepen in Borrowings. Borrowings exclusief leases: 140127 - 8622 = 131505.",
+        "status": "Onzeker",
+        "note": "De som van beide balansposten is beschikbaar, maar een volledige uitsplitsing van financiële schuld ontbreekt. Leaseverplichtingen van 8622 zijn inbegrepen; operationele leases en financiële leases zijn niet afzonderlijk gekwantificeerd of geclassificeerd. Een kortlopende/langlopende splitsing van leases ontbreekt. Renteloze obligaties worden niet afzonderlijk geïdentificeerd: voor zover opgenomen in Borrowings blijven ze tegen boekwaarde inbegrepen; hun aanwezigheid en volledigheid zijn niet vast te stellen. De nominale EUR- en CHF-obligatiebedragen op pagina 14 zijn niet als extra schuld toegevoegd."
+      },
+      {
+        "ticker": "NVO",
+        "metric": "Omzetgroei",
+        "start": "2026-04-01",
+        "end": "2026-06-30",
+        "period_type": "Kwartaal",
+        "value": 0.02,
+        "currency": null,
+        "method": "Gerapporteerd",
+        "definition": "Gerapporteerde groei van IFRS-netto-omzet in DKK tegenover hetzelfde kwartaal vorig jaar.",
+        "source": "NVO-2026-06-30.pdf",
+        "page": "Gedrukte/pdf-pagina 4, Q2 and H1 2026 reported sales; 26, Appendix 1 — Condensed income statement; 34, Appendix 7 — Net sales and operating profit growth at CER",
+        "evidence": "Gerapporteerde kwartaalgroei in DKK: 2%, opgeslagen als 0.02. Oorspronkelijke omzetbedragen, schaal DKK million: Q2 2026 78,488; Q2 2025 76,857. Afzonderlijke controle: (78488 / 76857 - 1) ≈ 0.02122123, oftewel 2,122123%. Controle minus gerapporteerd: circa +0,122123 procentpunt. Afzonderlijk gerapporteerde CER-groei: 3%, fractie 0.03.",
+        "status": "Nog te controleren",
+        "note": "Hoofdwaarde is de gerapporteerde omzetgroei in DKK. De oorzaak van het verschil met de controleberekening wordt niet vastgesteld. CER sluit wisselkoerseffecten en volgens de rapportdefinitie prijsaanpassingen in hyperinflatoire landen uit. Adjusted sales growth van 6% in DKK en 7% at CER is niet als hoofdwaarde gebruikt."
+      }
+    ]
+  },
+  {
+    "id": "T01-run3",
+    "seconds": 45.7,
+    "usage": {
+      "input_tokens": 45972,
+      "cached_input_tokens": 8960,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1549,
+      "reasoning_output_tokens": 61
+    },
+    "item_types": [
+      "agent_message",
+      "error"
+    ],
+    "records": [
+      {
+        "ticker": "NVO",
+        "metric": "FCF",
+        "start": "2026-04-01",
+        "end": "2026-06-30",
+        "period_type": "Kwartaal",
+        "value": 42524,
+        "currency": "DKK",
+        "method": "Gerapporteerd",
+        "definition": "Net cash generated from operating activities minus Purchase of property, plant and equipment.",
+        "source": "NVO-2026-06-30.pdf",
+        "page": "37 — Appendix 7: Non-IFRS financial measures, Free cash flow; 27 — Appendix 2: Condensed cash flow statement, voetnoot 1",
+        "evidence": "Oorspronkelijke schaal: DKK million. Q2 2026 operationele kasstroom 55,199; aankopen materiële vaste activa (12,675); gerapporteerde FCF 42,524. Controle: 55199 - 12675 = 42524 miljoen DKK.",
+        "status": "Nog te controleren",
+        "note": "Afzonderlijke kwartaal-FCF beschikbaar. Definitie gewijzigd vanaf 2026; vergelijkende cijfers zijn herzien. Vanaf 1 januari 2026 worden ontvangen rente onder investeringsactiviteiten en betaalde rente onder financieringsactiviteiten gepresenteerd; voorheen stonden beide onder operationele activiteiten. Aankopen immateriële activa worden binnen deze FCF-definitie niet afgetrokken."
+      },
+      {
+        "ticker": "NVO",
+        "metric": "Schuld",
+        "start": null,
+        "end": "2026-06-30",
+        "period_type": "Peildatum",
+        "value": 140127,
+        "currency": "DKK",
+        "method": "Berekend",
+        "definition": "Boekwaarde van kortlopende plus langlopende Borrowings, inclusief de daarin opgenomen leaseverplichtingen; zonder aftrek van liquide middelen of effecten.",
+        "source": "NVO-2026-06-30.pdf",
+        "page": "28 — Appendix 3: Condensed balance sheet; 37 — Appendix 7: Non-IFRS financial measures, Net debt; 14 — Bonds",
+        "evidence": "Oorspronkelijke schaal: DKK million. Non-current Borrowings 121,794; current Borrowings 18,333. Som: 121794 + 18333 = 140127 miljoen DKK. De net debt-reconciliatie toont dezelfde Borrowings met een lease-add-back van 8,622, waaruit blijkt dat deze leaseverplichtingen in Borrowings zijn opgenomen. Exclusief deze leases bedraagt Borrowings 131505 miljoen DKK.",
+        "status": "Onzeker",
+        "note": "Beide looptijdcomponenten van Borrowings zijn beschikbaar. Operationele leases: geen afzonderlijk bedrag of expliciete behandeling vermeld. Financiële leases: geen afzonderlijk bedrag of expliciete behandeling vermeld. Alleen totale leaseverplichtingen van 8622 miljoen DKK zijn identificeerbaar; de verdeling over kort/lang ontbreekt. Renteloze obligaties zijn niet afzonderlijk geïdentificeerd: niet wegens een nulcoupon uitgesloten, maar opname en boekwaarde zijn niet afzonderlijk te controleren. Volledigheid buiten Borrowings is niet expliciet bevestigd."
+      },
+      {
+        "ticker": "NVO",
+        "metric": "Omzetgroei",
+        "start": "2026-04-01",
+        "end": "2026-06-30",
+        "period_type": "Kwartaal",
+        "value": 0.02,
+        "currency": null,
+        "method": "Gerapporteerd",
+        "definition": "Gerapporteerde groei van IFRS-netto-omzet in DKK tegenover hetzelfde kwartaal van het voorgaande jaar.",
+        "source": "NVO-2026-06-30.pdf",
+        "page": "4 — Commercial execution, Q2 and H1 2026 reported sales; 26 — Appendix 1: Condensed income statement; 34 — Appendix 7: Net sales and operating profit growth at CER",
+        "evidence": "Gerapporteerde Q2-omzetgroei in DKK: 2%, opgeslagen als 0.02. Oorspronkelijke omzetbedragen, schaal DKK million: Q2 2026 78,488; Q2 2025 76,857. Afzonderlijke controle: (78488 / 76857 - 1) ≈ 0.021221, oftewel 2,1221%. Controle minus gerapporteerd: circa +0,1221 procentpunt.",
+        "status": "Nog te controleren",
+        "note": "Hoofdwaarde blijft het gerapporteerde percentage; voor het verschil met de controleberekening wordt geen oorzaak verondersteld. Gerapporteerde groei bij constante valuta is afzonderlijk 0.03. Adjusted sales growth is een andere maatstaf: 0.06 in DKK en 0.07 bij constante valuta, en is niet als hoofdwaarde gebruikt."
+      }
+    ]
+  },
+  {
+    "id": "T02-run1",
+    "seconds": 50.03,
+    "usage": {
+      "input_tokens": 49691,
+      "cached_input_tokens": 8960,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1623,
+      "reasoning_output_tokens": 66
+    },
+    "item_types": [
+      "agent_message",
+      "error"
+    ],
+    "records": [
+      {
+        "ticker": "LLY",
+        "metric": "FCF",
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "period_type": "Halfjaar",
+        "value": 10764,
+        "currency": "USD",
+        "method": "Berekend",
+        "definition": "Operationele kasstroom minus aankopen van materiële vaste activa over dezelfde periode.",
+        "source": "LLY-2026-06-30.pdf",
+        "page": "Gedrukte pagina 8 / pdf-pagina 8 — Consolidated Condensed Statements of Cash Flows",
+        "evidence": "Oorspronkelijke schaal: dollars in millions. Six Months Ended June 30, 2026: Net Cash Provided by Operating Activities $16,023; Purchases of property and equipment $(5,259). FCF = 16023 - 5259 = 10764 miljoen USD.",
+        "status": "Nog te controleren",
+        "note": "Geen gerapporteerde FCF of afzonderlijke kwartaalcomponenten gevonden. Het vooraf gekozen halfjaar is gebruikt, zonder deling door twee. Dit is de voorgeschreven berekende definitie, geen gerapporteerde bedrijfsdefinitie. Expenditures for long-lived assets op pagina 23 omvat ook computersoftware en is niet gebruikt als vervanging voor aankopen van materiële vaste activa."
+      },
+      {
+        "ticker": "LLY",
+        "metric": "Schuld",
+        "start": null,
+        "end": "2026-06-30",
+        "period_type": "Peildatum",
+        "value": 54908,
+        "currency": "USD",
+        "method": "Berekend",
+        "definition": "Som van de boekwaarden van kortlopende financiële schuld, inclusief lopende aflossingen van langlopende schuld, en langlopende financiële schuld.",
+        "source": "LLY-2026-06-30.pdf",
+        "page": "Gedrukte pagina 7 / pdf-pagina 7 — Consolidated Condensed Balance Sheets; gedrukte pagina 17 / pdf-pagina 17 — Note 8: Financial Instruments, Debt; gedrukte pagina 31 / pdf-pagina 31 — Financial Condition and Liquidity",
+        "evidence": "Oorspronkelijke schaal op pagina 7 en 17: dollars in millions. Short-term borrowings and current maturities of long-term debt $7,050 + Long-term debt $47,858 = 54908 miljoen USD. Aansluiting Note 8: Short-term commercial paper borrowings, carrying amount $5,284 + Long-term debt, including current portion, carrying amount $49,624 = 54908. Hieruit volgt een lopend deel van langlopende schuld van 1766. Pagina 31 vermeldt total debt $54.9 billion, oftewel afgerond 54900 miljoen USD.",
+        "status": "Onzeker",
+        "note": "De expliciete schuldposten sluiten aan; geen nettoschuld of totale verplichtingen gebruikt. Operationele leases: bedragen en verwerking binnen deze schuldafbakening ontbreken. Financiële leases: bedragen en eventuele opname in de schuldposten ontbreken; geen afzonderlijke bijtelling mogelijk. Renteloze obligaties zijn niet afzonderlijk vermeld; eventuele opname is uitsluitend via de gerapporteerde boekwaarden, zonder uitsluiting op grond van een nulcoupon. Hun aanwezigheid en omvang zijn niet vast te stellen. Volledigheid en leaseafbakening blijven daarom onzeker."
+      },
+      {
+        "ticker": "LLY",
+        "metric": "Omzetgroei",
+        "start": "2026-04-01",
+        "end": "2026-06-30",
+        "period_type": "Kwartaal",
+        "value": 0.48,
+        "currency": null,
+        "method": "Gerapporteerd",
+        "definition": "Gerapporteerde groei van de geconsolideerde kwartaalomzet tegenover hetzelfde kwartaal vorig jaar.",
+        "source": "LLY-2026-06-30.pdf",
+        "page": "Gedrukte pagina 24 / pdf-pagina 24 — Executive Overview, Financial Results; gedrukte pagina 28 / pdf-pagina 28 — Results of Operations, Revenue; gedrukte pagina 5 / pdf-pagina 5 — Consolidated Condensed Statements of Operations",
+        "evidence": "Gerapporteerde kwartaalgroei: 48%, opgeslagen als fractie 0.48. Oorspronkelijke omzetschaal: dollars in millions. Three Months Ended June 30: 2026 $22,974 en 2025 $15,558. Afzonderlijke controleberekening: (22974 / 15558 - 1) = circa 0.476668, oftewel 47.6668%. Controleberekening minus gerapporteerde groei = circa -0.3332 procentpunt.",
+        "status": "Nog te controleren",
+        "note": "Het gerapporteerde percentage blijft de hoofdwaarde; geen oorzaak voor het verschil met de controleberekening vastgesteld. Constantevalutagroei is niet afzonderlijk gerapporteerd. De wisselkoersbijdrage van 1% in de kwartaalbrug op pagina 28 is afzonderlijke informatie en is niet gebruikt om constantevalutagroei te berekenen."
+      }
+    ]
+  },
+  {
+    "id": "T02-run2",
+    "seconds": 49.22,
+    "usage": {
+      "input_tokens": 49691,
+      "cached_input_tokens": 8960,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1598,
+      "reasoning_output_tokens": 81
+    },
+    "item_types": [
+      "agent_message",
+      "error"
+    ],
+    "records": [
+      {
+        "ticker": "LLY",
+        "metric": "FCF",
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "period_type": "Halfjaar",
+        "value": 10764,
+        "currency": "USD",
+        "method": "Berekend",
+        "definition": "Operationele kasstroom minus aankopen van materiële vaste activa over dezelfde periode.",
+        "source": "LLY-2026-06-30.pdf",
+        "page": "Gedrukte pagina 8 / pdf-pagina 8 — Consolidated Condensed Statements of Cash Flows",
+        "evidence": "Oorspronkelijke schaal: Dollars in millions. Six Months Ended June 30, 2026: Net Cash Provided by Operating Activities $16,023; Purchases of property and equipment $(5,259). FCF = 16023 - 5259 = 10764 miljoen USD.",
+        "status": "Nog te controleren",
+        "note": "Geen gerapporteerde FCF of afzonderlijke kwartaaloperationele kasstroom gevonden. Het vooraf gekozen halfjaar is gebruikt zonder deling door het aantal kwartalen. Dit is de voorgeschreven berekende definitie, geen gerapporteerde bedrijfsdefinitie. Expenditures for long-lived assets op pagina 23 omvat ook computersoftware en is daarom niet als vervanging voor aankopen van materiële vaste activa gebruikt."
+      },
+      {
+        "ticker": "LLY",
+        "metric": "Schuld",
+        "start": null,
+        "end": "2026-06-30",
+        "period_type": "Peildatum",
+        "value": 54908,
+        "currency": "USD",
+        "method": "Berekend",
+        "definition": "Som van de boekwaarde van kortlopende financiële schuld inclusief kortlopende aflossingen van langlopende schuld en de boekwaarde van langlopende schuld.",
+        "source": "LLY-2026-06-30.pdf",
+        "page": "Gedrukte pagina 7 / pdf-pagina 7 — Consolidated Condensed Balance Sheets; gedrukte pagina 17 / pdf-pagina 17 — Note 8: Financial Instruments, Debt; gedrukte pagina 31 / pdf-pagina 31 — Financial Condition and Liquidity",
+        "evidence": "Oorspronkelijke schaal: Dollars in millions. Short-term borrowings and current maturities of long-term debt $7,050 + Long-term debt $47,858 = 54908 miljoen USD. Aansluiting Note 8: Short-term commercial paper borrowings, carrying amount $5,284 + Long-term debt, including current portion, carrying amount $49,624 = 54908. Hieruit volgt een kortlopend deel van langlopende schuld van 1766 miljoen USD. Pagina 31 vermeldt total debt van $54.9 billion.",
+        "status": "Onzeker",
+        "note": "De expliciete schuldposten sluiten aan; er is geen ontbrekende component binnen deze aansluiting. Operationele leases: bedragen en classificatie niet afzonderlijk vermeld; geen bedrag toegevoegd. Financiële leases: bedragen en eventuele opname in de schuldposten niet vast te stellen; geen afzonderlijke toevoeging gedaan om dubbeltelling te vermijden. Renteloze obligaties zijn niet afzonderlijk geïdentificeerd; eventuele bedragen binnen de gerapporteerde schuldboekwaarden blijven inbegrepen, zonder uitsluiting wegens een nulcoupon. Volledigheid buiten de expliciete schuldposten blijft onzeker. Contingente acquisitievergoedingen zijn niet als financieringsschuld toegevoegd."
+      },
+      {
+        "ticker": "LLY",
+        "metric": "Omzetgroei",
+        "start": "2026-04-01",
+        "end": "2026-06-30",
+        "period_type": "Kwartaal",
+        "value": 0.48,
+        "currency": null,
+        "method": "Gerapporteerd",
+        "definition": "Gerapporteerde geconsolideerde omzetgroei over de drie maanden geëindigd op 30 juni 2026 tegenover dezelfde drie maanden van 2025.",
+        "source": "LLY-2026-06-30.pdf",
+        "page": "Gedrukte pagina 5 / pdf-pagina 5 — Consolidated Condensed Statements of Operations; gedrukte pagina 24 / pdf-pagina 24 — Executive Overview, Financial Results; gedrukte pagina 28 / pdf-pagina 28 — Results of Operations, Revenue",
+        "evidence": "Oorspronkelijke schaal omzet: Dollars in millions. Three Months Ended June 30: Revenue 2026 $22,974 en 2025 $15,558. Gerapporteerde Percent Change: 48%, opgeslagen als 0.48. Afzonderlijke controleberekening: (22974 / 15558 - 1) ≈ 0.47666795, oftewel 47.666795%. Controleberekening minus gerapporteerd percentage ≈ -0.333205 procentpunt.",
+        "status": "Nog te controleren",
+        "note": "Het gerapporteerde percentage blijft de hoofdwaarde; de oorzaak van het verschil met de controleberekening is niet vastgesteld. Constante-valutagroei is niet afzonderlijk gerapporteerd. De op pagina 28 vermelde valutabijdrage van 1 procentpunt is afzonderlijke informatie en is niet als constante-valutagroei gebruikt."
+      }
+    ]
+  },
+  {
+    "id": "T02-run3",
+    "seconds": 46.22,
+    "usage": {
+      "input_tokens": 49691,
+      "cached_input_tokens": 8960,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1557,
+      "reasoning_output_tokens": 79
+    },
+    "item_types": [
+      "agent_message",
+      "error"
+    ],
+    "records": [
+      {
+        "ticker": "LLY",
+        "metric": "FCF",
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "period_type": "Halfjaar",
+        "value": 10764,
+        "currency": "USD",
+        "method": "Berekend",
+        "definition": "Operationele kasstroom minus aankopen van materiële vaste activa.",
+        "source": "LLY-2026-06-30.pdf",
+        "page": "Gedrukt/pdf 8 — Consolidated Condensed Statements of Cash Flows",
+        "evidence": "Oorspronkelijke schaal: dollars in millions. Six Months Ended June 30, 2026: Net Cash Provided by Operating Activities 16,023; Purchases of property and equipment (5,259). FCF = 16023 - 5259 = 10764 miljoen USD.",
+        "status": "Nog te controleren",
+        "note": "Geen gerapporteerde FCF of afzonderlijke kwartaalcomponenten gevonden. Het vooraf gekozen halfjaar is gebruikt zonder deling door kwartalen. Dit is de voorgeschreven berekening, geen aangetroffen bedrijfsdefinitie. Expenditures for long-lived assets op pagina 23 omvat ook computersoftware en is niet gebruikt als vervanging voor aankopen van materiële vaste activa."
+      },
+      {
+        "ticker": "LLY",
+        "metric": "Schuld",
+        "start": null,
+        "end": "2026-06-30",
+        "period_type": "Peildatum",
+        "value": 54908,
+        "currency": "USD",
+        "method": "Berekend uit gerapporteerde boekwaarden",
+        "definition": "Boekwaarde van kortlopende financiële schuld inclusief kortlopend deel van langlopende schuld, plus langlopende financiële schuld.",
+        "source": "LLY-2026-06-30.pdf",
+        "page": "Gedrukt/pdf 7 — Consolidated Condensed Balance Sheets; 16–17 — Note 8: Financial Instruments, Debt; 31 — Financial Condition and Liquidity",
+        "evidence": "Oorspronkelijke schaal: dollars in millions. Balans: Short-term borrowings and current maturities of long-term debt 7,050 + Long-term debt 47,858 = 54,908 miljoen USD. Note 8 bevestigt: Short-term commercial paper borrowings, carrying amount 5,284 + Long-term debt including current portion, carrying amount 49,624 = 54,908. Afgeleid kortlopend deel langlopende schuld: 49,624 - 47,858 = 1,766; 5,284 + 1,766 = 7,050. Pagina 31 vermeldt total debt van $54.9 billion.",
+        "status": "Onzeker",
+        "note": "De gerapporteerde schuldposten sluiten aan, maar volledigheid inclusief financiële leases staat niet vast. Operationele leases: verplichtingen niet afzonderlijk vermeld en niet apart toegevoegd. Financiële leases: bedragen en eventuele opname in de schuldposten niet toegelicht; geen aanvullende optelling mogelijk. Renteloze obligaties zijn niet afzonderlijk geïdentificeerd; indien opgenomen in de gerapporteerde schuldposten blijven hun boekwaarden inbegrepen, zonder uitsluiting wegens nulrente. Geen kasmiddelen afgetrokken; reële waarden, totale verplichtingen en acquisitiegerelateerde contingent consideration zijn niet als schuldcomponent toegevoegd."
+      },
+      {
+        "ticker": "LLY",
+        "metric": "Omzetgroei",
+        "start": "2026-04-01",
+        "end": "2026-06-30",
+        "period_type": "Kwartaal",
+        "value": 0.48,
+        "currency": null,
+        "method": "Gerapporteerd",
+        "definition": "Gerapporteerde groei van geconsolideerde kwartaalomzet tegenover hetzelfde kwartaal van het voorgaande jaar.",
+        "source": "LLY-2026-06-30.pdf",
+        "page": "Gedrukt/pdf 5 — Consolidated Condensed Statements of Operations; 24 — Executive Overview, Financial Results; 28 — Results of Operations, Revenue",
+        "evidence": "Oorspronkelijke schaal omzet: dollars in millions. Three Months Ended June 30: omzet 2026 $22,974 miljoen; omzet 2025 $15,558 miljoen. Gerapporteerde Percent Change: 48%, opgeslagen als 0.48. Afzonderlijke controle: (22974 / 15558 - 1) = circa 0.476668, oftewel 47.6668%. Controle minus gerapporteerd = circa -0.3332 procentpunt.",
+        "status": "Nog te controleren",
+        "note": "De gerapporteerde 48% blijft de hoofdwaarde; er wordt geen oorzaak aan het verschil met de controleberekening toegeschreven. Pagina 28 vermeldt afzonderlijk een geconsolideerde valutabijdrage van 1 procentpunt. Een expliciete kwartaalgroei bij constante valuta is niet vermeld en is niet afgeleid."
+      }
+    ]
+  },
+  {
+    "id": "T03-run1",
+    "seconds": 41.23,
+    "usage": {
+      "input_tokens": 201201,
+      "cached_input_tokens": 0,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1736,
+      "reasoning_output_tokens": 100
+    },
+    "item_types": [
+      "agent_message",
+      "error"
+    ],
+    "records": [
+      {
+        "ticker": "AMZN",
+        "metric": "FCF",
+        "start": "2026-04-01",
+        "end": "2026-06-30",
+        "period_type": "Kwartaal",
+        "value": -8821,
+        "currency": "USD",
+        "method": "Berekend",
+        "definition": "Operationele kasstroom minus bruto aankopen van materiële vaste activa.",
+        "source": "AMZN-2026-06-30.pdf",
+        "page": "Gedrukte pagina / pdf-pagina 3 — Consolidated Statements of Cash Flows; 33 — Non-GAAP Financial Measures, Free Cash Flow",
+        "evidence": "Oorspronkelijke schaal: USD in millions. Three Months Ended June 30, 2026: Net cash provided by operating activities 45,387; Purchases of property and equipment (54,208). Berekening: 45387 - 54208 = -8821 miljoen USD.",
+        "status": "Nog te controleren",
+        "note": "Geen afzonderlijk gerapporteerde kwartaal-FCF gevonden. Daarom de toegestane kwartaalberekening gebruikt. Amazon definieert FCF met aankopen netto van verkoopopbrengsten en incentives; die opbrengsten bedragen dit kwartaal 1,132 miljoen USD en zijn in deze bruto fallback niet verrekend. De gerapporteerde FCF van -7,604 miljoen USD betreft uitsluitend de twaalf maanden 2025-07-01 t/m 2026-06-30 en is niet als kwartaalwaarde gebruikt."
+      },
+      {
+        "ticker": "AMZN",
+        "metric": "Schuld",
+        "start": null,
+        "end": "2026-06-30",
+        "period_type": "Peildatum",
+        "value": 155315,
+        "currency": "USD",
+        "method": "Berekend",
+        "definition": "Boekwaarde van kortlopende en langlopende financiële schuld, met financiële leases en financieringsverplichtingen inbegrepen; operationele leases uitgesloten.",
+        "source": "AMZN-2026-06-30.pdf",
+        "page": "Gedrukte pagina / pdf-pagina 14 — Note 3, Leases; 15 — Note 4, Commitments; 17–18 — Note 5, Debt",
+        "evidence": "USD in millions op p. 17: nominale langlopende schuld 132,995 minus unamortized discount and issuance costs 771 = boekwaarde 132,224, bestaande uit current portion 3,330 en long-term debt 128,894. P. 18: overige kortlopende kredietfaciliteiten 325 miljoen USD. Subtotaal leningen en obligaties: 3330 + 128894 + 325 = 132549. P. 14, USD in millions: financiële leases kortlopend 1,688 plus langlopend 11,763 = 13,451. P. 15: financieringsverplichtingen exclusief rente kortlopend $415 million en langlopend $8.9 billion = 415 + 8900 = circa 9315 miljoen USD. Totaal: 132549 + 13451 + 9315 = circa 155315 miljoen USD.",
+        "status": "Onzeker",
+        "note": "Brede afbakening inclusief financiële leases en financieringsverplichtingen; zonder beide bedraagt het subtotaal 132549 miljoen USD. De langlopende financieringsverplichtingen zijn afgerond gerapporteerd, zodat het totaal benaderend is. Operationele leases afzonderlijk: kortlopend 13745 plus langlopend 82575 = 96320 miljoen USD, uitgesloten. Commercial paper, beide revolvers en de term loan hebben expliciet geen uitstaande leningen op de peildatum. Geen ontbrekende bedragen binnen de genoemde componenten vastgesteld; de gewenste afbakening van financiële schuld blijft te controleren. Renteloze obligaties zijn niet afzonderlijk geïdentificeerd; dergelijke verplichtingen zouden bij aanwezigheid tegen boekwaarde meetellen, ook zonder coupon. De Anthropic-converteerbare notes zijn beleggingen van Amazon en geen schuld van Amazon. De uitgifte van 25000 miljoen USD na 30 juni is uitgesloten."
+      },
+      {
+        "ticker": "AMZN",
+        "metric": "Omzetgroei",
+        "start": "2026-04-01",
+        "end": "2026-06-30",
+        "period_type": "Kwartaal",
+        "value": 0.2,
+        "currency": null,
+        "method": "Gerapporteerd",
+        "definition": "Gerapporteerde groei van geconsolideerde netto-omzet tegenover hetzelfde kwartaal van het vorige jaar.",
+        "source": "AMZN-2026-06-30.pdf",
+        "page": "Gedrukte pagina / pdf-pagina 29 — Results of Operations, Net Sales; 4 — Consolidated Statements of Operations",
+        "evidence": "P. 29 rapporteert Consolidated Year-over-year Percentage Growth voor Q2 2026 van 20%, opgeslagen als fractie 0.20. Oorspronkelijke omzetbedragen, USD in millions: Q2 2026 200,606 en Q2 2025 167,702. Afzonderlijke controleberekening: (200606 / 167702 - 1) = circa 0.196205, oftewel 19.6205%. Controleberekening minus gerapporteerde groei = circa -0.3795 procentpunt.",
+        "status": "Nog te controleren",
+        "note": "Hoofdwaarde is het gerapporteerde percentage; geen oorzaak aan het verschil met de controleberekening toegeschreven. Groei exclusief wisselkoerseffecten is afzonderlijk eveneens gerapporteerd als 20% (fractie 0.20) op p. 29 en vervangt de hoofdwaarde niet. Vergelijkingsperiode: 2025-04-01 t/m 2025-06-30."
+      }
+    ]
+  },
+  {
+    "id": "T03-run2",
+    "seconds": 63.09,
+    "usage": {
+      "input_tokens": 201201,
+      "cached_input_tokens": 8960,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1838,
+      "reasoning_output_tokens": 256
+    },
+    "item_types": [
+      "agent_message",
+      "error"
+    ],
+    "records": [
+      {
+        "ticker": "AMZN",
+        "metric": "FCF",
+        "start": "2026-04-01",
+        "end": "2026-06-30",
+        "period_type": "Kwartaal",
+        "value": -8821,
+        "currency": "USD",
+        "method": "Berekend",
+        "definition": "Operationele kasstroom minus aankopen van materiële vaste activa, zonder verrekening van verkoopopbrengsten en incentives.",
+        "source": "AMZN-2026-06-30.pdf",
+        "page": "Gedrukt/pdf 3 — Consolidated Statements of Cash Flows; gedrukt/pdf 33 — Free Cash Flow",
+        "evidence": "Kwartaalbedragen oorspronkelijk in USD millions: operating activities 45,387; purchases of property and equipment (54,208). Berekening: 45387 - 54208 = -8821 miljoen USD. Proceeds from property and equipment sales and incentives: 1,132 miljoen USD.",
+        "status": "Nog te controleren",
+        "note": "Afzonderlijke kwartaal-FCF is niet gerapporteerd, maar beide componenten voor de toegestane berekening zijn beschikbaar. Amazons bedrijfsdefinitie trekt aankopen netto van verkoopopbrengsten en incentives af; de gebruikte brutoformule ligt daardoor 1132 miljoen USD lager. De gerapporteerde FCF van -7604 miljoen USD betreft 2025-07-01 t/m 2026-06-30 (twaalf maanden) en is niet als kwartaalwaarde gebruikt."
+      },
+      {
+        "ticker": "AMZN",
+        "metric": "Schuld",
+        "start": null,
+        "end": "2026-06-30",
+        "period_type": "Peildatum",
+        "value": 155315,
+        "currency": "USD",
+        "method": "Berekend",
+        "definition": "Som van kortlopende en langlopende financiële schuld tegen boekwaarde, inclusief financiële leaseverplichtingen en financieringsverplichtingen; exclusief operationele leases.",
+        "source": "AMZN-2026-06-30.pdf",
+        "page": "Gedrukt/pdf 14 — Note 3, Leases; 15 — Note 4, Commitments; 17–18 — Note 5, Debt",
+        "evidence": "Oorspronkelijk USD millions: long-term debt 128,894; current portion of long-term debt 3,330; overige kortlopende kredietfaciliteiten 325. Subtotaal leningen: 128894 + 3330 + 325 = 132549. Controle boekwaarde langlopende schuld inclusief kortlopend deel: face value 132,995 minus discount and issuance costs 771 = 132224. Financiële leases: current 1,688 + long-term 11,763 = 13451. Financing obligations: current $415 million + long-term $8.9 billion (= 8900 miljoen) = circa 9315. Totaal: 132549 + 13451 + 9315 = circa 155315 miljoen USD.",
+        "status": "Onzeker",
+        "note": "Brede afbakening van financiële schuld: financiële leases en financing obligations zijn inbegrepen en afzonderlijk getoond. Operationele leases zijn uitgesloten: 13745 kortlopend + 82575 langlopend = 96320 miljoen USD. Het langlopende bedrag van financing obligations is slechts afgerond beschikbaar, waardoor ook het totaal benaderend is. Commercial paper, beide revolving credit facilities en de delayed draw term loan hebben expliciet geen uitstaande leningen op de peildatum. Geen ontbrekende bedragen geïdentificeerd binnen deze afbakening. Renteloze obligaties zijn niet afzonderlijk geïdentificeerd; eventuele renteloze financiële schuld wordt niet wegens ontbrekende coupon uitgesloten, maar tegen boekwaarde meegenomen. De na 30 juni uitgegeven obligaties van 25 miljard USD zijn uitgesloten."
+      },
+      {
+        "ticker": "AMZN",
+        "metric": "Omzetgroei",
+        "start": "2026-04-01",
+        "end": "2026-06-30",
+        "period_type": "Kwartaal",
+        "value": 0.2,
+        "currency": null,
+        "method": "Gerapporteerd",
+        "definition": "Gerapporteerde jaar-op-jaar groei van geconsolideerde total net sales over het afzonderlijke kwartaal.",
+        "source": "AMZN-2026-06-30.pdf",
+        "page": "Gedrukt/pdf 29 — Net Sales; 4 — Consolidated Statements of Operations; 34 — Effect of Foreign Exchange Rates",
+        "evidence": "Gerapporteerde geconsolideerde kwartaalgroei: 20%. Oorspronkelijke omzetbedragen in USD millions: Q2 2026 200,606 en Q2 2025 167,702. Afzonderlijke controleberekening: (200606 / 167702 - 1) = circa 0.196205, oftewel 19.6205%. Controleberekening minus gerapporteerd percentage: circa -0.3795 procentpunt.",
+        "status": "Nog te controleren",
+        "note": "Hoofdwaarde blijft het gerapporteerde percentage; geen oorzaak toegekend aan het verschil met de controleberekening. Constante valuta afzonderlijk: gerapporteerde kwartaalgroei exclusief wisselkoerseffecten is eveneens 20% (fractie 0.20). Omzet tegen voorgaandejaarskoersen bedraagt 200531 miljoen USD; dit bedrag vervangt de gerapporteerde omzet niet."
+      }
+    ]
+  },
+  {
+    "id": "T03-run3",
+    "seconds": 56.63,
+    "usage": {
+      "input_tokens": 201201,
+      "cached_input_tokens": 8960,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1815,
+      "reasoning_output_tokens": 90
+    },
+    "item_types": [
+      "agent_message",
+      "error"
+    ],
+    "records": [
+      {
+        "ticker": "AMZN",
+        "metric": "FCF",
+        "start": "2026-04-01",
+        "end": "2026-06-30",
+        "period_type": "Kwartaal",
+        "value": -8821,
+        "currency": "USD",
+        "method": "Berekend",
+        "definition": "Operationele kasstroom minus aankopen van materiële vaste activa, zonder verrekening van verkoopopbrengsten en incentives.",
+        "source": "AMZN-2026-06-30.pdf",
+        "page": "Gedrukte pagina / pdf-pagina 3, Consolidated Statements of Cash Flows; 33, Non-GAAP Financial Measures — Free Cash Flow",
+        "evidence": "Kwartaalbedragen oorspronkelijk in USD miljoenen: Net cash provided by operating activities 45,387; Purchases of property and equipment (54,208). Berekening: 45,387 - 54,208 = -8,821 miljoen USD.",
+        "status": "Nog te controleren",
+        "note": "Geen afzonderlijk gerapporteerde kwartaal-FCF gevonden; beide kwartaalcomponenten voor de toegestane berekening zijn beschikbaar. Amazons definitie trekt aankopen netto na verkoopopbrengsten en incentives af; deze fallback gebruikt bruto aankopen. De kwartaalopbrengsten en incentives van 1,132 miljoen USD zijn daarom niet verrekend. De gerapporteerde FCF van -7,604 miljoen USD op pagina 33 betreft uitsluitend de twaalf maanden 2025-07-01 t/m 2026-06-30 en is niet als kwartaalwaarde gebruikt."
+      },
+      {
+        "ticker": "AMZN",
+        "metric": "Schuld",
+        "start": null,
+        "end": "2026-06-30",
+        "period_type": "Peildatum",
+        "value": 155315,
+        "currency": "USD",
+        "method": "Berekend",
+        "definition": "Som van kortlopende en langlopende financiële schuld tegen boekwaarde, inclusief financiële leaseverplichtingen en afzonderlijk gerapporteerde financieringsverplichtingen; exclusief operationele leases.",
+        "source": "AMZN-2026-06-30.pdf",
+        "page": "Gedrukte pagina / pdf-pagina 14, Note 3 — Leases; 15, Note 4 — Commitments and Contingencies, voetnoot 1; 17–18, Note 5 — Debt",
+        "evidence": "Oorspronkelijke schaal USD miljoenen, behalve waar vermeld: langlopende schuld 128,894; kortlopend deel langlopende schuld 3,330; overige kortlopende kredietfaciliteiten 325. Schuld exclusief leases en financieringsverplichtingen: 128,894 + 3,330 + 325 = 132,549. Aansluiting: nominale langlopende schuld 132,995 minus niet-geamortiseerde korting en uitgiftekosten 771 = boekwaarde 132,224, inclusief kortlopend deel. Financiële leases: kortlopend 1,688 + langlopend 11,763 = 13,451. Financieringsverplichtingen exclusief rente: kortlopend 415 miljoen + langlopend oorspronkelijk $8.9 billion, omgerekend 8,900 miljoen = 9,315. Totaal kortlopend: 5,758; totaal langlopend: 149,557; samen 155,315 miljoen USD.",
+        "status": "Nog te controleren",
+        "note": "Operationele leases apart: 13,745 kortlopend + 82,575 langlopend = 96,320 miljoen USD, uitgesloten. Commercial paper, beide revolving credit facilities en de delayed draw term loan hebben expliciet geen uitstaand saldo. Geen ontbrekende schuldcomponent geïdentificeerd binnen deze afbakening. Renteloze obligaties zijn niet afzonderlijk vermeld; eventuele renteloze financiële schuld zou tegen boekwaarde worden opgenomen, niet wegens een nulcoupon worden uitgesloten. De langlopende financieringsverplichtingen zijn slechts op $0.1 billion nauwkeurig gerapporteerd, waardoor het totaal benaderend is. De na 30 juni uitgegeven obligaties van $25.0 billion zijn uitgesloten."
+      },
+      {
+        "ticker": "AMZN",
+        "metric": "Omzetgroei",
+        "start": "2026-04-01",
+        "end": "2026-06-30",
+        "period_type": "Kwartaal",
+        "value": 0.2,
+        "currency": null,
+        "method": "Gerapporteerd",
+        "definition": "Gerapporteerde jaar-op-jaargroei van geconsolideerde Total net sales voor het kwartaal tegenover hetzelfde kwartaal van het voorgaande jaar.",
+        "source": "AMZN-2026-06-30.pdf",
+        "page": "Gedrukte pagina / pdf-pagina 4, Consolidated Statements of Operations; 29, Results of Operations — Net Sales; 34, Effect of Foreign Exchange Rates",
+        "evidence": "Gerapporteerde kwartaalgroei op pagina 29: 20%, opgeslagen als 0.2. Omzet oorspronkelijk in USD miljoenen: kwartaal geëindigd 2026-06-30 200,606; kwartaal geëindigd 2025-06-30 167,702. Controleberekening: (200606 / 167702 - 1) = circa 0.196205, oftewel 19.6205%. Gerapporteerd minus berekend: circa +0.3795 procentpunt.",
+        "status": "Nog te controleren",
+        "note": "De hoofdwaarde blijft het gerapporteerde percentage; er wordt geen oorzaak voor het verschil met de controleberekening verondersteld. Groei exclusief wisselkoerseffecten is afzonderlijk eveneens gerapporteerd als 20% (fractie 0.2). Pagina 34 vermeldt kwartaalomzet tegen voorgaandejaarskoersen van 200,531 miljoen USD; deze vervangt de gerapporteerde omzet niet. Vergelijkingsperiode: 2025-04-01 t/m 2025-06-30."
+      }
+    ]
+  },
+  {
+    "id": "T04-run1",
+    "seconds": 48.84,
+    "usage": {
+      "input_tokens": 24793,
+      "cached_input_tokens": 8960,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1642,
+      "reasoning_output_tokens": 76
+    },
+    "item_types": [
+      "agent_message",
+      "error"
+    ],
+    "records": [
+      {
+        "ticker": "NFLX",
+        "metric": "FCF",
+        "start": "2026-07-01",
+        "end": "2026-09-30",
+        "period_type": "Kwartaal",
+        "value": 2883.513,
+        "currency": "USD",
+        "method": "Gerapporteerd",
+        "definition": "Non-GAAP free cash flow: operationele kasstroom minus aankopen van materiële vaste activa.",
+        "source": "NFLX-2026-09-30-aandeelhoudersbrief.pdf",
+        "page": "Gedrukte/pdf-pagina 11, Non-GAAP Free Cash Flow; pagina 5, Cash Flow and Capital Structure, voetnoot 5; pagina 10, Consolidated Statements of Cash Flows",
+        "evidence": "Oorspronkelijke schaal: duizenden USD. Voor de drie maanden geëindigd op 2026-09-30: operationele kasstroom 3,162,279; aankopen materiële vaste activa (278,766); gerapporteerde FCF 2,883,513. Controle: 3,162,279 - 278,766 = 2,883,513 duizend USD = 2883.513 miljoen USD.",
+        "status": "Nog te controleren",
+        "note": "Afzonderlijk kwartaal beschikbaar. De controleberekening bevestigt de gerapporteerde waarde; methode blijft Gerapporteerd. De bedrijfsdefinitie komt overeen met operationele kasstroom minus aankopen van materiële vaste activa."
+      },
+      {
+        "ticker": "NFLX",
+        "metric": "Schuld",
+        "start": null,
+        "end": "2026-09-30",
+        "period_type": "Peildatum",
+        "value": 15132.394,
+        "currency": "USD",
+        "method": "Berekend",
+        "definition": "Som van de boekwaarde van kortlopende en langlopende financiële schuld op de balansdatum.",
+        "source": "NFLX-2026-09-30-aandeelhoudersbrief.pdf",
+        "page": "Gedrukte/pdf-pagina 9, Consolidated Balance Sheets; pagina 13, Non-GAAP Net Debt; pagina 5, Cash Flow and Capital Structure",
+        "evidence": "Oorspronkelijke schaal: duizenden USD. Short-term debt 2,474,796 + Long-term debt 12,657,598 = 15,132,394 duizend USD = 15132.394 miljoen USD. Dit stemt overeen met Total debt op pagina 13. Daar worden debt issuance costs and original issue discount 59,251 en fair value hedging adjustment 145,158 afzonderlijk toegevoegd: 15,132,394 + 59,251 + 145,158 = 15,336,803 duizend USD, tegenover afgerond $15.3B gross debt op pagina 5. Deze toevoegingen zijn niet opgenomen in de gekozen boekwaardesom.",
+        "status": "Onzeker",
+        "note": "Beide expliciete balansschuldcomponenten zijn beschikbaar. Operationele leases: geen afzonderlijke verplichting of bedrag vermeld. Financiële leases: geen afzonderlijke verplichting of bedrag vermeld; opname in de schuldregels is niet vast te stellen. Eventuele renteloze obligaties worden niet afzonderlijk geïdentificeerd; indien aanwezig behoren zij tegen boekwaarde tot financiële schuld, maar hun opname is niet verifieerbaar. Geen extra bedragen verondersteld. Volledigheid en leaseafbakening blijven onzeker. Cash is niet afgetrokken; contentverplichtingen en totale verplichtingen zijn niet als financiële schuld meegenomen."
+      },
+      {
+        "ticker": "NFLX",
+        "metric": "Omzetgroei",
+        "start": "2026-07-01",
+        "end": "2026-09-30",
+        "period_type": "Kwartaal",
+        "value": 0.118,
+        "currency": null,
+        "method": "Gerapporteerd",
+        "definition": "Gerapporteerde omzetgroei van Q3 2026 tegenover hetzelfde kwartaal in 2025.",
+        "source": "NFLX-2026-09-30-aandeelhoudersbrief.pdf",
+        "page": "Gedrukte/pdf-pagina 1, overzicht resultaten, Y/Y % Growth; pagina 8, Consolidated Statements of Operations; pagina 12, Non-GAAP Constant Currency Information",
+        "evidence": "Pagina 1 rapporteert 11.8% voor Q3 2026, opgeslagen als 0.118. Oorspronkelijke omzetbedragen op pagina 8, in duizenden USD: Q3 2026 12,874,176 en Q3 2025 11,510,307; in miljoenen USD respectievelijk 12874.176 en 11510.307. Afzonderlijke controle: (12,874,176 / 11,510,307 - 1) = circa 0.1184911054, oftewel 11.84911%. Controle minus hoofdwaarde: circa +0.04911 procentpunt.",
+        "status": "Nog te controleren",
+        "note": "De hoofdwaarde is het gerapporteerde percentage van 11.8% uit de resultaattabel. Pagina's 1, 2 en 12 vermelden daarnaast 12%; dat ligt 0.2 procentpunt boven de hoofdwaarde en circa 0.15089 procentpunt boven de controleberekening. Geen oorzaak voor deze verschillen aangenomen. Constante-valutagroei afzonderlijk gerapporteerd als 11% (fractie 0.11), 0.8 procentpunt onder de hoofdwaarde; deze maatstaf sluit wisselkoerseffecten en gerealiseerde omzethedgingeffecten uit."
+      }
+    ]
+  },
+  {
+    "id": "T04-run2",
+    "seconds": 65.41,
+    "usage": {
+      "input_tokens": 24793,
+      "cached_input_tokens": 8960,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1793,
+      "reasoning_output_tokens": 49
+    },
+    "item_types": [
+      "agent_message",
+      "error"
+    ],
+    "records": [
+      {
+        "ticker": "NFLX",
+        "metric": "FCF",
+        "start": "2026-07-01",
+        "end": "2026-09-30",
+        "period_type": "Kwartaal",
+        "value": 2883.513,
+        "currency": "USD",
+        "method": "Gerapporteerd",
+        "definition": "Non-GAAP free cash flow: kasstroom uit operationele activiteiten minus aankopen van property and equipment.",
+        "source": "NFLX-2026-09-30-aandeelhoudersbrief.pdf",
+        "page": "p. 11 / PDF-pagina 11, Non-GAAP Free Cash Flow; p. 5 / PDF-pagina 5, Cash Flow and Capital Structure, voetnoot 5",
+        "evidence": "Oorspronkelijke schaal: duizenden USD. Voor de drie maanden geëindigd op 30 september 2026: operationele kasstroom 3,162,279; aankopen property and equipment (278,766); gerapporteerde Non-GAAP free cash flow 2,883,513. Controle: 3,162,279 - 278,766 = 2,883,513 duizend USD = 2883.513 miljoen USD.",
+        "status": "Nog te controleren",
+        "note": "Afzonderlijk kwartaal beschikbaar. De bedrijfsdefinitie komt overeen met operationele kasstroom minus aankopen van materiële vaste activa; de waarde is gerapporteerd, niet als vervangende maatstaf berekend. Geen broncontrole door de gebruiker uitgevoerd."
+      },
+      {
+        "ticker": "NFLX",
+        "metric": "Schuld",
+        "start": null,
+        "end": "2026-09-30",
+        "period_type": "Peildatum",
+        "value": 15132.394,
+        "currency": "USD",
+        "method": "Berekend",
+        "definition": "Boekwaarde van short-term debt plus long-term debt op de balansdatum.",
+        "source": "NFLX-2026-09-30-aandeelhoudersbrief.pdf",
+        "page": "p. 9 / PDF-pagina 9, Consolidated Balance Sheets; p. 13 / PDF-pagina 13, Non-GAAP Net Debt; p. 5 / PDF-pagina 5, Cash Flow and Capital Structure",
+        "evidence": "Oorspronkelijke schaal op p. 9 en p. 13: duizenden USD. Short-term debt 2,474,796 + long-term debt 12,657,598 = 15,132,394 duizend USD = 15132.394 miljoen USD. Dit sluit aan bij Total debt 15,132,394 op p. 13. Die reconciliatie telt afzonderlijk debt issuance costs and original issue discount 59,251 en fair value hedging adjustment 145,158 op; samen 15,336,803 duizend USD, tegenover de afgeronde gross debt van $15.3B op p. 5.",
+        "status": "Onzeker",
+        "note": "De balansboekwaarden zijn gebruikt; de afzonderlijke toevoegingen uit de nettoschuldreconciliatie zijn niet opgeteld en cash is niet afgetrokken. Operationele leases: geen afzonderlijke schuldcomponent of bedrag vermeld. Financiële leases: geen afzonderlijke schuldcomponent of bedrag vermeld; eventuele opname in debt of andere balansposten is niet vast te stellen. Renteloze obligaties worden niet afzonderlijk vermeld; indien aanwezig horen zij tegen boekwaarde bij financiële schuld, maar hun aanwezigheid en opname zijn niet vast te stellen. De volledige afbakening van financiële schuld blijft daarom onzeker. Content liabilities zijn niet als financiële schuld opgeteld."
+      },
+      {
+        "ticker": "NFLX",
+        "metric": "Omzetgroei",
+        "start": "2026-07-01",
+        "end": "2026-09-30",
+        "period_type": "Kwartaal",
+        "value": 0.118,
+        "currency": null,
+        "method": "Gerapporteerd",
+        "definition": "Gerapporteerde omzetgroei van Q3 2026 tegenover Q3 2025, op basis van omzet in de oorspronkelijke rapportagevaluta USD.",
+        "source": "NFLX-2026-09-30-aandeelhoudersbrief.pdf",
+        "page": "p. 1 / PDF-pagina 1, samenvatting Y/Y % Growth; p. 8 / PDF-pagina 8, Consolidated Statements of Operations; p. 12 / PDF-pagina 12, Non-GAAP Constant Currency Information",
+        "evidence": "Hoofdwaarde: p. 1 rapporteert Q3 2026 Y/Y % Growth van 11.8%. Oorspronkelijke omzetbedragen op p. 8, in duizenden USD: Q3 2026 12,874,176 en Q3 2025 11,510,307; omgerekend 12874.176 en 11510.307 miljoen USD. Afzonderlijke controleberekening: (12,874,176 / 11,510,307 - 1) ≈ 0.1184911, oftewel 11.8491%. De controleberekening ligt circa 0.0491 procentpunt boven de hoofdwaarde. P. 1 en p. 2 vermelden in de tekst 12%; p. 12 rapporteert eveneens 12%, een verschil van 0.2 procentpunt tegenover de hoofdwaarde.",
+        "status": "Nog te controleren",
+        "note": "De gerapporteerde 11.8% uit de samenvatting is de hoofdwaarde; de controleberekening vervangt deze niet. Voor de verschillen tussen de gerapporteerde percentages en de controleberekening wordt geen oorzaak aangenomen. Afzonderlijke constante-valutagroei: 0.11. Volgens de rapportdefinitie sluit die jaar-op-jaar wisselkoerseffecten en als omzet gerealiseerde hedgingresultaten uit en gebruikt zij de wisselkoersen van overeenkomstige maanden van het voorgaande jaar. Geen broncontrole door de gebruiker uitgevoerd."
+      }
+    ]
+  },
+  {
+    "id": "T04-run3",
+    "seconds": 49.27,
+    "usage": {
+      "input_tokens": 24793,
+      "cached_input_tokens": 8960,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1612,
+      "reasoning_output_tokens": 51
+    },
+    "item_types": [
+      "agent_message",
+      "error"
+    ],
+    "records": [
+      {
+        "ticker": "NFLX",
+        "metric": "FCF",
+        "start": "2026-07-01",
+        "end": "2026-09-30",
+        "period_type": "Kwartaal",
+        "value": 2883.513,
+        "currency": "USD",
+        "method": "Gerapporteerd",
+        "definition": "Non-GAAP free cash flow: operationele kasstroom minus aankopen van materiële vaste activa.",
+        "source": "NFLX-2026-09-30-aandeelhoudersbrief.pdf",
+        "page": "p. 11, Non-GAAP Free Cash Flow; p. 10, Consolidated Statements of Cash Flows; p. 5, Cash Flow and Capital Structure, voetnoot 5",
+        "evidence": "Oorspronkelijke schaal p. 11: duizenden USD. Operationele kasstroom 3,162,279; purchases of property and equipment (278,766); gerapporteerde FCF 2,883,513. Controle: 3,162,279 - 278,766 = 2,883,513 duizend USD = 2883.513 miljoen USD.",
+        "status": "Nog te controleren",
+        "note": "Afzonderlijk kwartaal beschikbaar. De bedrijfsdefinitie komt overeen met operationele kasstroom minus aankopen van materiële vaste activa. De controleberekening vervangt de gerapporteerde waarde niet."
+      },
+      {
+        "ticker": "NFLX",
+        "metric": "Schuld",
+        "start": null,
+        "end": "2026-09-30",
+        "period_type": "Peildatum",
+        "value": 15132.394,
+        "currency": "USD",
+        "method": "Berekend",
+        "definition": "Som van de boekwaarden van kortlopende en langlopende financiële schuld op de balansdatum.",
+        "source": "NFLX-2026-09-30-aandeelhoudersbrief.pdf",
+        "page": "p. 9, Consolidated Balance Sheets; p. 13, Non-GAAP Net Debt; p. 5, Cash Flow and Capital Structure",
+        "evidence": "Oorspronkelijke schaal p. 9: duizenden USD. Short-term debt 2,474,796 + long-term debt 12,657,598 = 15,132,394 duizend USD = 15132.394 miljoen USD. Dit sluit aan bij Total debt 15,132,394 op p. 13. Daar worden debt issuance costs and original issue discount 59,251 en fair value hedging adjustment 145,158 toegevoegd; samen 15,336,803 duizend USD, tegenover de afgeronde gross debt van $15.3B op p. 5.",
+        "status": "Onzeker",
+        "note": "De waarde gebruikt de boekwaarden zonder de toevoegingen uit de nettoschuldreconciliatie en zonder aftrek van kasmiddelen. Operationele leases: bedragen en verwerking niet afzonderlijk vermeld. Financiële leases: bedragen en eventuele opname in de schuldregels niet afzonderlijk vermeld; geen aanvullende component verondersteld. Renteloze obligaties worden niet afzonderlijk vermeld; eventuele opgenomen boekwaarden blijven in de schuldregels inbegrepen, maar aanwezigheid en volledigheid zijn niet vast te stellen. Beide expliciete schuldregels zijn beschikbaar; eventuele overige financiële schuldcomponenten zijn niet afzonderlijk identificeerbaar."
+      },
+      {
+        "ticker": "NFLX",
+        "metric": "Omzetgroei",
+        "start": "2026-07-01",
+        "end": "2026-09-30",
+        "period_type": "Kwartaal",
+        "value": 0.118,
+        "currency": null,
+        "method": "Gerapporteerd",
+        "definition": "Gerapporteerde omzetgroei van Q3 2026 tegenover Q3 2025; controleformule: huidige kwartaalomzet / vergelijkbare kwartaalomzet vorig jaar - 1.",
+        "source": "NFLX-2026-09-30-aandeelhoudersbrief.pdf",
+        "page": "p. 1, overzichtstabel Y/Y % Growth; p. 8, Consolidated Statements of Operations; p. 12, Non-GAAP Constant Currency Information",
+        "evidence": "Hoofdwaarde p. 1: 11.8% = 0.118. Oorspronkelijke omzetbedragen p. 8, duizenden USD: Q3 2026 12,874,176 en Q3 2025 11,510,307; omgerekend 12874.176 en 11510.307 miljoen USD. Controle: (12,874,176 / 11,510,307 - 1) circa 0.1184911, oftewel 11.8491%. Controle minus hoofdwaarde: circa +0.0491 procentpunt. P. 1-2 en p. 12 vermelden tevens 12%, oftewel 0.12; dat is +0.2 procentpunt tegenover de hoofdwaarde.",
+        "status": "Nog te controleren",
+        "note": "De gerapporteerde 11.8% blijft de hoofdwaarde; geen oorzaak toegekend aan de verschillen. Constante valuta afzonderlijk: gerapporteerd 11% = 0.11, met uitsluiting van jaar-op-jaarwisselkoerseffecten en gerealiseerde hedgingwinsten/-verliezen in omzet, op basis van wisselkoersen van de overeenkomstige maanden vorig jaar. Geen externe wisselkoers opgehaald of toegepast; koersdatum niet van toepassing."
+      }
+    ]
+  },
+  {
+    "id": "T05-run1",
+    "seconds": 56.79,
+    "usage": {
+      "input_tokens": 107577,
+      "cached_input_tokens": 8960,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1783,
+      "reasoning_output_tokens": 49
+    },
+    "item_types": [
+      "agent_message",
+      "error"
+    ],
+    "records": [
+      {
+        "ticker": "UBER",
+        "metric": "FCF",
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "period_type": "Halfjaar",
+        "value": 5078,
+        "currency": "USD",
+        "method": "Gerapporteerd",
+        "definition": "Uber definieert free cash flow als netto operationele kasstroom minus kapitaaluitgaven; de reconciliatie gebruikt aankopen van materiële vaste activa.",
+        "source": "UBER-2026-06-30.pdf",
+        "page": "PDF 71, Reconciliations of Non-GAAP Financial Measures — Free Cash Flow; PDF 14, Condensed Consolidated Statements of Cash Flows",
+        "evidence": "Oorspronkelijke schaal: USD in millions. Halfjaar 2026: Net cash provided by operating activities $5,213; Purchases of property and equipment $(135); gerapporteerde Free cash flow $5,078. Rekenkundige controle: 5213 - 135 = 5078 miljoen USD.",
+        "status": "Nog te controleren",
+        "note": "Afzonderlijke kwartaal-FCF en kwartaalcomponenten ontbreken. Beschikbaar zijn de halfjaren 2025 en 2026, met gerapporteerde FCF van respectievelijk 4725 en 5078 miljoen USD. De vooraf gekozen periode 1 januari t/m 30 juni 2026 is gebruikt, zonder deling door twee. De bedrijfsdefinitie sluit aan bij operationele kasstroom minus aankopen van materiële vaste activa; aflossingen op financiële leases worden niet afgetrokken."
+      },
+      {
+        "ticker": "UBER",
+        "metric": "Schuld",
+        "start": null,
+        "end": "2026-06-30",
+        "period_type": "Peildatum",
+        "value": 12723,
+        "currency": "USD",
+        "method": "Berekend",
+        "definition": "Som van de gerapporteerde boekwaarden van kortlopende en langlopende financiële schuld; financiële leases kunnen door ontbrekende balansbedragen niet worden aangevuld.",
+        "source": "UBER-2026-06-30.pdf",
+        "page": "PDF 8, Condensed Consolidated Balance Sheets; PDF 27–31, Note 5 — Debt and Credit Arrangements; PDF 14, Statements of Cash Flows; PDF 48, Freight Holding Supplier Financing Program",
+        "evidence": "Oorspronkelijke schaal: USD in millions. Short-term debt 1,997 + Long-term debt, net of current portion 10,726 = 12,723. Note 5 bevestigt Total debt $12,723: Term Loan 2,000; 2028 Convertible Notes 1,725; 2028 Exchangeable Senior Notes 1,324; Senior Notes 2029 1,500, 2030 1,250, 2031 1,000, 2034 1,500, 2035 1,250 en 2054 1,250; minus unamortized discount and issuance costs 76. Operationele leaseverplichtingen: current 178 + non-current 1,830 = 2,008 miljoen USD, afzonderlijk gehouden. Financiële leaseaflossingen over het halfjaar: $82 miljoen; dit is geen eindboekwaarde.",
+        "status": "Onzeker",
+        "note": "12723 miljoen USD is het vaststelbare schuldtotaal uit balans en Note 5. Kortlopende en langlopende boekwaarden van financiële leases zijn niet afzonderlijk beschikbaar; hun opname in andere balansposten en de volledigheid van het totale financiële schuldbedrag staan niet vast. Operationele leases van 2008 miljoen USD zijn uitgesloten. De renteloze 2028 Exchangeable Senior Notes zijn inbegrepen tegen hun gerapporteerde boekwaarde van 1324 miljoen USD, die door de gekozen fair-value accounting gelijk is aan reële waarde; de nominale hoofdsom van 1150 miljoen USD is niet gebruikt. Revolver en commercial paper hebben volgens Note 5 geen uitstaand saldo. Supplier financing is als immaterieel beschreven binnen accounts payable, zonder exact bedrag; niet toegevoegd. Toekomstige financieringsverplichtingen zijn geen opgenomen schuld op deze peildatum."
+      },
+      {
+        "ticker": "UBER",
+        "metric": "Omzetgroei",
+        "start": "2026-04-01",
+        "end": "2026-06-30",
+        "period_type": "Kwartaal",
+        "value": 0.12,
+        "currency": null,
+        "method": "Gerapporteerd",
+        "definition": "Gerapporteerde groei van geconsolideerde kwartaalomzet tegenover hetzelfde kwartaal van het voorgaande jaar, in de oorspronkelijke rapportagevaluta.",
+        "source": "UBER-2026-06-30.pdf",
+        "page": "PDF 9, Condensed Consolidated Statements of Operations; PDF 53, Financial and Operational Highlights; PDF 61, Revenue; PDF 53–54, Components of Results of Operations — Revenue",
+        "evidence": "Oorspronkelijke schaal: USD in millions. Omzet drie maanden geëindigd op 30 juni: 2026 $14,191; 2025 $12,651. Gerapporteerde groei 12%, opgeslagen als 0.12. Afzonderlijke controle: (14191 / 12651 - 1) ≈ 0.12173, oftewel 12.173%. Controleberekening ligt circa 0.173 procentpunt boven het gerapporteerde percentage. Gerapporteerde groei bij constante valuta is afzonderlijk 11%, oftewel 0.11.",
+        "status": "Nog te controleren",
+        "note": "Hoofdwaarde blijft het gerapporteerde percentage. Het rapport geeft geen expliciete verklaring voor het verschil met de controleberekening. Constante valuta ligt 1 procentpunt onder de hoofdwaarde en is niet ermee vermengd. Vergelijkbaarheidsbeperking: vanaf 2 januari 2026 worden betalingen aan chauffeurs in bepaalde Britse markten als omzetvermindering verwerkt in plaats van als kostprijs; het rapport noemt een negatieve kwartaalomzetimpact van 1100 miljoen USD. Geen eigen correctie toegepast."
+      }
+    ]
+  },
+  {
+    "id": "T05-run2",
+    "seconds": 59.6,
+    "usage": {
+      "input_tokens": 107577,
+      "cached_input_tokens": 8960,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1791,
+      "reasoning_output_tokens": 45
+    },
+    "item_types": [
+      "agent_message",
+      "error"
+    ],
+    "records": [
+      {
+        "ticker": "UBER",
+        "metric": "FCF",
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "period_type": "Halfjaar",
+        "value": 5078,
+        "currency": "USD",
+        "method": "Gerapporteerd",
+        "definition": "Uber definieert free cash flow als netto operationele kasstroom minus kapitaaluitgaven; de aansluiting gebruikt aankopen van materiële vaste activa.",
+        "source": "UBER-2026-06-30.pdf",
+        "page": "PDF-pagina 71, Reconciliations of Non-GAAP Financial Measures — Free Cash Flow; PDF-pagina 14, Condensed Consolidated Statements of Cash Flows",
+        "evidence": "Oorspronkelijke schaal: USD in millions. Six Months Ended June 30, 2026: Net cash provided by operating activities $5,213; Purchases of property and equipment $(135); Free cash flow $5,078. Controle: 5213 - 135 = 5078 miljoen USD.",
+        "status": "Nog te controleren",
+        "note": "Afzonderlijke kwartaal-FCF en kwartaalcomponenten ontbreken. Beschikbaar zijn de halfjaren 2025-01-01 t/m 2025-06-30 en 2026-01-01 t/m 2026-06-30. De vooraf gekozen periode januari–juni 2026 is gebruikt, zonder deling door twee. Dit is gerapporteerde non-GAAP FCF; financiële-leaseaflossingen worden in deze aansluiting niet afgetrokken."
+      },
+      {
+        "ticker": "UBER",
+        "metric": "Schuld",
+        "start": null,
+        "end": "2026-06-30",
+        "period_type": "Peildatum",
+        "value": 12723,
+        "currency": "USD",
+        "method": "Berekend",
+        "definition": "Som van de gerapporteerde boekwaarden van kortlopende en langlopende financiële schuld, na niet-geamortiseerde kortingen en uitgiftekosten. Volledigheid ten aanzien van financiële leases is onzeker.",
+        "source": "UBER-2026-06-30.pdf",
+        "page": "PDF-pagina 8, Condensed Consolidated Balance Sheets; PDF-pagina 27, Note 5 — Debt and Credit Arrangements; PDF-pagina 31, Note 5; PDF-pagina 14, Statements of Cash Flows; PDF-pagina 48, Note 13 — Supplier Financing Program",
+        "evidence": "Oorspronkelijke schaal: USD in millions. Short-term debt $1,997 + Long-term debt, net of current portion $10,726 = $12,723. Note 5-componenten: 2026 Term Loan 2000; 2028 Convertible Notes 1725; 2028 Exchangeable Senior Notes 1324; 2029 Senior Notes 1500; 2030 Senior Notes 1250; 2031 Senior Notes 1000; 2034 Senior Notes 1500; 2035 Senior Notes 1250; 2054 Senior Notes 1250; minus unamortized discount and issuance costs 76 = 12723 miljoen USD.",
+        "status": "Onzeker",
+        "note": "12723 miljoen USD is het aansluitende schuldsubtotaal uit balans en Note 5. De renteloze 2028 Exchangeable Senior Notes zijn inbegrepen tegen hun gerapporteerde boekwaarde van 1324 miljoen USD, die volgens de gekozen waarderingsmethode gelijk is aan fair value; de hoofdsom van 1150 miljoen USD is niet als vervanging gebruikt. Operationele leases zijn afzonderlijk gerapporteerd: 178 kortlopend + 1830 langlopend = 2008 miljoen USD, buiten dit subtotaal. Financiële leases: 82 miljoen USD aflossingen over het halfjaar zijn vermeld, maar eindboekwaarden en uitsplitsing kort/lang ontbreken; eventuele opname in andere balansposten is niet vast te stellen. Het leveranciersfinancieringsprogramma is als immaterieel opgenomen onder accounts payable, zonder exact bedrag; niet toegevoegd. Revolver en commercial paper hebben geen uitstaand saldo. Onbenutte kredietruimte en financiering na de peildatum zijn niet opgenomen."
+      },
+      {
+        "ticker": "UBER",
+        "metric": "Omzetgroei",
+        "start": "2026-04-01",
+        "end": "2026-06-30",
+        "period_type": "Kwartaal",
+        "value": 0.12,
+        "currency": null,
+        "method": "Gerapporteerd",
+        "definition": "Gerapporteerde groei van de geconsolideerde kwartaalomzet tegenover hetzelfde kwartaal van het voorgaande jaar, tegen gerapporteerde wisselkoersen.",
+        "source": "UBER-2026-06-30.pdf",
+        "page": "PDF-pagina 61, MD&A — Revenue; PDF-pagina 9, Condensed Consolidated Statements of Operations; PDF-pagina 53, Financial and Operational Highlights; PDF-pagina 54, Revenue",
+        "evidence": "Oorspronkelijke omzetbedragen en schaal: USD in millions. Three Months Ended June 30: 2025 $12,651; 2026 $14,191. Gerapporteerde groei 12%. Afzonderlijke controle: (14191 / 12651 - 1) = circa 0.12173, oftewel 12.173%; circa 0.173 procentpunt boven de gerapporteerde hoofdwaarde. Afzonderlijk gerapporteerde groei bij constante valuta: 11%, als fractie 0.11.",
+        "status": "Nog te controleren",
+        "note": "De hoofdwaarde blijft het gerapporteerde percentage 0.12. Voor het verschil met de controleberekening wordt geen oorzaak verondersteld. De vergelijkingsperiode is 2025-04-01 t/m 2025-06-30. Het rapport vermeldt een wijziging van het UK Mobility-bedrijfsmodel vanaf 2026-01-02, waarbij betalingen aan chauffeurs omzet verminderen in plaats van kostprijs; de gerapporteerde negatieve omzetimpact in het kwartaal is 1100 miljoen USD. Geen eigen correctie toegepast. Constante-valutagroei is apart gehouden."
+      }
+    ]
+  },
+  {
+    "id": "T05-run3",
+    "seconds": 42.58,
+    "usage": {
+      "input_tokens": 107577,
+      "cached_input_tokens": 8960,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1773,
+      "reasoning_output_tokens": 41
+    },
+    "item_types": [
+      "agent_message",
+      "error"
+    ],
+    "records": [
+      {
+        "ticker": "UBER",
+        "metric": "FCF",
+        "start": "2026-01-01",
+        "end": "2026-06-30",
+        "period_type": "Halfjaar",
+        "value": 5078,
+        "currency": "USD",
+        "method": "Gerapporteerd",
+        "definition": "Uber definieert free cash flow als netto operationele kasstroom minus kapitaaluitgaven; de reconciliatie gebruikt purchases of property and equipment.",
+        "source": "UBER-2026-06-30.pdf",
+        "page": "PDF-pagina 71, Reconciliations of Non-GAAP Financial Measures — Free Cash Flow; PDF-pagina 14, Condensed Consolidated Statements of Cash Flows",
+        "evidence": "Oorspronkelijke schaal: USD in millions. Six Months Ended June 30, 2026: Net cash provided by operating activities $5,213; Purchases of property and equipment $(135); gerapporteerde Free cash flow $5,078. Controle: 5213 - 135 = 5078 miljoen USD.",
+        "status": "Nog te controleren",
+        "note": "Afzonderlijke kwartaal-FCF en kwartaalcomponenten ontbreken. De vooraf gekozen periode 1 januari tot en met 30 juni 2026 is gebruikt, zonder deling door kwartalen. De bedrijfsdefinitie sluit aan bij operationele kasstroom minus aankopen van materiële vaste activa. Aflossingen op financiële leases van 82 miljoen USD over het halfjaar worden niet afgetrokken in deze bedrijfsdefinitie."
+      },
+      {
+        "ticker": "UBER",
+        "metric": "Schuld",
+        "start": null,
+        "end": "2026-06-30",
+        "period_type": "Peildatum",
+        "value": 12723,
+        "currency": "USD",
+        "method": "Berekend",
+        "definition": "Som van de gerapporteerde boekwaarden van kortlopende en langlopende financiële schuld, na onverwerkte discontovoeten en uitgiftekosten zoals opgenomen in Note 5; financiële leaseverplichtingen zijn niet aanvullend gekwantificeerd.",
+        "source": "UBER-2026-06-30.pdf",
+        "page": "PDF-pagina 8, Condensed Consolidated Balance Sheets; PDF-pagina 27, Note 5 — Debt and Credit Arrangements; PDF-pagina 31, Note 5 — 2028 Exchangeable Senior Notes, Credit Agreement en Commercial Paper; PDF-pagina 14, Statements of Cash Flows; PDF-pagina 48, Freight Holding Supplier Financing Program",
+        "evidence": "Oorspronkelijke schaal: USD in millions. Short-term debt 1,997 + Long-term debt 10,726 = 12,723. Note 5 specificeert: 2026 Term Loan 2,000; 2028 Convertible Notes 1,725; 2028 Exchangeable Senior Notes 1,324; 2029 Senior Notes 1,500; 2030 Senior Notes 1,250; 2031 Senior Notes 1,000; 2034 Senior Notes 1,500; 2035 Senior Notes 1,250; 2054 Senior Notes 1,250; minus unamortized discount and issuance costs 76 = 12,723 miljoen USD. Operationele leaseverplichtingen: current 178 + non-current 1,830 = 2,008 miljoen USD, afzonderlijk uitgesloten.",
+        "status": "Onzeker",
+        "note": "12,723 miljoen USD is het onderbouwde schuldtotaal uit Note 5. De renteloze 2028 Exchangeable Senior Notes zijn inbegrepen tegen hun gerapporteerde boekwaarde van 1,324 miljoen USD; Uber waardeert deze gehele lening tegen reële waarde. Voor overige schuld wordt geen algemene reëlewaardeherwaardering toegepast. Financiële leases bestaan: het kasstroomoverzicht vermeldt 82 miljoen USD aflossingen, maar kortlopende en langlopende leaseboekwaarden en eventuele opname in het schuldtotaal zijn niet afzonderlijk vastgesteld. Deze ontbrekende bedragen zijn onbekend, niet nul. Supplier financing binnen accounts payable is als immaterieel beschreven maar niet gekwantificeerd en niet toegevoegd. De revolving credit agreement en commercial paper hebben volgens Note 5 geen uitstaand saldo. Volledigheid van financiële schuld inclusief financiële leases staat daardoor niet vast."
+      },
+      {
+        "ticker": "UBER",
+        "metric": "Omzetgroei",
+        "start": "2026-04-01",
+        "end": "2026-06-30",
+        "period_type": "Kwartaal",
+        "value": 0.12,
+        "currency": null,
+        "method": "Gerapporteerd",
+        "definition": "Gerapporteerde groei van de geconsolideerde kwartaalomzet tegenover hetzelfde kwartaal van het voorgaande jaar, in rapportagevaluta.",
+        "source": "UBER-2026-06-30.pdf",
+        "page": "PDF-pagina 61, MD&A — Revenue; PDF-pagina 53, Financial and Operational Highlights; PDF-pagina 9, Condensed Consolidated Statements of Operations; PDF-pagina 54, Components of Results of Operations — Revenue",
+        "evidence": "Oorspronkelijke omzetbedragen en schaal: USD in millions. Three Months Ended June 30: 2026 $14,191 versus 2025 $12,651. Gerapporteerde groei 12%, opgeslagen als 0.12. Afzonderlijke controle: (14191 / 12651 - 1) circa 0.12173, oftewel 12,173%; circa 0,173 procentpunt hoger dan de gerapporteerde hoofdwaarde. Afzonderlijk gerapporteerde groei bij constante valuta: 11%, als fractie 0.11.",
+        "status": "Nog te controleren",
+        "note": "Het verschil tussen controleberekening en gerapporteerd percentage wordt vermeld zonder een oorzaak toe te schrijven. Constante valuta blijft afzonderlijk en ligt 1 procentpunt onder de gerapporteerde groei. Het rapport beschrijft een wijziging van het Mobility-bedrijfsmodel in bepaalde Britse markten vanaf 2 januari 2026, waarbij betalingen aan chauffeurs omzet verminderen in plaats van als omzetkosten te worden geboekt; dit beperkt de vergelijkbaarheid. Er is geen eigen correctie op de omzetgroei toegepast."
+      }
+    ]
+  }
+]

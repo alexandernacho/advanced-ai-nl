@@ -1,0 +1,62 @@
+| Maatstaf | Waarde | Periode / type | Valuta en schaal | Bronpagina en sectie | Status en beperkingen |
+|---|---:|---|---|---|---|
+| FCF | 5.078 | 2026-01-01 t/m 2026-06-30; Halfjaar | USD miljoen | PDF 71, Free Cash Flow | Nog te controleren. Gerapporteerd; afzonderlijke kwartaal-FCF ontbreekt. Vooraf gekozen halfjaar gebruikt. |
+| Schuld | 12.723 | 2026-06-30; Peildatum | USD miljoen | PDF 8, Balance Sheets; PDF 27–31, Note 5 | Onzeker. Kortlopend 1.997 + langlopend 10.726. Boekwaarde financiële leases ontbreekt; volledigheid totaal onzeker. |
+| Omzetgroei | 12% | 2026-04-01 t/m 2026-06-30; Kwartaal, tegenover dezelfde periode in 2025 | Geen; JSON-fractie 0.12 | PDF 9, Statements of Operations; PDF 53, Financial and Operational Highlights; PDF 61, Revenue | Nog te controleren. Controleberekening circa 12,173%; constante valuta afzonderlijk 11%. |
+
+Het leesbare bronmateriaal betreft **Uber Technologies, Inc. (UBER), Form 10-Q**, voor het kwartaal geëindigd op **30 juni 2026** (PDF 1). De financiële tabellen bevatten kwartaal- en halfjaarcijfers. Oorspronkelijke rapportagevaluta is USD. Er is geen wisselkoers opgehaald; koersdatum is niet van toepassing.
+
+```json
+{
+  "records": [
+    {
+      "ticker": "UBER",
+      "metric": "FCF",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "period_type": "Halfjaar",
+      "value": 5078,
+      "currency": "USD",
+      "method": "Gerapporteerd",
+      "definition": "Uber definieert free cash flow als netto operationele kasstroom minus kapitaaluitgaven; de reconciliatie gebruikt aankopen van materiële vaste activa.",
+      "source": "UBER-2026-06-30.pdf",
+      "page": "PDF 71, Reconciliations of Non-GAAP Financial Measures — Free Cash Flow; PDF 14, Condensed Consolidated Statements of Cash Flows",
+      "evidence": "Oorspronkelijke schaal: USD in millions. Halfjaar 2026: Net cash provided by operating activities $5,213; Purchases of property and equipment $(135); gerapporteerde Free cash flow $5,078. Rekenkundige controle: 5213 - 135 = 5078 miljoen USD.",
+      "status": "Nog te controleren",
+      "note": "Afzonderlijke kwartaal-FCF en kwartaalcomponenten ontbreken. Beschikbaar zijn de halfjaren 2025 en 2026, met gerapporteerde FCF van respectievelijk 4725 en 5078 miljoen USD. De vooraf gekozen periode 1 januari t/m 30 juni 2026 is gebruikt, zonder deling door twee. De bedrijfsdefinitie sluit aan bij operationele kasstroom minus aankopen van materiële vaste activa; aflossingen op financiële leases worden niet afgetrokken."
+    },
+    {
+      "ticker": "UBER",
+      "metric": "Schuld",
+      "start": null,
+      "end": "2026-06-30",
+      "period_type": "Peildatum",
+      "value": 12723,
+      "currency": "USD",
+      "method": "Berekend",
+      "definition": "Som van de gerapporteerde boekwaarden van kortlopende en langlopende financiële schuld; financiële leases kunnen door ontbrekende balansbedragen niet worden aangevuld.",
+      "source": "UBER-2026-06-30.pdf",
+      "page": "PDF 8, Condensed Consolidated Balance Sheets; PDF 27–31, Note 5 — Debt and Credit Arrangements; PDF 14, Statements of Cash Flows; PDF 48, Freight Holding Supplier Financing Program",
+      "evidence": "Oorspronkelijke schaal: USD in millions. Short-term debt 1,997 + Long-term debt, net of current portion 10,726 = 12,723. Note 5 bevestigt Total debt $12,723: Term Loan 2,000; 2028 Convertible Notes 1,725; 2028 Exchangeable Senior Notes 1,324; Senior Notes 2029 1,500, 2030 1,250, 2031 1,000, 2034 1,500, 2035 1,250 en 2054 1,250; minus unamortized discount and issuance costs 76. Operationele leaseverplichtingen: current 178 + non-current 1,830 = 2,008 miljoen USD, afzonderlijk gehouden. Financiële leaseaflossingen over het halfjaar: $82 miljoen; dit is geen eindboekwaarde.",
+      "status": "Onzeker",
+      "note": "12723 miljoen USD is het vaststelbare schuldtotaal uit balans en Note 5. Kortlopende en langlopende boekwaarden van financiële leases zijn niet afzonderlijk beschikbaar; hun opname in andere balansposten en de volledigheid van het totale financiële schuldbedrag staan niet vast. Operationele leases van 2008 miljoen USD zijn uitgesloten. De renteloze 2028 Exchangeable Senior Notes zijn inbegrepen tegen hun gerapporteerde boekwaarde van 1324 miljoen USD, die door de gekozen fair-value accounting gelijk is aan reële waarde; de nominale hoofdsom van 1150 miljoen USD is niet gebruikt. Revolver en commercial paper hebben volgens Note 5 geen uitstaand saldo. Supplier financing is als immaterieel beschreven binnen accounts payable, zonder exact bedrag; niet toegevoegd. Toekomstige financieringsverplichtingen zijn geen opgenomen schuld op deze peildatum."
+    },
+    {
+      "ticker": "UBER",
+      "metric": "Omzetgroei",
+      "start": "2026-04-01",
+      "end": "2026-06-30",
+      "period_type": "Kwartaal",
+      "value": 0.12,
+      "currency": null,
+      "method": "Gerapporteerd",
+      "definition": "Gerapporteerde groei van geconsolideerde kwartaalomzet tegenover hetzelfde kwartaal van het voorgaande jaar, in de oorspronkelijke rapportagevaluta.",
+      "source": "UBER-2026-06-30.pdf",
+      "page": "PDF 9, Condensed Consolidated Statements of Operations; PDF 53, Financial and Operational Highlights; PDF 61, Revenue; PDF 53–54, Components of Results of Operations — Revenue",
+      "evidence": "Oorspronkelijke schaal: USD in millions. Omzet drie maanden geëindigd op 30 juni: 2026 $14,191; 2025 $12,651. Gerapporteerde groei 12%, opgeslagen als 0.12. Afzonderlijke controle: (14191 / 12651 - 1) ≈ 0.12173, oftewel 12.173%. Controleberekening ligt circa 0.173 procentpunt boven het gerapporteerde percentage. Gerapporteerde groei bij constante valuta is afzonderlijk 11%, oftewel 0.11.",
+      "status": "Nog te controleren",
+      "note": "Hoofdwaarde blijft het gerapporteerde percentage. Het rapport geeft geen expliciete verklaring voor het verschil met de controleberekening. Constante valuta ligt 1 procentpunt onder de hoofdwaarde en is niet ermee vermengd. Vergelijkbaarheidsbeperking: vanaf 2 januari 2026 worden betalingen aan chauffeurs in bepaalde Britse markten als omzetvermindering verwerkt in plaats van als kostprijs; het rapport noemt een negatieve kwartaalomzetimpact van 1100 miljoen USD. Geen eigen correctie toegepast."
+    }
+  ]
+}
+```

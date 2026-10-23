@@ -1,0 +1,62 @@
+| Maatstaf | Uitkomst | Periode / peildatum | Valuta | Bronpagina’s | Beperking |
+|---|---:|---|---|---|---|
+| FCF | **DKK 42.524 miljoen** | Kwartaal, 1 apr–30 jun 2026 | DKK | Gedrukt p. 37 / pdf-p. 37, “Free cash flow” | Gerapporteerd volgens de herziene definitie vanaf 2026. |
+| Schuld | **DKK 140.127 miljoen** | 30 jun 2026 | DKK | Gedrukt p. 28 / pdf-p. 28, “Appendix 3: Condensed balance sheet”; gedrukte p. 37 / pdf-p. 37, “Net debt” | Boekwaarde van current en non-current Borrowings. Leases zijn uitgesloten van deze schuldmaatstaf. |
+| Omzetgroei | **2%** (0,02) gerapporteerd in DKK; **3%** (0,03) bij constante wisselkoersen | Kwartaal, Q2 2026 versus Q2 2025 | — | Gedrukt p. 4 / pdf-p. 4, “Reported sales”; gedrukte p. 34 / pdf-p. 34, “Net sales and operating profit growth at CER” | De rapportage noemt zowel DKK-groei als CER-groei; CER is apart gehouden. |
+
+Het document is een Novo Nordisk A/S financieel verslag over de zes maanden van 1 januari tot en met 30 juni 2026, met afzonderlijke Q2-cijfers. De ticker NVO past bij de in het rapport vermelde ADR. Bedragen hieronder staan in miljoenen DKK; oorspronkelijke rapportbedragen en schaal staan in het bewijs. Wisselkoersen zijn niet opgehaald.
+
+```json
+{
+  "records": [
+    {
+      "ticker": "NVO",
+      "metric": "FCF",
+      "start": "2026-04-01",
+      "end": "2026-06-30",
+      "period_type": "Kwartaal",
+      "value": 42524,
+      "currency": "DKK",
+      "method": "Gerapporteerd",
+      "definition": "Free cash flow is net cash generated from operating activities minus purchase of property, plant and equipment. De definitie is vanaf 2026 van kracht; vergelijkende cijfers zijn herzien.",
+      "source": "NVO-2026-06-30.pdf",
+      "page": "Gedrukt p. 37 / pdf-p. 37, Appendix 7: Non-IFRS financial measures (additional information), sectie Free cash flow",
+      "evidence": "Q2 2026: net cash generated from operating activities DKK 55,199 miljoen minus purchase of property, plant and equipment DKK 12,675 miljoen = gerapporteerde FCF DKK 42,524 miljoen. Oorspronkelijke rapportagevaluta DKK; rapportbedragen zijn al in DKK million.",
+      "status": "Nog te controleren",
+      "note": "Afzonderlijk kwartaal beschikbaar. De definitie is vanaf 2026 gewijzigd en sluit aan bij de in het rapport beschreven beschikbaarheid voor kapitaalallocatie."
+    },
+    {
+      "ticker": "NVO",
+      "metric": "Schuld",
+      "start": null,
+      "end": "2026-06-30",
+      "period_type": "Peildatum",
+      "value": 140127,
+      "currency": "DKK",
+      "method": "Gerapporteerd",
+      "definition": "Boekwaarde van kortlopende plus langlopende financiële schuld (Borrowings); geen nettoschuld.",
+      "source": "NVO-2026-06-30.pdf",
+      "page": "Gedrukt p. 28 / pdf-p. 28, Appendix 3: Condensed balance sheet; lease-informatie: gedrukte p. 37 / pdf-p. 37, sectie Net debt",
+      "evidence": "Per 30 juni 2026: Borrowings, non-current DKK 121,794 miljoen + Borrowings, current DKK 18,333 miljoen = DKK 140,127 miljoen. Rapportbedragen zijn al in DKK million.",
+      "status": "Nog te controleren",
+      "note": "De componenten zijn als Borrowings gepresenteerd. Het rapport vermeldt bij de nettoschuldreconciliatie dat lease liabilities van DKK 8,622 miljoen zijn uitgesloten van Borrowings; dit bedrag is informatief en niet bij de schuldwaarde opgeteld. Operationele en financiële leases worden niet afzonderlijk uitgesplitst in de aangeleverde rapporttekst. De behandeling van eventuele renteloze obligaties is niet gespecificeerd."
+    },
+    {
+      "ticker": "NVO",
+      "metric": "Omzetgroei",
+      "start": "2026-04-01",
+      "end": "2026-06-30",
+      "period_type": "Kwartaal",
+      "value": 0.02,
+      "currency": null,
+      "method": "Gerapporteerd",
+      "definition": "Gerapporteerde groei van net sales in Deense kronen tegenover hetzelfde kwartaal vorig jaar. CER-groei sluit wisselkoerseffecten uit.",
+      "source": "NVO-2026-06-30.pdf",
+      "page": "Gedrukt p. 4 / pdf-p. 4, Commercial execution, sectie Q2 and H1 2026 reported sales; CER-definitie: gedrukte p. 34 / pdf-p. 34, Appendix 7",
+      "evidence": "Q2 2026 net sales DKK 78,488 miljoen; Q2 2025 DKK 76,857 miljoen. Controleberekening: (78,488 / 76,857 - 1) = circa 0.0212, ofwel circa 2.12%. Het rapport geeft de gerapporteerde groei in DKK als 2% (0.02) en de groei at CER als 3% (0.03). Bedragen zijn in DKK million.",
+      "status": "Nog te controleren",
+      "note": "De controleberekening op afgeronde bedragen is circa 0.12 procentpunt hoger dan het gerapporteerde DKK-percentage van 2%; gerapporteerd percentage behouden als hoofdwaarde. CER van 3% is apart vermeld."
+    }
+  ]
+}
+```

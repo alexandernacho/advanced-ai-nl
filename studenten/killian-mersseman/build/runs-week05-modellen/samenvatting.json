@@ -1,0 +1,47 @@
+{
+  "A": {
+    "model": "gpt-6.1-sol",
+    "n": 5,
+    "passed": 4,
+    "avg_output_tokens": 1732.6,
+    "avg_input_tokens": 85846.8,
+    "avg_cached_input_tokens": 7936.0,
+    "avg_reasoning_tokens": 72.4,
+    "max_input_tokens": 201201,
+    "avg_seconds": 49.602,
+    "avg_usd": 0.1739412,
+    "year_40_usd": 6.957648,
+    "avg_nocache_usd": 0.1890196,
+    "numeric_matches_out_of_15": 14
+  },
+  "B": {
+    "model": "gpt-6-luna",
+    "n": 5,
+    "passed": 0,
+    "avg_output_tokens": 1371.4,
+    "avg_input_tokens": 85154.8,
+    "avg_cached_input_tokens": 7628.8,
+    "avg_reasoning_tokens": 0.0,
+    "max_input_tokens": 200509,
+    "avg_seconds": 15.824000000000002,
+    "avg_usd": 0.008514588,
+    "year_40_usd": 0.34058352000000003,
+    "avg_nocache_usd": 0.00920118,
+    "numeric_matches_out_of_15": 12
+  },
+  "C": {
+    "model": "gpt-6-astra",
+    "n": 5,
+    "passed": 5,
+    "avg_output_tokens": 1762.4,
+    "avg_input_tokens": 85782.8,
+    "avg_cached_input_tokens": 7065.6,
+    "avg_reasoning_tokens": 78.4,
+    "max_input_tokens": 201137,
+    "avg_seconds": 66.662,
+    "avg_usd": 0.8823576,
+    "year_40_usd": 35.294304,
+    "avg_nocache_usd": 0.9459479999999999,
+    "numeric_matches_out_of_15": 15
+  }
+}

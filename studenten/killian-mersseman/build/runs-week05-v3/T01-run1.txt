@@ -1,0 +1,62 @@
+| Maatstaf | Waarde | Periode / peildatum | Valuta | Bronpagina en sectie | Beperkingen / status |
+|---|---:|---|---|---|---|
+| FCF | 42.524 miljoen | Kwartaal: 2026-04-01 t/m 2026-06-30 | DKK | 3, Financial highlights; 37, Appendix 7 — Free cash flow | Gerapporteerd; definitie gewijzigd vanaf 2026, vergelijkende cijfers herzien. Nog te controleren. |
+| Schuld | 140.127 miljoen | Peildatum: 2026-06-30 | DKK | 28, Appendix 3 — Balance sheet; 37, Appendix 7 — Net debt | Inclusief 8.622 miljoen leaseverplichtingen; leasecategorieën en renteloze obligaties niet afzonderlijk gespecificeerd. Onzeker. |
+| Omzetgroei | 2% | Kwartaal: 2026-04-01 t/m 2026-06-30 tegenover hetzelfde kwartaal 2025 | n.v.t.; omzet in DKK | 4, Reported sales; 26, Appendix 1 | Controleberekening: circa 2,1221%, dus +0,1221 procentpunt tegenover gerapporteerd. CER afzonderlijk: 3%. Nog te controleren. |
+
+Het leesbare bronmateriaal betreft **Novo Nordisk A/S**, waarvan pagina 25 de ADR-ticker **NVO** bevestigt. Het is een niet-gecontroleerd IAS 34-halfjaarbericht over **2026-01-01 t/m 2026-06-30**, met afzonderlijke Q2-cijfers (pagina’s 1, 24 en 26). Alle geldbedragen hieronder zijn miljoenen DKK. Er is geen wisselkoers toegepast; koersdatum is niet van toepassing.
+
+```json
+{
+  "records": [
+    {
+      "ticker": "NVO",
+      "metric": "FCF",
+      "start": "2026-04-01",
+      "end": "2026-06-30",
+      "period_type": "Kwartaal",
+      "value": 42524,
+      "currency": "DKK",
+      "method": "Gerapporteerd",
+      "definition": "Vanaf 2026: net cash generated from operating activities minus purchase of property, plant and equipment.",
+      "source": "NVO-2026-06-30.pdf",
+      "page": "Gedrukte/pdf-pagina 37, Appendix 7 — Free cash flow; pagina 3, Financial highlights; pagina 27, Appendix 2",
+      "evidence": "Oorspronkelijke schaal: DKK million. Q2 2026 operationele kasstroom 55,199; aankopen materiële vaste activa (12,675); gerapporteerde FCF 42,524. Rekenkundige controle: 55199 - 12675 = 42524.",
+      "status": "Nog te controleren",
+      "note": "Afzonderlijke kwartaal-FCF beschikbaar. Definitie gewijzigd vanaf 2026; vergelijkende cijfers zijn herzien. Aankopen immateriële activa worden niet afgetrokken in deze definitie. Vanaf 1 januari 2026 worden ontvangen rente onder investeringskasstromen en betaalde rente onder financieringskasstromen gepresenteerd; voorheen vielen beide onder operationele kasstromen."
+    },
+    {
+      "ticker": "NVO",
+      "metric": "Schuld",
+      "start": null,
+      "end": "2026-06-30",
+      "period_type": "Peildatum",
+      "value": 140127,
+      "currency": "DKK",
+      "method": "Berekend",
+      "definition": "Boekwaarde van kortlopende plus langlopende Borrowings, inclusief de daarin opgenomen leaseverplichtingen; zonder aftrek van kasmiddelen of effecten.",
+      "source": "NVO-2026-06-30.pdf",
+      "page": "Gedrukte/pdf-pagina 28, Appendix 3 — Condensed balance sheet; pagina 37, Appendix 7 — Net debt; pagina 14, Bonds",
+      "evidence": "Oorspronkelijke schaal: DKK million. Langlopende Borrowings 121,794 plus kortlopende Borrowings 18,333 = 140,127. De nettoschuldreconciliatie vermeldt 8,622 aan leaseverplichtingen binnen Borrowings. Exclusief deze leases bedraagt Borrowings 140127 - 8622 = 131505; dit is geen nettoschuld.",
+      "status": "Onzeker",
+      "note": "De balans levert beide looptijdcomponenten, maar geen verdere uitsplitsing van Borrowings. Operationele leases: niet afzonderlijk gekwantificeerd. Financiële leases: niet afzonderlijk gekwantificeerd. Het gezamenlijke leasebedrag van 8622 is inbegrepen; verdeling naar categorie en looptijd ontbreekt. Renteloze obligaties zijn niet afzonderlijk geïdentificeerd; eventuele daarin opgenomen boekwaarden worden niet wegens een nulcoupon uitgesloten. Volledigheid van deze afbakening kan uit het rapport niet definitief worden vastgesteld. De nominale EUR- en CHF-obligatiebedragen op pagina 14 worden niet bij de boekwaarden opgeteld."
+    },
+    {
+      "ticker": "NVO",
+      "metric": "Omzetgroei",
+      "start": "2026-04-01",
+      "end": "2026-06-30",
+      "period_type": "Kwartaal",
+      "value": 0.02,
+      "currency": null,
+      "method": "Gerapporteerd",
+      "definition": "Gerapporteerde groei van IFRS-netto-omzet in DKK tegenover hetzelfde kwartaal vorig jaar; geen aangepaste omzetgroei en geen constante valuta.",
+      "source": "NVO-2026-06-30.pdf",
+      "page": "Gedrukte/pdf-pagina 4, Q2 and H1 2026 reported sales; pagina 26, Appendix 1 — Condensed income statement; pagina 34, Appendix 7 — Net sales and operating profit growth at CER",
+      "evidence": "Oorspronkelijke schaal omzet: DKK million. Q2 2026 Net sales 78,488; Q2 2025 Net sales 76,857. Gerapporteerde groei in DKK: 2%, opgeslagen als 0.02. Afzonderlijke controle: (78488 / 76857 - 1) circa 0.02122123, oftewel 2.122123%. Controleberekening minus gerapporteerde groei: circa +0.122123 procentpunt. Afzonderlijke gerapporteerde groei bij constante valuta: 3%, oftewel 0.03.",
+      "status": "Nog te controleren",
+      "note": "Geen oorzaak toegekend aan het verschil tussen controleberekening en gerapporteerd percentage. Vergelijkingsperiode: 2025-04-01 t/m 2025-06-30. Volgens pagina 4 bevat Q2 2025 een 340B-provisievrijval; Q2 2026 niet. De hoofdwaarde blijft de gerapporteerde omzetgroei."
+    }
+  ]
+}
+```

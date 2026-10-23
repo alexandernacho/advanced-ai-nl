@@ -1,0 +1,62 @@
+| Maatstaf | Waarde | Periode / peildatum | Valuta / schaal | Bronpagina en sectie | Status en beperkingen |
+|---|---:|---|---|---|---|
+| FCF | 10.764 | 2026-01-01 t/m 2026-06-30 — Halfjaar | USD miljoen | p. 8, Statements of Cash Flows | Nog te controleren — Berekend; afzonderlijke kwartaal-FCF ontbreekt. Vooraf gekozen halfjaar gebruikt. |
+| Schuld | 54.908 | 2026-06-30 — Peildatum | USD miljoen | p. 7, Balance Sheets; p. 17, Note 8 — Debt | Onzeker — boekwaarde schuldposten sluit aan; leaseafbakening niet vast te stellen. |
+| Omzetgroei | 48% | 2026-04-01 t/m 2026-06-30 — Kwartaal, tegenover dezelfde periode in 2025 | Geen; JSON-fractie 0.48 | p. 24, Financial Results; p. 28, Revenue; p. 5, Statements of Operations | Nog te controleren — controleberekening 47,6668%; gerapporteerd percentage ligt circa 0,3332 procentpunt hoger. |
+
+De aangeleverde tekst is leesbaar en hoort bij **Eli Lilly and Company (LLY)**: Form 10-Q voor het kwartaal geëindigd op **30 juni 2026** (pdf-p. 1). De financiële tabellen bevatten kwartaal- en halfjaarperioden. De oorspronkelijke rapportagevaluta is USD; een wisselkoers en koersdatum zijn niet van toepassing.
+
+```json
+{
+  "records": [
+    {
+      "ticker": "LLY",
+      "metric": "FCF",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "period_type": "Halfjaar",
+      "value": 10764,
+      "currency": "USD",
+      "method": "Berekend",
+      "definition": "Operationele kasstroom minus aankopen van materiële vaste activa over dezelfde periode.",
+      "source": "LLY-2026-06-30.pdf",
+      "page": "Gedrukte pagina 8 / pdf-pagina 8, Consolidated Condensed Statements of Cash Flows",
+      "evidence": "Oorspronkelijke schaal: Dollars in millions. Six Months Ended June 30, 2026: Net Cash Provided by Operating Activities 16,023; Purchases of property and equipment (5,259). FCF = 16023 - 5259 = 10764 miljoen USD.",
+      "status": "Nog te controleren",
+      "note": "Geen gerapporteerde FCF of afzonderlijke operationele kwartaal-kasstroom gevonden. Beschikbare kasstroomperioden zijn 2026-01-01 t/m 2026-06-30 en 2025-01-01 t/m 2025-06-30. De vooraf gekozen halfjaarperiode 2026 is gebruikt, zonder deling door kwartalen. Dit is de voorgeschreven berekende definitie, geen gerapporteerde bedrijfsdefinitie. Aankopen van IPR&D en overnames worden niet aanvullend afgetrokken. Expenditures for long-lived assets op p. 23 omvat ook computersoftware en is niet gebruikt als vervanging voor purchases of property and equipment."
+    },
+    {
+      "ticker": "LLY",
+      "metric": "Schuld",
+      "start": null,
+      "end": "2026-06-30",
+      "period_type": "Peildatum",
+      "value": 54908,
+      "currency": "USD",
+      "method": "Berekend",
+      "definition": "Som van de boekwaarde van kortlopende leningen en kortlopende aflossingen van langlopende schuld, plus langlopende schuld.",
+      "source": "LLY-2026-06-30.pdf",
+      "page": "Gedrukte pagina 7 / pdf-pagina 7, Consolidated Condensed Balance Sheets; gedrukte pagina 17 / pdf-pagina 17, Note 8 — Debt; gedrukte pagina 31 / pdf-pagina 31, Financial Condition and Liquidity",
+      "evidence": "Oorspronkelijke schaal p. 7 en 17: Dollars in millions. Short-term borrowings and current maturities of long-term debt 7,050 + Long-term debt 47,858 = 54,908 miljoen USD. Aansluiting Note 8: Short-term commercial paper borrowings, carrying amount 5,284 + Long-term debt, including current portion, carrying amount 49,624 = 54,908. Hieruit volgt een kortlopend deel van langlopende schuld van 1,766. P. 31 rapporteert total debt van $54.9 billion, oftewel afgerond 54,900 miljoen USD.",
+      "status": "Onzeker",
+      "note": "Beide balanscomponenten zijn beschikbaar; reële waarden en kasmiddelen zijn niet gebruikt. Operationele leases: bedragen en classificatie niet afzonderlijk vermeld, geen afzonderlijke toevoeging gedaan. Financiële leases: bedragen en eventuele opname in de schuldposten niet vast te stellen; geen aanvullende waarde aangenomen. Renteloze obligaties: niet afzonderlijk geïdentificeerd; niet op grond van een nulcoupon uitgesloten en, indien opgenomen in de gerapporteerde schuldposten, via hun boekwaarde inbegrepen. Een afzonderlijk bedrag is onbekend, niet nul. Volledigheid en afbakening buiten de gerapporteerde schuldposten blijven onzeker."
+    },
+    {
+      "ticker": "LLY",
+      "metric": "Omzetgroei",
+      "start": "2026-04-01",
+      "end": "2026-06-30",
+      "period_type": "Kwartaal",
+      "value": 0.48,
+      "currency": null,
+      "method": "Gerapporteerd",
+      "definition": "Gerapporteerde groei van geconsolideerde kwartaalomzet tegenover hetzelfde kwartaal vorig jaar, inclusief valuta-effecten.",
+      "source": "LLY-2026-06-30.pdf",
+      "page": "Gedrukte pagina 24 / pdf-pagina 24, Executive Overview — Financial Results; gedrukte pagina 28 / pdf-pagina 28, Results of Operations — Revenue; gedrukte pagina 5 / pdf-pagina 5, Consolidated Condensed Statements of Operations",
+      "evidence": "Gerapporteerde kwartaalgroei: 48 percent, opgeslagen als 0.48. Oorspronkelijke omzetschaal: Dollars in millions. Three Months Ended June 30: 2026 $22,974; 2025 $15,558. Afzonderlijke controleberekening: (22974 / 15558 - 1) ≈ 0.476668, oftewel 47.6668%. Gerapporteerd minus berekend ≈ +0.3332 procentpunt.",
+      "status": "Nog te controleren",
+      "note": "Het gerapporteerde percentage blijft de hoofdwaarde; de oorzaak van het verschil met de controleberekening is niet vastgesteld. Vergelijkingsperiode: 2025-04-01 t/m 2025-06-30. Constante-valutagroei is niet afzonderlijk gerapporteerd en blijft onbekend. De afzonderlijke valuta-effectcomponent op p. 28 bedraagt 1% (fractie 0.01); deze is niet gebruikt om een constante-valutagroeipercentage af te leiden."
+    }
+  ]
+}
+```

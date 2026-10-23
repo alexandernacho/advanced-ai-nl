@@ -1,0 +1,62 @@
+| Maatstaf | Waarde | Periode / type | Valuta | Bronpagina en sectie | Beperking / status |
+|---|---:|---|---|---|---|
+| FCF | 2.883,513 miljoen | 2026-07-01 t/m 2026-09-30; Kwartaal | USD | 11, Non-GAAP Free Cash Flow; 5, voetnoot 5 | Gerapporteerd volgens bedrijfsdefinitie; Nog te controleren |
+| Schuld | 15.132,394 miljoen | 2026-09-30; Peildatum | USD | 9, Consolidated Balance Sheets; 13, Non-GAAP Net Debt | Som boekwaarden; leases en eventuele renteloze obligaties niet afzonderlijk toegelicht; Onzeker |
+| Omzetgroei | 11,8% | 2026-07-01 t/m 2026-09-30; Kwartaal | — | 1, overzicht resultaten; 8, Statements of Operations; 12, Constant Currency Information | Controleberekening 11,84911%; Nog te controleren |
+
+Het leesbare bronmateriaal betreft **Netflix, Inc. (NFLX)**: de aandeelhoudersbrief van 20 oktober 2026 met niet-gecontroleerde financiële bijlagen. De feitelijke verslagperiode is het kwartaal geëindigd op 30 september 2026, van 1 juli tot en met 30 september.
+
+```json
+{
+  "records": [
+    {
+      "ticker": "NFLX",
+      "metric": "FCF",
+      "start": "2026-07-01",
+      "end": "2026-09-30",
+      "period_type": "Kwartaal",
+      "value": 2883.513,
+      "currency": "USD",
+      "method": "Gerapporteerd",
+      "definition": "Non-GAAP free cash flow: operationele kasstroom minus aankopen van materiële vaste activa.",
+      "source": "NFLX-2026-09-30-aandeelhoudersbrief.pdf",
+      "page": "Gedrukte/pdf-pagina 11, Non-GAAP Free Cash Flow; pagina 5, Cash Flow and Capital Structure, voetnoot 5; pagina 10, Consolidated Statements of Cash Flows",
+      "evidence": "Oorspronkelijke schaal: duizenden USD. Voor de drie maanden geëindigd op 2026-09-30: operationele kasstroom 3,162,279; aankopen materiële vaste activa (278,766); gerapporteerde FCF 2,883,513. Controle: 3,162,279 - 278,766 = 2,883,513 duizend USD = 2883.513 miljoen USD.",
+      "status": "Nog te controleren",
+      "note": "Afzonderlijk kwartaal beschikbaar. De controleberekening bevestigt de gerapporteerde waarde; methode blijft Gerapporteerd. De bedrijfsdefinitie komt overeen met operationele kasstroom minus aankopen van materiële vaste activa."
+    },
+    {
+      "ticker": "NFLX",
+      "metric": "Schuld",
+      "start": null,
+      "end": "2026-09-30",
+      "period_type": "Peildatum",
+      "value": 15132.394,
+      "currency": "USD",
+      "method": "Berekend",
+      "definition": "Som van de boekwaarde van kortlopende en langlopende financiële schuld op de balansdatum.",
+      "source": "NFLX-2026-09-30-aandeelhoudersbrief.pdf",
+      "page": "Gedrukte/pdf-pagina 9, Consolidated Balance Sheets; pagina 13, Non-GAAP Net Debt; pagina 5, Cash Flow and Capital Structure",
+      "evidence": "Oorspronkelijke schaal: duizenden USD. Short-term debt 2,474,796 + Long-term debt 12,657,598 = 15,132,394 duizend USD = 15132.394 miljoen USD. Dit stemt overeen met Total debt op pagina 13. Daar worden debt issuance costs and original issue discount 59,251 en fair value hedging adjustment 145,158 afzonderlijk toegevoegd: 15,132,394 + 59,251 + 145,158 = 15,336,803 duizend USD, tegenover afgerond $15.3B gross debt op pagina 5. Deze toevoegingen zijn niet opgenomen in de gekozen boekwaardesom.",
+      "status": "Onzeker",
+      "note": "Beide expliciete balansschuldcomponenten zijn beschikbaar. Operationele leases: geen afzonderlijke verplichting of bedrag vermeld. Financiële leases: geen afzonderlijke verplichting of bedrag vermeld; opname in de schuldregels is niet vast te stellen. Eventuele renteloze obligaties worden niet afzonderlijk geïdentificeerd; indien aanwezig behoren zij tegen boekwaarde tot financiële schuld, maar hun opname is niet verifieerbaar. Geen extra bedragen verondersteld. Volledigheid en leaseafbakening blijven onzeker. Cash is niet afgetrokken; contentverplichtingen en totale verplichtingen zijn niet als financiële schuld meegenomen."
+    },
+    {
+      "ticker": "NFLX",
+      "metric": "Omzetgroei",
+      "start": "2026-07-01",
+      "end": "2026-09-30",
+      "period_type": "Kwartaal",
+      "value": 0.118,
+      "currency": null,
+      "method": "Gerapporteerd",
+      "definition": "Gerapporteerde omzetgroei van Q3 2026 tegenover hetzelfde kwartaal in 2025.",
+      "source": "NFLX-2026-09-30-aandeelhoudersbrief.pdf",
+      "page": "Gedrukte/pdf-pagina 1, overzicht resultaten, Y/Y % Growth; pagina 8, Consolidated Statements of Operations; pagina 12, Non-GAAP Constant Currency Information",
+      "evidence": "Pagina 1 rapporteert 11.8% voor Q3 2026, opgeslagen als 0.118. Oorspronkelijke omzetbedragen op pagina 8, in duizenden USD: Q3 2026 12,874,176 en Q3 2025 11,510,307; in miljoenen USD respectievelijk 12874.176 en 11510.307. Afzonderlijke controle: (12,874,176 / 11,510,307 - 1) = circa 0.1184911054, oftewel 11.84911%. Controle minus hoofdwaarde: circa +0.04911 procentpunt.",
+      "status": "Nog te controleren",
+      "note": "De hoofdwaarde is het gerapporteerde percentage van 11.8% uit de resultaattabel. Pagina's 1, 2 en 12 vermelden daarnaast 12%; dat ligt 0.2 procentpunt boven de hoofdwaarde en circa 0.15089 procentpunt boven de controleberekening. Geen oorzaak voor deze verschillen aangenomen. Constante-valutagroei afzonderlijk gerapporteerd als 11% (fractie 0.11), 0.8 procentpunt onder de hoofdwaarde; deze maatstaf sluit wisselkoerseffecten en gerealiseerde omzethedgingeffecten uit."
+    }
+  ]
+}
+```

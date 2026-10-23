@@ -1,0 +1,60 @@
+| Maatstaf | Waarde | Periode | Valuta | Bronpagina | Beperkingen |
+|---|---:|---|---|---|---|
+| FCF | 2.883,513 mln | Kwartaal, 1 jul–30 sep 2026 | USD | PDF p. 11, “Non-GAAP Free Cash Flow”; definitie p. 5 | Gerapporteerde FCF; definitie is operationele kasstroom minus aankopen van materiële vaste activa. |
+| Schuld | 15.132,394 mln | Peildatum 30 sep 2026 | USD | PDF p. 9, “Consolidated Balance Sheets”; toelichting p. 5 | Kortlopende en langlopende schuld opgeteld. Leases worden niet apart gekwantificeerd; geen afzonderlijke vermelding van renteloze obligaties. |
+| Omzetgroei | 0,12 (12%) | Kwartaal, 1 jul–30 sep 2026 t.o.v. dezelfde periode in 2025 | USD-bedragen; groei als fractie | PDF p. 12, “Non-GAAP Constant Currency Information” | Gerapporteerd percentage; controleberekening wijkt circa 0,12 procentpunt af door afronding. Constante valuta: 11%. |
+
+```json
+{
+  "records": [
+    {
+      "ticker": "NFLX",
+      "metric": "FCF",
+      "start": "2026-07-01",
+      "end": "2026-09-30",
+      "period_type": "Kwartaal",
+      "value": 2883.513,
+      "currency": "USD",
+      "method": "Gerapporteerd",
+      "definition": "Non-GAAP free cash flow: operationele kasstroom minus aankopen van materiële vaste activa.",
+      "source": "NFLX-2026-09-30-aandeelhoudersbrief.pdf",
+      "page": "Gedrukte p. 5 en PDF p. 11, “Cash Flow and Capital Structure” en “Non-GAAP Free Cash Flow”",
+      "evidence": "Bronbedragen in duizenden USD: operationele kasstroom 3,162,279 en aankopen van materiële vaste activa (278,766); gerapporteerde FCF 2,883,513. Omgezet naar miljoenen USD: 3,162.279 − 278.766 = 2,883.513.",
+      "status": "Nog te controleren",
+      "note": "Afzonderlijk kwartaalbedrag beschikbaar. De bedrijfsdefinitie trekt aankopen van materiële vaste activa af van operationele kasstroom."
+    },
+    {
+      "ticker": "NFLX",
+      "metric": "Schuld",
+      "start": null,
+      "end": "2026-09-30",
+      "period_type": "Peildatum",
+      "value": 15132.394,
+      "currency": "USD",
+      "method": "Berekend",
+      "definition": "Boekwaarde van kortlopende plus langlopende financiële schuld op de balansdatum; nettoschuld wordt niet gebruikt.",
+      "source": "NFLX-2026-09-30-aandeelhoudersbrief.pdf",
+      "page": "Gedrukte p. 9 en PDF p. 9, “Consolidated Balance Sheets”; bruto schuld toegelicht op gedrukte p. 5",
+      "evidence": "Bronbedragen in duizenden USD: short-term debt 2,474,796 + long-term debt 12,657,598 = 15,132,394. Omgezet naar miljoenen USD: 2,474.796 + 12,657.598 = 15,132.394.",
+      "status": "Onzeker",
+      "note": "De balans noemt kortlopende en langlopende schuld. Leases worden niet afzonderlijk gekwantificeerd; het rapport specificeert niet of ze in deze schuldposten zijn opgenomen. Renteloze obligaties worden niet afzonderlijk vermeld, dus volledigheid en afbakening van financiële schuld zijn niet volledig vast te stellen."
+    },
+    {
+      "ticker": "NFLX",
+      "metric": "Omzetgroei",
+      "start": "2026-07-01",
+      "end": "2026-09-30",
+      "period_type": "Kwartaal",
+      "value": 0.12,
+      "currency": null,
+      "method": "Gerapporteerd",
+      "definition": "Gerapporteerde omzetgroei jaar op jaar voor het kwartaal. Constante-valutagroei wordt afzonderlijk gerapporteerd.",
+      "source": "NFLX-2026-09-30-aandeelhoudersbrief.pdf",
+      "page": "Gedrukte p. 1 en PDF p. 12, “Summary Results” en “Non-GAAP Constant Currency Information”",
+      "evidence": "Omzet in duizenden USD: huidig kwartaal 12,874,176; vergelijkbaar kwartaal 2025 11,510,307. In miljoenen USD: 12,874.176 en 11,510.307. Controleberekening: (12,874.176 / 11,510.307 − 1) = circa 0.1185 (11.85%). Gerapporteerde groei 12%; constante-valutagroei 11%; verschil tussen gerapporteerd en constante valuta 1 procentpunt. De afgeronde controleberekening ligt circa 0.12 procentpunt onder de gerapporteerde 12%.",
+      "status": "Nog te controleren",
+      "note": "Gerapporteerd percentage is afgerond. De brief noemt daarnaast 11% groei op constante-valutabasis; dit is een afzonderlijke maatstaf."
+    }
+  ]
+}
+```

@@ -1,0 +1,70 @@
+{
+  "created_utc": "2026-10-22T13:45:24.485613+00:00",
+  "model": "gpt-6.1-sol",
+  "effort": "low",
+  "n": 5,
+  "repetitions": 3,
+  "scope": "extractie na vooraf vastgelegde periodekeuze; geen Excel-update",
+  "original_prompt_sha256": "2e4a474577b792f3dd1c1c38c78f18acb7a744ca42517378f3bdae7f15946ca4",
+  "extraction_prompt_sha256": "66e97a78af733fcdc4371e1922f1d7fbe89536e73286aa4c3076236ecce9399b",
+  "pdf_reader": "pypdf; volledige tekst per pagina; geen OCR of paginafilter",
+  "cases": [
+    {
+      "id": "T01",
+      "ticker": "NVO",
+      "pdf": "build/rapporten/NVO/NVO-2026-06-30.pdf",
+      "pdf_sha256": "967b672dd614cf0b01c8ba3e7a5d4e4d3a2d453c78d217599ea184ae928b98dc",
+      "pages": 37,
+      "textless_pages": [],
+      "input_sha256": "d6dd6be5bb01055e818c5c2563f63706342c36ca73d46a27314e3e515a5407bf",
+      "input_characters": 122020,
+      "period_choice": ""
+    },
+    {
+      "id": "T02",
+      "ticker": "LLY",
+      "pdf": "build/rapporten/LLY/LLY-2026-06-30.pdf",
+      "pdf_sha256": "8cd64f831e58ba6ac57b34192dcadd11095eb01de8a6c636e77932e7ed9dbc75",
+      "pages": 53,
+      "textless_pages": [],
+      "input_sha256": "b2ca3c0d5585a314ea80e4882c3942fa82aaac505c0ab3bdecd33df98990b7a5",
+      "input_characters": 175791,
+      "period_choice": "Als afzonderlijke kwartaal-FCF ontbreekt, kies ik vooraf 1 januari tot en met 30 juni 2026. Deze periodekeuze is al gemaakt; je hoeft daar niet opnieuw op te wachten."
+    },
+    {
+      "id": "T03",
+      "ticker": "AMZN",
+      "pdf": "build/rapporten/AMZN/AMZN-2026-06-30.pdf",
+      "pdf_sha256": "b6cc80d1d24114bfca236d3128778c19c6d519745dcfa324aa01f5787dc89ad8",
+      "pages": 294,
+      "textless_pages": [
+        192
+      ],
+      "input_sha256": "40dd1408c2d356cf8f3020b18212c5530c72f5050a245f9f76233cb1db9b3837",
+      "input_characters": 878472,
+      "period_choice": ""
+    },
+    {
+      "id": "T04",
+      "ticker": "NFLX",
+      "pdf": "build/rapporten/NFLX/2026-Q3/NFLX-2026-09-30-aandeelhoudersbrief.pdf",
+      "pdf_sha256": "57c48d24a24d109dc1b030a65420804fc32ed9d2765a90252f3f3f174bce9a0a",
+      "pages": 13,
+      "textless_pages": [],
+      "input_sha256": "dab932d8be1b6db6aac63b15b269cbfb980dacb77d58079c174ad5657b92a9f3",
+      "input_characters": 43345,
+      "period_choice": ""
+    },
+    {
+      "id": "T05",
+      "ticker": "UBER",
+      "pdf": "build/rapporten/UBER/UBER-2026-06-30.pdf",
+      "pdf_sha256": "8bca34255439069b6bd1edf638944bbdc0c09a87a178704550da779d949f71e1",
+      "pages": 155,
+      "textless_pages": [],
+      "input_sha256": "c1e7834640d8641ef5e75e16779533faf8ed67ece3ca94caf63d4db0c2ada842",
+      "input_characters": 442513,
+      "period_choice": "Als afzonderlijke kwartaal-FCF ontbreekt, kies ik vooraf 1 januari tot en met 30 juni 2026. Deze periodekeuze is al gemaakt; je hoeft daar niet opnieuw op te wachten."
+    }
+  ]
+}
