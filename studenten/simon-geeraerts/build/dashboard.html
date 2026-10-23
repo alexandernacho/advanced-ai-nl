@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard — leveringsassistent</title>
+  <style>
+    :root { --ink:#102a43; --muted:#627d98; --paper:#f7fafc; --card:#fff; --line:#d9e2ec; --blue:#0b7285; --teal:#2f9e84; --amber:#f08c00; --shadow:0 12px 32px rgba(16,42,67,.08); }
+    * { box-sizing:border-box; } body { margin:0; font:16px/1.55 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; color:var(--ink); background:var(--paper); }
+    main { max-width:1080px; margin:auto; padding:24px 16px 56px; } header { padding:22px 0 18px; } .eyebrow { color:var(--blue); font-size:.78rem; font-weight:800; letter-spacing:.11em; text-transform:uppercase; margin:0; } h1 { font-size:clamp(2rem,7vw,4rem); line-height:1; letter-spacing:-.05em; margin:.35rem 0 .65rem; } h2 { font-size:1.16rem; margin:0 0 14px; } p { margin:.25rem 0 0; } .intro { max-width:650px; color:var(--muted); }
+    .grid { display:grid; gap:16px; margin-top:16px; } .metrics { grid-template-columns:repeat(3,1fr); } .two { grid-template-columns:1.15fr .85fr; } .card { background:var(--card); border:1px solid var(--line); border-radius:18px; padding:20px; box-shadow:var(--shadow); } .metric { min-height:150px; display:flex; flex-direction:column; justify-content:space-between; } .metric strong { display:block; font-size:clamp(1.8rem,5vw,2.85rem); letter-spacing:-.06em; line-height:1; } .label { color:var(--muted); font-weight:700; font-size:.86rem; } .tag { display:inline-block; width:max-content; padding:4px 9px; border-radius:999px; color:#075e54; background:#d3f9d8; font-size:.8rem; font-weight:800; } .warning { background:#fff3bf; color:#8a4b00; }
+    table { width:100%; border-collapse:collapse; font-size:.93rem; } th,td { padding:11px 8px; text-align:left; border-bottom:1px solid var(--line); vertical-align:top; } th { color:var(--muted); font-size:.77rem; letter-spacing:.04em; text-transform:uppercase; } td:last-child, th:last-child { text-align:right; } .table-wrap { overflow-x:auto; } .choice { border-left:5px solid var(--teal); } .range { font-size:1.55rem; font-weight:850; letter-spacing:-.04em; color:var(--blue); } .flow { display:grid; gap:0; margin-top:8px; } .flow div { display:grid; grid-template-columns:145px 1fr; gap:10px; padding:11px 0; border-bottom:1px solid var(--line); } .flow b { color:var(--muted); font-size:.88rem; } footer { color:var(--muted); font-size:.85rem; padding:22px 2px 0; }
+    @media (max-width:720px) { main { padding:16px 12px 42px; } .metrics,.two { grid-template-columns:1fr; } .card { border-radius:14px; padding:16px; } .flow div { grid-template-columns:1fr; gap:2px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">Week 5 · 23 oktober 2026</p>
+      <h1>Wat mag deze assistent kosten?</h1>
+      <p class="intro">Een dashboard van de foutmarge, modelkeuze en waarde van een leveringsassistent. Alle cijfers komen uit de eigen testset en metingen.</p>
+    </header>
+
+    <section class="grid metrics" aria-label="Kerncijfers">
+      <article class="card metric"><span class="label">Score met foutmarge</span><strong>12–13 / 13</strong><span>3 runs per promptversie · n = 13</span></article>
+      <article class="card metric"><span class="label">Controle op set v2</span><strong>26 / 30</strong><span>1 run · n = 30 · gpt-6-luna</span></article>
+      <article class="card metric"><span class="label">Gekozen model</span><strong>Luna</strong><span>12/13 · €0,0000514 per run</span></article>
+      <article class="card metric"><span class="label">Netto waarde per jaar</span><strong>€2.225–€2.280</strong><span>30 vragen per maand</span></article>
+    </section>
+
+    <section class="grid two">
+      <article class="card">
+        <h2>Foutmarge</h2>
+        <p class="range">12–13 op 13</p>
+        <p>De vorige prompt scoorde 13/13, 12/13 en 13/13. De huidige prompt scoorde 12/13, 13/13 en 13/13.</p>
+        <p style="margin-top:14px"><span class="tag warning">Claim ingetrokken</span></p>
+        <p>De huidige prompt is niet aantoonbaar beter: de twee bereiken overlappen volledig.</p>
+      </article>
+      <article class="card choice">
+        <h2>Beslissing</h2>
+        <p class="range">Kies Luna</p>
+        <p>Alle drie de setups vallen binnen de foutmarge. Luna is daarom de beste keuze: dezelfde score, met de laagste kost.</p>
+      </article>
+    </section>
+
+    <section class="card" style="margin-top:16px">
+      <h2>Drie setups, één taak</h2>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Setup</th><th>Model</th><th>Score</th><th>In foutmarge?</th><th>Outputtokens</th><th>Kost/run</th><th>Per jaar</th></tr></thead>
+        <tbody>
+          <tr><td>A · standaard</td><td>Luna</td><td>12/13</td><td>Ja</td><td>39,1</td><td>€0,0000514</td><td>€0,0185</td></tr>
+          <tr><td>B · omlaag</td><td>Terra</td><td>12/13</td><td>Ja</td><td>35,1</td><td>€0,0010559</td><td>€0,3801</td></tr>
+          <tr><td>C · omhoog</td><td>Sol</td><td>12/13</td><td>Ja</td><td>39,3</td><td>€0,0010305</td><td>€0,3710</td></tr>
+        </tbody>
+      </table></div>
+      <p class="intro" style="margin-top:12px">De kosten zijn berekend met 376 inputtokens, de gemeten gemiddelde outputtokens en 360 vragen per jaar.</p>
+    </section>
+
+    <section class="grid two">
+      <article class="card">
+        <h2>Volledige value chain</h2>
+        <div class="flow">
+          <div><b>Met de hand</b><span>10 minuten per vraag</span></div>
+          <div><b>Met de tool</b><span>0,50–0,73 minuut: nakijken plus eventueel een fout herstellen</span></div>
+          <div><b>Winst per vraag</b><span>9,27–9,50 minuten</span></div>
+          <div><b>Volume</b><span>360 vragen per jaar</span></div>
+          <div><b>Tijdswinst</b><span>55,62–57,00 uur per jaar</span></div>
+          <div><b>Uurkost</b><span>€40</span></div>
+          <div><b>API-kost</b><span>€0,0185 per jaar</span></div>
+          <div><b>Netto per jaar</b><span><strong>€2.224,60–€2.279,98</strong></span></div>
+        </div>
+      </article>
+      <article class="card">
+        <h2>Wat ik het minst zeker weet</h2>
+        <p class="range">30 vragen / maand</p>
+        <p>Dit volume is een eigen inschatting, geen meting. Als het halveert, halveert de netto waarde bijna volledig. Dat heeft meer invloed dan de foutmarge van de test.</p>
+        <p style="margin-top:16px" class="label">Aannames</p>
+        <p>Een manueel antwoord kost 10 minuten. Controle met de tool kost 30 seconden. Een fout antwoord corrigeren kost naar schatting 3 minuten.</p>
+      </article>
+    </section>
+    <footer>Bronnen: eigen testset, foutmargetest, modeltest en kostenberekening. Geen klantgegevens of testinputs opgenomen.</footer>
+  </main>
+</body>
+</html>
