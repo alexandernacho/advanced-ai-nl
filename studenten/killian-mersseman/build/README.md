@@ -1,5 +1,9 @@
 # Kwartaalrapporten vergelijken
 
+## Modelkeuze week 5
+
+Op 23 oktober kiest de student GPT-6.1 Sol, effort low, met aanvullende handmatige schuldcontrole. Zie `modellen.md` voor de vergelijking en `schuldcontrole.md` voor de controle per bedrijfsupdate. De extra controle is nog niet op tijd en effect gemeten; de bestaande v3-testresultaten blijven bij de geteste extractievariant horen.
+
 Deze tool helpt mij als beginnende belegger die aan stockpicking doet om twee kwartaalrapporten overzichtelijk te vergelijken. De uitvoer bevat FCF, totale rentedragende schuld, omzetgroei en expliciet genoemde risico’s, met bronverwijzingen. Ik beoordeel de gegevens zelf.
 
 ## Bestanden

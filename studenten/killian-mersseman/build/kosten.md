@@ -189,3 +189,31 @@ Luna: (54.120 × 0,10 + 754.944 × 0,01 + 4.076 × 0,50) / 1.000.000. Geen kwali
 ECB van 15 oktober 2026: EUR 1 = USD 1,1208, bron https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml, lokaal bewijs excel/koersen/2026-10-15.json. Per run $0,2244944 / 1,1208 = EUR 0,2002983583. Bij 40 updates: jaarlijkse toolkost EUR 8,01; geschatte persoonlijke nettowaarde 150 − 8,011934 = **EUR 141,99**. Bij 20 updates: 75 − 4,005967 = **EUR 70,99**. Deze scenario’s veronderstellen hetzelfde toekomstige verbruik per update, dezelfde tarieven en koers. Eénmalige installatie kan de meting beïnvloeden; andere rapporten en caching ook. Eigen analyses en eventuele beleggingsrendementen blijven uitgesloten.
 
 De eerdere kostenpassages blijven als voorgeschiedenis staan. Deze volledige één-bedrijf-run vervangt de oude tweebedrijfssessie als basis voor het actuele schaal- en waardescenario. AMZN heeft drie records toegevoegd (15 totaal); inhoudelijke broncontrole door de student staat nog open.
+
+## Week 5 — gemeten modelvergelijking, extractie zonder Excel
+
+Op 22–23 oktober 2026 zijn Sol, Luna en Astra elk op dezelfde vijf vooraf vastgelegde inputs getest, één antwoord per input, effort low. Bron en volledige beoordeling: `modellen.md`; ruwe logs en kosten per antwoord: `runs-week05-modellen/`. Dit zijn nieuwe runs, geen herprijzing van de oude AMZN-run. De scope is volledige rapporttekst plus geïsoleerde extractieprompt, zonder tools, koersen, JSON-opslag door het model of Excel-update. De kosten omvatten nog steeds CLI-context; het eigen promptdeel is niet afzonderlijk gemeten.
+
+| Model | Score agent (n = 5) | Gemiddeld API-equivalent per extractie | Scenario 40 extracties/jaar |
+|---|---:|---:|---:|
+| GPT-6.1 Sol, low | 4/5 | $0,1739412 | $6,96 |
+| GPT-6 Luna, low | 0/5 volledig geslaagd | $0,008514588 | $0,34 |
+| GPT-6 Astra, low | 5/5 | $0,8823576 | $35,29 |
+
+Standaardtarieven per miljoen tokens, gecontroleerd op 22 oktober 2026: [Sol](https://developers.openai.com/api/docs/models/gpt-6.1-sol) $2 input, $0,10 cache lezen, $10 output; [Luna](https://developers.openai.com/api/docs/models/gpt-6-luna) $0,10 / $0,01 / $0,50; [Astra](https://developers.openai.com/api/docs/models/gpt-6-astra) $10 / $1 / $50. Cache-schrijftokens zijn nul. Geen aanvraag overschrijdt 272.000 gemelde inputtokens; geen lange-contexttoeslag toegepast. Alle runs vragen standaardservice, geen Fast. Reasoning is al onderdeel van output.
+
+De bedragen zijn berekende API-equivalenten met het werkelijk gemelde tokenverbruik en cachegebruik per model, geen afzonderlijke Plus-facturen. Het jaarscenario gebruikt 40 updates, elk tegen het gemiddelde van deze vijf brongevallen. Zonder cachekorting worden de gemiddelde scenario's $0,1890196 voor Sol, $0,00920118 voor Luna en $0,9459480 voor Astra. Er is geen nieuwe eurokoers opgehaald en de persoonlijke nettowaarde is hiermee niet automatisch herberekend.
+
+De oorspronkelijke volledige AMZN-productierun en bijbehorende scenario's hierboven blijven staan: een geïsoleerde extractietest heeft een andere scope. De modeltest vervangt dus niet stilzwijgend de kost van de volledige Excel-workflow. Luna's 0/5 betekent niet dat alle bedragen fout waren; de score vereist ook juiste perioden, afbakening en onzekerheidsvermelding. Correctie- en controletijd zijn niet meegerekend in de tokenkosten. Productiekeuze door de student staat nog open.
+
+### Gekozen werkwijze en schuldcontroletijd — 23 oktober 2026
+
+De student kiest daarna **Sol met schuldcontrole** en schat die controle op **maximaal 5 minuten per bedrijfsupdate**, omdat die AI-uitvoer al altijd controleert. Dit is een eigen tijdsinschatting, geen nieuwe meting. De bestaande 15 minuten met de tool bestaan uit 8 minuten uitvoeren en 7 minuten controleren. Schuldcontrole wordt voorlopig als onderdeel van die bestaande controle behandeld; niet automatisch 5 minuten erbij tellen en niet de volledige 7 minuten door 5 vervangen. De eerdere totale tijd blijft dus voorlopig 15 minuten als scenarioaanname. Werkelijke overlap en foutcorrectietijd zijn niet afzonderlijk gemeten; daarom is hiermee geen nieuwe nettowaarde vastgesteld. Praktische controle: `schuldcontrole.md`.
+
+### Hersteltijd en bijgewerkt waardebereik — 23 oktober 2026
+
+Vervolgens schat de student **ongeveer 7 minuten extra om een gevonden fout te herstellen**, inclusief feedback doorgeven met de hoop op minder herhaling. Eigen schatting, geen gemeten herstelduur of bewezen toekomstige foutreductie. Deze zeven herstelminuten staan los van de maximaal vijf minuten schuldcontrole binnen de bestaande zeven minuten gewone controle.
+
+Met 0–20% niet volledig geslaagde updates (beschrijvend Sol-scorebereik 4–5/5) wordt de gemiddelde tooltijd 15–16,4 minuten: `15 + foutaandeel × 7`. Bij 40 updates geeft dit **29,07–30 uur mogelijke tijdwinst per jaar** en **€145,33–€150 persoonlijke tijdwaarde** tegen de eigen €5/uur. Met de eerder vastgelegde volledige-runkost van circa €0,2003 per update als scenarioaanname wordt het netto **€137,32–€141,99 per jaar**. Bij 20 updates: **€68,66–€70,99**. Volledige berekening, historische kosten/koers en scopebeperkingen: `waarde.md`.
+
+De correctietijd veronderstelt één herstelactie per niet volledig geslaagde update. Feedback verlaagt het gebruikte foutaandeel niet zonder nieuwe meting. De recente kosten van alleen extractie worden niet als volledige Excel-workflowkost gebruikt of dubbel opgeteld. Deze waarde blijft een persoonlijk scenario, geen aangetoonde opbrengst.

@@ -1,0 +1,62 @@
+| Maatstaf | Waarde | Periode / type | Valuta | PDF-pagina en sectie | Beperking / status |
+|---|---:|---|---|---|---|
+| FCF | 5.078 miljoen | 2026-01-01 t/m 2026-06-30 · Halfjaar | USD | 71 · Free Cash Flow | Gerapporteerd; afzonderlijk kwartaal ontbreekt. Vooraf gekozen halfjaar gebruikt. Nog te controleren. |
+| Schuld | 12.723 miljoen | 2026-06-30 · Peildatum | USD | 8 · Balance Sheets; 27 en 31 · Note 5 | Kortlopend 1.997 + langlopend 10.726. Financiële leaseboekwaarden ontbreken; volledigheid onzeker. Onzeker. |
+| Omzetgroei | 12% | 2026-04-01 t/m 2026-06-30 · Kwartaal | — | 9 · Statements of Operations; 53 · Financial and Operational Highlights; 61 · Revenue | Gerapporteerde hoofdwaarde; controle circa 12,173%. Constante valuta afzonderlijk: 11%. Nog te controleren. |
+
+Het leesbare bronmateriaal betreft **Uber Technologies, Inc. (UBER), Form 10-Q**, voor het kwartaal geëindigd op **30 juni 2026** (PDF-pagina 1). Rapportagevaluta is USD. Er is geen wisselkoers opgehaald of toegepast; koersdatum is niet van toepassing.
+
+```json
+{
+  "records": [
+    {
+      "ticker": "UBER",
+      "metric": "FCF",
+      "start": "2026-01-01",
+      "end": "2026-06-30",
+      "period_type": "Halfjaar",
+      "value": 5078,
+      "currency": "USD",
+      "method": "Gerapporteerd",
+      "definition": "Uber definieert free cash flow als netto operationele kasstroom minus kapitaaluitgaven; de reconciliatie gebruikt purchases of property and equipment.",
+      "source": "UBER-2026-06-30.pdf",
+      "page": "PDF-pagina 71, Reconciliations of Non-GAAP Financial Measures — Free Cash Flow; PDF-pagina 14, Condensed Consolidated Statements of Cash Flows",
+      "evidence": "Oorspronkelijke schaal: USD in millions. Six Months Ended June 30, 2026: Net cash provided by operating activities $5,213; Purchases of property and equipment $(135); gerapporteerde Free cash flow $5,078. Controle: 5213 - 135 = 5078 miljoen USD.",
+      "status": "Nog te controleren",
+      "note": "Afzonderlijke kwartaal-FCF en kwartaalcomponenten ontbreken. De vooraf gekozen periode 1 januari tot en met 30 juni 2026 is gebruikt, zonder deling door kwartalen. De bedrijfsdefinitie sluit aan bij operationele kasstroom minus aankopen van materiële vaste activa. Aflossingen op financiële leases van 82 miljoen USD over het halfjaar worden niet afgetrokken in deze bedrijfsdefinitie."
+    },
+    {
+      "ticker": "UBER",
+      "metric": "Schuld",
+      "start": null,
+      "end": "2026-06-30",
+      "period_type": "Peildatum",
+      "value": 12723,
+      "currency": "USD",
+      "method": "Berekend",
+      "definition": "Som van de gerapporteerde boekwaarden van kortlopende en langlopende financiële schuld, na onverwerkte discontovoeten en uitgiftekosten zoals opgenomen in Note 5; financiële leaseverplichtingen zijn niet aanvullend gekwantificeerd.",
+      "source": "UBER-2026-06-30.pdf",
+      "page": "PDF-pagina 8, Condensed Consolidated Balance Sheets; PDF-pagina 27, Note 5 — Debt and Credit Arrangements; PDF-pagina 31, Note 5 — 2028 Exchangeable Senior Notes, Credit Agreement en Commercial Paper; PDF-pagina 14, Statements of Cash Flows; PDF-pagina 48, Freight Holding Supplier Financing Program",
+      "evidence": "Oorspronkelijke schaal: USD in millions. Short-term debt 1,997 + Long-term debt 10,726 = 12,723. Note 5 specificeert: 2026 Term Loan 2,000; 2028 Convertible Notes 1,725; 2028 Exchangeable Senior Notes 1,324; 2029 Senior Notes 1,500; 2030 Senior Notes 1,250; 2031 Senior Notes 1,000; 2034 Senior Notes 1,500; 2035 Senior Notes 1,250; 2054 Senior Notes 1,250; minus unamortized discount and issuance costs 76 = 12,723 miljoen USD. Operationele leaseverplichtingen: current 178 + non-current 1,830 = 2,008 miljoen USD, afzonderlijk uitgesloten.",
+      "status": "Onzeker",
+      "note": "12,723 miljoen USD is het onderbouwde schuldtotaal uit Note 5. De renteloze 2028 Exchangeable Senior Notes zijn inbegrepen tegen hun gerapporteerde boekwaarde van 1,324 miljoen USD; Uber waardeert deze gehele lening tegen reële waarde. Voor overige schuld wordt geen algemene reëlewaardeherwaardering toegepast. Financiële leases bestaan: het kasstroomoverzicht vermeldt 82 miljoen USD aflossingen, maar kortlopende en langlopende leaseboekwaarden en eventuele opname in het schuldtotaal zijn niet afzonderlijk vastgesteld. Deze ontbrekende bedragen zijn onbekend, niet nul. Supplier financing binnen accounts payable is als immaterieel beschreven maar niet gekwantificeerd en niet toegevoegd. De revolving credit agreement en commercial paper hebben volgens Note 5 geen uitstaand saldo. Volledigheid van financiële schuld inclusief financiële leases staat daardoor niet vast."
+    },
+    {
+      "ticker": "UBER",
+      "metric": "Omzetgroei",
+      "start": "2026-04-01",
+      "end": "2026-06-30",
+      "period_type": "Kwartaal",
+      "value": 0.12,
+      "currency": null,
+      "method": "Gerapporteerd",
+      "definition": "Gerapporteerde groei van de geconsolideerde kwartaalomzet tegenover hetzelfde kwartaal van het voorgaande jaar, in rapportagevaluta.",
+      "source": "UBER-2026-06-30.pdf",
+      "page": "PDF-pagina 61, MD&A — Revenue; PDF-pagina 53, Financial and Operational Highlights; PDF-pagina 9, Condensed Consolidated Statements of Operations; PDF-pagina 54, Components of Results of Operations — Revenue",
+      "evidence": "Oorspronkelijke omzetbedragen en schaal: USD in millions. Three Months Ended June 30: 2026 $14,191 versus 2025 $12,651. Gerapporteerde groei 12%, opgeslagen als 0.12. Afzonderlijke controle: (14191 / 12651 - 1) circa 0.12173, oftewel 12,173%; circa 0,173 procentpunt hoger dan de gerapporteerde hoofdwaarde. Afzonderlijk gerapporteerde groei bij constante valuta: 11%, als fractie 0.11.",
+      "status": "Nog te controleren",
+      "note": "Het verschil tussen controleberekening en gerapporteerd percentage wordt vermeld zonder een oorzaak toe te schrijven. Constante valuta blijft afzonderlijk en ligt 1 procentpunt onder de gerapporteerde groei. Het rapport beschrijft een wijziging van het Mobility-bedrijfsmodel in bepaalde Britse markten vanaf 2 januari 2026, waarbij betalingen aan chauffeurs omzet verminderen in plaats van als omzetkosten te worden geboekt; dit beperkt de vergelijkbaarheid. Er is geen eigen correctie op de omzetgroei toegepast."
+    }
+  ]
+}
+```

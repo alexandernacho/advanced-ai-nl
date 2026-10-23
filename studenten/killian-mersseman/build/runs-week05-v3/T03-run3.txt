@@ -1,0 +1,62 @@
+| Maatstaf | Waarde | Periode / type | Valuta / schaal | Bronpagina en sectie | Beperking / status |
+|---|---:|---|---|---|---|
+| FCF | -8.821 | 2026-04-01 t/m 2026-06-30; Kwartaal | USD miljoen | 3, Cash Flows; 33, Free Cash Flow | Berekend: operationele kasstroom minus bruto aankopen materiële vaste activa. Wijkt af van Amazons nettodefinitie. Nog te controleren. |
+| Schuld | 155.315 | 2026-06-30; Peildatum | USD miljoen | 14, Leases; 15, Commitments; 17–18, Debt | Inclusief financiële leases en financieringsverplichtingen; exclusief operationele leases. Langlopende financieringsverplichtingen afgerond gerapporteerd. Nog te controleren. |
+| Omzetgroei | 20% | 2026-04-01 t/m 2026-06-30; Kwartaal, tegenover dezelfde periode 2025 | Geen | 4, Operations; 29, Net Sales | Gerapporteerd percentage; controleberekening 19,6205%, verschil +0,3795 procentpunt. Nog te controleren. |
+
+De aangeleverde tekst is leesbaar en betreft **Amazon.com, Inc. (AMZN), Form 10-Q**, voor de drie maanden geëindigd op **30 juni 2026** (pdf-pagina 1). Bovenstaande bronpagina’s zijn zowel gedrukte als pdf-pagina’s. Rapportagevaluta is USD; er is geen wisselkoers toegepast en een koersdatum is niet van toepassing.
+
+```json
+{
+  "records": [
+    {
+      "ticker": "AMZN",
+      "metric": "FCF",
+      "start": "2026-04-01",
+      "end": "2026-06-30",
+      "period_type": "Kwartaal",
+      "value": -8821,
+      "currency": "USD",
+      "method": "Berekend",
+      "definition": "Operationele kasstroom minus aankopen van materiële vaste activa, zonder verrekening van verkoopopbrengsten en incentives.",
+      "source": "AMZN-2026-06-30.pdf",
+      "page": "Gedrukte pagina / pdf-pagina 3, Consolidated Statements of Cash Flows; 33, Non-GAAP Financial Measures — Free Cash Flow",
+      "evidence": "Kwartaalbedragen oorspronkelijk in USD miljoenen: Net cash provided by operating activities 45,387; Purchases of property and equipment (54,208). Berekening: 45,387 - 54,208 = -8,821 miljoen USD.",
+      "status": "Nog te controleren",
+      "note": "Geen afzonderlijk gerapporteerde kwartaal-FCF gevonden; beide kwartaalcomponenten voor de toegestane berekening zijn beschikbaar. Amazons definitie trekt aankopen netto na verkoopopbrengsten en incentives af; deze fallback gebruikt bruto aankopen. De kwartaalopbrengsten en incentives van 1,132 miljoen USD zijn daarom niet verrekend. De gerapporteerde FCF van -7,604 miljoen USD op pagina 33 betreft uitsluitend de twaalf maanden 2025-07-01 t/m 2026-06-30 en is niet als kwartaalwaarde gebruikt."
+    },
+    {
+      "ticker": "AMZN",
+      "metric": "Schuld",
+      "start": null,
+      "end": "2026-06-30",
+      "period_type": "Peildatum",
+      "value": 155315,
+      "currency": "USD",
+      "method": "Berekend",
+      "definition": "Som van kortlopende en langlopende financiële schuld tegen boekwaarde, inclusief financiële leaseverplichtingen en afzonderlijk gerapporteerde financieringsverplichtingen; exclusief operationele leases.",
+      "source": "AMZN-2026-06-30.pdf",
+      "page": "Gedrukte pagina / pdf-pagina 14, Note 3 — Leases; 15, Note 4 — Commitments and Contingencies, voetnoot 1; 17–18, Note 5 — Debt",
+      "evidence": "Oorspronkelijke schaal USD miljoenen, behalve waar vermeld: langlopende schuld 128,894; kortlopend deel langlopende schuld 3,330; overige kortlopende kredietfaciliteiten 325. Schuld exclusief leases en financieringsverplichtingen: 128,894 + 3,330 + 325 = 132,549. Aansluiting: nominale langlopende schuld 132,995 minus niet-geamortiseerde korting en uitgiftekosten 771 = boekwaarde 132,224, inclusief kortlopend deel. Financiële leases: kortlopend 1,688 + langlopend 11,763 = 13,451. Financieringsverplichtingen exclusief rente: kortlopend 415 miljoen + langlopend oorspronkelijk $8.9 billion, omgerekend 8,900 miljoen = 9,315. Totaal kortlopend: 5,758; totaal langlopend: 149,557; samen 155,315 miljoen USD.",
+      "status": "Nog te controleren",
+      "note": "Operationele leases apart: 13,745 kortlopend + 82,575 langlopend = 96,320 miljoen USD, uitgesloten. Commercial paper, beide revolving credit facilities en de delayed draw term loan hebben expliciet geen uitstaand saldo. Geen ontbrekende schuldcomponent geïdentificeerd binnen deze afbakening. Renteloze obligaties zijn niet afzonderlijk vermeld; eventuele renteloze financiële schuld zou tegen boekwaarde worden opgenomen, niet wegens een nulcoupon worden uitgesloten. De langlopende financieringsverplichtingen zijn slechts op $0.1 billion nauwkeurig gerapporteerd, waardoor het totaal benaderend is. De na 30 juni uitgegeven obligaties van $25.0 billion zijn uitgesloten."
+    },
+    {
+      "ticker": "AMZN",
+      "metric": "Omzetgroei",
+      "start": "2026-04-01",
+      "end": "2026-06-30",
+      "period_type": "Kwartaal",
+      "value": 0.2,
+      "currency": null,
+      "method": "Gerapporteerd",
+      "definition": "Gerapporteerde jaar-op-jaargroei van geconsolideerde Total net sales voor het kwartaal tegenover hetzelfde kwartaal van het voorgaande jaar.",
+      "source": "AMZN-2026-06-30.pdf",
+      "page": "Gedrukte pagina / pdf-pagina 4, Consolidated Statements of Operations; 29, Results of Operations — Net Sales; 34, Effect of Foreign Exchange Rates",
+      "evidence": "Gerapporteerde kwartaalgroei op pagina 29: 20%, opgeslagen als 0.2. Omzet oorspronkelijk in USD miljoenen: kwartaal geëindigd 2026-06-30 200,606; kwartaal geëindigd 2025-06-30 167,702. Controleberekening: (200606 / 167702 - 1) = circa 0.196205, oftewel 19.6205%. Gerapporteerd minus berekend: circa +0.3795 procentpunt.",
+      "status": "Nog te controleren",
+      "note": "De hoofdwaarde blijft het gerapporteerde percentage; er wordt geen oorzaak voor het verschil met de controleberekening verondersteld. Groei exclusief wisselkoerseffecten is afzonderlijk eveneens gerapporteerd als 20% (fractie 0.2). Pagina 34 vermeldt kwartaalomzet tegen voorgaandejaarskoersen van 200,531 miljoen USD; deze vervangt de gerapporteerde omzet niet. Vergelijkingsperiode: 2025-04-01 t/m 2025-06-30."
+    }
+  ]
+}
+```
