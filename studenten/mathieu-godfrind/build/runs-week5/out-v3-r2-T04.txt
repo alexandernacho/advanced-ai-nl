@@ -1,0 +1,4 @@
+OORDEEL: NO-GO
+RISICO'S:
+- C: "Materiaal behuizing Glass" — Glas is breekbaar.
+UITLEG: Lege glazen parfumflesjes, en glas is breekbaar, dus moeilijk te verzenden.

@@ -1,0 +1,10 @@
+
+Claude configuration file at C:\Users\mathi\.claude.json is corrupted: JSON Parse error: Unexpected EOF
+The corrupted file has been backed up to: C:\Users\mathi\.claude\backups\.claude.json.corrupted.1792572718979
+A backup file exists at: C:\Users\mathi\.claude\backups\.claude.json.backup.1792572663858
+You can manually restore it by running: cp "C:\Users\mathi\.claude\backups\.claude.json.backup.1792572663858" "C:\Users\mathi\.claude.json"
+
+OORDEEL: NO-GO
+RISICO'S:
+- B: "Donker konijnenknuffel" — De pagina noemt dit product een knuffel en knuffelpop, dus speelgoed, en CE niet vermeld.
+UITLEG: Knuffelspeelgoed zonder CE-vermelding mag je niet verkopen in de EU.

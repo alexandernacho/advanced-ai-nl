@@ -1,0 +1,6 @@
+```
+OORDEEL: NO-GO
+RISICO'S:
+- B: "Puissance: AC 110v-220v" — Elektrisch apparaat op netspanning met USB-lader, CE niet vermeld.
+UITLEG: Elektrisch apparaat zonder CE-vermelding, dus niet verkoopbaar in de EU.
+```

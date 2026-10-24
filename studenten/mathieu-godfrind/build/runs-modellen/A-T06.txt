@@ -1,0 +1,4 @@
+OORDEEL: NO-GO
+RISICO'S:
+- C: "Batterijtype: 18650 lithiumbatterij" — Het product bevat een lithiumbatterij (800 mAh), wat de verzending moeilijk maakt.
+UITLEG: CE staat wel vermeld, maar de ingebouwde lithiumbatterij maakt verzending lastig. Daardoor is het niet veilig om in te kopen.

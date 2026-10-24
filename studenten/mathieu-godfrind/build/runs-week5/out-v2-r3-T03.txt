@@ -1,0 +1,5 @@
+```
+OORDEEL: GO
+RISICO'S: geen
+UITLEG: Elektronica met CE-vermelding ("CE-gecertificeerd"), merknaam is de leverancier (SChitec/OEM) en de behuizing is van kunststof (ABS, PC), dus niet breekbaar.
+```

@@ -1,0 +1,9 @@
+
+Claude configuration file at C:\Users\mathi\.claude.json is corrupted: JSON Parse error: Unexpected EOF
+The corrupted file has been backed up to: C:\Users\mathi\.claude\backups\.claude.json.corrupted.1792572721483
+A backup file exists at: C:\Users\mathi\.claude\backups\.claude.json.backup.1792572663858
+You can manually restore it by running: cp "C:\Users\mathi\.claude\backups\.claude.json.backup.1792572663858" "C:\Users\mathi\.claude.json"
+
+OORDEEL: GO
+RISICO'S: geen
+UITLEG: Katoenen draagtas met merknaam OEM, geen elektronica of batterij, 0,3 kg bruto en niet breekbaar.
