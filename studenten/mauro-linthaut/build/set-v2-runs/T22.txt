@@ -1,0 +1,12 @@
+```
+ETF: Xtrackers MSCI World Screened UCITS ETF
+
+Risico-indicator: 3 | bron: "Wir haben dieses Produkt auf einer Skala von 1 bis 7 in die Risikoklasse 3 eingestuft, wobei 3 einer mittelniedrigen Risikoklasse entspricht."
+Aanbevolen bewaartermijn: 5 jaar | bron: "Empfohlene Haltedauer: 5 Jahre. Das Produkt hat keine Mindesthaltedauer."
+Lopende kosten per jaar: 0,22% | bron: "0,19 % des Werts Ihrer Anlage pro Jahr." en "0,03 % des Werts Ihrer Anlage pro Jahr."
+Instapkosten: 0% | bron: "Es fallen keine Einstiegskosten an."
+Uitstapkosten: 0% | bron: "Es fallen keine Ausstiegskosten an."
+Gevolgde index: MSCI World Select Screened Index | bron: "Das Anlageziel besteht darin, die Wertentwicklung des MSCI World Select Screened Index (der „Index“) abzubilden."
+Uitkerend of accumulerend: accumulerend | bron: "Die Erträge und Kursgewinne werden nicht ausgeschüttet, sie werden im Fonds wieder angelegt."
+Ongunstig scenario: 11.360 USD en 2,6% per jaar | bron: "11.360 USD 2,6 %"
+```

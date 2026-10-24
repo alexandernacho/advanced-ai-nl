@@ -1,0 +1,12 @@
+```
+ETF: Xtrackers NASDAQ 100 UCITS ETF
+
+Risico-indicator: 5 | bron: "We hebben dit product ingedeeld in klasse 5 uit 7; dat is een middelgroot-hoge risicoklasse."
+Aanbevolen bewaartermijn: 5 jaar | bron: "Aanbevolen periode van bezit: 5 jaar."
+Lopende kosten per jaar: 0,20% | bron: "0,20 % van de waarde van uw belegging per jaar. Dit is een schatting op basis van de feitelijke kosten van het jaar afgesloten op 31.12.2025."
+Instapkosten: 0% | bron: "Wij rekenen geen instapvergoeding aan."
+Uitstapkosten: 0% | bron: "Wij rekenen geen uitstapkosten aan."
+Gevolgde index: NASDAQ-100 Index | bron: "Doel is dat uw belegging de waardeontwikkeling vóór vergoedingen en kosten weerspiegelt van de NASDAQ-100 Index (index)"
+Uitkerend of accumulerend: niet vermeld | bron: n.v.t.
+Ongunstig scenario: 12.060 USD en 3,8% per jaar | bron: "Ongunstig Wat u kunt terugkrijgen na kosten Gemiddeld rendement per jaar 6.740 USD -32,6 % 12.060 USD 3,8 %"
+```

@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KID-tool dashboard</title>
+<style>
+:root{--bg:#f7f7f5;--card:#fff;--ink:#1c1c1a;--mute:#66665f;--line:#e2e2dc;--accent:#1f5fbf;--good:#1e7a46;--bad:#b3261e;--bar:#c9d8f0}
+@media (prefers-color-scheme:dark){:root{--bg:#161614;--card:#201f1d;--ink:#eeeeea;--mute:#a3a39b;--line:#34332f;--accent:#7aa7ee;--good:#5fc088;--bad:#f0877f;--bar:#2c4469}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:760px;margin:0 auto;padding:24px 16px 56px}
+h1{font-size:1.5rem;margin:0 0 4px}
+h2{font-size:1.1rem;margin:0 0 12px}
+.sub{color:var(--mute);margin:0 0 20px}
+section{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin:0 0 16px}
+.big{font-size:2rem;font-weight:700;line-height:1.1}
+.row{display:flex;gap:12px;flex-wrap:wrap}
+.row>div{flex:1 1 180px}
+.lab{color:var(--mute);font-size:.85rem}
+.tag{display:inline-block;padding:2px 10px;border-radius:99px;background:var(--bar);font-size:.85rem;font-weight:600}
+.good{color:var(--good)}.bad{color:var(--bad)}
+table{width:100%;border-collapse:collapse;font-size:.92rem}
+th,td{text-align:left;padding:8px 6px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--mute);font-weight:600;font-size:.8rem}
+td.n,th.n{text-align:right;white-space:nowrap}
+.scroll{overflow-x:auto}
+.bar{height:14px;background:var(--line);border-radius:7px;position:relative;margin:4px 0 2px}
+.bar i{position:absolute;top:0;bottom:0;border-radius:7px;background:var(--accent)}
+.bar b{position:absolute;top:0;bottom:0;background:var(--bar);border-radius:7px}
+small,.note{color:var(--mute);font-size:.85rem}
+</style>
+</head>
+<body>
+<main>
+<h1>KID-tool: velden uit het KID van een ETF halen</h1>
+<p class="sub">Dashboard week 5, 21 oktober 2026. De tool haalt 8 velden uit het KID (risico-indicator, bewaartermijn, lopende kosten, instap, uitstap, index, uitkerend of accumulerend, ongunstig scenario), met een bronzin per veld.</p>
+
+<section>
+<h2>Eerst dit: mijn score en mijn foutmarge</h2>
+<div class="row">
+<div><div class="big good">9 tot 10</div><div class="lab">van 10 KID's volledig juist, laatste prompt (v1.2). n = 10 inputs, 3 runs.</div></div>
+<div><div class="big">3 tot 4</div><div class="lab">van 10 bij de versie van week 2 (v1). Zelfde inputs, 3 runs.</div></div>
+</div>
+<p>Op velden: v1.2 <b>79 tot 80 van 80</b>, v1 <b>70 tot 71 van 80</b>. De bereiken overlappen niet.</p>
+<p><span class="tag">Claim bevestigd</span> Claim uit week 3 en 4: "79 op 80 juist (n = 10, 1 run)". De laagste run van v1.2 (9/10) ligt boven de hoogste van v1 (4/10). Wat dit niet bewijst: dat het aan één regel ligt, want v1.1 is nooit apart bewaard en ik vergeleek v1 met v1.2. De foutmarge van v1.2 is op deze tien KID's 0 tot 1 veld op 80.</p>
+<div class="scroll"><table>
+<tr><th>Versie</th><th class="n">Run 1</th><th class="n">Run 2</th><th class="n">Run 3</th><th class="n">Min–max</th></tr>
+<tr><td>v1 (week 2)</td><td class="n">3/10</td><td class="n">4/10</td><td class="n">4/10</td><td class="n">3–4</td></tr>
+<tr><td>v1.2 (laatste)</td><td class="n">10/10</td><td class="n">10/10</td><td class="n">9/10</td><td class="n">9–10</td></tr>
+</table></div>
+<p class="note">Model: Sonnet 5.5. Enige fout van v1.2: één scenario met de verkeerde kolom (T07, run 3). Bron: <code>foutmarge.md</code>.</p>
+</section>
+
+<section>
+<h2>Mijn testset groeit: van 10 naar 32 inputs (set v2)</h2>
+<div class="row">
+<div><div class="big good">32 van 32</div><div class="lab">KID's volledig juist, prompt v1.2 ongewijzigd. 256 van 256 velden. n = 32 inputs, 1 run (set v2).</div></div>
+<div><div class="big">22 nieuw</div><div class="lab">T11 tot T32. Antwoord vooraf geschreven, de prompt niet bijgestuurd op deze inputs.</div></div>
+</div>
+<div class="scroll"><table>
+<tr><th>Groep</th><th class="n">Aantal</th><th>Wat</th></tr>
+<tr><td>Oud (T01–T10)</td><td class="n">10</td><td>De tien van week 2, onaangeroerd.</td></tr>
+<tr><td>Echt (T11–T20)</td><td class="n">10</td><td>ETF's die ik zelf opzocht op Saxo Investor.</td></tr>
+<tr><td>Rand (T21–T25, T30, T31)</td><td class="n">7</td><td>Engels, Duits en Italiaans; EUR en GBP; bewaartermijn van 30 dagen, 3 en 7 jaar; een private-equity fonds met 3% instap.</td></tr>
+<tr><td>Onzeker (T26–T29, T32)</td><td class="n">5</td><td>Actieve fondsen zonder index, twee factsheets die geen KID zijn, en een KID waar uitkerend of accumulerend niet in staat.</td></tr>
+</table></div>
+<p><b>Wat de score niet zegt:</b> mijn tool maakte op deze 32 inputs geen enkele fout, ook niet op de moeilijke. Daardoor kan de set geen verbetering meer laten zien: hij meet een plafond. Eén run is bovendien geen bewijs, want v1.2 schommelde eerder al tussen 9 en 10 van 10.</p>
+<p class="note">T31 en T32 (en daarmee de score 32/32) heb ik toegevoegd nadat de run op T01–T30 al klaar was (30/30), zonder de prompt aan te passen. Een score op set v1 en op set v2 vergelijk ik niet. Bron: <code>test-set.md</code>.</p>
+</section>
+
+<section>
+<h2>Drie setups, één run per input</h2>
+<div class="scroll"><table>
+<tr><th>Setup</th><th class="n">Score</th><th class="n">KID's juist</th><th class="n">Kost per run</th><th class="n">Per jaar (72)</th></tr>
+<tr><td>A Sonnet 5.5, medium</td><td class="n">80/80</td><td class="n">10/10</td><td class="n">± €0,036</td><td class="n">± €2,61</td></tr>
+<tr><td>B Haiku 5.5, medium</td><td class="n">79/80</td><td class="n">9/10</td><td class="n">± €0,0031</td><td class="n">± €0,22</td></tr>
+<tr><td>C Opus 5.5, medium</td><td class="n">80/80</td><td class="n">10/10</td><td class="n">± €0,072</td><td class="n">± €5,19</td></tr>
+</table></div>
+<p>Mijn gok: 9 op 10 bij alle modellen. Uitkomst: Haiku 9, Sonnet en Opus 10. Het verschil van één KID valt binnen mijn foutmarge (v1.2 schommelde al tussen 9 en 10), dus op score zijn de setups niet te onderscheiden. De enige echte fout: Haiku bij T04, scenario 1.300 USD en -33,5% in plaats van 13.600 USD en 6,3%.</p>
+<p class="note">Kost = input-tokens × inputprijs + output-tokens × outputprijs (prijzen van 21 oktober 2026), 1 dollar = €0,90. Haiku gebruikte gemiddeld 4.021 output-tokens, Sonnet 1.440, Opus 1.414. Bron: <code>modellen.md</code>.</p>
+</section>
+
+<section>
+<h2>Kost</h2>
+<div class="row">
+<div><div class="big">± €0,036</div><div class="lab">per run met Sonnet 5.5 (mijn deel: prompt met KID, ± 13k tokens in)</div></div>
+<div><div class="big">± €2,61</div><div class="lab">per jaar bij 72 runs (48 tot 144 mogelijk)</div></div>
+</div>
+<p class="note">Haiku-prijs gecorrigeerd in week 5: 5.5 kost 0,10 / 0,50 dollar per miljoen tokens, niet de 1 / 5 van Haiku 4.5. Bron: <code>kosten.md</code>.</p>
+</section>
+
+<section>
+<h2>Value chain, met de foutmarge erin</h2>
+<div class="scroll"><table>
+<tr><th>Schakel</th><th>Waarde</th></tr>
+<tr><td>Met de hand</td><td>± 12,5 min per ETF (eigen schatting)</td></tr>
+<tr><td>Met de tool</td><td>draaien 40 s + nakijken 2 min + fouten herstellen (deel fout × 12,5 min) = 2,7 min bij 10/10, 3,9 min bij 9/10</td></tr>
+<tr><td>Winst per ETF</td><td>9,8 min bij 10/10 · 8,6 min bij 9/10</td></tr>
+<tr><td>Volume</td><td>72 per jaar (48 tot 144), eigen schatting</td></tr>
+<tr><td>Uren per jaar</td><td>11,8 u · 10,3 u</td></tr>
+<tr><td>Uurkost</td><td>€22,50 per uur voor de werkgever (mijn bruto uurloon €15 × 1,5; eerst €15, gecorrigeerd in week 5)</td></tr>
+<tr><td>Waarde</td><td>€265 · €232</td></tr>
+<tr><td>Kost van de tool</td><td>± €2,61 per jaar (gemeten tokens, Sonnet 5.5)</td></tr>
+<tr><td><b>Netto per jaar</b></td><td><b>± €262 bij 10/10 · ± €230 bij 9/10</b></td></tr>
+</table></div>
+<p><b>Bereik:</b> ± €230 tot ± €262 per jaar. De foutmarge verschuift het netto maar met ± €32.</p>
+<p><b>Zwakste cijfer: de nakijktijd van 2 min.</b> Geschat, niet gemeten, en de tool maakte fouten in het scenario. Is het 5 min, dan blijft er ± €177 netto over bij 10/10 en ± €144 bij 9/10. Het volume weegt ook zwaarder dan de score: bij 48 per jaar ± €153 tot ± €175, bij 144 per jaar ± €459 tot ± €524.</p>
+<p class="note">Bron: <code>kosten.md</code>. Handwerk, nakijktijd, volume en uurkost zijn schattingen. Draaien en tokens zijn gemeten. Eerst rekende ik met €15 per uur (bruto), gecorrigeerd in week 5 naar de kost voor de werkgever (× 1,5).</p>
+</section>
+
+<p class="note">Alle cijfers komen uit mijn eigen bestanden in <code>build/</code>. Wat ik niet gemeten heb, staat er niet.</p>
+</main>
+</body>
+</html>

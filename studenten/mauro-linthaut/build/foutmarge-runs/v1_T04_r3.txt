@@ -1,0 +1,12 @@
+```
+ETF: L&G Artificial Intelligence UCITS ETF (USD Accumulating ETF)
+
+Risico-indicator: 5 | bron: "Nous avons classé ce produit dans la classe de risque 5 sur 7, qui est une classe de risque entre moyenne et élevée."
+Aanbevolen bewaartermijn: 5 jaar | bron: "Période de détention recommandée: 5 Ans"
+Lopende kosten per jaar: 0.49% | bron: "0.49% de la valeur de votre investissement par an. Cette estimation se base sur les coûts réels au cours de l'année dernière."
+Instapkosten: 0% | bron: "Nous ne facturons pas de coût d'entrée."
+Uitstapkosten: 0% | bron: "Nous ne facturons pas de coût de sortie pour ce produit, mais la personne qui vous vend le produit peut le faire."
+Gevolgde index: ROBO Global® Artificial Intelligence Index | bron: "vise à répliquer la performance de l'indice ROBO Global® Artificial Intelligence Index (l'« Indice »), avant déduction des frais et dépenses."
+Uitkerend of accumulerend: accumulerend | bron: "Tout revenu pouvant résulter des investissements du Fonds sera réinvesti dans celuici."
+Ongunstig scenario: 13,600 USD en 6.3% per jaar | bron: "Défavorable ... -33.5% 13,600 USD ... Intermédiaire Rendement annuel moyen ... 6.3% 20,280 USD" (tabel is door de opmaak door elkaar geraakt; bedrag en rendement zijn gekoppeld aan de kolom "Si vous sortez après 5 Ans")
+```

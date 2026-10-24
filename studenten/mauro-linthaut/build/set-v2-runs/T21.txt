@@ -1,0 +1,12 @@
+```
+ETF: iShares Euro Government Bond Index Fund (IE), Inst Dist EUR
+
+Risico-indicator: 3 | bron: "We have classified this product as 3 out of 7, which is a medium low risk class."
+Aanbevolen bewaartermijn: 3 jaar | bron: "Recommended Holding Period: 3 years"
+Lopende kosten per jaar: 0,13% | bron: "0.13% of the value of your investment per year." en "0.00% of the value of your investment per year."
+Instapkosten: 0% | bron: "We do not charge an entry fee."
+Uitstapkosten: 0% | bron: "We do not charge an exit fee."
+Gevolgde index: FTSE Euro Government Bond Index | bron: "The Fund aims to achieve a total return on your investment, through a combination of capital growth and income, which reflects the return of the FTSE Euro Government Bond Index, the Fund’s benchmark index."
+Uitkerend of accumulerend: uitkerend | bron: "Your shares will be distributing shares (i.e. dividend income will be paid on the shares annually)."
+Ongunstig scenario: 7.870 EUR en -7,7% per jaar | bron: "7,870 EUR -7.7%"
+```

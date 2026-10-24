@@ -1,0 +1,12 @@
+```
+ETF: VanEck Semiconductor UCITS ETF
+
+Risico-indicator: 6 | bron: "We hebben dit product ingedeeld in klasse 6 uit 7; dat is de op één na hoogste risicoklasse."
+Aanbevolen bewaartermijn: 5 jaar | bron: "Aanbevolen periode van bezit: 5 jaar"
+Lopende kosten per jaar: 0,35% | bron: "0,35 % van de waarde van uw belegging per jaar. Dit is een schatting op basis van de feitelijke kosten van het afgelopen jaar." en "0,00 % van de waarde van uw belegging per jaar. Dit is een schatting van de kosten die ontstaan wanneer we de onderliggende beleggingen voor het product kopen en verkopen."
+Instapkosten: 0% | bron: "Wij brengen geen instapkosten in rekening."
+Uitstapkosten: 0% | bron: "Wij brengen voor dit product geen uitstapkosten in rekening, maar de persoon die u het product verkoopt, doet dat misschien wel."
+Gevolgde index: MarketVector US Listed Semiconductor 10% Capped Screened Index | bron: "De beleggingsdoelstelling van het product is het repliceren van de MarketVector US Listed Semiconductor 10% Capped Screened Index (de 'Index'), vóór vergoedingen en kosten."
+Uitkerend of accumulerend: accumulerend | bron: "Uitkeringsbeleid: Opbrengsten herbelegd"
+Ongunstig scenario: 20.210 USD en 15,11% per jaar | bron: "USD 730 -40,75 % USD 20.210 15,11 %"
+```

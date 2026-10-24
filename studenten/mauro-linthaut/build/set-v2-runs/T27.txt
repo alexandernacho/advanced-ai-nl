@@ -1,0 +1,10 @@
+ETF: iShares Europe Equity Enhanced Active UCITS ETF
+
+Risico-indicator: 4 | bron: "We have classified this product as 4 out of 7, which is a medium risk class."
+Aanbevolen bewaartermijn: 5 jaar | bron: "Recommended Holding Period: 5 years"
+Lopende kosten per jaar: 0,47% | bron: "0.25% of the value of your investment per year." en "0.22% of the value of your investment per year."
+Instapkosten: 0% | bron: "We do not charge an entry fee."
+Uitstapkosten: 0% | bron: "We do not charge an exit fee."
+Gevolgde index: niet vermeld
+Uitkerend of accumulerend: uitkerend | bron: "Your shares will be distributing shares (i.e. income will be paid on the shares quarterly)."
+Ongunstig scenario: 11.070 EUR en 2,1% per jaar | bron: "11,070 EUR 2.1%"

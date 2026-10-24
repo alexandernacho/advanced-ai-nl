@@ -1,0 +1,12 @@
+```
+ETF: iShares Global Water UCITS ETF
+
+Risico-indicator: 4 | bron: "Wij hebben dit product ingedeeld in klasse 4 uit 7; dat is een middelgrote risicoklasse."
+Aanbevolen bewaartermijn: 5 jaar | bron: "Aanbevolen periode van bezit : 5 jaren"
+Lopende kosten per jaar: 0,74% | bron: "Beheerkosten en andere administratieve of operationele kosten 0,65% van de waarde van uw belegging per jaar." en "Transactiekosten 0,09% van de waarde van uw belegging per jaar."
+Instapkosten: 0% | bron: "We rekenen geen instapkosten."
+Uitstapkosten: 0% | bron: "We rekenen geen uitstapkosten."
+Gevolgde index: S&P Global Water Index | bron: "De Aandelenklasse is een aandelenklasse van een Fonds dat streeft naar een rendement op uw belegging door een combinatie van kapitaalgroei en inkomsten uit de activa van het Fonds, dat het rendement van de S&P Global Water Index, de referentie-index (Index) van het Fonds, weerspiegelt."
+Uitkerend of accumulerend: uitkerend | bron: "Uw aandelen zijn dividendaandelen (d.w.z. inkomsten uit de aandelen worden halfjaarlijks uitgekeerd)."
+Ongunstig scenario: 11.090 USD en 2,1% per jaar | bron: "Ongunstig** Wat u kunt terugkrijgen na kosten 7.490 USD 11.090 USD Gemiddeld rendement per jaar -25,1% 2,1%"
+```

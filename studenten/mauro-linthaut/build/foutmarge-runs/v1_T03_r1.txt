@@ -1,0 +1,12 @@
+```
+ETF: Defiance Memory UCITS ETF
+
+Risico-indicator: 5 | bron: "We hebben dit product ingedeeld in klasse 5 uit 7; dat is een middelgroot-hoge risicoklasse."
+Aanbevolen bewaartermijn: 5 jaar | bron: "Het Fonds heeft geen vaste minimumlooptijd, maar de aanbevolen periode van bezit is vijf jaar."
+Lopende kosten per jaar: niet vermeld
+Instapkosten: 0% | bron: "0% van het bedrag dat u betaalt wanneer u in deze belegging instapt"
+Uitstapkosten: 0% | bron: "0% van uw belegging voordat deze aan u wordt uitbetaald"
+Gevolgde index: Indxx Defiance Global Memory Chip Select Index | bron: "voor zover mogelijk en uitvoerbaar, zal beleggen in effecten in verhouding tot de wegingen die deel uitmaken van de Indxx Defiance Global Memory Chip Select Index (de Index)."
+Uitkerend of accumulerend: accumulerend | bron: "De inkomsten uit de beleggingen van het Fonds worden niet uitgekeerd met betrekking tot de aandelen van deze klasse. In plaats daarvan worden de inkomsten voor rekening van de aandeelhouders van het Fonds gecumuleerd en herbelegd."
+Ongunstig scenario: 14.390 USD en 7,5% per jaar | bron: "Ongunstig scenario Wat u kunt terugkrijgen na kosten Gemiddeld rendement 6.200 USD -38,0% 14.390 USD 7,5%"
+```

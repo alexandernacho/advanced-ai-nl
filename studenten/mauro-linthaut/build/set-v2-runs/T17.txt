@@ -1,0 +1,12 @@
+```
+ETF: Future of Defence UCITS ETF
+
+Risico-indicator: 4 | bron: "We hebben dit product ingedeeld in klasse 4 uit 7; dat is een middelgrote risicoklasse."
+Aanbevolen bewaartermijn: 5 jaar | bron: "Het fonds heeft geen vaste minimumlooptijd, maar de aanbevolen periode van bezit is 5 jaar."
+Lopende kosten per jaar: 0,49% | bron: "0,49% van de waarde van uw belegging per jaar" en "0,00% van de waarde van uw belegging per jaar"
+Instapkosten: 0% | bron: "0% van het bedrag dat u betaalt wanneer u in deze belegging instapt"
+Uitstapkosten: 0% | bron: "0% van uw belegging voordat deze aan u wordt uitbetaald"
+Gevolgde index: EQM Future of Defence Index | bron: "De beleggingsdoelstelling van het Fonds is om de prijs en de prestaties, vóór vergoedingen en kosten, van de EQM Future of Defence Index (de Index) te volgen."
+Uitkerend of accumulerend: accumulerend | bron: "In plaats daarvan worden de inkomsten voor rekening van de aandeelhouders van het Fonds gecumuleerd en herbelegd."
+Ongunstig scenario: 12.620 USD en 4,8% per jaar | bron: "Ongunstig scenario Wat u kunt terugkrijgen na kosten Gemiddeld rendement 8.940 USD -10,6% 12.620 USD 4,8%"
+```

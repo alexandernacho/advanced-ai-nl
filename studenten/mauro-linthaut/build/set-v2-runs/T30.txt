@@ -1,0 +1,12 @@
+```
+ETF: Xtrackers MSCI USA Information Technology UCITS ETF
+
+Risico-indicator: 5 | bron: "We have classified this product as 5 out of 7, which is a medium-high risk class."
+Aanbevolen bewaartermijn: 7 jaar | bron: "Recommended holding period: 7 years."
+Lopende kosten per jaar: 0,12% | bron: "0.12 % of the value of your investment per year. This is an estimate based on actual costs for the fiscal year ending 31.12.2024." en "0.00 % of the value of your investment per year. This is an estimate of the costs incurred when we buy and sell the underlying investments for the product."
+Instapkosten: 0% | bron: "We do not charge an entry fee."
+Uitstapkosten: 0% | bron: "We do not charge an exit fee."
+Gevolgde index: MSCI USA Information Technology 20/35 Custom Index | bron: "The aim is for your investment to track the performance, before fees and expenses, of the MSCI USA Information Technology 20/35 Custom Index (index)."
+Uitkerend of accumulerend: uitkerend | bron: "The fund distributes up to four times per annum."
+Ongunstig scenario: 12.140 USD en 2,8% per jaar | bron: "Unfavourable What you might get back after costs Average return each year 6,990 USD -30.1 % 12,140 USD 2.8 %"
+```

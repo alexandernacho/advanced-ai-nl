@@ -1,0 +1,12 @@
+```
+ETF: Global X Video Games & Esports UCITS ETF
+
+Risico-indicator: 4 | bron: "Wij hebben dit product ingedeeld in klasse 4 uit 7, dat is een middelgrote risicoklasse."
+Aanbevolen bewaartermijn: 5 jaar | bron: "Aanbevolen periode van bezit: 5 jaar"
+Lopende kosten per jaar: 0,6% | bron: "De jaarlijkse beheerskosten voor dit product zijn 0,50%." en "0,1% van de waarde van uw belegging per jaar."
+Instapkosten: 0% | bron: "Instapkosten Geen"
+Uitstapkosten: 0% | bron: "Uitstapkosten Geen"
+Gevolgde index: Solactive Video Games & Esports v2 Index | bron: "De beleggingsdoelstelling van het fonds is het genereren van rendement dat, vóór aftrek van kosten en vergoedingen, over het algemeen nauw overeenkomt met de koers en het rendement van de Solactive Video Games & Esports v2 Index (de “Index”)."
+Uitkerend of accumulerend: accumulerend | bron: "Bij kapitalisatieaandelen worden inkomsten automatisch herbelegd in het fonds en komen deze tot uitdrukking in de intrinsieke waarde per aandeel."
+Ongunstig scenario: 7.560 USD en -5,44% per jaar | bron: "USD 7.560 -5,44%"
+```

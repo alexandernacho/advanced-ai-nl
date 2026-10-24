@@ -1,0 +1,12 @@
+```
+ETF: Aspect Diversified Trends Fund – Class T EUR Institutional
+
+Risico-indicator: 3 | bron: "We have classified this product as class 3 out of 7, which is a medium-low risk class."
+Aanbevolen bewaartermijn: 5 jaar | bron: "Recommended minimum holding period: 5 Years"
+Lopende kosten per jaar: 2,2% | bron: "0.9% that are incurred each year for managing your investments and running the company." en "An estimate of 1.3% incurred when we buy and sell the underlying Portfolio transaction costs investments for the product."
+Instapkosten: 0% | bron: "There are no direct entry costs associated with the investment."
+Uitstapkosten: 0% | bron: "We do not charge an exit fee for this product."
+Gevolgde index: niet vermeld
+Uitkerend of accumulerend: niet vermeld
+Ongunstig scenario: 6.690 EUR en -7,71% per jaar | bron: "What you might get back after costs 6,960 EUR 6,690 EUR" en "Average return each year - 30.39% - 7.71%"
+```

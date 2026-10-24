@@ -1,0 +1,12 @@
+```
+ETF: AMUNDI PRIME ALL COUNTRY WORLD UCITS ETF ACC
+
+Risico-indicator: 4 | bron: "We hebben dit product ingedeeld in klasse 4 uit 7; dat is een middelgrote risicoklasse."
+Aanbevolen bewaartermijn: 5 jaar | bron: "Aanbevolen periode van bezit: 5 jaar"
+Lopende kosten per jaar: 0,12% | bron: "0,07% van de waarde van uw belegging per jaar. Dit percentage is een schatting op basis van de feitelijke kosten van het afgelopen jaar." en "0,05% van de waarde van uw belegging per jaar. Dit is een schatting van de kosten voor de onderliggende beleggingen om het product te kopen en verkopen."
+Instapkosten: 0% | bron: "Wij brengen geen instapkosten in rekening voor dit product."
+Uitstapkosten: 0% | bron: "Wij brengen voor dit product geen uitstapkosten in rekening, maar de persoon die u het product verkoopt, doet dat misschien wel."
+Gevolgde index: Solactive GBS Global Markets Large & Mid Cap Index | bron: "Het doel van het Subfonds is het rendement van de Solactive GBS Global Markets Large & Mid Cap Index (de "Index") te volgen."
+Uitkerend of accumulerend: accumulerend | bron: "Aangezien dit een niet-uitkerende aandelencategorie is, worden de beleggingsopbrengsten herbelegd."
+Ongunstig scenario: 12.370 USD en 4,3% per jaar | bron: "Wat u kunt terugkrijgen na kosten Gemiddeld rendement per jaar $7.920 -20,8% $12.370 4,3%"
+```

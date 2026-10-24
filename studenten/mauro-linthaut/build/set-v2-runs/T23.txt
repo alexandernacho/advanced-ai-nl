@@ -1,0 +1,12 @@
+```
+ETF: Xtrackers S&P 500 Swap UCITS ETF
+
+Risico-indicator: 4 | bron: "Abbiamo classificato questo prodotto al livello 4 su 7, che corrisponde alla classe di rischio media."
+Aanbevolen bewaartermijn: 5 jaar | bron: "Periodo di mantenimento consigliato: 5 anni."
+Lopende kosten per jaar: 0,20% | bron: "Commissioni di gestione e altri costi amministrativi o di esercizio 0,20 % del valore dell'investimento all'anno." en "Costi di transazione 0,00 % del valore dell'investimento all'anno."
+Instapkosten: 0% | bron: "Non addebitiamo una commissione di ingresso."
+Uitstapkosten: 0% | bron: "Non addebitiamo una commissione di uscita."
+Gevolgde index: S&P 500 Index | bron: "L’investimento mira a riflettere la performance dell’S&P 500 Index (l’indice), pensato per riflettere la performance delle azioni di 500 società che rappresentano tutte le principali industrie statunitensi, cercando di minimizzare le oscillazioni dei cambi a livello di classe di azioni."
+Uitkerend of accumulerend: accumulerend | bron: "I rendimenti e le plusvalenze non vengono distribuiti, bensì reinvestiti nel fondo."
+Ongunstig scenario: 11.210 EUR en 2,3% per jaar | bron: "Sfavorevole Possibile rimborso al netto dei costi Rendimento medio per ciascun anno 7.890 EUR -21,1 % 11.210 EUR 2,3 %"
+```

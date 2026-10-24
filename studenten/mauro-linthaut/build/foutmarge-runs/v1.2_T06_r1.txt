@@ -1,0 +1,12 @@
+```
+ETF: State Street SPDR S&P 500 UCITS ETF
+
+Risico-indicator: 4 | bron: "Nous avons classé ce produit dans la classe de risque 4 sur 7, qui est une classe de risque moyenne."
+Aanbevolen bewaartermijn: 5 jaar | bron: "Période de détention recommandée : 5 ans"
+Lopende kosten per jaar: 0,03% | bron: "0,03 % de la valeur de votre investissement par an." en "Coûts de transaction 0,00 % L’impact des coûts d’achat et de vente des investissements sousjacents pour le produit."
+Instapkosten: 0% | bron: "0,00 % L’impact des coûts que vous payez au moment de l’entrée dans votre investissement."
+Uitstapkosten: 0% | bron: "0,00 % L’impact des coûts de sortie de votre investissement lorsqu’il arrive à échéance."
+Gevolgde index: S&P 500 Index | bron: "Le Fonds vise à répliquer aussi fidèlement que possible la performance du S&P 500 Index (« l'Indice »)."
+Uitkerend of accumulerend: accumulerend | bron: "Tout revenu enregistré par le Fonds sera retenu et traduit par une augmentation de la valeur des actions."
+Ongunstig scenario: 12.010 USD en 3,7% per jaar | bron: "12.010 USD 3,7 %"
+```

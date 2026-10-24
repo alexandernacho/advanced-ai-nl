@@ -1,0 +1,12 @@
+```
+ETF: Xtrackers Global Equity Top Active UCITS ETF 1C Active
+
+Risico-indicator: niet vermeld
+Aanbevolen bewaartermijn: niet vermeld
+Lopende kosten per jaar: niet vermeld
+Instapkosten: niet vermeld
+Uitstapkosten: niet vermeld
+Gevolgde index: niet vermeld
+Uitkerend of accumulerend: accumulerend | bron: "Income treatment" en "Capitalizing"
+Ongunstig scenario: niet vermeld
+```
