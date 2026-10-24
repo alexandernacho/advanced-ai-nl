@@ -36,3 +36,7 @@ Nieuwe sessie in mijn studentenmap, `/model haiku`, één run op T01, daarna `/c
 Dat is ± 13 keer meer dan jouw deel van T01 met Haiku (€ 0,0050). Oorzaak: elke extra stap (een bestand openen) stuurt de hele context van ± 40.000 tokens opnieuw mee. Les: in de echte tool alleen de prompt en de websitetekst meesturen, in één bericht.
 
 Let op: `/context` in mijn studentenmap start de cursusskill `context` (die heeft dezelfde naam) in plaats van het ingebouwde commando. Die las `AGENTS.md` en `context.md`: ook dat telde mee in de 5 requests. Het contextgetal komt daarom uit de meting met `claude -p` hierboven.
+
+## Week 5: Haiku-check (gecorrigeerd in week 5)
+Gecontroleerd: mijn eigen run in week 4 toonde `claude-haiku-4-5` in `/cost`, en mijn metingen met `claude -p` gebruikten expliciet `claude-haiku-4-5`. De Haiku-regels hierboven rekenen dus met het juiste model en de juiste prijs ($1 / $5). Niets te corrigeren.
+Nieuw in week 5: **Haiku 5.5** ($0,10 / $0,50). Gemeten op 10 inputs × 3 runs: gemiddeld ± 825 output-tokens. Kost per run: 2.697 × $0,10 + 825 × $0,50 per miljoen = $0,00068 · **€ 0,0006**. Per maand bij mijn volume (100): € 0,06 · 10×: € 0,60 · 1.000×: € 60. Details in `modellen.md`.
