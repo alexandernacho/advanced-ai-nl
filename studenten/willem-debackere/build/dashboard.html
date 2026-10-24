@@ -1,0 +1,133 @@
+<meta charset="utf-8">
+<title>Leads-tool DBA Hardwoods</title>
+<style>
+/* Layout: één smalle kolom, samenvatting bovenaan, daarna meting, modellen, value chain. Kleur van eikenhout en bosgroen. */
+:root {
+  --bg: #f6f7f4;
+  --surface: #ffffff;
+  --fg: #1f2620;
+  --muted: #5d685f;
+  --line: #d9ded6;
+  --accent: #2f5d45;
+  --wood: #9a6b3c;
+  --good: #2e7d4f;
+  --bad: #b3412f;
+  --warn: #9a6b00;
+  --display: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --body: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --mono: ui-monospace, "Cascadia Mono", Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #141815; --surface: #1c221e; --fg: #e6ebe5; --muted: #9aa69c; --line: #2f3831;
+    --accent: #7fbf9a; --wood: #d0a170; --good: #6fc492; --bad: #ef8a76; --warn: #e0b85a; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #141815; --surface: #1c221e; --fg: #e6ebe5; --muted: #9aa69c; --line: #2f3831;
+  --accent: #7fbf9a; --wood: #d0a170; --good: #6fc492; --bad: #ef8a76; --warn: #e0b85a; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--fg); font: 15px/1.55 var(--body); margin: 0; padding-inline: 16px; padding-block: 28px 48px; }
+main { max-width: 760px; margin-inline: auto; display: grid; gap: 36px; }
+h1, h2 { font-family: var(--display); font-weight: 600; text-wrap: balance; margin: 0; }
+h1 { font-size: 1.9rem; line-height: 1.15; }
+h2 { font-size: 1.3rem; }
+p { margin: 0; max-width: 65ch; }
+.eyebrow { font-size: .72rem; letter-spacing: .09em; text-transform: uppercase; color: var(--wood); font-weight: 600; }
+.lead { color: var(--muted); }
+header { display: grid; gap: 10px; }
+section { display: grid; gap: 14px; }
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; }
+.kpi { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 14px; display: grid; gap: 4px; min-width: 0; }
+.kpi .v { font-family: var(--display); font-size: 1.6rem; font-variant-numeric: tabular-nums; }
+.kpi .l { font-size: .8rem; color: var(--muted); }
+.pill { display: inline-block; font-size: .75rem; font-weight: 600; padding: 2px 9px; border-radius: 99px; border: 1px solid currentColor; }
+.pill.good { color: var(--good); } .pill.bad { color: var(--bad); } .pill.warn { color: var(--warn); }
+.scroll { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-variant-numeric: tabular-nums; font-size: .9rem; }
+th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+td.n, th.n { text-align: right; white-space: nowrap; }
+tr.pick td { background: color-mix(in srgb, var(--accent) 10%, transparent); }
+.runs { display: grid; gap: 8px; }
+.runrow { display: grid; grid-template-columns: 8.5rem 1fr; gap: 10px; align-items: center; }
+.runrow .name { font-size: .85rem; }
+.dots { display: flex; gap: 6px; flex-wrap: wrap; }
+.dot { font: 600 .8rem var(--mono); padding: 3px 8px; border-radius: 5px; background: var(--surface); border: 1px solid var(--line); }
+.dot.full { border-color: var(--good); color: var(--good); }
+.note { font-size: .88rem; color: var(--muted); }
+.weak { border-left: 3px solid var(--warn); padding: 10px 14px; background: var(--surface); display: grid; gap: 6px; }
+footer { font-size: .8rem; color: var(--muted); }
+</style>
+
+<main>
+  <header>
+    <div class="eyebrow">Advanced AI for Business · Build · week 5</div>
+    <h1>Leads-tool voor DBA Hardwoods</h1>
+    <p class="lead">De tool leest de homepage van één bedrijf en zegt of het een mogelijke klant is voor rubberwood: maakt het zelf iets in massief hout? Hij haalt het e-mailadres eruit. Zonder e-mailadres is het geen lead.</p>
+  </header>
+
+  <section aria-labelledby="s-kort">
+    <h2 id="s-kort">In het kort</h2>
+    <div class="kpis">
+      <div class="kpi"><span class="v">10/10</span><span class="l">Haiku 5.5, foutmarge 10–10 (n = 10, 3 runs)</span></div>
+      <div class="kpi"><span class="v">€ 0,0006</span><span class="l">kost per run, Haiku 5.5</span></div>
+      <div class="kpi"><span class="v">± € 10.650</span><span class="l">netto per jaar bij 100 bedrijven per maand</span></div>
+      <div class="kpi"><span class="v">0</span><span class="l">verzonnen e-mailadressen in 110 runs (week 5)</span></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="s-fout">
+    <h2 id="s-fout">Foutmarge</h2>
+    <p class="note">Zelfde 10 inputs, 3 runs per versie, elke run een aparte sessie zonder tools. 21 en 24 oktober 2026.</p>
+    <div class="runs">
+      <div class="runrow"><span class="name">v1 · Sonnet 5.5</span><span class="dots"><span class="dot">9</span><span class="dot">9</span><span class="dot">9</span></span></div>
+      <div class="runrow"><span class="name">v2 · Sonnet 5.5</span><span class="dots"><span class="dot">9</span><span class="dot">9</span><span class="dot">9</span></span></div>
+      <div class="runrow"><span class="name">v2 · Haiku 5.5</span><span class="dots"><span class="dot full">10</span><span class="dot full">10</span><span class="dot full">10</span></span></div>
+    </div>
+    <p><span class="pill bad">Claim ingetrokken</span></p>
+    <p>Mijn claim uit week 3: de nieuwe regel loste T07 op. Maar v1 en v2 scoren allebei 9–9. Met Sonnet ging T07 (een meubelzaak die elders laat maken) in alle 6 runs fout. De 2 juiste runs van week 3 waren toeval.</p>
+  </section>
+
+  <section aria-labelledby="s-mod">
+    <h2 id="s-mod">Model en effort</h2>
+    <p class="note">Mijn gok vooraf: Opus het best en ook nodig. Deels fout: Haiku 5.5 haalt hetzelfde voor 1/25 van de prijs.</p>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>Setup</th><th class="n">Score</th><th class="n">Output-tokens</th><th class="n">Per run</th><th class="n">Per jaar</th></tr></thead>
+        <tbody>
+          <tr><td>A · Sonnet 5.5, medium</td><td class="n">9/10 (3 runs: 9–9)</td><td class="n">± 200</td><td class="n">€ 0,0067</td><td class="n">€ 8,00</td></tr>
+          <tr class="pick"><td>B · Haiku 5.5 <span class="pill good">in productie</span></td><td class="n">10/10 (3 runs: 10–10)</td><td class="n">± 825</td><td class="n">€ 0,0006</td><td class="n">€ 0,72</td></tr>
+          <tr><td>C · Opus 5.5</td><td class="n">10/10 (1 run)</td><td class="n">318</td><td class="n">€ 0,0154</td><td class="n">€ 18,50</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Het hele verschil tussen de setups is één input: T07. Per jaar = 1.200 runs. 1 dollar = 0,90 euro.</p>
+  </section>
+
+  <section aria-labelledby="s-vc">
+    <h2 id="s-vc">Value chain</h2>
+    <div class="scroll">
+      <table>
+        <tbody>
+          <tr><th>Met de hand</th><td>15 min per bedrijf</td><td class="note">eigen schatting</td></tr>
+          <tr><th>Met de tool</th><td>opzoeken 1 min · kopiëren en draaien 2 min · nakijken 10 s · fouten herstellen 0% × 15 min = <strong>± 3 min 10 s</strong></td><td class="note">geschat / gemeten</td></tr>
+          <tr><th>Winst</th><td>± 11 min 50 s per bedrijf</td><td></td></tr>
+          <tr><th>Volume</th><td>100 per maand · 1.200 per jaar</td><td class="note">gok</td></tr>
+          <tr><th>Uren</th><td>± 237 u per jaar</td><td></td></tr>
+          <tr><th>Uurkost</th><td>€ 45 voor de werkgever</td><td class="note">aanname, les week 4</td></tr>
+          <tr><th>Kost tool</th><td>± € 0,72 per jaar (Haiku 5.5)</td><td class="note">gemeten</td></tr>
+          <tr><th>Netto</th><td><strong>± € 10.650 per jaar</strong></td><td></td></tr>
+          <tr><th>Bereik</th><td>Haiku 5.5: 10–10, geen bereik gemeten. Bij 1 op 10 fout (zoals Sonnet): ± € 9.290 per jaar.</td><td class="note">foutmarge</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="weak">
+      <span class="pill warn">Zwakste cijfer</span>
+      <p>Het volume van 100 bedrijven per maand is een gok: het hangt af van de maand en het andere werk. Bij de helft blijft er ± € 5.325 per jaar over. Het volume beweegt het netto vier keer meer dan de foutmarge.</p>
+    </div>
+  </section>
+
+  <footer>Bronnen: build/foutmarge.md, build/modellen.md, build/kosten.md, build/waarde.md. Inputs zijn publieke websites; geen namen van personen.</footer>
+</main>

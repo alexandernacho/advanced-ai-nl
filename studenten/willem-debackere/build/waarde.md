@@ -26,3 +26,22 @@ Dan blijft enkel nakijken over: 10 s. Winst ± 14 min 50 s per bedrijf, ± 297 u
 
 ## Wat het nakijken wel en niet vangt
 Nakijken = enkel controleren of het een e-mailadres is (geen telefoonnummer of adres). Niet of het op de site staat. Of het adres werkt, blijkt pas bij de mailing. Een verzonnen adres (F2) valt dus pas op als er geen antwoord komt of de mail terugkomt. Daarom blijft F2 de fout om te meten: 0 in 20 runs, maar maar 6 runs testen het echt.
+
+## Week 5: value chain met de foutmarge (Haiku 5.5 in productie)
+
+| Schakel | Waarde | Bron |
+|---|---|---|
+| Met de hand | **15 min** per bedrijf | eigen schatting |
+| Score | 10 op 10 (foutmarge 10–10, n = 10, 3 runs, Haiku 5.5) | gemeten, `modellen.md` |
+| Met de tool | Opzoeken 1 min · kopiëren, plakken en draaien 2 min · nakijken 10 s · fouten herstellen 0% × 15 min = 0 · samen **± 3 min 10 s** | geschat / gemeten |
+| Winst per bedrijf | **± 11 min 50 s** | |
+| Volume | ± 5 per dag · 25 per week · 100 per maand · **1.200 per jaar** | eigen schatting (gok) |
+| Uren gewonnen | ± 1 u per dag · 4,9 u per week · 19,7 u per maand · **± 237 u per jaar** | |
+| Uurkost | **€ 45 voor de werkgever** | aanname: loonkost van een bediende (les week 4) |
+| Waarde | 237 × 45 = **± € 10.650 per jaar** | |
+| Kost van de tool | 1.200 × € 0,0006 = **± € 0,72 per jaar** (Haiku 5.5) | gemeten, `kosten.md` |
+| Netto | **± € 10.650 per jaar** | |
+| Bereik | Haiku 5.5: 10–10, dus geen bereik in mijn meting. Ter vergelijking, Sonnet 5.5 (9 op 10): 10% × 15 min = 1 min 30 s herstellen, winst 10 min 20 s, ± 207 u, **± € 9.290 per jaar** | foutmarge |
+| Zwakste cijfer | Het volume van 100 per maand. Is het de helft: ± 118 u, **± € 5.325 per jaar** | |
+
+10 op 10 op 10 inputs betekent niet dat Haiku in het echt nooit fout zit. Zit hij in het echt even vaak fout als Sonnet (1 op 10), dan zakt het netto met ± € 1.360. Het volume halveren laat het netto zakken met ± € 5.325. Mijn zwakste cijfer is dus het volume, niet de score.
