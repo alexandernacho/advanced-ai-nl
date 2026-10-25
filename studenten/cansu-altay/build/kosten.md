@@ -255,3 +255,20 @@ Sol: (694 × $2 + 43 × $10) / 1.000.000 = $0,001818 per run. Omrekening naar eu
 | Luna, niet getest | €0.00008120 | €0.0053–€0.0063 | €0.053–€0.063 | €5.28–€6.33 |
 
 Bij 780–936 runs per jaar: Sol €1.27–€1.52. Persoonlijke vergelijkingswaarde bij 5,2 uur winst en €15–€17 per uur: €78–€88,40; na v5-modelkosten €76.48–€87.13. Als uitproberen de helft kost: 1,3 uur winst, waarde €19,50–€22,10; na modelkosten €17.98–€20.83. Dit zijn scenario's, geen gerealiseerde inkomsten. Tijdschattingen zijn gebaseerd op Cansu's ervaringen en Terra-tests; Sol- en Luna-prestaties zijn niet onder dezelfde omstandigheden vastgesteld. Overige softwarekosten ontbreken.
+
+
+## Gecorrigeerd in week 5 — modeltest op 24 oktober 2026
+
+De eerdere regel met GPT-6.1 Sol was een raming voor dat model, geen kostenmeting van de inhoudelijke Terra-tests. De modellen zijn nu afzonderlijk getest: GPT-5.6 Terra, GPT-5.6 Luna en GPT-5.6 Sol, alle met effort high en prompt v5. De eerdere regels blijven als geschiedenis staan. Er is geen Haiku gebruikt; de Haiku-correctie uit de les is hier niet van toepassing.
+
+Prijzen, gemeten outputtokens, scores en bronnen staan in [modellen.md](modellen.md). De gebruikte standaardprijzen per miljoen input-/outputtokens zijn Terra $2/$12, Luna $0,20/$1,20 en Sol $4/$20. Bron: officiële OpenAI-modeldocumentatie, gelinkt in modellen.md. De Sol-prijs is tijdelijk; jaarbedragen veronderstellen hetzelfde tarief.
+
+Losse-toolraming met de vaste week-4-benadering van 694 inputtokens en de gemeten gemiddelde output, inclusief reasoning: Terra 46,5, Luna 163,0, Sol 61,7 outputtokens. Geen cachekorting. Het exacte inputverbruik van een losse API-toepassing is nog niet gemeten; de Codex-systeemcontext is buiten deze raming gehouden.
+
+| Model | Per notitie (USD) | Per notitie (EUR) | 65–78/maand (EUR) | 780–936/jaar (EUR) |
+|---|---:|---:|---:|---:|
+| GPT-5.6 Terra | $0,001946 | €0,001738 | €0,113–€0,136 | €1,36–€1,63 |
+| GPT-5.6 Luna | $0,0003344 | €0,0002987 | €0,0194–€0,0233 | €0,233–€0,280 |
+| GPT-5.6 Sol | $0,004010 | €0,003582 | €0,233–€0,279 | €2,79–€3,35 |
+
+Eurobedragen gebruiken uitsluitend voor vergelijkbaarheid dezelfde historische rekenkoers als week 4: €1 = $1,1195. Deze koers is voor 24 oktober niet opnieuw gecontroleerd en is geen claim over de actuele wisselkoers. Jaarvolumes en maandvolumes zijn eerdere aannames van Cansu, geen gebruiksmeting. Geen extra abonnementskosten of gerealiseerde factuur. Samenvatting van de berekening staat in week-05-modelruns/summary.json; ruwe usage-events staan naast de antwoorden. Cansu kiest voorlopig GPT-5.6 Luna met de geteste effort high; haar motivatie en de beperkingen staan in modellen.md. De Luna-rij is daarmee de kostenraming voor het voorlopig gekozen gebruiksscenario.

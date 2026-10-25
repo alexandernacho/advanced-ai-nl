@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a16e3a-9ef0-7fc3-a758-0319932ffe09"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"| Oefening | Gewicht | Sets | Herhalingen |\n|---|---|---|---|\n| cable straight arm pull down | 20kg | onbekend | 12, 12, 12, tot failure (aantal onbekend) |"}}
+{"type":"turn.completed","usage":{"input_tokens":10910,"cached_input_tokens":7936,"cache_write_input_tokens":0,"output_tokens":58,"reasoning_output_tokens":0}}

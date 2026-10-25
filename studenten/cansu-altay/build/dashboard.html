@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Week 5: tests, modelkosten en geschatte tijdwinst van een tool voor trainingsnotities.">
+  <title>Trainingsnotities · Resultaten week 5</title>
+  <style>
+    :root{color-scheme:light;--paper:#f5f5f0;--ink:#172e29;--muted:#52645e;--line:#d8ded6;--green:#215f4d;--soft:#e5eee5;--amber:#755116;--sand:#fff0d3}
+    *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1080px;margin:auto;padding:40px 24px 64px}a{color:var(--green);text-underline-offset:3px}a:focus-visible,summary:focus-visible{outline:3px solid var(--amber);outline-offset:5px}header{padding:12px 0 28px;border-bottom:1px solid var(--line)}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-size:.75rem;font-weight:750;color:var(--green)}h1{font-size:clamp(2.3rem,6vw,4.5rem);letter-spacing:-.055em;line-height:1.06;margin:14px 0 20px;max-width:760px}h2{font-size:1.6rem;line-height:1.2;letter-spacing:-.025em;margin:0 0 16px}h3{font-size:1.1rem;margin:0 0 12px}p{margin:0 0 14px}.intro{max-width:700px;color:var(--muted);font-size:1.1rem}.meta{font-size:.85rem;color:var(--muted)}nav{display:flex;gap:12px 24px;flex-wrap:wrap;margin:24px 0}nav a{font-size:.9rem}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:28px 0}.card{background:white;border:1px solid var(--line);border-radius:16px;padding:24px}.label{font-size:.85rem;color:var(--muted)}.big{display:block;font-size:2.5rem;letter-spacing:-.055em;font-weight:750;line-height:1.3;margin:8px 0}.badge{display:inline-block;border-radius:30px;padding:3px 10px;font-size:.8rem;font-weight:650;background:var(--soft);color:var(--green)}.badge.warn{background:var(--sand);color:var(--amber)}section{margin-top:40px;scroll-margin-top:24px}.notice{border-left:4px solid var(--amber);padding:16px 20px;background:var(--sand);border-radius:0 10px 10px 0;margin:20px 0}.notice p:last-child{margin-bottom:0}.scroll{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:white}table{border-collapse:collapse;width:100%;font-size:.9rem;text-align:left}caption{text-align:left;padding:16px;font-weight:700}th,td{padding:14px 16px;border-bottom:1px solid var(--line);vertical-align:top}thead th{background:var(--soft);font-weight:700}tbody tr:last-child td,tbody tr:last-child th{border-bottom:0}.chosen td,.chosen th{background:#f0f7ed}.note{font-size:.88rem;color:var(--muted);margin-top:12px}.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}.chain{margin:0;padding-left:24px}.chain li{padding:8px 0 12px 8px}.chain strong{display:block}.chain span{color:var(--muted)}details{border-top:1px solid var(--line);padding:18px 0}summary{cursor:pointer;font-weight:650}details p,details ul{margin:14px 0 0}footer{margin-top:48px;padding-top:22px;border-top:1px solid var(--line);font-size:.85rem;color:var(--muted)}code{font-size:.85em;overflow-wrap:anywhere}.break{overflow-wrap:anywhere}@media(max-width:700px){main{padding:24px 16px 40px}.cards,.two{grid-template-columns:1fr}.cards{gap:10px}.card{padding:20px}.big{font-size:2.1rem}th,td{padding:12px;font-size:.85rem}nav{gap:10px 18px}}@media print{body{background:white}main{max-width:none;padding:0}.scroll{overflow:visible}section,.card{break-inside:avoid}nav{display:none}details{display:block}}
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="eyebrow">Build / week 05 / trainingsnotities</div>
+    <h1>Goede antwoorden.<br>Hoe betrouwbaar?</h1>
+    <p class="intro">Korte trainingsnotities omzetten naar oefening, gewicht, sets en herhalingen. Dit dashboard toont wat is getest, wat het model naar schatting kost en welke tijdwinst nog gemeten moet worden.</p>
+    <p class="meta">Tests: 24 oktober 2026 · Dashboard: 25 oktober 2026 · Prompt v5</p>
+  </header>
+  <nav aria-label="Onderdelen"><a href="#herhaling">Herhaalde tests</a><a href="#modellen">Modellen en kosten</a><a href="#waarde">Tijd en waarde</a><a href="#grenzen">Wat nog ontbreekt</a></nav>
+  <div class="cards">
+    <article class="card"><span class="label">Herhaalde v5-tests · Terra high</span><strong class="big">8–9 / 10</strong><span class="badge warn">Verbetering niet bewezen</span><p class="note">n = 10 notities, 3 rondes. V4 had hetzelfde bereik.</p></article>
+    <article class="card"><span class="label">Voorlopig gekozen · Luna high</span><strong class="big">10 / 10</strong><span class="badge">Eén testronde</span><p class="note">n = 10. Luna heeft nog geen eigen foutmarge over herhalingen.</p></article>
+    <article class="card"><span class="label">Luna · losse-toolraming</span><strong class="big">€0,000299</strong><span class="badge">Per notitie, afgerond</span><p class="note">Circa €0,23–€0,28 per jaar bij 780–936 notities. Geen factuurbedrag.</p></article>
+  </div>
+  <section id="herhaling" aria-labelledby="herhaling-title">
+    <h2 id="herhaling-title">01 / Wat gebeurt er bij herhalen?</h2>
+    <p>Beide promptversies kregen dezelfde tien notities, dezelfde beoordelingsregels en drie afzonderlijke rondes met <code>gpt-5.6-terra</code>, effort high.</p>
+    <div class="scroll"><table><caption>Score per ronde · n = 10, drie runs per versie</caption><thead><tr><th scope="col">Prompt</th><th scope="col">Ronde 1</th><th scope="col">Ronde 2</th><th scope="col">Ronde 3</th><th scope="col">Min–max</th></tr></thead><tbody><tr><th scope="row">v4</th><td>9/10</td><td>8/10</td><td>9/10</td><td>8–9/10</td></tr><tr><th scope="row">v5</th><td>8/10</td><td>9/10</td><td>8/10</td><td>8–9/10</td></tr></tbody></table></div>
+    <div class="notice"><p><strong>Algemene verbeterclaim ingetrokken.</strong> De bereiken overlappen. V5 verwerkt de onduidelijke sets wel beter: op die ene notitie 3/3 correct, tegenover 0/3 voor v4. Bij andere notities blijven fouten voorkomen.</p></div>
+    <p class="note">Dit is het waargenomen min–max-bereik, geen statistisch betrouwbaarheidsinterval. Eén notitie staat ook als voorbeeld in beide prompts. Zonder die notitie: beide versies 7–8/9. Twee antwoorden zijn door de student nagekeken; bij één verschilt haar oordeel van de vooraf afgesproken uitvoervorm. Dat verschil is bewaard zonder de testscore te veranderen.</p>
+  </section>
+  <section id="modellen" aria-labelledby="modellen-title">
+    <h2 id="modellen-title">02 / Kan het met een kleiner model?</h2>
+    <p>Dezelfde v5-prompt en tien notities, één nieuwe ronde per model. Effort blijft high. Luna is voorlopig gekozen vanwege de score en de geraamde kosten; extra rommelige notities moeten nog worden getest.</p>
+    <div class="scroll"><table><caption>Drie setups · GPT-5.6 · n = 10, één run</caption><thead><tr><th scope="col">Setup / model</th><th scope="col">Effort</th><th scope="col">Score</th><th scope="col">Tegenover 8–9/10</th><th scope="col">Gem. outputtokens</th><th scope="col">USD / notitie</th><th scope="col">USD / jaar</th></tr></thead><tbody><tr><th scope="row">A / Terra</th><td>high</td><td>9/10</td><td>Binnen bereik</td><td>46,5</td><td>$0,001946</td><td>$1,52–$1,82</td></tr><tr class="chosen"><th scope="row">B / Luna · gekozen</th><td>high</td><td>10/10</td><td>Boven bereik</td><td>163,0</td><td>$0,0003344</td><td>$0,26–$0,31</td></tr><tr><th scope="row">C / Sol</th><td>high</td><td>8/10</td><td>Binnen bereik</td><td>61,7</td><td>$0,004010</td><td>$3,13–$3,75</td></tr></tbody></table></div>
+    <p class="note">De foutmarge is alleen gemeten bij Terra, niet bij Luna of Sol. Eén ronde bewijst geen blijvende rangorde. Zonder promptvoorbeeld: Terra 8/9, Luna 9/9, Sol 7/9. Een lager denkniveau is nog niet getest.</p>
+    <details><summary>Waar komen de kosten vandaan?</summary><p>Vaste benadering uit week 4: 694 inputtokens per notitie. Gemeten gemiddelde output uit de modeltest, inclusief reasoning. Formule: (694 × inputprijs + outputtokens × outputprijs) / 1.000.000. Geen cachekorting, opslag of hosting meegerekend. De Codex-systeemcontext valt buiten deze losse-toolraming.</p><p>Per miljoen input-/outputtokens: Terra $2/$12, Luna $0,20/$1,20, Sol $4/$20. Bronnen, gecontroleerd op 24 oktober: <a href="https://developers.openai.com/api/docs/models/gpt-5.6-terra">OpenAI Terra</a>, <a href="https://developers.openai.com/api/docs/models/gpt-5.6-luna">OpenAI Luna</a> en <a href="https://developers.openai.com/api/docs/models/gpt-5.6-sol">OpenAI Sol</a>. Sol heeft een tijdelijk tarief; de jaarbedragen veronderstellen gelijkblijvende prijzen.</p><p>Eurobedragen gebruiken de historische rekenkoers uit week 4: €1 = $1,1195. Geen actuele wisselkoersclaim. Luna: €0,0194–€0,0233 per maand, €0,233–€0,280 per jaar, bij 65–78 notities per maand.</p></details>
+  </section>
+  <section id="waarde" aria-labelledby="waarde-title">
+    <h2 id="waarde-title">03 / Tijdwinst is nog een scenario</h2>
+    <p>Het overzicht dat vorige trainingsgegevens bewaart en terugzoekt is nog niet gebouwd. Alle tijden hieronder zijn schattingen. Kleine correcties passen volgens de student vaak binnen gewone rust; moeilijkere correcties kunnen de training verlengen.</p>
+    <ol class="chain">
+      <li><strong>Zonder overzicht: 180 seconden extra uitproberen per training.</strong><span>Exclusief gewone sets, rust en het normale klaarzetten. Dit is nog niet gemeten.</span></li>
+      <li><strong>Met overzicht: 60 seconden terugzoeken.</strong><span>Twee raadplegingen × 30 seconden. Typen, wachten en nakijken kosten samen 48–53 seconden per notitie en zouden volledig binnen bestaande rust passen.</span></li>
+      <li><strong>Fouten herstellen: gemiddeld 45 seconden per verkeerde tabel.</strong><span>Kleine fout ongeveer 20 seconden, moeilijkere fout 1–2 minuten; allemaal eigen schattingen. Het deel buiten de normale rust is nog niet gemeten.</span></li>
+      <li><strong>Foutenscenario: 10–20% van 5–6 notities per training.</strong><span>0,5–1,2 correcties × 45 seconden = 22,5–54 seconden herstelwerk. Dit foutenbereik komt van Terra en is uitsluitend een gevoeligheidsscenario voor Luna.</span></li>
+      <li><strong>Winst: 180 − 60 − extra herstelwerk.</strong><span>66–97,5 seconden per training als alle gemiddelde correctietijd extra is; 120 seconden als die volledig binnen rust past.</span></li>
+      <li><strong>Volume: 3 trainingen per week × 52 weken.</strong><span>156 trainingen, 780–936 notities per jaar. Vijf à zes notities per training, 15–18 per week en 65–78 per gemiddelde maand. Aannames, geen gebruiksmeting.</span></li>
+      <li><strong>Persoonlijke uurwaarde: €15–€17.</strong><span>Vergelijking met eigen uurloon, geen werkgeversloonkost en geen daadwerkelijk verdiend geld. Werkgeversuurkost: niet vastgesteld voor deze persoonlijke sporttoepassing.</span></li>
+      <li><strong>Min Luna-modelkosten: circa €0,23–€0,28 per jaar.</strong><span>Raming bij het genoemde volume; overige softwarekosten ontbreken.</span></li>
+    </ol>
+    <div class="two">
+      <article class="card"><h3>Alle gemiddelde correctietijd extra</h3><strong class="big">2,86–4,225 uur</strong><p>Verwachte tijdwinst per jaar.</p><p><strong>€42,62–€71,59</strong> persoonlijke vergelijkingswaarde na modelkosten.</p><p class="note">Per week 3 min 18 s–4 min 52,5 s; per gemiddelde maand 14 min 18 s–21 min 7,5 s.</p></article>
+      <article class="card"><h3>Correcties volledig binnen rust</h3><strong class="big">5,2 uur</strong><p>Verwachte tijdwinst per jaar.</p><p><strong>€77,72–€88,17</strong> persoonlijke vergelijkingswaarde na modelkosten.</p><p class="note">Twee minuten per training; zes minuten per week; 26 minuten per gemiddelde maand.</p></article>
+    </div>
+    <p class="note">Ruime scenariogrenzen, geen bewezen besparing. Het werkelijke aandeel extra correctietijd is onbekend. Individuele moeilijke correcties kunnen langer duren dan het aangenomen gemiddelde.</p>
+    <details><summary>Effect van uitsluitend de score, bij vast volume</summary><p>Bij vijf notities en volledig extra correctietijd: 8/10 geeft 3,25 uur winst per jaar; 9/10 geeft 4,225 uur. Bij zes notities: 2,86 respectievelijk 4,03 uur. Het ruimere bereik 2,86–4,225 uur varieert zowel volume als score.</p></details>
+    <div class="notice"><p><strong>Zwakste cijfers: de ongeteste tijdschattingen.</strong> Als uitproberen zonder overzicht 90 in plaats van 180 seconden kost, blijft vóór extra herstelwerk 1,3 uur winst per jaar over. Als alle gemiddelde correctietijd extra is, wordt dat −1,04 tot +0,325 uur. Tijdverlies is dus mogelijk.</p><p>Halvering van de uitprobeertijd verandert het scenario met 3,9 uur per jaar, tegenover 0,975–1,17 uur door het Terra-scoreverschil bij vast volume. De student wil eerst de terugzoektijd meten zodra het overzicht bestaat en tegelijk het aantal raadplegingen noteren.</p></div>
+  </section>
+  <section id="grenzen" aria-labelledby="grenzen-title">
+    <h2 id="grenzen-title">04 / Nog niet gemeten</h2>
+    <div class="card"><ul><li>Luna's eigen foutmarge over meerdere rondes en nieuwe, rommelige notities.</li><li>Prestaties en kosten bij een lager denkniveau.</li><li>Werkelijke uitprobeertijd, terugzoektijd en verlenging van rust door correcties.</li><li>Werkelijk gebruik van het nog te bouwen overzicht, opslag- en hostingkosten.</li></ul><p class="note">Bronbestanden: foutmarge.md, modellen.md, kosten.md en waarde.md. Scores volgen vooraf vastgelegde uitvoerregels. De kleine testset is eerder voor promptverbeteringen gebruikt. De losse modeltests hadden wel dezelfde gebruikersprompt en instellingen, maar modelspecifieke Codex-systeemcontext.</p></div>
+  </section>
+  <footer>Week 5 · Eén zelfstandig HTML-bestand · Geen externe scripts, lettertypes of persoonsgegevens in de pagina.</footer>
+</main>
+</body>
+</html>
