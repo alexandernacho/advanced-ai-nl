@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a16e3a-d72e-7250-8ee8-672f2475c9ff"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"| Oefening | Gewicht | Sets | Herhalingen |\n|---|---|---|---|\n| seated hamstring curl | 20kg | 4 | 12 |"}}
+{"type":"turn.completed","usage":{"input_tokens":9936,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":72,"reasoning_output_tokens":28}}

@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a16e23-fea1-7463-b71a-7b891bf7b25e"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"| Oefening | Gewicht | Sets | Herhalingen |\n|---|---|---|---|\n| cable kickbacks | 15kg | 4 | 12 |"}}
+{"type":"turn.completed","usage":{"input_tokens":11458,"cached_input_tokens":9984,"cache_write_input_tokens":0,"output_tokens":41,"reasoning_output_tokens":0}}

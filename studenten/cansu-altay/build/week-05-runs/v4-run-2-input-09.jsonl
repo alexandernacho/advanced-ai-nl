@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a16e23-5ae3-7b92-94ae-1e58b7346b5a"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"| Oefening | Gewicht | Sets | Herhalingen |\n|---|---|---|---|\n| facepulls | 30kg | 4 | onbekend, onbekend, onbekend, tot failure (aantal onbekend) |"}}
+{"type":"turn.completed","usage":{"input_tokens":11393,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":56,"reasoning_output_tokens":0}}

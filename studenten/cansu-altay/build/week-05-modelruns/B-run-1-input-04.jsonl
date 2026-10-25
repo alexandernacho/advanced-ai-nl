@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a16e3a-d436-7bc1-b7b5-c9489c4c317c"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"| Oefening | Gewicht | Sets | Herhalingen |\n|---|---|---|---|\n| hip thrusts | 60kg | 4 | 12 |"}}
+{"type":"turn.completed","usage":{"input_tokens":9928,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":92,"reasoning_output_tokens":49}}

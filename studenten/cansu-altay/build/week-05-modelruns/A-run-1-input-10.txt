@@ -1,0 +1,3 @@
+| Oefening | Gewicht | Sets | Herhalingen |
+|---|---|---|---|
+| lat pulldown | 35kg | 3 | 12 |

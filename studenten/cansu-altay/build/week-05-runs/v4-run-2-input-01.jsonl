@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a16e23-24cf-7540-b08c-4ebdcd97c24d"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"| Oefening | Gewicht | Sets | Herhalingen |\n|---|---|---|---|\n| Bulgarian Split Squat | 20kg | 4 | 12 |"}}
+{"type":"turn.completed","usage":{"input_tokens":11392,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":42,"reasoning_output_tokens":0}}

@@ -1,5 +1,9 @@
 # Testset — Trainingsnotities
 
+## Beoordelingsafspraak week 5 — vóór de nieuwe vergelijking
+
+Cansu bevestigt dat bij de oorspronkelijke input 6 (`cable strght arm pull down 20kg 3x12 + laatste set tot faillure`) voor **beide versies, v4 en v5, alleen `onbekend` bij Sets correct is**. Een ingevuld totaal, waaronder `3` of `4`, is fout. De overige velden volgen de vooraf vastgelegde v5-uitvoerafspraak onderaan dit bestand. Deze regel geldt voor de nieuwe week-5-tests; de historische verwachte antwoorden en beoordelingen hieronder blijven ongewijzigd.
+
 Vanaf v4 in voorbereiding wordt input 7 met het verwachte antwoord als voorbeeld in de prompt opgenomen, op keuze van Cansu. Houd nieuwe tests van deze input apart van tests op ongeziene inputs. De eerdere resultaten horen bij de toen gebruikte versies en blijven bewaard.
 
 Zes echte trainingsnotities van Cansu. De verwachte antwoorden komen uit haar eigen notities en verduidelijkingen. Cansu bevestigde dat `4 x 12` betekent: 4 sets en 12 herhalingen per set. De antwoorden zijn vastgelegd vóór de AI wordt getest.

@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a16e23-91fb-7b13-a157-3723be8d058d"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"| Oefening | Gewicht | Sets | Herhalingen |\n|---|---|---|---|\n| dumbbell pullover | 10kg, 12, 14 | 3 | tot failure (aantal onbekend), tot failure (aantal onbekend), tot failure (aantal onbekend) |"}}
+{"type":"turn.completed","usage":{"input_tokens":11397,"cached_input_tokens":9984,"cache_write_input_tokens":0,"output_tokens":70,"reasoning_output_tokens":0}}

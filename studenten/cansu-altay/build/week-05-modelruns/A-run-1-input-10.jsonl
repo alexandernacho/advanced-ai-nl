@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a16e3a-bd74-7063-9903-496c589f5216"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"| Oefening | Gewicht | Sets | Herhalingen |\n|---|---|---|---|\n| lat pulldown | 35kg | 3 | 12 |"}}
+{"type":"turn.completed","usage":{"input_tokens":11459,"cached_input_tokens":9984,"cache_write_input_tokens":0,"output_tokens":42,"reasoning_output_tokens":0}}

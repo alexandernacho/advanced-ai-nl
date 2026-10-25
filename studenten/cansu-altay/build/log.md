@@ -100,3 +100,28 @@ Op verzoek van Cansu is de regel voor een dubbelzinnig totaal aantal sets explic
 ## 14 oktober 2026 — gerichte v5-hertest afgerond
 
 Cansu legde vooraf bij input 6 Sets = onbekend en Herhalingen = 3 x 12, laatste set: tot failure (aantal onbekend) vast. Ze deelde twee identieke antwoorden en beoordeelde beide als correct: 2/2 (n = 1, 2 runs), met dezelfde gerapporteerde modelinstelling GPT 5.6 terra hoog. Alleen de expliciete regel voor dubbelzinnige sets is toegevoegd aan v4. De uitvoerafspraak is veranderd, dus geen zuivere scorevergelijking met v4. Geen volledige v5-score; de volledige v4-score blijft 18/20.
+
+
+## 24 oktober 2026 — week 5, automatische foutmargetest
+
+Cansu voorspelt dat v5 beter zal scoren en bevestigt vooraf dat bij input 6 voor beide versies alleen onbekend bij Sets correct is. Met codex exec zijn 60 losse sessies uitgevoerd: v4 en v5, tien oorspronkelijke inputs, drie runs, model gpt-5.6-terra met effort high. Geen verwachte antwoorden meegestuurd; uitvoerlogs tonen geen toolgebruik. Antwoorden en reproduceerbaar script staan in week-05-runs/. Voorlopige beoordeling door Codex: v4 9/10, 8/10, 9/10; v5 8/10, 9/10, 8/10. Bereiken overlappen, dus algemene verbetering niet bewezen. V5 scoort op input 6 wel 3/3 tegenover v4 0/3. Twee beoordelingen moeten nog door Cansu worden gecontroleerd, met name de volledigheid van de herhalingscel bij inputs 8 en 9. Details en beperkingen in foutmarge.md. Historische scores en verwachte antwoorden zijn niet aangepast.
+
+### Zelfcontrole en conclusie foutmargetest afgerond
+
+Cansu controleerde v5 run 1 input 8 en v5 run 3 input 9. Bij input 8 accepteert zij de compacte failure-vermelding; dit verschilt van de vooraf afgesproken uitvoervorm en is afzonderlijk genoteerd, zonder de testregels of scores achteraf te wijzigen. Bij input 9 bevestigt zij dat onbekend voor de eerste drie sets expliciet moet worden vermeld. Haar eigen conclusie staat letterlijk in foutmarge.md: algemene verbetering van v5 is niet bewezen; beide bereiken zijn 8–9/10. De foutmargetest is afgerond. Voor de volgende modeltest blijft v5 ongewijzigd.
+
+## 24 oktober 2026 — modeltest week 5
+
+Cansu gaf vóór de runs haar voorspelling over kleinere modellen; letterlijk bewaard in modellen.md. V5 ongewijzigd getest: A GPT-5.6 Terra high, B GPT-5.6 Luna high, C GPT-5.6 Sol high. Elk tien oorspronkelijke inputs, een nieuwe losse sessie per input. Alle 30 sessies afgerond zonder toolgebruik. Beoordeling volgens vooraf vastgelegde regels: Terra 9/10, Luna 10/10, Sol 8/10; zonder promptvoorbeeld 7: 8/9, 9/9, 7/9. Gemiddelde output inclusief reasoning: 46,5 / 163,0 / 61,7 tokens. Kostenramingen bijgewerkt met juiste modelprijzen; oude kostenregels bewaard. Details en beperkingen in modellen.md. Cansu moet nog haar conclusie en modelkeuze formuleren. Lager effortniveau nog niet getest.
+
+### Voorlopige modelkeuze door Cansu
+
+Cansu kiest voorlopig GPT-5.6 Luna, omdat het in de modeltest 10/10 scoorde en het goedkoopst is. Haar eigen toelichting staat letterlijk in modellen.md. Zij wil extra onduidelijke of rommelige trainingsnotities testen; deze zijn nog niet aangeleverd. De geteste setup heeft effort high. Een lager denkniveau is nog niet getest.
+
+## 25 oktober 2026 — correctietijd en waardescenario
+
+Cansu schat gemiddeld 45 seconden herstelwerk per fout antwoord (kleine fout 20 s, moeilijk 1–2 min). Kleine correcties passen volgens haar vaak binnen gewone rust; moeilijkere kunnen rust verlengen. Het extra aandeel is niet gemeten. In waarde.md zijn daarom twee overlapgrenzen berekend. Het Terra-bereik van 10–20% fout is expliciet een gevoeligheidsscenario voor het voorlopig gekozen Luna, geen gemeten Luna-foutmarge. Bij alle gemiddelde correctietijd extra resteert 66–97,5 s verwachte winst per training, of 2,86–4,225 uur per jaar; bij volledige overlap 5,2 uur. Alle tijden blijven schattingen en veronderstellen een nog niet gebouwd overzicht. Halvering van de uitprobeertijd kan tot tijdverlies leiden.
+
+## 25 oktober 2026 — conceptpost en dashboard
+
+Cansu keurt de laatste twee herschrijvingen goed. Vijf citaten met herschrijvingen zijn in de conceptpost posts/week-05.md verwerkt, op basis van haar eigen uitleg. De conceptpost telt 480 woorden zonder citaten en koppen; eigen titel en nalezen blijven open. build/dashboard.html is als zelfstandig, mobiel opgemaakt bestand gemaakt met scores, claim, modellen, kosten en volledige persoonlijke waardescenario. Statische controle: sluitende HTML-tags, geen externe assets, geen echte namen in pagina, modelscores en outputtelling gecontroleerd tegen summary.json; vijf letterlijke citaten gecontroleerd tegen eigen eerdere posts. Geen browserpreview uitgevoerd, omdat geen ondersteunde browserpreviewtool beschikbaar is. Nog geen publieke link of push; volgt bij indienen. Lager effortniveau blijft niet getest; werkgeversuurkost is niet vastgesteld voor dit persoonlijke gebruiksscenario.

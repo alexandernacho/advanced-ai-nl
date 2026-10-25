@@ -1,0 +1,65 @@
+{
+  "A": {
+    "score": 9,
+    "n": 10,
+    "output_tokens_mean": 46.5,
+    "reasoning_tokens_mean": 0.0,
+    "input_tokens_assumed": 694,
+    "cost_usd": 0.001946,
+    "cost_eur_historical_rate": 0.0017382760160786067,
+    "month_eur": [
+      0.11298794104510944,
+      0.13558552925413134
+    ],
+    "year_eur": [
+      1.3558552925413132,
+      1.627026351049576
+    ],
+    "year_usd": [
+      1.5178800000000001,
+      1.821456
+    ]
+  },
+  "B": {
+    "score": 10,
+    "n": 10,
+    "output_tokens_mean": 163.0,
+    "reasoning_tokens_mean": 113.3,
+    "input_tokens_assumed": 694,
+    "cost_usd": 0.0003344,
+    "cost_eur_historical_rate": 0.00029870477891916035,
+    "month_eur": [
+      0.01941581062974542,
+      0.023298972755694508
+    ],
+    "year_eur": [
+      0.23298972755694508,
+      0.2795876730683341
+    ],
+    "year_usd": [
+      0.260832,
+      0.3129984
+    ]
+  },
+  "C": {
+    "score": 8,
+    "n": 10,
+    "output_tokens_mean": 61.7,
+    "reasoning_tokens_mean": 15.0,
+    "input_tokens_assumed": 694,
+    "cost_usd": 0.00401,
+    "cost_eur_historical_rate": 0.003581956230460027,
+    "month_eur": [
+      0.23282715497990175,
+      0.27939258597588207
+    ],
+    "year_eur": [
+      2.793925859758821,
+      3.352711031710585
+    ],
+    "year_usd": [
+      3.1277999999999997,
+      3.75336
+    ]
+  }
+}

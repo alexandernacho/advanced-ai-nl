@@ -1,0 +1,10 @@
+{
+  "model_requested": "gpt-5.6-terra",
+  "effort": "high",
+  "version": "v4",
+  "run": 2,
+  "input": 8,
+  "returncode": 0,
+  "seconds": 4.14,
+  "isolated_session": true
+}

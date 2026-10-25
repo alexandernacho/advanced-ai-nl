@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a16e24-72e9-75d2-99b3-4c979acaacef"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"| Oefening | Gewicht | Sets | Herhalingen |\n|---|---|---|---|\n| facepulls | 30kg | 4 | laatste set: tot failure (aantal onbekend) |"}}
+{"type":"turn.completed","usage":{"input_tokens":11457,"cached_input_tokens":9984,"cache_write_input_tokens":0,"output_tokens":50,"reasoning_output_tokens":0}}

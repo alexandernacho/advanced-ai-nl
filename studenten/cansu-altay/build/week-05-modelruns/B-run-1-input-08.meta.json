@@ -1,0 +1,11 @@
+{
+  "model_requested": "gpt-5.6-luna",
+  "effort": "high",
+  "setup": "B",
+  "prompt_version": "v5",
+  "run": 1,
+  "input": 8,
+  "returncode": 0,
+  "seconds": 5.09,
+  "isolated_session": true
+}
