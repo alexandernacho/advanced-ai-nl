@@ -1,11 +1,11 @@
 # Build log
 
 | Date | Version | What I did | Result | Errors or observations | Next step |
-| --- | --- | --- | --- | --- | 
+| --- | --- | --- | --- | --- | --- |
 | 2026-09-24 | v1 | Created a fixed prompt for classifying Outlook emails. | Ready to run on T01–T05. | Not tested yet. | Run every input twice and record the labels. |
 | 2026-09-24 | v1 | Ran T01 once in a fresh Codex conversation. | `lezen`, matching the expected label. | No error observed. | Run T01 a second time in a new conversation. |
 | 2026-09-24 | v1 | Ran T01 a second time in a fresh Codex conversation. | `lezen`, matching the expected label again. | No variation between the two runs. | Run T02 with T01 as the earlier email. |
-| 2026-09-24 | v1 | Ran T02 once in a fresh Codex conversation, with T01 supplied as the earlier email. | `herhaling`, matching the expected label. | No error observed. | Run T02 a second time in a new conversation. |
+| 2026-09-24 | v1 | Ran T02 once in a fresh Codex conversation, with T01 as the earlier email. | `herhaling`, matching the expected label. | No error observed. | Run T02 a second time in a new conversation. |
 | 2026-09-24 | v1 | Ran T02 a second time in a fresh Codex conversation. | `herhaling`, matching the expected label again. | No variation between the two runs. | Run T03 twice. |
 | 2026-09-24 | v1 | Ran T03 once in a fresh Codex conversation. | `doen`, matching the expected label. | No error observed. | Run T03 a second time in a new conversation. |
 | 2026-09-24 | v1 | Ran T03 a second time in a fresh Codex conversation. | `doen`, matching the expected label again. | No variation between the two runs. | Run T04 twice. |
@@ -19,3 +19,9 @@
 | 2026-10-14 | v3 | Added the optional-recommendation rule and matching example. | Ready to rerun T01 in a new conversation. | This one rerun can suggest an improvement, but cannot prove the rule works generally. | Record the rerun and write the post. |
 | 2026-10-14 | v3 | Reran only T01 in a fresh ChatGPT conversation. | `lezen`, matching the expected label (1/1). | The change fixed this one error, but one input is too small a sample to prove the improvement generalises. | Replace constructed edge cases with real anonymised emails before submission. |
 | 2026-10-14 | v2 | Replaced T06–T10 with five real, anonymised inbox emails and reran them in fresh ChatGPT conversations. | All five matched their expected labels. The full v2 Run 1 remains 9/10 because T01 was the single F1 error. | T01's v3 rerun is tracked separately; Run 2 for all inputs belongs to week 4. The planned buurtest was not possible because no classmate was available. | Submit week 3; complete Run 2 in week 4. |
+| 2026-10-21 | v3 | Started the week-5 fault-margin measurement with the same T01–T10 set. | One isolated v3 low-effort run returned T01 = `lezen`. | After that run the local CLI could not initialize another app-server session; no failed run is counted as data. | Repeat the missing full runs when the CLI can create fresh sessions. |
+| 2026-10-21 | v3 | Added `foutmarge.md`, `modellen.md` and a single-file dashboard. | Existing evidence is reported as v2 = 9/10 and v3 = 10/10 in two available full runs. | A third run per version and the three effort setups are still explicitly marked as not measured. | Do not claim a definitive three-run margin before completing them. |
+| 2026-10-21 | v2 | Ran the same ten-case evaluation three times with `gpt-5.6-luna`, low effort. | 8/10, 9/10 and 7/10. | Variation appeared in T04, T07 and T08. | Compare the range with v3, not only the best run. |
+| 2026-10-21 | v3 | Ran the same ten-case evaluation three times with `gpt-5.6-luna`, low effort. | 9/10, 8/10 and 7/10. | The v2 and v3 ranges overlap completely. | Withdraw the claim of a proven improvement. |
+| 2026-10-21 | v3 | Tested effort setups on the same ten cases. | Medium 8/10, low 9/10, high 8/10. | All scores fall inside the 7–9 error range; output tokens were not separately exposed. | Choose low effort provisionally on cost. |
+| 2026-10-25 | v3 | Gecontroleerde Outlook-onderwerpen gebruikt voor T11–T30; één run op T01–T30. | 19/30 correct (set v2, 1 run). | De eerdere kandidaatbeschrijvingen waren vanaf enkele mails verkeerd doorgeschoven; de onderwerpen zijn gecontroleerd en vervangen. | PR bijwerken met de set-v2-score. |

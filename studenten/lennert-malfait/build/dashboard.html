@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Outlook-classifier — week 5</title>
+  <style>
+    :root { color-scheme: light; --ink:#17212b; --muted:#5f6b76; --line:#d9e0e6; --accent:#126e82; --soft:#eef7f8; }
+    * { box-sizing:border-box; } body { margin:0; font:16px/1.55 system-ui,sans-serif; color:var(--ink); background:#f7f9fa; }
+    main { max-width:900px; margin:auto; padding:28px 18px 56px; } h1 { margin-bottom:4px; } h2 { margin-top:30px; font-size:1.2rem; }
+    .muted { color:var(--muted); } .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:12px; }
+    .card { background:white; border:1px solid var(--line); border-radius:12px; padding:16px; } .big { font-size:1.8rem; font-weight:700; color:var(--accent); }
+    table { width:100%; border-collapse:collapse; background:white; } th,td { padding:9px 10px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; } th { background:var(--soft); }
+    code { background:#edf1f3; padding:2px 4px; border-radius:4px; } .notice { border-left:4px solid #e09f3e; padding:10px 14px; background:#fff8eb; }
+  </style>
+</head>
+<body><main>
+  <h1>Outlook message classifier</h1>
+  <p class="muted">Week 5 dashboard · set v2 · 27 oktober 2026 · publieke, geanonimiseerde testdata</p>
+  <section class="grid">
+    <div class="card"><div class="muted">Set v2</div><div class="big">19/30</div><div>1 run, n = 30</div></div>
+    <div class="card"><div class="muted">Vorige foutmarge</div><div class="big">7–9/10</div><div>v2/v3, 3 runs, n = 10</div></div>
+    <div class="card"><div class="muted">Kost per run</div><div class="big">€0,00080</div><div>week-4-meting, GPT-5.6 Luna-aanname</div></div>
+  </section>
+  <h2>Foutmarge en claim</h2>
+  <p>Set v2 scoorde <strong>19/30</strong> in één run. De vorige foutmarge voor v2 en v3 was <strong>7–9/10</strong>, n = 10 en drie runs per versie. De claim dat v3 verbeterde is ingetrokken: de bereiken overlappen volledig.</p>
+  <div class="notice">De verwachte antwoorden zijn vooraf vastgelegd. Er is niets achteraf herlabeld.</div>
+  <h2>Set v2</h2><p>De testset bevat T01–T30. De oude tien bleven ongewijzigd; de twintig nieuwe zijn vooraf beantwoord.</p><h2>Setups</h2>
+  <table><thead><tr><th>Setup</th><th>Model</th><th>Effort</th><th>Score</th><th>Kost</th></tr></thead><tbody>
+    <tr><td>A standaard</td><td>gpt-5.6-luna</td><td>medium</td><td>8/10</td><td>± €0,00080</td></tr>
+    <tr><td>B omlaag</td><td>gpt-5.6-luna</td><td>low</td><td>9/10</td><td>± €0,00080</td></tr>
+    <tr><td>C omhoog</td><td>gpt-5.6-luna</td><td>high</td><td>8/10</td><td>± €0,00080</td></tr>
+  </tbody></table>
+  <h2>Kosten en value chain</h2>
+  <table><tbody>
+    <tr><th>Volume</th><td>100 mails/maand = 1.200 runs/jaar (eigen schatting)</td></tr>
+    <tr><th>Handmatig</th><td>55 s/mail: lezen 40 s + beslissen 10 s + verplaatsen 5 s</td></tr>
+    <tr><th>Met tool</th><td>3 s draaien + 10 s nakijken + fouten herstellen: 18,5–29,5 s</td></tr>
+    <tr><th>Winst</th><td>25,5–36,5 s/mail = ongeveer 8,5–12,2 uur/jaar</td></tr>
+    <tr><th>Waarde</th><td>€127,50–€182,50/jaar bij €15 per uur</td></tr>
+    <tr><th>Toolkost</th><td>€0,96/jaar bij €0,00080 per run</td></tr>
+    <tr><th>Netto</th><td>ongeveer €126,54–€181,54/jaar</td></tr>
+    <tr><th>Bereik</th><td>gebaseerd op 70–90% juist uit de drie runs per versie</td></tr>
+    <tr><th>Zwakste cijfer</th><td>55 s handwerk; niet met chronometer gemeten</td></tr>
+  </tbody></table>
+  <p class="muted">Details en beperkingen: <code>build/foutmarge.md</code>, <code>build/modellen.md</code> en <code>build/kosten.md</code>.</p>
+</main></body></html>
