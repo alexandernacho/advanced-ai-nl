@@ -1,0 +1,56 @@
+# Prompt v1
+
+Je beoordeelt nieuwsberichten op wat ze betekenen voor de vraag naar defensiebedrijven (wapens, militair materieel, defensiebudgetten).
+
+Je krijgt de kop en de eerste alinea van één nieuwsbericht. Kies precies één label:
+
+- `positief`: het bericht wijst op meer vraag of budget voor defensiebedrijven. Bijvoorbeeld een hoger defensiebudget, een nieuw conflict, een grote bestelling.
+- `negatief`: het bericht wijst op minder vraag of budget. Bijvoorbeeld een staakt-het-vuren, een vredesakkoord, besparingen op defensie.
+- `neutraal`: het bericht gaat over defensie, maar verandert de vraag niet. Bijvoorbeeld een benoeming of een interne reorganisatie.
+- `niet over defensie`: het bericht gaat niet over defensie of defensiebedrijven.
+- `onzeker`: het bericht wijst in beide richtingen, of de tekst bevat te weinig om te beslissen.
+
+Regels:
+- Baseer je alleen op de tekst. Voeg geen feiten toe die er niet in staan, want anders oordeel je op basis van wat je denkt te weten in plaats van wat het bericht zegt, en dan kan niemand je antwoord controleren aan de hand van de tekst.
+- Voorspel de beurskoers niet.
+- Gaat het bericht over extra geld voor defensie dat met besparingen elders betaald wordt, kies dan positief, want voor defensiebedrijven telt alleen of hun deel van het budget stijgt.
+- Bouwt een defensiebedrijf een nieuwe fabriek of breidt het uit, kies dan positief, want een bedrijf breidt pas uit als het meer bestellingen verwacht.
+- Gaat het bericht over gesprekken of onderhandelingen zonder akkoord, kies dan onzeker, want pas een getekend akkoord verandert de vraag naar defensie. Gesprekken kunnen ook mislukken.
+- Twijfel je tussen twee labels? Kies `onzeker`. Gok niet.
+
+## Voorbeelden
+
+Voorbeeld 1
+Bericht: "Polen bestelt 200 extra tanks. De Poolse regering kondigt aan dat ze haar leger versneld uitbreidt en tekent een contract voor 200 nieuwe tanks."
+Label: positief
+Reden: Een land bestelt meer wapens, dus meer vraag naar defensiebedrijven.
+
+Voorbeeld 2
+Bericht: "Duitsland schrapt aankoop van gevechtshelikopters. De Duitse regering stelt de geplande aankoop uit om te besparen op de defensiebegroting."
+Label: negatief
+Reden: Een geplande defensie-aankoop wordt geschrapt, dus minder vraag.
+
+Voorbeeld 3
+Bericht: "Thales verhuist hoofdkantoor naar nieuw gebouw. Het defensiebedrijf Thales trekt volgend jaar in een nieuw kantoor in Parijs."
+Label: neutraal
+Reden: Gaat over een defensiebedrijf, maar een verhuis verandert niets aan de vraag.
+
+Voorbeeld 4
+Bericht: "Supermarktketen opent tien nieuwe winkels. De keten breidt uit in Vlaanderen en zoekt honderd nieuwe medewerkers."
+Label: niet over defensie
+Reden: Het bericht heeft niets met defensie te maken.
+
+Voorbeeld 5
+Bericht: "Ministers praten over defensiebudget, nog geen akkoord. De Europese ministers van Defensie vergaderden gisteren, maar raakten het niet eens over meer of minder uitgaven."
+Label: onzeker
+Reden: Het is niet duidelijk of de uitgaven stijgen of dalen.
+
+Antwoord in exact dit formaat, niets anders:
+
+Label: <één van de vijf labels>
+Reden: <één zin, met enkel wat in de tekst staat>
+
+Bericht:
+EU summit focuses on competitiveness, energy prices amid mounting economic pressure
+
+BRUSSELS, Oct. 15 (Xinhua) -- European Union (EU) leaders gathered in Brussels on Thursday for a two-day summit which focused on economic competitiveness, high energy prices and the bloc's next long-term budget, with the first day ending amid differences in views and the cancellation of a scheduled press conference.

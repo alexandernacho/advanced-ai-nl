@@ -1,0 +1,208 @@
+<title>Dashboard defensienieuws-labeler</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+:root {
+  --bg: #f6f7f9; --card: #ffffff; --text: #1b1f27; --muted: #5a6475; --line: #dfe3ea;
+  --accent: #1f5fbf; --good: #1d7a45; --bad: #b3261e; --warn: #9a5b00; --track: #e8ebf1;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #111418; --card: #1b2027; --text: #eceff4; --muted: #a2adbd; --line: #2b323c;
+    --accent: #7db0ff; --good: #5fd08f; --bad: #ff8a80; --warn: #f2b45a; --track: #2b323c;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #111418; --card: #1b2027; --text: #eceff4; --muted: #a2adbd; --line: #2b323c;
+  --accent: #7db0ff; --good: #5fd08f; --bad: #ff8a80; --warn: #f2b45a; --track: #2b323c;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  padding-block: 16px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+main { max-width: 760px; margin: 0 auto; }
+h1 { font-size: 1.4rem; margin: 8px 0 4px; }
+h2 { font-size: 1.1rem; margin: 0 0 10px; }
+p { margin: 0 0 8px; }
+.sub { color: var(--muted); font-size: .9rem; margin-bottom: 16px; }
+section { background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+  padding: 16px; margin-bottom: 16px; }
+.big { font-size: 2.2rem; font-weight: 700; line-height: 1.1; }
+.muted { color: var(--muted); font-size: .9rem; }
+.pill { display: inline-block; padding: 2px 10px; border-radius: 999px; font-size: .85rem;
+  font-weight: 600; border: 1px solid currentColor; }
+.good { color: var(--good); } .bad { color: var(--bad); } .warn { color: var(--warn); }
+.scale { position: relative; height: 14px; background: var(--track); border-radius: 7px; margin: 12px 0 4px; }
+.range { position: absolute; top: 0; bottom: 0; background: var(--accent); border-radius: 7px; opacity: .85; }
+.ticks { display: flex; justify-content: space-between; color: var(--muted); font-size: .75rem; }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 12px; }
+.cell { border: 1px solid var(--line); border-radius: 8px; padding: 8px; text-align: center; }
+.cell b { display: block; font-size: 1.2rem; }
+.cards { display: grid; gap: 10px; }
+.card { border: 1px solid var(--line); border-radius: 10px; padding: 12px; }
+.card h3 { margin: 0 0 6px; font-size: 1rem; }
+dl { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 2px 12px; }
+dt { color: var(--muted); font-size: .9rem; }
+dd { margin: 0; text-align: right; }
+.wrap { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: .92rem; }
+th, td { text-align: left; vertical-align: top; padding: 8px 6px; border-top: 1px solid var(--line); }
+th { color: var(--muted); font-weight: 600; border-top: 0; }
+td.num, th.num { text-align: right; white-space: nowrap; }
+.src { color: var(--muted); font-size: .8rem; }
+footer { color: var(--muted); font-size: .8rem; padding: 4px 0 24px; }
+@media (min-width: 560px) { .cards { grid-template-columns: repeat(3, 1fr); } }
+th, td { min-width: 0; }
+.card, .cell { min-width: 0; }
+</style>
+<main>
+  <h1>Dashboard: defensienieuws-labeler</h1>
+  <p class="sub">Een tool die van een nieuwsbericht (kop en eerste alinea) zegt wat het betekent voor de vraag naar defensiebedrijven: positief, negatief, neutraal, niet over defensie of onzeker. Stand van 27 oktober 2026, week 5.</p>
+
+  <section>
+    <h2>Score en foutmarge</h2>
+    <p class="big">9 tot 10 <span class="muted">op 10</span></p>
+    <p class="muted">Laatste prompt (v3), Claude Haiku 5.5. n = 10 inputs, 3 runs per versie, dezelfde inputs voor beide versies.</p>
+    <div class="scale" role="img" aria-label="Foutmarge van 9 tot 10 op een schaal van 0 tot 10">
+      <div class="range" style="left:90%; width:10%"></div>
+    </div>
+    <div class="ticks"><span>0</span><span>5</span><span>10</span></div>
+    <div class="grid">
+      <div class="cell"><span class="muted">Run 1</span><b>9</b></div>
+      <div class="cell"><span class="muted">Run 2</span><b>9</b></div>
+      <div class="cell"><span class="muted">Run 3</span><b>10</b></div>
+    </div>
+    <p class="muted" style="margin-top:12px">Vorige versie (v1, week 2): runs 9, 10, 9, dus ook 9 tot 10. Elke fout kwam in maar één run voor, telkens bij een andere input.</p>
+  </section>
+
+  <section>
+    <h2>Grotere testset (set v2)</h2>
+    <p class="big">23 op 30 <span class="muted">(set v2, 1 run)</span></p>
+    <p class="muted">30 inputs, prompt v3, Claude Haiku 5.5, elke input in een aparte sessie. De juiste antwoorden stonden vast voor de run. De 20 nieuwe inputs (T11 tot T30) zijn echte berichten uit de krant: 13 gewone gevallen, 6 randgevallen en 1 onzeker. Maar 2 hebben onzeker als antwoord.</p>
+    <div class="grid">
+      <div class="cell"><span class="muted">T01–T10</span><b>10/10</b></div>
+      <div class="cell"><span class="muted">T11–T30</span><b>13/20</b></div>
+      <div class="cell"><span class="muted">Fouten</span><b class="bad">7</b></div>
+    </div>
+    <div class="wrap" style="margin-top:12px">
+    <table>
+      <thead><tr><th>Input</th><th>Model zei</th><th>Verwacht</th></tr></thead>
+      <tbody>
+        <tr><td>T11</td><td>neutraal</td><td>positief</td></tr>
+        <tr><td>T15</td><td>onzeker</td><td>neutraal</td></tr>
+        <tr><td>T16</td><td>onzeker</td><td>positief</td></tr>
+        <tr><td>T26</td><td>onzeker</td><td>neutraal</td></tr>
+        <tr><td>T27</td><td>niet over defensie</td><td>positief</td></tr>
+        <tr><td>T28</td><td>onzeker</td><td>positief</td></tr>
+        <tr><td>T29</td><td>onzeker</td><td>neutraal</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="muted" style="margin-top:8px">Zes van de zeven fouten zijn onzeker of neutraal waar ik positief of neutraal verwachtte, omdat de tekst geen budget of bestelling noemt. Eén run, dus nog geen foutmarge voor deze set.</p>
+  </section>
+
+  <section>
+    <h2>Mijn claim</h2>
+    <p>"De vijf voorbeelden in mijn prompt hebben de score verbeterd."</p>
+    <p><span class="pill bad">Ingetrokken</span></p>
+    <p class="muted">Het bereik van v3 (9 tot 10) overlapt met dat van v1 (9 tot 10). De laagste score van de nieuwe versie ligt niet hoger dan de hoogste van de oude. Het verschil valt binnen de foutmarge: de verbetering is niet bewezen. Ze is niet slechter, ik kan het gewoon niet zeggen.</p>
+  </section>
+
+  <section>
+    <h2>Drie setups</h2>
+    <p class="muted">Elk één run op dezelfde 10 inputs, prompt v3, zonder tools. Mijn foutmarge is 9 tot 10.</p>
+    <div class="cards">
+      <div class="card">
+        <h3>A · Sonnet 5.5</h3>
+        <dl>
+          <dt>Effort</dt><dd>medium</dd>
+          <dt>Score</dt><dd><b>8/10</b></dd>
+          <dt>Binnen foutmarge?</dt><dd class="bad">Nee, 1 punt eronder</dd>
+          <dt>Output-tokens/run</dt><dd>83,8</dd>
+          <dt>Kost per run</dt><dd>$0,00604</dd>
+          <dt>Per jaar (1.100 runs)</dt><dd>$6,64 (€5,98)</dd>
+        </dl>
+      </div>
+      <div class="card">
+        <h3>B · Haiku 5.5</h3>
+        <dl>
+          <dt>Effort</dt><dd>standaard</dd>
+          <dt>Score</dt><dd><b>10/10</b></dd>
+          <dt>Binnen foutmarge?</dt><dd class="good">Ja</dd>
+          <dt>Output-tokens/run</dt><dd>319,4</dd>
+          <dt>Kost per run</dt><dd>$0,00042</dd>
+          <dt>Per jaar (1.100 runs)</dt><dd>$0,46 (€0,42)</dd>
+        </dl>
+      </div>
+      <div class="card">
+        <h3>C · Opus 5.5</h3>
+        <dl>
+          <dt>Effort</dt><dd>standaard</dd>
+          <dt>Score</dt><dd><b>10/10</b></dd>
+          <dt>Binnen foutmarge?</dt><dd class="good">Ja</dd>
+          <dt>Output-tokens/run</dt><dd>154,0</dd>
+          <dt>Kost per run</dt><dd>$0,01348</dd>
+          <dt>Per jaar (1.100 runs)</dt><dd>$14,83 (€13,35)</dd>
+        </dl>
+      </div>
+    </div>
+    <p class="muted" style="margin-top:12px"><b>Keuze: Haiku 5.5.</b> Zelfde score als Opus binnen de foutmarge, ongeveer 32 keer goedkoper. Sonnet scoorde lager. Wel maar één run per setup en n = 10: één fout is 10 procentpunt.</p>
+    <p class="src">Kost per run = 2.600 input-tokens (mijn deel) × inputprijs + gemiddelde output-tokens × outputprijs. Prijzen per miljoen tokens: Sonnet $2 / $10, Haiku $0,10 / $0,50, Opus $4 / $20. Per jaar herberekend met 1.100 runs. Dollar naar euro: 0,90 (aanname).</p>
+  </section>
+
+  <section>
+    <h2>Kost per run en per jaar (productie: Haiku 5.5)</h2>
+    <div class="wrap">
+    <table>
+      <thead><tr><th>Meting</th><th class="num">Per run</th><th class="num">Per maand (100)</th><th class="num">Per jaar (1.100)</th></tr></thead>
+      <tbody>
+        <tr><td>Modeltest week 5 (319 output-tokens)<br><span class="src">gemeten, gebruikt in de value chain</span></td><td class="num">$0,00042</td><td class="num">$0,04</td><td class="num">$0,46 (€0,42)</td></tr>
+        <tr><td>Meting week 4, één run (1,2k output-tokens)<br><span class="src">gemeten, gecorrigeerd in week 5 naar 100 runs per maand</span></td><td class="num">$0,00086</td><td class="num">$0,09 (€0,08)</td><td class="num">$0,95 (€0,85)</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="muted" style="margin-top:8px">De kosten zijn bijna nul, op beide metingen. Het cijfer van week 5 is lager omdat Haiku in die test minder output gaf dan in de ene run van week 4.</p>
+    <p class="src">Volume: 5 berichten per werkdag, 25 per week, 100 per maand, 1.100 per jaar (220 werkdagen). Schatting, niet geteld.</p>
+  </section>
+
+  <section>
+    <h2>Value chain: wint de tool tijd?</h2>
+    <p class="big good">± €280 tot ± €342 <span class="muted">netto per jaar</span></p>
+    <p class="muted">Bereik bij mijn laagste (9/10) en hoogste (10/10) score. Midden (9,5/10): ± €311. Uurkost €21,57.</p>
+    <div class="wrap">
+    <table>
+      <thead><tr><th>Schakel</th><th>Waarde</th><th>Bron</th></tr></thead>
+      <tbody>
+        <tr><td>Met de hand</td><td>Openen 15 s · lezen 30 s · beslissen 30 s · noteren 20 s = <b>95 s</b></td><td class="src">geschat, nog niet gemeten</td></tr>
+        <tr><td>Score</td><td>9 tot 10 op 10</td><td class="src">gemeten</td></tr>
+        <tr><td>Met de tool</td><td>Vinden 15 s · plakken 10 s · wachten 8 s · nakijken 10 s = 43 s, plus fouten herstellen (deel fout × 95 s). Samen <b>52,5 s</b> (9/10) of <b>43 s</b> (10/10)</td><td class="src">wachttijd gemeten, rest geschat</td></tr>
+        <tr><td>Winst per bericht</td><td><b>42,5 s</b> (9/10) · <b>52 s</b> (10/10)</td><td class="src">berekend</td></tr>
+        <tr><td>Volume</td><td>5 per dag · 25 per week · 100 per maand · <b>1.100 per jaar</b></td><td class="src">geschat: ik volg zelf ongeveer 5 berichten per werkdag voor ik beslis over mijn aandelen</td></tr>
+        <tr><td>Uren per jaar</td><td><b>13 u</b> (9/10) · <b>15,9 u</b> (10/10)</td><td class="src">berekend</td></tr>
+        <tr><td>Uurkost</td><td>€14,38 bruto × 1,5 = <b>€21,57</b></td><td class="src">bruto uit een loonwebsite (gemiddeld studentenloon, 11 oktober 2026), factor 1,5 is een aanname</td></tr>
+        <tr><td>Kost van de tool</td><td><b>€0,42 per jaar</b> (Haiku 5.5)</td><td class="src">gemeten, wisselkoers aanname</td></tr>
+        <tr><td>Netto per jaar</td><td><b>± €280</b> (9/10) · <b>± €342</b> (10/10)</td><td class="src">berekend</td></tr>
+        <tr><td>Bereik</td><td><b>± €280 tot ± €342</b></td><td class="src">foutmarge</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>Mijn zwakste cijfer</h2>
+    <p><b>De 95 seconden met de hand.</b> Geschat, <span class="warn">nog niet gemeten</span> met een stopwatch. De hele winst hangt ervan af.</p>
+    <div class="grid">
+      <div class="cell"><span class="muted">9/10</span><b class="bad">± −€2</b></div>
+      <div class="cell"><span class="muted">midden</span><b>± €14</b></div>
+      <div class="cell"><span class="muted">10/10</span><b>± €29</b></div>
+    </div>
+    <p class="muted" style="margin-top:12px">Zo veel is het netto per jaar als de handtijd de helft is (47,5 s). Bij 9/10 wint de tool dan niets meer. De handtijd verschuift het netto met ± €300, mijn foutmarge met ± €62: de handtijd weegt ongeveer vijf keer zwaarder.</p>
+    <p class="muted">Tweede zwak punt: de uurkost. Ik ben geen werkgever, het bedrag is wat mijn tijd waard is tegen een studentenloon en een factor 1,5 (aanname).</p>
+    <p class="muted">Nog te doen: de handtijd meten.</p>
+  </section>
+
+  <footer>Alle cijfers komen uit de bestanden foutmarge, modellen, kosten en de value chain van week 5. Er staan geen testinputs op deze pagina.</footer>
+</main>
