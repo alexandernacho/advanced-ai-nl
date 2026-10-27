@@ -13,3 +13,4 @@ Gemeten op 20 oktober 2026. Eén run: prompt v1 + T01 (`inc db 36 x 6`), nieuwe 
 - Euro: 1 dollar = 0,90 euro (aanname uit het README). Koers op 20 oktober 2026: 0,89, een verschil van 1%.
 - `/context` werkte niet: in deze repo start dat commando de skill `context`. Daarom is de context benaderd met `/cost`: cache lezen (32,8k) + cache schrijven (23,9k) = 56,7k. Jouw deel = de input die niet uit de cache kwam (2,1k) + de output (1,5k).
 - De 1,5k output is meer dan de tabel die terugkwam: de rest is denkwerk van Haiku, en dat wordt ook betaald.
+- Gecheckt in week 5: model (Haiku 5.5) en prijs ($0,10 / $0,50) kloppen. Niets gecorrigeerd.

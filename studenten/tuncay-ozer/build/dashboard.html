@@ -1,0 +1,211 @@
+<title>Excel-progressievolger</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+/* Layout: één smalle kolom, samenvatting bovenaan, daarna foutmarge → modellen → value chain. */
+:root {
+  --bg: #f3f5f7;
+  --surface: #ffffff;
+  --ink: #17202a;
+  --muted: #5b6672;
+  --line: #d9dee4;
+  --plate: #1f5fbf;        /* blauw zoals een 20 kg-schijf */
+  --plate-soft: #dbe6f7;
+  --ok: #1d7a46;
+  --ok-soft: #dcf0e3;
+  --warn: #9a5b00;
+  --warn-soft: #fbecd2;
+  --miss: #c9d0d8;
+  --font-display: "Bahnschrift", "DIN Alternate", "Arial Narrow", system-ui, sans-serif;
+  --font-body: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-data: ui-monospace, "Cascadia Mono", Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #11161c; --surface: #19212a; --ink: #e6ebf0; --muted: #9aa6b2; --line: #2c3743;
+    --plate: #6ea2f0; --plate-soft: #1d2f4a; --ok: #5fcf8e; --ok-soft: #173826;
+    --warn: #f0b155; --warn-soft: #3d2c12; --miss: #36414d; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #11161c; --surface: #19212a; --ink: #e6ebf0; --muted: #9aa6b2; --line: #2c3743;
+  --plate: #6ea2f0; --plate-soft: #1d2f4a; --ok: #5fcf8e; --ok-soft: #173826;
+  --warn: #f0b155; --warn-soft: #3d2c12; --miss: #36414d; color-scheme: dark;
+}
+body {
+  background: var(--bg); color: var(--ink); font-family: var(--font-body);
+  font-size: 15px; line-height: 1.5;
+}
+.wrap {
+  max-width: 760px; margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 28px 48px;
+  display: grid; gap: 28px;
+}
+h1, h2 { font-family: var(--font-display); text-wrap: balance; margin: 0; letter-spacing: .01em; }
+h1 { font-size: 1.9rem; line-height: 1.15; }
+h2 { font-size: 1.25rem; }
+p { margin: 0; max-width: 65ch; }
+.eyebrow { font-size: .75rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); font-weight: 600; }
+.muted { color: var(--muted); font-size: .88rem; }
+header { display: grid; gap: 8px; }
+.sample {
+  font-family: var(--font-data); font-size: .85rem; background: var(--surface);
+  border: 1px solid var(--line); border-radius: 6px; padding: 10px 12px; overflow-x: auto;
+}
+.sample b { color: var(--plate); font-weight: 600; }
+
+.kpis { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+@media (min-width: 640px) { .kpis { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.kpi { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 14px; display: grid; gap: 4px; align-content: start; }
+.kpi .v { font-family: var(--font-display); font-size: 1.6rem; font-variant-numeric: tabular-nums; line-height: 1.1; }
+.kpi .s { font-size: .8rem; color: var(--muted); }
+
+section { display: grid; gap: 12px; }
+.pill { display: inline-block; font-size: .78rem; font-weight: 700; padding: 2px 9px; border-radius: 999px; letter-spacing: .02em; }
+.pill.warn { background: var(--warn-soft); color: var(--warn); }
+.pill.ok { background: var(--ok-soft); color: var(--ok); }
+
+.tbl { overflow-x: auto; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); }
+table { border-collapse: collapse; width: 100%; font-size: .88rem; }
+th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-size: .74rem; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); font-weight: 600; white-space: nowrap; }
+tr:last-child td { border-bottom: 0; }
+td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+tr.pick td { background: var(--plate-soft); }
+tr.total td { font-weight: 700; }
+
+.grid-runs { display: grid; grid-template-columns: 3.2rem repeat(10, minmax(0, 1fr)); gap: 6px 4px; align-items: center; font-family: var(--font-data); font-size: .74rem; }
+.grid-runs .lbl { color: var(--muted); }
+.grid-runs .id { text-align: center; color: var(--muted); }
+.dots { display: flex; justify-content: center; gap: 3px; }
+.dot { width: 9px; height: 9px; border-radius: 50%; background: var(--miss); }
+.dot.j { background: var(--plate); }
+.legend { display: flex; gap: 16px; flex-wrap: wrap; font-size: .8rem; color: var(--muted); }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+
+.bars { display: grid; gap: 10px; }
+.bar { display: grid; grid-template-columns: minmax(0, 11rem) minmax(0, 1fr); gap: 10px; align-items: center; font-size: .85rem; }
+@media (max-width: 480px) { .bar { grid-template-columns: 1fr; gap: 4px; } }
+.track { position: relative; height: 22px; background: var(--bg); border: 1px solid var(--line); border-radius: 4px; }
+.range { position: absolute; top: 3px; bottom: 3px; background: var(--plate); border-radius: 3px; min-width: 4px; }
+.range.weak { background: var(--warn); }
+.track .t { position: absolute; top: 50%; transform: translateY(-50%); font-family: var(--font-data); font-size: .74rem; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.axis { display: grid; grid-template-columns: minmax(0, 11rem) minmax(0, 1fr); gap: 10px; font-family: var(--font-data); font-size: .7rem; color: var(--muted); }
+.axis div:last-child { display: flex; justify-content: space-between; }
+@media (max-width: 480px) { .axis { grid-template-columns: 1fr; } .axis div:first-child { display: none; } }
+
+.callout { background: var(--warn-soft); border-radius: 8px; padding: 14px; display: grid; gap: 6px; }
+.callout h3 { margin: 0; font-family: var(--font-display); font-size: 1.05rem; color: var(--warn); }
+footer { font-size: .8rem; color: var(--muted); border-top: 1px solid var(--line); padding-top: 14px; }
+code { font-family: var(--font-data); font-size: .9em; }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Week 5 · 27 oktober 2026</div>
+    <h1>Excel-progressievolger</h1>
+    <p>Mijn tool zet een kort, slordig berichtje na een training om naar rijen voor mijn Excel.</p>
+    <div class="sample">bench 80kg gedaan 3x5 → <b>bench press | 3 | 5 | 80 | ? | ? | vorige week 77,5</b></div>
+  </header>
+
+  <div class="kpis">
+    <div class="kpi"><div class="eyebrow">Score</div><div class="v">9–10/10</div><div class="s">n = 10 · foutmarge 9–9 (3 runs) · Sonnet 10/10 (1 run)</div></div>
+    <div class="kpi"><div class="eyebrow">Netto per jaar</div><div class="v">€80–93</div><div class="s">bij €16 per uur, 4 trainingen per week</div></div>
+    <div class="kpi"><div class="eyebrow">Kost per run</div><div class="v">$0,0051</div><div class="s">Sonnet 5.5 · ≈ €1,22 per jaar</div></div>
+    <div class="kpi"><div class="eyebrow">Claim week 3</div><div class="v"><span class="pill warn">ingetrokken</span></div><div class="s">bereiken raken elkaar (7–9 en 9–9)</div></div>
+  </div>
+
+  <section>
+    <h2>Foutmarge</h2>
+    <p class="muted">Claude Haiku 5.5 · n = 10 (T01–T10) · 3 runs per versie · zelfde inputs · elke run een nieuwe sessie zonder tools.</p>
+    <div class="tbl"><table>
+      <thead><tr><th>Versie</th><th class="n">Run 1</th><th class="n">Run 2</th><th class="n">Run 3</th><th class="n">Min–max</th></tr></thead>
+      <tbody>
+        <tr><td>v1 · zonder <code>A x B</code>-regel</td><td class="n">7</td><td class="n">9</td><td class="n">8</td><td class="n">7–9</td></tr>
+        <tr><td>v2 · met <code>A x B</code>-regel</td><td class="n">9</td><td class="n">9</td><td class="n">9</td><td class="n">9–9</td></tr>
+      </tbody>
+    </table></div>
+    <p>Claim: "De regel voor <code>12X12</code> lost T10 op." <span class="pill warn">ingetrokken</span> voor de totale score: de laagste score van v2 (9) ligt niet hoger dan de hoogste van v1 (9). Op T10 alleen ging het wel van 0 op 3 naar 3 op 3.</p>
+
+    <div class="tbl" style="padding:12px">
+      <div class="grid-runs" id="runs"></div>
+    </div>
+    <div class="legend"><span><i class="dot j"></i> juist</span><span><i class="dot"></i> fout</span><span>T02 (<code>5km 36min</code>) blijft de zwakke plek: 1 op 6.</span></div>
+  </section>
+
+  <section>
+    <h2>Model en effort</h2>
+    <p class="muted">Laatste prompt (v2) · n = 10 · 1 run per setup · effort medium. Kost per run = 2,1k input-tokens + gemiddelde output-tokens. Per jaar = 264 runs.</p>
+    <div class="tbl"><table>
+      <thead><tr><th>Setup</th><th class="n">Score</th><th>Binnen foutmarge?</th><th class="n">Output-tokens</th><th class="n">Kost per run</th><th class="n">Per jaar</th></tr></thead>
+      <tbody>
+        <tr class="pick"><td>A · Sonnet 5.5 <span class="pill ok">mijn keuze</span></td><td class="n">10/10</td><td>net erboven, 1 run</td><td class="n">93</td><td class="n">$0,0051</td><td class="n">≈ €1,22</td></tr>
+        <tr><td>B · Haiku 5.5</td><td class="n">9/10</td><td>ja</td><td class="n">567</td><td class="n">$0,0005</td><td class="n">≈ €0,12</td></tr>
+        <tr><td>C · Opus 5.5</td><td class="n">9/10</td><td>ja</td><td class="n">189</td><td class="n">$0,0122</td><td class="n">≈ €2,89</td></tr>
+      </tbody>
+    </table></div>
+    <p>Mijn gok vooraf: Opus scoort het best. <b>Klopte niet.</b> Sonnet als goed genoeg: <b>klopte.</b> Sonnet had alles juist en is bijna 2× goedkoper dan Opus.</p>
+  </section>
+
+  <section>
+    <h2>Value chain</h2>
+    <div class="tbl"><table>
+      <thead><tr><th>Schakel</th><th class="n">Bij 9/10</th><th class="n">Bij 10/10</th></tr></thead>
+      <tbody>
+        <tr><td>Met de hand (Excel 10 s + 4,5 oefeningen × 30 s)</td><td class="n">145 s</td><td class="n">145 s</td></tr>
+        <tr><td>Met de tool (typen, draaien, nakijken, plakken)</td><td class="n">43 s</td><td class="n">43 s</td></tr>
+        <tr><td>+ fouten herstellen (deel fout × 145 s)</td><td class="n">14,5 s</td><td class="n">0 s</td></tr>
+        <tr><td>Winst per training</td><td class="n">87,5 s</td><td class="n">102 s</td></tr>
+        <tr><td>× 208 trainingen per jaar (4 per week)</td><td class="n">5,1 u</td><td class="n">5,9 u</td></tr>
+        <tr><td>× €16 per uur (mijn uurloon)</td><td class="n">€80,90</td><td class="n">€94,30</td></tr>
+        <tr><td>− kost van de tool (208 × $0,0051)</td><td class="n">€0,95</td><td class="n">€0,95</td></tr>
+        <tr class="total"><td>Netto per jaar</td><td class="n">± €80</td><td class="n">± €93</td></tr>
+        <tr><td class="muted">Bovengrens bij €24 per uur (€16 × 1,5)</td><td class="n muted">± €120</td><td class="n muted">± €140</td></tr>
+      </tbody>
+    </table></div>
+
+    <h2 style="font-size:1.05rem">Wat als één getal de helft is?</h2>
+    <div class="bars" id="bars"></div>
+    <div class="axis"><div></div><div><span>€0</span><span>€50</span><span>€100</span><span>€150</span></div></div>
+
+    <div class="callout">
+      <h3>Mijn zwakste cijfer: de tijd met de hand</h3>
+      <p>145 s per training is geschat, niet gemeten. Is het de helft, dan zakt mijn netto naar €20–26. Dat beweegt het netto meer dan mijn foutmarge (± €13). Het aantal trainingen ken ik beter: gemiddeld 4 per week.</p>
+    </div>
+  </section>
+
+  <footer>Bronnen: <code>build/foutmarge.md</code>, <code>build/modellen.md</code>, <code>build/kosten.md</code>, <code>build/value-chain.md</code>. Prijzen per miljoen tokens op 21 oktober 2026. 1 dollar = 0,90 euro.</footer>
+</div>
+
+<script>
+// juist (1) of fout (0) per run, uit build/foutmarge.md
+var runs = {
+  v1: ["111","010","111","111","111","111","111","111","011","000"],
+  v2: ["111","000","111","111","111","111","111","111","111","111"]
+};
+var g = document.getElementById("runs"), h = '<div></div>';
+for (var i = 1; i <= 10; i++) h += '<div class="id">T' + (i < 10 ? "0" + i : i) + '</div>';
+["v1", "v2"].forEach(function (v) {
+  h += '<div class="lbl">' + v + '</div>';
+  runs[v].forEach(function (r) {
+    h += '<div class="dots">' + r.split("").map(function (c) { return '<i class="dot' + (c === "1" ? " j" : "") + '"></i>'; }).join("") + '</div>';
+  });
+});
+g.innerHTML = h;
+
+// netto per jaar (min–max), schaal €0–150
+var bars = [
+  ["Zoals berekend", 80, 93, ""],
+  ["Foutmarge 9 ↔ 10", 80, 93, ""],
+  ["Trainingen: 2 per week", 40, 47, ""],
+  ["Tijd met de hand: 72,5 s", 20, 26, "weak"],
+  ["Uurkost €24 (omhoog)", 120, 140, ""]
+];
+document.getElementById("bars").innerHTML = bars.map(function (b) {
+  var l = b[1] / 150 * 100, w = (b[2] - b[1]) / 150 * 100;
+  return '<div class="bar"><div>' + b[0] + '</div><div class="track">' +
+    '<div class="range ' + b[3] + '" style="left:' + l + '%;width:' + w + '%"></div>' +
+    '<span class="t" style="' + (l + w > 70 ? 'right:calc(' + (100 - l) + '% + 6px)' : 'left:calc(' + (l + w) + '% + 6px)') + '">€' + b[1] + '–' + b[2] + '</span></div></div>';
+}).join("");
+</script>
