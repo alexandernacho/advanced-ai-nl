@@ -1,0 +1,540 @@
+﻿[
+    {
+        "Version":  "Huidig",
+        "Run":  1,
+        "Nr":  1,
+        "Exit":  0,
+        "Labels":  [
+                       "organisatie",
+                       "sfeer"
+                   ],
+        "Output":  "{\"labels\":[\"organisatie\",\"sfeer\"],\"reden\":\"Leuke sfeer, alles was goed geregeld en de bezoekers hebben zich de hele avond prima vermaakt.\"}"
+    },
+    {
+        "Version":  "Huidig",
+        "Run":  1,
+        "Nr":  2,
+        "Exit":  0,
+        "Labels":  [
+                       "organisatie",
+                       "wachttijden"
+                   ],
+        "Output":  "{\"labels\":[\"organisatie\",\"wachttijden\"],\"reden\":\"Meester, de review noemt een goede mix van activiteiten en een lange wachtrij bij de ingang.\"}"
+    },
+    {
+        "Version":  "Huidig",
+        "Run":  1,
+        "Nr":  3,
+        "Exit":  0,
+        "Labels":  "sfeer",
+        "Output":  "{\"labels\":[\"sfeer\"],\"reden\":\"De bezoeker vond het een gezellige dag en waardeerde vooral de optredens.\"}"
+    },
+    {
+        "Version":  "Huidig",
+        "Run":  1,
+        "Nr":  4,
+        "Exit":  0,
+        "Labels":  "organisatie",
+        "Output":  "{\"labels\":[\"organisatie\"],\"reden\":\"Meester, de review noemt een goede organisatie en vriendelijk personeel.\"}"
+    },
+    {
+        "Version":  "Huidig",
+        "Run":  1,
+        "Nr":  5,
+        "Exit":  0,
+        "Labels":  [
+                       "locatie",
+                       "organisatie"
+                   ],
+        "Output":  "{\"labels\":[\"locatie\",\"organisatie\"],\"reden\":\"De review noemt een leuke locatie en genoeg activiteiten.\"}"
+    },
+    {
+        "Version":  "Huidig",
+        "Run":  1,
+        "Nr":  6,
+        "Exit":  0,
+        "Labels":  "andere",
+        "Output":  "{\"labels\":[\"andere\"],\"reden\":\"De review zegt alleen dat het anders was dan verwacht en noemt geen duidelijk thema.\"}"
+    },
+    {
+        "Version":  "Huidig",
+        "Run":  1,
+        "Nr":  7,
+        "Exit":  0,
+        "Labels":  "andere",
+        "Output":  "{\"labels\":[\"andere\"],\"reden\":\"ΓÇÿTopΓÇÖ is te vaag om een specifiek thema te herkennen.\"}"
+    },
+    {
+        "Version":  "Huidig",
+        "Run":  1,
+        "Nr":  8,
+        "Exit":  0,
+        "Labels":  "sfeer",
+        "Output":  "{\"labels\":[\"sfeer\"],\"reden\":\"De review noemt een fijne sfeer, maar vindt dat het geluid beter kon.\"}"
+    },
+    {
+        "Version":  "Huidig",
+        "Run":  1,
+        "Nr":  9,
+        "Exit":  0,
+        "Labels":  "andere",
+        "Output":  "{\"labels\":[\"andere\"],\"reden\":\"De review noemt alleen de kleur van de stoelen.\"}"
+    },
+    {
+        "Version":  "Huidig",
+        "Run":  1,
+        "Nr":  10,
+        "Exit":  0,
+        "Labels":  "andere",
+        "Output":  "{\"labels\":[\"andere\"],\"reden\":\"De review gaat over vergeten was thuis en noemt geen duidelijk evenementthema.\"}"
+    },
+    {
+        "Version":  "Huidig",
+        "Run":  2,
+        "Nr":  1,
+        "Exit":  0,
+        "Labels":  [
+                       "organisatie",
+                       "sfeer"
+                   ],
+        "Output":  "{\"labels\":[\"organisatie\",\"sfeer\"],\"reden\":\"Meester, de review noemt een leuke sfeer, goed geregelde organisatie en prima vermaak gedurende de avond.\"}"
+    },
+    {
+        "Version":  "Huidig",
+        "Run":  2,
+        "Nr":  2,
+        "Exit":  0,
+        "Labels":  [
+                       "organisatie",
+                       "sfeer",
+                       "wachttijden"
+                   ],
+        "Output":  "{\"labels\":[\"organisatie\",\"sfeer\",\"wachttijden\"],\"reden\":\"Fijn evenement, een goede mix van activiteiten en een lange wachtrij bij de ingang.\"}"
+    },
+    {
+        "Version":  "Huidig",
+        "Run":  2,
+        "Nr":  3,
+        "Exit":  0,
+        "Labels":  "sfeer",
+        "Output":  "{\"labels\":[\"sfeer\"],\"reden\":\"Gezellige dag gehad; vooral de optredens maakten het de moeite waard.\"}"
+    },
+    {
+        "Version":  "Huidig",
+        "Run":  2,
+        "Nr":  4,
+        "Exit":  0,
+        "Labels":  "organisatie",
+        "Output":  "{\"labels\":[\"organisatie\"],\"reden\":\"Goed georganiseerd en vriendelijk personeel.\"}"
+    },
+    {
+        "Version":  "Huidig",
+        "Run":  2,
+        "Nr":  5,
+        "Exit":  0,
+        "Labels":  [
+                       "locatie",
+                       "organisatie"
+                   ],
+        "Output":  "{\"labels\":[\"locatie\",\"organisatie\"],\"reden\":\"De review noemt een leuke locatie en voldoende activiteiten.\"}"
+    },
+    {
+        "Version":  "Huidig",
+        "Run":  2,
+        "Nr":  6,
+        "Exit":  0,
+        "Labels":  "andere",
+        "Output":  "{\"labels\":[\"andere\"],\"reden\":\"De review zegt alleen dat het anders was dan verwacht en noemt geen duidelijk thema.\"}"
+    },
+    {
+        "Version":  "Huidig",
+        "Run":  2,
+        "Nr":  7,
+        "Exit":  0,
+        "Labels":  "andere",
+        "Output":  "{\"labels\":[\"andere\"],\"reden\":\"De review ΓÇÿTop.ΓÇÖ is te vaag om een specifiek thema te bepalen.\"}"
+    },
+    {
+        "Version":  "Huidig",
+        "Run":  2,
+        "Nr":  8,
+        "Exit":  0,
+        "Labels":  "sfeer",
+        "Output":  "{\"labels\":[\"sfeer\"],\"reden\":\"De review noemt expliciet een fijne sfeer.\"}"
+    },
+    {
+        "Version":  "Huidig",
+        "Run":  2,
+        "Nr":  9,
+        "Exit":  0,
+        "Labels":  "andere",
+        "Output":  "{\"labels\":[\"andere\"],\"reden\":\"Meester, de review noemt alleen de kleur van de stoelen.\"}"
+    },
+    {
+        "Version":  "Huidig",
+        "Run":  2,
+        "Nr":  10,
+        "Exit":  0,
+        "Labels":  "andere",
+        "Output":  "{\"labels\":[\"andere\"],\"reden\":\"De review gaat over vergeten was thuis en noemt geen duidelijk evenementthema.\"}"
+    },
+    {
+        "Version":  "Huidig",
+        "Run":  3,
+        "Nr":  1,
+        "Exit":  0,
+        "Labels":  [
+                       "organisatie",
+                       "sfeer"
+                   ],
+        "Output":  "{\"labels\":[\"organisatie\",\"sfeer\"],\"reden\":\"Alles was goed geregeld, de sfeer was leuk en de bezoekers hebben zich de hele avond prima vermaakt.\"}"
+    },
+    {
+        "Version":  "Huidig",
+        "Run":  3,
+        "Nr":  2,
+        "Exit":  0,
+        "Labels":  [
+                       "organisatie",
+                       "wachttijden"
+                   ],
+        "Output":  "{\"labels\":[\"organisatie\",\"wachttijden\"],\"reden\":\"Goede mix van activiteiten en een lange wachtrij bij de ingang.\"}"
+    },
+    {
+        "Version":  "Huidig",
+        "Run":  3,
+        "Nr":  3,
+        "Exit":  0,
+        "Labels":  "sfeer",
+        "Output":  "{\"labels\":[\"sfeer\"],\"reden\":\"Meester, de bezoeker noemt de dag gezellig en vond vooral de optredens de moeite waard.\"}"
+    },
+    {
+        "Version":  "Huidig",
+        "Run":  3,
+        "Nr":  4,
+        "Exit":  0,
+        "Labels":  "organisatie",
+        "Output":  "{\"labels\":[\"organisatie\"],\"reden\":\"Meester, de review noemt een goede organisatie en vriendelijk personeel.\"}"
+    },
+    {
+        "Version":  "Huidig",
+        "Run":  3,
+        "Nr":  5,
+        "Exit":  0,
+        "Labels":  [
+                       "locatie",
+                       "organisatie"
+                   ],
+        "Output":  "{\"labels\":[\"locatie\",\"organisatie\"],\"reden\":\"Meester, de review noemt een leuke locatie en genoeg activiteiten.\"}"
+    },
+    {
+        "Version":  "Huidig",
+        "Run":  3,
+        "Nr":  6,
+        "Exit":  0,
+        "Labels":  "andere",
+        "Output":  "{\"labels\":[\"andere\"],\"reden\":\"Meester, ΓÇÿanders dan verwachtΓÇÖ is te vaag om een specifieke categorie te kiezen.\"}"
+    },
+    {
+        "Version":  "Huidig",
+        "Run":  3,
+        "Nr":  7,
+        "Exit":  0,
+        "Labels":  "andere",
+        "Output":  "{\"labels\":[\"andere\"],\"reden\":\"ΓÇÿTopΓÇÖ is te vaag om een specifiek thema te bepalen.\"}"
+    },
+    {
+        "Version":  "Huidig",
+        "Run":  3,
+        "Nr":  8,
+        "Exit":  0,
+        "Labels":  "sfeer",
+        "Output":  "{\"labels\":[\"sfeer\"],\"reden\":\"Meester, de review noemt expliciet een fijne sfeer.\"}"
+    },
+    {
+        "Version":  "Huidig",
+        "Run":  3,
+        "Nr":  9,
+        "Exit":  0,
+        "Labels":  "andere",
+        "Output":  "{\"labels\":[\"andere\"],\"reden\":\"De review noemt alleen de kleur van de stoelen.\"}"
+    },
+    {
+        "Version":  "Huidig",
+        "Run":  3,
+        "Nr":  10,
+        "Exit":  0,
+        "Labels":  "andere",
+        "Output":  "{\"labels\":[\"andere\"],\"reden\":\"De review gaat over vergeten was thuis en noemt geen duidelijk evenementthema.\"}"
+    },
+    {
+        "Version":  "Vorige",
+        "Run":  1,
+        "Nr":  1,
+        "Exit":  0,
+        "Labels":  [
+                       "organisatie",
+                       "sfeer"
+                   ],
+        "Output":  "{\"labels\":[\"organisatie\",\"sfeer\"],\"reden\":\"De review noemt een leuke sfeer, goed geregelde organisatie en een avond vol vermaak.\"}"
+    },
+    {
+        "Version":  "Vorige",
+        "Run":  1,
+        "Nr":  2,
+        "Exit":  0,
+        "Labels":  [
+                       "organisatie",
+                       "sfeer",
+                       "wachttijden"
+                   ],
+        "Output":  "{\"labels\":[\"organisatie\",\"sfeer\",\"wachttijden\"],\"reden\":\"De bezoeker noemt een goede mix van activiteiten, een fijn evenement en wachten bij de ingang.\"}"
+    },
+    {
+        "Version":  "Vorige",
+        "Run":  1,
+        "Nr":  3,
+        "Exit":  0,
+        "Labels":  "sfeer",
+        "Output":  "{\"labels\":[\"sfeer\"],\"reden\":\"Meester, de bezoeker noemt een gezellige dag en waardeert de optredens.\"}"
+    },
+    {
+        "Version":  "Vorige",
+        "Run":  1,
+        "Nr":  4,
+        "Exit":  0,
+        "Labels":  "organisatie",
+        "Output":  "{\"labels\":[\"organisatie\"],\"reden\":\"De bezoeker noemt de goede organisatie en het vriendelijke personeel.\"}"
+    },
+    {
+        "Version":  "Vorige",
+        "Run":  1,
+        "Nr":  5,
+        "Exit":  0,
+        "Labels":  [
+                       "organisatie",
+                       "locatie"
+                   ],
+        "Output":  "{\"labels\":[\"organisatie\",\"locatie\"],\"reden\":\"De bezoeker noemt een leuke locatie en voldoende activiteiten.\"}"
+    },
+    {
+        "Version":  "Vorige",
+        "Run":  1,
+        "Nr":  6,
+        "Exit":  0,
+        "Labels":  "andere",
+        "Output":  "{\"labels\":[\"andere\"],\"reden\":\"Meester, ΓÇÿanders dan verwachtΓÇÖ geeft onvoldoende informatie voor een specifieke categorie.\"}"
+    },
+    {
+        "Version":  "Vorige",
+        "Run":  1,
+        "Nr":  7,
+        "Exit":  0,
+        "Labels":  "andere",
+        "Output":  "{\"labels\":[\"andere\"],\"reden\":\"ΓÇ£TopΓÇ¥ is te vaag; de rest gaat over een test van de review-sorteerder.\"}"
+    },
+    {
+        "Version":  "Vorige",
+        "Run":  1,
+        "Nr":  8,
+        "Exit":  0,
+        "Labels":  "sfeer",
+        "Output":  "{\"labels\":[\"sfeer\"],\"reden\":\"De bezoeker noemt expliciet een erg fijne sfeer.\"}"
+    },
+    {
+        "Version":  "Vorige",
+        "Run":  1,
+        "Nr":  9,
+        "Exit":  0,
+        "Labels":  "andere",
+        "Output":  "{\"labels\":[\"andere\"],\"reden\":\"Meester, de review noemt alleen de kleur van de stoelen en geeft onvoldoende informatie over een van de categorie├½n.\"}"
+    },
+    {
+        "Version":  "Vorige",
+        "Run":  1,
+        "Nr":  10,
+        "Exit":  0,
+        "Labels":  "andere",
+        "Output":  "{\"labels\":[\"andere\"],\"reden\":\"De review gaat over vergeten was thuis en geeft geen informatie over het evenement.\"}"
+    },
+    {
+        "Version":  "Vorige",
+        "Run":  2,
+        "Nr":  1,
+        "Exit":  0,
+        "Labels":  [
+                       "organisatie",
+                       "sfeer"
+                   ],
+        "Output":  "{\"labels\":[\"organisatie\",\"sfeer\"],\"reden\":\"De bezoeker noemt een leuke sfeer, een goede organisatie en een vermakelijke avond.\"}"
+    },
+    {
+        "Version":  "Vorige",
+        "Run":  2,
+        "Nr":  2,
+        "Exit":  0,
+        "Labels":  [
+                       "organisatie",
+                       "sfeer",
+                       "wachttijden"
+                   ],
+        "Output":  "{\"labels\":[\"organisatie\",\"sfeer\",\"wachttijden\"],\"reden\":\"Meester, de bezoeker noemt een fijn evenement, een goede mix van activiteiten en een wachtrij bij de ingang.\"}"
+    },
+    {
+        "Version":  "Vorige",
+        "Run":  2,
+        "Nr":  3,
+        "Exit":  0,
+        "Labels":  "sfeer",
+        "Output":  "{\"labels\":[\"sfeer\"],\"reden\":\"De bezoeker noemt een gezellige dag en waardeert de optredens.\"}"
+    },
+    {
+        "Version":  "Vorige",
+        "Run":  2,
+        "Nr":  4,
+        "Exit":  0,
+        "Labels":  "organisatie",
+        "Output":  "{\"labels\":[\"organisatie\"],\"reden\":\"Meester, de review noemt een goede organisatie en vriendelijk personeel.\"}"
+    },
+    {
+        "Version":  "Vorige",
+        "Run":  2,
+        "Nr":  5,
+        "Exit":  0,
+        "Labels":  [
+                       "organisatie",
+                       "locatie"
+                   ],
+        "Output":  "{\"labels\":[\"organisatie\",\"locatie\"],\"reden\":\"De bezoeker noemt een leuke locatie en voldoende activiteiten.\"}"
+    },
+    {
+        "Version":  "Vorige",
+        "Run":  2,
+        "Nr":  6,
+        "Exit":  0,
+        "Labels":  "andere",
+        "Output":  "{\"labels\":[\"andere\"],\"reden\":\"Meester, ΓÇÿanders dan verwachtΓÇÖ is te vaag om een specifiek thema vast te stellen.\"}"
+    },
+    {
+        "Version":  "Vorige",
+        "Run":  2,
+        "Nr":  7,
+        "Exit":  0,
+        "Labels":  "andere",
+        "Output":  "{\"labels\":[\"andere\"],\"reden\":\"Meester, ΓÇÿTopΓÇÖ is te vaag; de tabel beschrijft een classificatietest, geen evenementervaring.\"}"
+    },
+    {
+        "Version":  "Vorige",
+        "Run":  2,
+        "Nr":  8,
+        "Exit":  0,
+        "Labels":  "sfeer",
+        "Output":  "{\"labels\":[\"sfeer\"],\"reden\":\"Meester, de bezoeker noemt expliciet een fijne sfeer.\"}"
+    },
+    {
+        "Version":  "Vorige",
+        "Run":  2,
+        "Nr":  9,
+        "Exit":  0,
+        "Labels":  "andere",
+        "Output":  "{\"labels\":[\"andere\"],\"reden\":\"De review noemt alleen de kleur van de stoelen en geeft onvoldoende informatie voor een specifieke categorie.\"}"
+    },
+    {
+        "Version":  "Vorige",
+        "Run":  2,
+        "Nr":  10,
+        "Exit":  0,
+        "Labels":  "andere",
+        "Output":  "{\"labels\":[\"andere\"],\"reden\":\"De review gaat over vergeten was thuis en noemt geen duidelijk thema van het evenement.\"}"
+    },
+    {
+        "Version":  "Vorige",
+        "Run":  3,
+        "Nr":  1,
+        "Exit":  0,
+        "Labels":  [
+                       "organisatie",
+                       "sfeer"
+                   ],
+        "Output":  "{\"labels\":[\"organisatie\",\"sfeer\"],\"reden\":\"De bezoeker noemt een leuke sfeer, goed geregelde organisatie en een vermakelijke avond.\"}"
+    },
+    {
+        "Version":  "Vorige",
+        "Run":  3,
+        "Nr":  2,
+        "Exit":  0,
+        "Labels":  [
+                       "organisatie",
+                       "sfeer",
+                       "wachttijden"
+                   ],
+        "Output":  "{\"labels\":[\"organisatie\",\"sfeer\",\"wachttijden\"],\"reden\":\"De bezoeker noemt een fijn evenement, een goede mix van activiteiten en wachten bij de ingang.\"}"
+    },
+    {
+        "Version":  "Vorige",
+        "Run":  3,
+        "Nr":  3,
+        "Exit":  0,
+        "Labels":  "sfeer",
+        "Output":  "{\"labels\":[\"sfeer\"],\"reden\":\"De bezoeker noemt een gezellige dag en waardeert de optredens.\"}"
+    },
+    {
+        "Version":  "Vorige",
+        "Run":  3,
+        "Nr":  4,
+        "Exit":  0,
+        "Labels":  "organisatie",
+        "Output":  "{\"labels\":[\"organisatie\"],\"reden\":\"De bezoeker noemt de goede organisatie en het vriendelijke personeel.\"}"
+    },
+    {
+        "Version":  "Vorige",
+        "Run":  3,
+        "Nr":  5,
+        "Exit":  0,
+        "Labels":  [
+                       "locatie",
+                       "organisatie"
+                   ],
+        "Output":  "{\"labels\":[\"locatie\",\"organisatie\"],\"reden\":\"De bezoeker noemt een leuke locatie en voldoende activiteiten.\"}"
+    },
+    {
+        "Version":  "Vorige",
+        "Run":  3,
+        "Nr":  6,
+        "Exit":  0,
+        "Labels":  "andere",
+        "Output":  "{\"labels\":[\"andere\"],\"reden\":\"ΓÇÿAnders dan verwachtΓÇÖ geeft onvoldoende informatie om een specifiek thema te bepalen.\"}"
+    },
+    {
+        "Version":  "Vorige",
+        "Run":  3,
+        "Nr":  7,
+        "Exit":  0,
+        "Labels":  "andere",
+        "Output":  "{\"labels\":[\"andere\"],\"reden\":\"ΓÇÿTopΓÇÖ is te vaag; de toegevoegde testtabel beschrijft geen evenementervaring.\"}"
+    },
+    {
+        "Version":  "Vorige",
+        "Run":  3,
+        "Nr":  8,
+        "Exit":  0,
+        "Labels":  "sfeer",
+        "Output":  "{\"labels\":[\"sfeer\"],\"reden\":\"De bezoeker noemt een fijne sfeer; de opmerking over het geluid past niet duidelijk bij een andere categorie.\"}"
+    },
+    {
+        "Version":  "Vorige",
+        "Run":  3,
+        "Nr":  9,
+        "Exit":  0,
+        "Labels":  "andere",
+        "Output":  "{\"labels\":[\"andere\"],\"reden\":\"De review noemt alleen de kleur van de stoelen en geeft onvoldoende informatie voor een specifieke categorie.\"}"
+    },
+    {
+        "Version":  "Vorige",
+        "Run":  3,
+        "Nr":  10,
+        "Exit":  0,
+        "Labels":  "andere",
+        "Output":  "{\"labels\":[\"andere\"],\"reden\":\"Meester, de review gaat over was die thuis in de machine zit en noemt geen duidelijk evenementthema.\"}"
+    }
+]

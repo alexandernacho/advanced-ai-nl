@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Dashboard van de review-sorteerder: betrouwbaarheid, kosten en waarde.">
+  <title>Review-sorteerder — dashboard</title>
+  <style>
+    :root { --ink:#172033; --muted:#5e6a7e; --line:#dce3ec; --bg:#f5f7fb; --card:#fff; --blue:#2456d6; --blue-soft:#e8efff; --green:#08775f; --green-soft:#e0f5ee; --amber:#9a5b00; --amber-soft:#fff2d9; --red:#a22d36; --red-soft:#ffe8ea; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:Arial, Helvetica, sans-serif; color:var(--ink); background:var(--bg); line-height:1.5; }
+    main { max-width:1060px; margin:auto; padding:24px 16px 48px; }
+    .eyebrow { margin:0 0 5px; color:var(--blue); font-size:.78rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; }
+    h1 { margin:0; font-size:clamp(1.75rem,6vw,2.7rem); line-height:1.1; letter-spacing:-.04em; }
+    .intro { max-width:650px; color:var(--muted); margin:12px 0 24px; }
+    h2 { font-size:1.15rem; margin:0 0 14px; }
+    h3 { font-size:1rem; margin:0 0 5px; }
+    .grid { display:grid; gap:14px; margin-bottom:26px; }
+    .metrics { grid-template-columns:repeat(3,minmax(0,1fr)); }
+    .card { background:var(--card); border:1px solid var(--line); border-radius:16px; padding:18px; box-shadow:0 2px 9px rgba(23,32,51,.04); }
+    .metric-label { color:var(--muted); font-size:.84rem; margin:0; }
+    .metric { font-size:clamp(1.55rem,5vw,2.3rem); font-weight:750; letter-spacing:-.04em; margin:4px 0; }
+    .detail { color:var(--muted); font-size:.84rem; margin:0; }
+    .status { display:inline-block; padding:4px 9px; border-radius:999px; font-size:.78rem; font-weight:700; }
+    .withdrawn { color:var(--red); background:var(--red-soft); }
+    .confirmed { color:var(--green); background:var(--green-soft); }
+    .callout { border-left:5px solid var(--amber); background:var(--amber-soft); padding:16px 18px; border-radius:0 13px 13px 0; margin-bottom:26px; }
+    .callout p { margin:6px 0 0; }
+    .table-card { overflow-x:auto; padding:0; }
+    table { width:100%; min-width:620px; border-collapse:collapse; text-align:left; }
+    caption { text-align:left; padding:18px 18px 8px; font-weight:700; font-size:1.15rem; }
+    th, td { padding:13px 18px; border-bottom:1px solid var(--line); vertical-align:top; }
+    th { color:var(--muted); font-size:.78rem; text-transform:uppercase; letter-spacing:.04em; }
+    tbody tr:last-child td { border-bottom:0; }
+    .best { color:var(--green); font-weight:700; }
+    .note { margin:10px 0 0; color:var(--muted); font-size:.84rem; }
+    .chain { display:grid; gap:10px; }
+    .step { position:relative; background:var(--card); border:1px solid var(--line); border-radius:13px; padding:14px 15px 14px 52px; }
+    .step::before { content:attr(data-n); position:absolute; left:15px; top:14px; display:grid; place-items:center; width:25px; height:25px; border-radius:50%; color:#fff; background:var(--blue); font-size:.78rem; font-weight:700; }
+    .step strong { display:block; }
+    .step span { color:var(--muted); font-size:.9rem; }
+    .value { background:var(--green-soft); border-color:#b9e8d9; }
+    .value::before { background:var(--green); }
+    .split { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:14px; }
+    .range { color:var(--green); font-size:1.6rem; font-weight:750; letter-spacing:-.04em; margin:3px 0; }
+    .source { color:var(--muted); font-size:.78rem; margin:28px 0 0; }
+    @media (max-width:640px) { main { padding:20px 13px 38px; } .metrics, .split { grid-template-columns:1fr; } .card { padding:16px; } .table-card { margin-left:-13px; margin-right:-13px; border-radius:0; } }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">Beslisdashboard · review-sorteerder</p>
+    <h1>Werkt het snel genoeg, betrouwbaar genoeg en goedkoop genoeg?</h1>
+    <p class="intro">Overzicht van de huidige metingen. Er staan geen echte namen of oorspronkelijke reviews in dit dashboard.</p>
+
+    <section class="grid metrics" aria-label="Kerncijfers">
+      <article class="card">
+        <p class="metric-label">Huidige score</p>
+        <p class="metric">8/10</p>
+        <p class="detail">Foutmarge: 20% · 2 fouten per run</p>
+      </article>
+      <article class="card">
+        <p class="metric-label">Stabiliteit</p>
+        <p class="metric">8–8/10</p>
+        <p class="detail">n = 10 · 3 runs per promptversie</p>
+      </article>
+      <article class="card">
+        <p class="metric-label">Kost per run</p>
+        <p class="metric">€0,00162</p>
+        <p class="detail">Schatting op 700 tokens</p>
+      </article>
+    </section>
+
+    <section class="callout" aria-labelledby="claim-title">
+      <span class="status withdrawn">Claim ingetrokken</span>
+      <h2 id="claim-title" style="margin-top:10px">“Mijn systeem is bijna waterdicht.”</h2>
+      <p>De foutmargetest blijft op 8/10 staan. De twee fouten zijn extra labels bij dubbelzinnige reviews. De uitvoer vraagt dus nog menselijke controle.</p>
+    </section>
+
+    <section aria-labelledby="models-title">
+      <div class="card table-card">
+        <table>
+          <caption id="models-title">Drie geteste setups</caption>
+          <thead><tr><th>Setup</th><th>Model</th><th>Niveau</th><th>Score</th><th>Kost per run</th></tr></thead>
+          <tbody>
+            <tr><td>A</td><td>GPT-6.1 Sol</td><td>Hoog</td><td>7/10</td><td>€0,00162*</td></tr>
+            <tr><td>B</td><td>GPT-6.1 Sol</td><td>Gemiddeld</td><td class="best">9/10</td><td>€0,00162*</td></tr>
+            <tr><td>C</td><td>GPT-6.1 Sol</td><td>Laag</td><td class="best">9/10</td><td>€0,00162*</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">* De kost werd apart gemeten voor GPT-6.1 Sol; er is geen aparte kostmeting per redeneerniveau. C is voorlopig de keuze: zelfde beste score als B en het laagste gemiddelde aantal outputtokens (76,3).</p>
+    </section>
+
+    <section style="margin-top:28px" aria-labelledby="value-title">
+      <h2 id="value-title">Volledige value chain</h2>
+      <div class="chain">
+        <article class="step" data-n="1"><strong>Bereik</strong><span>750 verwachte bezoekers → 20 reviews per maand (2,7%).</span></article>
+        <article class="step" data-n="2"><strong>Invoer en verwerking</strong><span>Eén korte review → GPT-6.1 Sol → labels per thema.</span></article>
+        <article class="step" data-n="3"><strong>Menselijke controle</strong><span>De organisator kijkt labels na voordat ze worden gebruikt.</span></article>
+        <article class="step" data-n="4"><strong>Tijdwinst</strong><span>2 minuten handmatig versus 10 seconden met de tool → 110 seconden winst per review.</span></article>
+        <article class="step" data-n="5"><strong>Jaarlijkse waarde vóór AI-kost</strong><span>240 reviews → 7 uur en 20 minuten tijdwinst → €95,33 per jaar.</span></article>
+        <article class="step" data-n="6"><strong>Jaarlijkse AI-kost</strong><span>€0,00162 per run × 240 reviews → ongeveer €0,39 per jaar.</span></article>
+        <article class="step value" data-n="7"><strong>Netto waarde per jaar</strong><span>€95,33 tijdwaarde − €0,39 AI-kost = ongeveer €94,94.</span></article>
+      </div>
+      <div class="split">
+        <article class="card"><p class="metric-label">Bereik bij opschaling</p><p class="range">20 → 20.000</p><p class="detail">reviews per maand; AI-kost van €0,0324 tot €32,40 per maand.</p></article>
+        <article class="card"><p class="metric-label">Zwakste cijfer</p><p class="range">10 sec.</p><p class="detail">Voor nakijken en overnemen. Bij 20 seconden wordt de netto waarde ongeveer €86,28 per jaar.</p></article>
+      </div>
+    </section>
+
+    <p class="source">Bronnen: <code>build/foutmarge.md</code>, <code>build/modellen.md</code>, <code>build/kosten.md</code> en de eigen value chain in de wekelijkse post. “Nog niet gemeten” is niet nodig: alle gevraagde kerncijfers staan in deze bronnen.</p>
+  </main>
+</body>
+</html>
