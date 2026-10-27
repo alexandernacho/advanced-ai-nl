@@ -55,14 +55,14 @@
 
     <section class="grid metrics" aria-label="Kerncijfers">
       <article class="card">
-        <p class="metric-label">Huidige score</p>
-        <p class="metric">8/10</p>
-        <p class="detail">Foutmarge: 20% · 2 fouten per run</p>
+        <p class="metric-label">Meest recente score</p>
+        <p class="metric">27/30</p>
+        <p class="detail">Set v2 · n = 30 · 1 run</p>
       </article>
       <article class="card">
-        <p class="metric-label">Stabiliteit</p>
+        <p class="metric-label">Foutmarge</p>
         <p class="metric">8–8/10</p>
-        <p class="detail">n = 10 · 3 runs per promptversie</p>
+        <p class="detail">20% fouten · n = 10 · 3 runs per promptversie</p>
       </article>
       <article class="card">
         <p class="metric-label">Kost per run</p>
@@ -98,14 +98,14 @@
         <article class="step" data-n="1"><strong>Bereik</strong><span>750 verwachte bezoekers → 20 reviews per maand (2,7%).</span></article>
         <article class="step" data-n="2"><strong>Invoer en verwerking</strong><span>Eén korte review → GPT-6.1 Sol → labels per thema.</span></article>
         <article class="step" data-n="3"><strong>Menselijke controle</strong><span>De organisator kijkt labels na voordat ze worden gebruikt.</span></article>
-        <article class="step" data-n="4"><strong>Tijdwinst</strong><span>2 minuten handmatig versus 10 seconden met de tool → 110 seconden winst per review.</span></article>
-        <article class="step" data-n="5"><strong>Jaarlijkse waarde vóór AI-kost</strong><span>240 reviews → 7 uur en 20 minuten tijdwinst → €95,33 per jaar.</span></article>
+        <article class="step" data-n="4"><strong>Tijdwinst per review</strong><span>2 minuten handmatig − (20 seconden draaien, nakijken en overnemen + 20% × 2 minuten fouten herstellen) = 76 seconden winst.</span></article>
+        <article class="step" data-n="5"><strong>Jaarlijkse waarde vóór AI-kost</strong><span>240 reviews → 5 uur en 4 minuten tijdwinst × €19,50 werkgeverskost per uur = €98,80 per jaar.</span></article>
         <article class="step" data-n="6"><strong>Jaarlijkse AI-kost</strong><span>€0,00162 per run × 240 reviews → ongeveer €0,39 per jaar.</span></article>
-        <article class="step value" data-n="7"><strong>Netto waarde per jaar</strong><span>€95,33 tijdwaarde − €0,39 AI-kost = ongeveer €94,94.</span></article>
+        <article class="step value" data-n="7"><strong>Netto waarde per jaar</strong><span>€98,80 tijdwaarde − €0,39 AI-kost = ongeveer €98,41.</span></article>
       </div>
       <div class="split">
-        <article class="card"><p class="metric-label">Bereik bij opschaling</p><p class="range">20 → 20.000</p><p class="detail">reviews per maand; AI-kost van €0,0324 tot €32,40 per maand.</p></article>
-        <article class="card"><p class="metric-label">Zwakste cijfer</p><p class="range">10 sec.</p><p class="detail">Voor nakijken en overnemen. Bij 20 seconden wordt de netto waarde ongeveer €86,28 per jaar.</p></article>
+        <article class="card"><p class="metric-label">Bereik bij foutmarge</p><p class="range">€98,41</p><p class="detail">per jaar bij 8–8/10. De gemeten foutmarge heeft hier dus geen bereik, maar blijft 20% fouten.</p></article>
+        <article class="card"><p class="metric-label">Zwakste cijfer</p><p class="range">20 sec.</p><p class="detail">Voor draaien, nakijken en overnemen. Bij 40 seconden wordt de netto waarde ongeveer €72,41 per jaar.</p></article>
       </div>
     </section>
 
