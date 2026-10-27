@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Dashboard voor de metingen van de eventreactiesorteerder.">
+  <title>Dashboard — eventreactiesorteerder</title>
+  <style>
+    :root { color-scheme: light; --ink:#17212b; --muted:#617080; --line:#dbe3ea; --page:#f3f6f8; --card:#fff; --blue:#135c9e; --blue-pale:#e9f3ff; --green:#08775c; --green-pale:#e7f7f1; --amber:#8b5600; --amber-pale:#fff4dc; --red:#a83030; --red-pale:#fff0f0; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--page); color:var(--ink); font:16px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif; }
+    main { width:min(100%, 880px); margin:0 auto; padding:24px 16px 44px; }
+    header { padding:8px 4px 20px; }
+    h1,h2,h3,p { margin-top:0; }
+    h1 { margin-bottom:6px; font-size:clamp(1.65rem,6vw,2.25rem); line-height:1.15; letter-spacing:-.03em; }
+    h2 { margin-bottom:14px; font-size:1.1rem; }
+    h3 { margin-bottom:4px; font-size:1rem; }
+    .intro,.source { color:var(--muted); }
+    .source { margin:14px 0 0; font-size:.82rem; }
+    .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+    .card,section { background:var(--card); border:1px solid var(--line); border-radius:16px; }
+    .card { padding:16px; }
+    section { margin-top:16px; padding:20px; }
+    .eyebrow { margin:0 0 4px; color:var(--muted); font-size:.8rem; font-weight:700; letter-spacing:.06em; text-transform:uppercase; }
+    .metric { margin:0; font-size:1.65rem; font-weight:800; letter-spacing:-.04em; line-height:1.1; }
+    .detail { margin:7px 0 0; color:var(--muted); font-size:.9rem; }
+    .status { display:inline-block; padding:4px 10px; border-radius:999px; background:var(--red-pale); color:var(--red); font-weight:750; font-size:.88rem; }
+    .claim { margin-bottom:0; font-size:1.05rem; }
+    .claim strong { display:block; margin:10px 0 2px; }
+    .table-wrap { overflow-x:auto; margin:0 -20px; padding:0 20px; }
+    table { width:100%; min-width:590px; border-collapse:collapse; font-size:.92rem; }
+    th,td { padding:11px 8px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; }
+    th { color:var(--muted); font-size:.76rem; letter-spacing:.04em; text-transform:uppercase; }
+    tbody tr:last-child td { border-bottom:0; }
+    td.num,th.num { text-align:right; }
+    .missing { color:var(--amber); font-weight:650; }
+    .cost-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+    .cost { background:var(--amber-pale); border:1px solid #f3ddb5; border-radius:12px; padding:14px; }
+    .cost .metric { color:var(--amber); font-size:1.1rem; letter-spacing:0; }
+    .chain { display:grid; gap:0; margin:0; padding:0; list-style:none; }
+    .chain li { position:relative; padding:0 0 22px 38px; }
+    .chain li:last-child { padding-bottom:0; }
+    .chain li::before { content:""; position:absolute; left:11px; top:5px; width:12px; height:12px; border:3px solid var(--blue); border-radius:50%; background:#fff; }
+    .chain li:not(:last-child)::after { content:""; position:absolute; left:16px; top:20px; bottom:0; width:2px; background:#b8d6ef; }
+    .chain p { margin:0; color:var(--muted); font-size:.92rem; }
+    .chain .value { color:var(--ink); font-weight:700; }
+    .summary { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; }
+    .summary .card { background:var(--blue-pale); border-color:#cfe5fa; }
+    .summary .metric { color:var(--blue); font-size:1rem; letter-spacing:0; }
+    footer { padding:18px 4px 0; color:var(--muted); font-size:.8rem; }
+    @media (max-width:540px) { main { padding:18px 12px 32px; } section { padding:16px; border-radius:14px; } .grid,.cost-grid { grid-template-columns:1fr; } .summary { grid-template-columns:1fr; } .table-wrap { margin:0 -16px; padding:0 16px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">Meetoverzicht</p>
+      <h1>Eventreactiesorteerder</h1>
+      <p class="intro">Een overzicht van betrouwbaarheid, modelvergelijking, kosten en waardeketen. Het dashboard bevat geen invoerteksten of identificeerbare gegevens.</p>
+    </header>
+
+    <div class="grid" aria-label="Kerncijfers">
+      <article class="card">
+        <p class="eyebrow">Gemeten score · prompt v1</p>
+        <p class="metric">9/10 · 90%</p>
+        <p class="detail">Foutmarge: 90%–90% · n = 10 per run · 3 runs</p>
+      </article>
+      <article class="card">
+        <p class="eyebrow">Netto per jaar</p>
+        <p class="metric">€77,05</p>
+        <p class="detail">Bereik: €62,47–€77,05</p>
+      </article>
+    </div>
+
+    <section aria-labelledby="claim-title">
+      <p class="eyebrow">Mijn claim</p>
+      <h2 id="claim-title"><span class="status">Ingetrokken</span></h2>
+      <p class="claim"><strong>Claim: prompt v2 zou beter zijn dan v1.</strong>Ingetrokken: v1 scoort 90%–90% en v2 80%–90%; de bereiken overlappen. Daarom gebruik ik v1 met GPT-6 Luna op medium effort.</p>
+    </section>
+
+    <section aria-labelledby="models-title">
+      <p class="eyebrow">Drie setups</p>
+      <h2 id="models-title">Score en kost</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Setup</th><th>Model</th><th>Effort</th><th class="num">Score</th><th class="num">Outputtokens/run</th><th class="num">Kost/run</th></tr></thead>
+          <tbody>
+            <tr><td>A</td><td>GPT‑6 Luna</td><td>high</td><td class="num">9/10 · 90%</td><td class="num">58,9</td><td class="num">€0,000070</td></tr>
+            <tr><td>B</td><td>GPT‑6 Luna</td><td>medium</td><td class="num">9/10 · 90%</td><td class="num">28,4</td><td class="num">€0,000056</td></tr>
+            <tr><td>C</td><td>GPT‑6.1 Sol</td><td>high</td><td class="num">9/10 · 90%</td><td class="num">116,7</td><td class="num">€0,00191</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="source">Alle scores vallen binnen de foutmarge van 80%–90%. Setup B heeft de laagste gemeten outputtokenwaarde en kost per run.</p>
+    </section>
+
+    <section aria-labelledby="cost-title">
+      <p class="eyebrow">Kosten</p>
+      <h2 id="cost-title">Kostoverzicht</h2>
+      <div class="cost-grid">
+        <article class="cost"><p class="eyebrow">Kost per run</p><p class="metric">€0,000056</p><p class="detail">Luna medium · 480 input- en 28,4 outputtokens</p></article>
+        <article class="cost"><p class="eyebrow">Kost per jaar</p><p class="metric">€0,03</p><p class="detail">500 reacties per jaar</p></article>
+      </div>
+      <p class="source">API-prijs volgens de cursustabel, met $1 = €0,90. Inputtokens zijn geschat; outputtokens zijn gemeten.</p>
+    </section>
+
+    <section aria-labelledby="chain-title">
+      <p class="eyebrow">Value chain</p>
+      <h2 id="chain-title">Tijdwinst per reactie</h2>
+      <ol class="chain">
+        <li><h3>1. Met de hand: 35 s</h3><p>20 s lezen + 10 s label kiezen + 5 s noteren. Eigen schatting.</p></li>
+        <li><h3>2. Met de tool: 16,5 s</h3><p>3 s draaien + 10 s nakijken + 10% fouten herstellen × 35 s.</p></li>
+        <li><h3>3. Winst: 18,5 s per reactie</h3><p>Bij 500 reacties: 2,57 uur per jaar.</p></li>
+        <li><h3>4. Netto: €77,05 per jaar</h3><p>2,57 uur × €30 loonkost − €0,03 toolkost.</p></li>
+      </ol>
+      <div class="summary" style="margin-top:18px">
+        <article class="card"><p class="eyebrow">Bereik</p><p class="metric">€62,47–€77,05</p></article>
+        <article class="card"><p class="eyebrow">Volume</p><p class="metric">500 reacties/jaar</p></article>
+        <article class="card"><p class="eyebrow">Zwakste cijfer</p><p class="metric">35 s handwerk</p></article>
+      </div>
+    </section>
+
+    <footer>Bronnen: <code>build/foutmarge.md</code>, <code>build/modellen.md</code>, <code>build/kosten.md</code> en <code>posts/week-05.md</code>. De tijdschattingen staan in de post.</footer>
+  </main>
+</body>
+</html>
