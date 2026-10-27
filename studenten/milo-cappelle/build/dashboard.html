@@ -1,0 +1,193 @@
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>Bouwaanvragen sorteren</title>
+<style>
+  /* Layout: één kolom, samenvatting bovenaan, daarna de vier cijfers in volgorde. */
+  :root {
+    --bg: #f6f5f1;
+    --surface: #ffffff;
+    --fg: #1d1f1c;
+    --muted: #5e625b;
+    --line: #dcdfd6;
+    --accent: #2f6b4f;
+    --warn: #9a5b00;
+    --bar: #2f6b4f;
+    --bar-bg: #e4e8df;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #161815;
+      --surface: #1f221e;
+      --fg: #eceee8;
+      --muted: #a4a99f;
+      --line: #343832;
+      --accent: #7fc4a0;
+      --warn: #e0a955;
+      --bar: #7fc4a0;
+      --bar-bg: #2d312b;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #161815;
+    --surface: #1f221e;
+    --fg: #eceee8;
+    --muted: #a4a99f;
+    --line: #343832;
+    --accent: #7fc4a0;
+    --warn: #e0a955;
+    --bar: #7fc4a0;
+    --bar-bg: #2d312b;
+    color-scheme: dark;
+  }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+    padding-block: 24px 48px;
+  }
+  main { max-width: 760px; margin: 0 auto; display: grid; gap: 20px; }
+  header h1 { font-size: 1.6rem; line-height: 1.2; margin: 0 0 6px; text-wrap: balance; }
+  header p { margin: 0; color: var(--muted); }
+  section { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 18px; min-width: 0; }
+  h2 { font-size: 1.05rem; margin: 0 0 4px; }
+  .note { color: var(--muted); font-size: 0.9rem; margin: 0 0 12px; }
+  .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
+  .tile { border: 1px solid var(--line); border-radius: 8px; padding: 12px; }
+  .tile .label { color: var(--muted); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em; }
+  .tile .value { font-size: 1.5rem; font-weight: 650; font-variant-numeric: tabular-nums; }
+  .tile .sub { color: var(--muted); font-size: 0.85rem; }
+  .table-wrap { overflow-x: auto; min-width: 0; }
+  table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+  th, td { text-align: left; padding: 8px 6px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--muted); font-weight: 600; font-size: 0.85rem; }
+  td.num, th.num { text-align: right; white-space: nowrap; }
+  .verdict { display: inline-block; padding: 2px 10px; border-radius: 999px; border: 1px solid var(--warn); color: var(--warn); font-weight: 600; font-size: 0.85rem; }
+  .range { position: relative; height: 10px; background: var(--bar-bg); border-radius: 999px; margin-top: 6px; min-width: 120px; }
+  .range span { position: absolute; top: 0; bottom: 0; background: var(--bar); border-radius: 999px; }
+  .scale { display: flex; justify-content: space-between; color: var(--muted); font-size: 0.75rem; margin-top: 4px; }
+  .pending { color: var(--muted); font-style: italic; }
+  ul { margin: 6px 0 0; padding-left: 20px; }
+  li + li { margin-top: 4px; }
+  footer { color: var(--muted); font-size: 0.8rem; }
+</style>
+
+<main>
+  <header>
+    <h1>Bouwaanvragen sorteren</h1>
+    <p>Mijn tool leest een bouwaanvraag en zegt of er werk in zit voor een grond- en afbraakbedrijf. Dit zijn de cijfers van week 5, 27 oktober 2026.</p>
+  </header>
+
+  <section>
+    <h2>Samenvatting</h2>
+    <p class="note">Score op 14 inputs, volume van 5.952 aanvragen per jaar, Haiku 4.5.</p>
+    <div class="tiles">
+      <div class="tile">
+        <div class="label">Score "interessant"</div>
+        <div class="value">11 tot 13</div>
+        <div class="sub">van 14 juist, v2</div>
+      </div>
+      <div class="tile">
+        <div class="label">Netto per jaar</div>
+        <div class="value">€1.075 tot €1.753</div>
+        <div class="sub">na de kost van de tool</div>
+      </div>
+      <div class="tile">
+        <div class="label">Kost per run</div>
+        <div class="value">€0,0028</div>
+        <div class="sub">€17 tot €54 per jaar</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Foutmarge</h2>
+    <p class="note">Dezelfde 14 inputs, 3 runs per versie. Het bereik is de laagste en de hoogste score.</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Versie</th><th>Veld</th><th class="num">Run 1</th><th class="num">Run 2</th><th class="num">Run 3</th><th>Bereik</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>v1</td><td>interessant</td><td class="num">13</td><td class="num">13</td><td class="num">14</td><td>13 tot 14</td></tr>
+          <tr><td>v2</td><td>interessant</td><td class="num">11</td><td class="num">13</td><td class="num">12</td><td>11 tot 13</td></tr>
+          <tr><td>v1</td><td>soort werk</td><td class="num">12</td><td class="num">13</td><td class="num">13</td><td>12 tot 13</td></tr>
+          <tr><td>v2</td><td>soort werk</td><td class="num">12</td><td class="num">13</td><td class="num">12</td><td>12 tot 13</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note" style="margin-top:12px">Stabiel = bij dezelfde input hetzelfde antwoord in alle 3 runs. v1: 12 van 14. v2: 11 van 14.</p>
+  </section>
+
+  <section>
+    <h2>Mijn claim</h2>
+    <p><strong>"v1 scoort hoger op 'interessant' dan v2."</strong></p>
+    <p><span class="verdict">Ingetrokken</span></p>
+    <p class="note">De slechtste run van v1 is 13, en de beste run van v2 is ook 13. Dat is niet hoger, dus de claim houdt de schommeling van de tool niet stand.</p>
+  </section>
+
+  <section>
+    <h2>Welk model en welke effort</h2>
+    <p class="note">Drie setups van dezelfde tool, elk één run op 14 inputs. Kost per jaar is een schatting: de output-tokens zijn niet gemeten.</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Setup</th><th>Model</th><th class="num">Score interessant</th><th class="num">Score soort werk</th><th class="num">Kost per jaar, laag</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>A, standaard (Sonnet 5.5, medium)</td><td>Sonnet 5.5</td><td class="num">14/14</td><td class="num">14/14</td><td class="num">€34</td></tr>
+          <tr><td>B, omlaag (Haiku 5.5, medium)</td><td>Haiku 5.5</td><td class="num">10/14</td><td class="num">12/14</td><td class="num">€2</td></tr>
+          <tr><td>C, omhoog (Opus 5.5, medium)</td><td>Opus 5.5</td><td class="num">14/14</td><td class="num">13/14</td><td class="num">€67</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>Kost</h2>
+    <p class="note">Gemeten met Haiku 4.5 op mijn eigen aanvragen. Haiku 5.5 is gerekend, niet gemeten.</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Model</th><th class="num">Per run</th><th class="num">Per jaar, laag</th><th class="num">Per jaar, hoog</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Haiku 4.5 (gemeten)</td><td class="num">€0,0028</td><td class="num">€17</td><td class="num">€54</td></tr>
+          <tr><td>Haiku 5.5 (gerekend)</td><td class="num">€0,0003</td><td class="num">€2</td><td class="num">€5</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note" style="margin-top:12px">Laag: 5.952 aanvragen per jaar. Hoog: 19.344 per jaar.</p>
+  </section>
+
+  <section>
+    <h2>Value chain</h2>
+    <p class="note">Met het bereik van de score van v2. Per aanvraag met de hand: 90 seconden, geschat.</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th></th><th class="num">11 van 14</th><th class="num">12 van 14</th><th class="num">13 van 14</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Met de tool, per aanvraag</td><td class="num">69,3 s</td><td class="num">62,9 s</td><td class="num">56,4 s</td></tr>
+          <tr><td>Winst per aanvraag</td><td class="num">20,7 s</td><td class="num">27,1 s</td><td class="num">33,6 s</td></tr>
+          <tr><td>Uren gewonnen per jaar</td><td class="num">34</td><td class="num">45</td><td class="num">56</td></tr>
+          <tr><td>Waarde per jaar (€31,88 per uur)</td><td class="num">€1.092</td><td class="num">€1.430</td><td class="num">€1.769</td></tr>
+          <tr><td>Min kost van de tool</td><td class="num">− €17</td><td class="num">− €17</td><td class="num">− €17</td></tr>
+          <tr><td><strong>Netto per jaar</strong></td><td class="num"><strong>€1.075</strong></td><td class="num"><strong>€1.414</strong></td><td class="num"><strong>€1.753</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note" style="margin-top:12px">Met het hoge volume: €4.001, €5.259 en €6.517 per jaar.</p>
+    <p><strong>Zwakste cijfer:</strong> de 90 seconden voor het handwerk. Bij 60 seconden blijft er bij 12 van 14 nog 1,4 seconde per aanvraag over.</p>
+  </section>
+
+  <footer>
+    Bronnen: foutmarge.md, kosten.md en waarde.md in de map build. Ruwe antwoorden: runs-foutmarge.txt.
+  </footer>
+</main>

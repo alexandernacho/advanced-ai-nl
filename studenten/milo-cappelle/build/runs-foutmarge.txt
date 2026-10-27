@@ -1,0 +1,170 @@
+# Ruwe antwoorden foutmargetest, Haiku 4.5 (claude-haiku-4-5), 27 oktober 2026
+# Elke run apart, in een lege map, zonder tools. Zelfde 14 inputs voor v1 en v2. Prompts: prompt-v1.md en prompt.md.
+v1 T01 run 1:
+```json{"interessant": "ja", "soort_werk": "grondwerk", "reden": "Reliëfwijziging, aanleggen van keermuren en opritaanpassingen vormen grondwerk dat langer dan één dag duurt."}```
+v1 T02 run 1:
+```json{"interessant": "onzeker", "soort_werk": "grondwerk", "reden": "Nivellering is grondwerk, maar de beschrijving geeft geen informatie over de omvang en duur van het project."}```
+v1 T03 run 1:
+```json{"interessant": "ja", "soort_werk": "beide", "reden": "Sloping van aanbouw (afbraak) en uitbreiding van meergezinswoning (grondwerk), waarschijnlijk meerdaags project."}```
+v1 T04 run 1:
+```json{"interessant": "ja", "soort_werk": "beide", "reden": "Afbraak stallen en aanleg verharding met meerdere silo's is meerdaags werk."}```
+v1 T05 run 1:
+```json{"interessant": "ja", "soort_werk": "grondwerk", "reden": "Uitgraving kelders, aanleg talud, wadi en vijver vereisen grondwerk en duren zeker langer dan één dag."}```
+v1 T06 run 1:
+```json{"interessant": "ja", "soort_werk": "beide", "reden": "Slopen van stallen en garage (afbraak) plus aanleggen van verhardingen (grondwerk); meerdere gebouwen duidt op werk van meer dan één dag."}```
+v1 T07 run 1:
+```json{"interessant": "ja", "soort_werk": "grondwerk", "reden": "Aanleggen van folieput, lavaput, mestput en betonverharding duurt langer dan één dag"}```
+v1 T08 run 1:
+```json{"interessant": "nee", "soort_werk": "geen", "reden": "Dit is exploitatie van een inrichting en bijstelling van voorwaarden, geen grond- of afbraakwerk."}```
+v1 T09 run 1:
+```json{  "interessant": "ja",  "soort_werk": "grondwerk",  "reden": "Uitbaggeren en samenvoegen van vijvers is grondwerk dat langer dan één dag zal duren."}```
+v1 T10 run 1:
+```json{"interessant": "nee", "soort_werk": "geen", "reden": "Inrichten van pedicurepraktijk in woning zonder afbraak of grondwerk."}```
+v1 T11 run 1:
+```json{"interessant": "nee", "soort_werk": "grondwerk", "reden": "Klein eendaags werk voor mast-fundering."}```
+v1 T12 run 1:
+```json{"interessant": "nee", "soort_werk": "geen", "reden": "De beschrijving spreekt over transformatie en uitbreiding, maar noemt geen afbraak of grondwerk."}```
+v1 T13 run 1:
+```json{"interessant": "nee", "soort_werk": "geen", "reden": "Regelmatigingsaanvraag voor bouwconstructies en terreinoppervlakken zonder afbraak of ondergronds grondwerk."}```
+v1 T14 run 1:
+```json{"interessant": "onzeker", "soort_werk": "afbraak", "reden": "Afbraak van hek duidelijk, maar omvang oprit regularisatie onduidelijk voor duurschatting."}```
+v1 T01 run 2:
+```json{"interessant": "ja", "soort_werk": "grondwerk", "reden": "Reliëfwijziging en aanleggen van keermuren zijn grondwerken die meer dan één dag duren."}```
+v1 T02 run 2:
+```json{"interessant": "onzeker", "soort_werk": "grondwerk", "reden": "Nivellering is grondwerk, maar de oppervlakte van het akkerland is onbekend, dus onduidelijk of het meer dan een dag duurt."}```
+v1 T03 run 2:
+```json{"interessant": "ja", "soort_werk": "beide", "reden": "Sloping van aanbouw en uitbreidingswerk op meergezinswoning duidt op meerdaags project."}```
+v1 T04 run 2:
+```json{"interessant": "ja", "soort_werk": "beide", "reden": "Afbraak van stallen en aanleg van verharding zijn aanwezig; meervoudig project duurt zeker langer dan één dag."}```
+v1 T05 run 2:
+```json{"interessant": "ja", "soort_werk": "grondwerk", "reden": "Aanleg talud, wadi, vijver en verharding vormen grondwerk dat zeker langer duurt dan één dag."}```
+v1 T06 run 2:
+```json{"interessant": "ja", "soort_werk": "beide", "reden": "Afbraak van meerdere gebouwen (2 stallen + garage) en aanleggen van verhardingen duurt zeker langer dan één dag."}```
+v1 T07 run 2:
+```json{"interessant": "ja", "soort_werk": "grondwerk", "reden": "Meerdere grondwerkzaamheden (folieput, lavaput, mestput) en betonverharding voor landbouwbedrijf; werk van meerdere dagen."}```
+v1 T08 run 2:
+```json{"interessant": "nee", "soort_werk": "geen", "reden": "Dit gaat over exploitatie van een inrichting met bijstelling van voorwaarden, niet over afbraak of grondwerk."}```
+v1 T09 run 2:
+```json{"interessant": "ja", "soort_werk": "grondwerk", "reden": "Uitbaggeren van vijvers is grondwerk dat meerdere dagen in beslag neemt."}```
+v1 T10 run 2:
+```json{"interessant": "nee", "soort_werk": "geen", "reden": "Inrichten van pedicurepraktijk in woning, geen afbraak of grondwerk."}```
+v1 T11 run 2:
+```json{"interessant": "nee", "soort_werk": "geen", "reden": "Plaatsen van een weermast is geen afbraak of grondwerk."}```
+v1 T12 run 2:
+```json{"interessant": "ja", "soort_werk": "grondwerk", "reden": "Uitbreiding van woning vereist grondwerk (funderingen) en duurt langer dan één dag."}```
+v1 T13 run 2:
+```json{"interessant": "nee", "soort_werk": "geen", "reden": "Regularisering van bestaande constructies op landbouwgrond, geen afbraak of grondwerk."}```
+v1 T14 run 2:
+```json{"interessant": "nee", "soort_werk": "afbraak", "reden": "Afbraak van omheining is vergelijkbaar eenvoudig werk van ongeveer één dag."}```
+v1 T01 run 3:
+```json{"interessant": "ja", "soort_werk": "grondwerk", "reden": "Reliëfwijziging en aanleggen van keermuren zijn grondwerk dat zeker langer dan één dag duurt."}```
+v1 T02 run 3:
+```json{"interessant": "onzeker", "soort_werk": "grondwerk", "reden": "Nivellering is grondwerk, maar omvang en duur van het akkerland-project zijn onvoldoende gespecificeerd."}```
+v1 T03 run 3:
+```json{"interessant": "ja", "soort_werk": "beide", "reden": "Sloop van aanbouw en verbouwen/uitbreiden van meergezinswoning nemen meerdere dagen in beslag."}```
+v1 T04 run 3:
+```json{"interessant": "ja", "soort_werk": "beide", "reden": "Afbraak van stallen plus grondwerk voor verharding en silo's, meerdaags project."}```
+v1 T05 run 3:
+```json{"interessant": "ja", "soort_werk": "grondwerk", "reden": "Kelders graven, talud aanleggen, wadi en vijver aanleggen zijn aanzienlijke grondwerkactiviteiten die samen zeker langer dan één dag duren."}```
+v1 T06 run 3:
+```json{"interessant": "ja", "soort_werk": "beide", "reden": "Slopen van meerdere gebouwen (2 varkensstallen en garage) gecombineerd met aanleggen van verhardingen duurt aanzienlijk langer dan één dag."}```
+v1 T07 run 3:
+```json{"interessant": "ja", "soort_werk": "grondwerk", "reden": "Grondwerk voor drie putten (folie, lava, mest) en betonverharding; duurt zeker meer dan één dag."}```
+v1 T08 run 3:
+```json{"interessant": "nee", "soort_werk": "geen", "reden": "Dit is een aanvraag voor bijstelling van voorwaarden voor een inrichting, geen fysieke afbraak of grondwerk."}```
+v1 T09 run 3:
+```json{"interessant": "ja", "soort_werk": "grondwerk", "reden": "Uitbaggeren en samenvoegen van vijvers is grondwerk dat meerdere dagen zal duren."}```
+v1 T10 run 3:
+```json{"interessant": "nee", "soort_werk": "geen", "reden": "Inrichten van pedicurepraktijk in woning vereist geen afbraak of grondwerk."}```
+v1 T11 run 3:
+```json{"interessant": "nee", "soort_werk": "geen", "reden": "Plaatsen van weermast is geen afbraak of grondwerk; klein eendaagse werk."}```
+v1 T12 run 3:
+```json{"interessant": "ja", "soort_werk": "grondwerk", "reden": "Uitbreiding van een woning vereist grondwerk voor funderingen en duurt langer dan één dag."}```
+v1 T13 run 3:
+```json{"interessant": "nee", "soort_werk": "geen", "reden": "Regularisatie van landbouwbouwwerken (kippenhok, carport, ruiterparcours) zonder afbraak of grondwerk."}```
+v1 T14 run 3:
+```json{"interessant": "onzeker", "soort_werk": "afbraak", "reden": "Afbraak van omheining is aanwezig, maar omvang en duur zijn onduidelijk."}```
+v2 T01 run 1:
+```json{  "interessant": "ja",  "soort_werk": "grondwerk",  "reden": "Reliëfwijziging en aanleggen van keermuren zijn grondwerk dat waarschijnlijk meerdere dagen duurt."}```
+v2 T02 run 1:
+```json{"interessant": "onzeker", "soort_werk": "grondwerk", "reden": "Nivellering van akkerland is grondwerk, maar de grootte van het akkerland en de werkduur zijn niet gegeven."}```
+v2 T03 run 1:
+```json{"interessant": "ja", "soort_werk": "beide", "reden": "Afbraak van aanbouw en uitbreiding van meergezinswoning met grondwerk duurt langer dan één dag."}```
+v2 T04 run 1:
+```json{"interessant": "ja", "soort_werk": "beide", "reden": "Afbraak van stallen en grondwerk voor silo's en verharding; dit project zal meerdere weken duren."}```
+v2 T05 run 1:
+```json{"interessant": "ja", "soort_werk": "grondwerk", "reden": "Omvangrijk project met uitgebreide grondwerken (kelders, talud, wadi, vijver, verharding), duidelijk meer dan één dag werk."}```
+v2 T06 run 1:
+```json{"interessant": "ja", "soort_werk": "beide", "reden": "Sloop van stallen en garage plus aanleggen van verhardingen; meermaals-daagse project."}```
+v2 T07 run 1:
+```json{"interessant": "ja", "soort_werk": "grondwerk", "reden": "Grondwerk vereist voor het graven van meerdere putten (folieput, lavaput, mestput) voor de varkensstal, waarschijnlijk meerdere dagen werk."}```
+v2 T08 run 1:
+```json{"interessant": "nee", "soort_werk": "geen", "reden": "Bijstelling van voorwaarden voor een bestaande installatie, geen fysieke bouw- of afbraakwerk."}```
+v2 T09 run 1:
+```json{"interessant": "ja", "soort_werk": "grondwerk", "reden": "Uitbaggeren van vijvers is aanzienlijk grondwerk dat zeker langer dan één dag duurt."}```
+v2 T10 run 1:
+```json{"interessant": "nee", "soort_werk": "geen", "reden": "Alleen interieurinrichting van een praktijkruimte, geen afbraak of grondwerk."}```
+v2 T11 run 1:
+```json{"interessant": "nee", "soort_werk": "geen", "reden": "Plaatsen van een weermast is geen afbraak of grondwerk."}```
+v2 T12 run 1:
+```json{"interessant": "onzeker", "soort_werk": "beide", "reden": "Transformatie en uitbreiding impliceren grondwerk; afbraak is waarschijnlijk maar omvang en duur zijn onduidelijk."}```
+v2 T13 run 1:
+```json{"interessant": "ja", "soort_werk": "grondwerk", "reden": "Aanleg piste d'équitation en aire bétonnée vereisen grondwerk; dergelijke werken duren meer dan één dag."}```
+v2 T14 run 1:
+```json{"interessant": "nee", "soort_werk": "beide", "reden": "Klein project: hekwerk vervangen en oprit regelmatig maken."}```
+v2 T01 run 2:
+```json{"interessant": "ja", "soort_werk": "grondwerk", "reden": "Reliëfwijziging en aanleg van keermuren duurt langer dan één dag."}```
+v2 T02 run 2:
+```json{"interessant": "onzeker", "soort_werk": "grondwerk", "reden": "Nivellering is grondwerk, maar grootte en duur van het werk zijn niet duidelijk uit de beschrijving."}```
+v2 T03 run 2:
+```json{"interessant": "ja", "soort_werk": "beide", "reden": "Slopen van aanbouw (afbraak) en uitbreiding van meergezinswoning (grondwerk voor funderingen) is een project van meerdere dagen."}```
+v2 T04 run 2:
+```json{"interessant": "ja", "soort_werk": "beide", "reden": "Afbraak stallen en aanleg silo's met verharding duurt meerdere dagen"}```
+v2 T05 run 2:
+```json{"interessant": "ja", "soort_werk": "grondwerk", "reden": "Grondwerk voor kelders, talud, wadi en vijver duurt veel langer dan één dag."}```
+v2 T06 run 2:
+```json{"interessant": "ja", "soort_werk": "beide", "reden": "Afbraak van meerdere varkensstallen en garage plus aanleggen van verhardingen; project duurt zeker langer dan één dag."}```
+v2 T07 run 2:
+```json{"interessant": "ja", "soort_werk": "grondwerk", "reden": "Meerdere putten (folieput, lavaput, mestput) graven voor een varkensstal duurt zeker langer dan één dag."}```
+v2 T08 run 2:
+```json{"interessant": "nee", "soort_werk": "geen", "reden": "Dit is exploitatie van bestaande inrichting, geen afbraak of grondwerk."}```
+v2 T09 run 2:
+```json{"interessant": "ja", "soort_werk": "grondwerk", "reden": "Vijverwerkzaamheden (uitbaggeren en samenvoegen) zijn grondwerk dat meer dan één dag in beslag neemt."}```
+v2 T10 run 2:
+```json{"interessant": "nee", "soort_werk": "geen", "reden": "Inrichten van pedicureruimte in woning is interieurwerk zonder afbraak of grondwerk."}```
+v2 T11 run 2:
+```json{"interessant": "nee", "soort_werk": "geen", "reden": "Plaatsen van een weermast is geen afbraak of grondwerk."}```
+v2 T12 run 2:
+```json{"interessant": "onzeker", "soort_werk": "geen", "reden": "Beschrijving vermeldt transformatie en uitbreiding zonder concrete afbraak- of grondwerkspecificaties; werkduur onduidelijk."}```
+v2 T13 run 2:
+```json{"interessant": "nee", "soort_werk": "geen", "reden": "geen afbraak of grondwerk beschreven, enkel regularisatie en inrichting van constructies"}```
+v2 T14 run 2:
+```json{"interessant": "onzeker", "soort_werk": "afbraak", "reden": "Duur van regularisering oprit onvoldoende gespecificeerd"}```
+v2 T01 run 3:
+```json{"interessant": "ja", "soort_werk": "grondwerk", "reden": "Verkavelingproject met reliëfwijziging, keermuren en opritten - grondwerk van meerdere dagen."}```
+v2 T02 run 3:
+```json{"interessant": "onzeker", "soort_werk": "grondwerk", "reden": "Omvang van het akkerland niet gespecificeerd, dus onzeker of het werk langer dan één dag duurt."}```
+v2 T03 run 3:
+```json{"interessant": "ja", "soort_werk": "beide", "reden": "Slopen van aanbouw en uitbreiding van meergezinswoning duurt meerdere weken."}```
+v2 T04 run 3:
+```json{"interessant": "ja", "soort_werk": "beide", "reden": "Afbraak stallen en grondwerk voor silos en verharding; omvangrijke werkzaamheden die zeker langer dan één dag duren."}```
+v2 T05 run 3:
+```json{"interessant": "ja", "soort_werk": "grondwerk", "reden": "Meerdere grondwerken (kelders, talud, wadi, vijver) voor uitgebreide veehouderijinfrastructuur, duidelijk meer dan één dag werk."}```
+v2 T06 run 3:
+```json{"interessant": "ja", "soort_werk": "beide", "reden": "Afbraak van stallen en garage, grondwerk voor verhardingen aanleggen; aanzienlijke werkduur nodig."}```
+v2 T07 run 3:
+```json{"interessant": "ja", "soort_werk": "grondwerk", "reden": "Graafwerk voor meerdere putten (folie-, lava-, mestput) is meermaals werk"}```
+v2 T08 run 3:
+```json{"interessant": "nee", "soort_werk": "geen", "reden": "Bijstelling van voorwaarden voor een afscheider-installatie zonder afbraak- of grondwerk."}```
+v2 T09 run 3:
+```json{"interessant": "ja", "soort_werk": "grondwerk", "reden": "Uitbaggeren en samenvoegen van vijvers is substantieel grondwerk dat meerdere dagen duurt."}```
+v2 T10 run 3:
+```json{"interessant": "nee", "soort_werk": "geen", "reden": "Inrichten van praktijkruimte is interieurafwerking, geen afbraak of grondwerk."}```
+v2 T11 run 3:
+```json{"interessant": "nee", "soort_werk": "geen", "reden": "Plaatsen van een weermast is geen afbraak of grondwerk, en kan in één dag worden afgewerkt."}```
+v2 T12 run 3:
+```json{"interessant": "nee", "soort_werk": "geen", "reden": "Transformatie en uitbreiding van woning zonder afbraak of grondwerk vermeld."}```
+v2 T13 run 3:
+```json{"interessant": "onzeker", "soort_werk": "grondwerk", "reden": "Aanleg ruiterbaan en betonnen oppervlak vereisen waarschijnlijk grondwerk, maar totale werkduur is onduidelijk gegeven regularisatiecontext."}```
+v2 T14 run 3:
+```json{"interessant": "onzeker", "soort_werk": "afbraak", "reden": "Démolition de clôture confirmée, mais l'ampleur du projet et la durée ne sont pas précisées."}```

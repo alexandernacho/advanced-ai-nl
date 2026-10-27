@@ -35,3 +35,12 @@ Gemeten op 18 oktober 2026. Prompt: `prompt.md` (v2). Input: T01. Prijzen uit de
 ## Opgemerkt
 - `haiku` kiest in Claude Code nu Haiku 5.5, dat niet in de prijstabel staat. Daarom expliciet `claude-haiku-4-5` gebruikt.
 - T01 gaf met Haiku 4.5 twee verschillende antwoorden: run 1 "ja, grondwerk", run 2 "onzeker, grondwerk".
+
+## Controle week 5 (21 oktober 2026)
+- **Welk model?** De meting in week 4 draaide met `--model claude-haiku-4-5`, niet met `haiku`. De prijs van Haiku 4.5 (1 en 5 dollar per miljoen) is dus juist. **Geen correctie nodig.**
+- **Referentie: Haiku 5.5** (0,10 en 0,50 dollar per miljoen, tot 100.000 tokens per vraag). Zelfde tokens als hierboven: 560 in en 514 uit. Dit is gerekend, niet gemeten.
+
+| Model | Kost per run | Per maand, laag (496) | Per maand, hoog (1.612) | 10× laag | 1.000× laag | 1.000× hoog |
+|---|---:|---:|---:|---:|---:|---:|
+| Haiku 4.5 (gemeten) | $0,0031 (€0,0028) | €1,40 | €4,54 | €13,97 | €1.397 | €4.541 |
+| Haiku 5.5 (gerekend) | $0,0003 (€0,0003) | €0,14 | €0,45 | €1,40 | €140 | €454 |
