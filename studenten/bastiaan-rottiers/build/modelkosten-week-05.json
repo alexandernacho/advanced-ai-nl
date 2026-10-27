@@ -1,0 +1,41 @@
+﻿[
+    {
+        "model":  "gpt-6.1-sol",
+        "n":  5,
+        "input_tokens":  16111.4,
+        "cached_input_tokens":  7936,
+        "output_tokens":  347.2,
+        "normalized_eur":  0.048636,
+        "normalized_year_eur":  4.6690559999999994,
+        "cold_eur":  0.032125320000000006,
+        "cold_month_eur":  0.25700256000000005,
+        "cold_year_eur":  3.0840307200000003,
+        "observed_cache_eur":  0.018554759999999997
+    },
+    {
+        "model":  "gpt-6-luna",
+        "n":  5,
+        "input_tokens":  15038.2,
+        "cached_input_tokens":  6937.6,
+        "output_tokens":  323.4,
+        "normalized_eur":  0.00242109,
+        "normalized_year_eur":  0.23242464,
+        "cold_eur":  0.0014989680000000003,
+        "cold_month_eur":  0.011991744000000002,
+        "cold_year_eur":  0.14390092800000004,
+        "observed_cache_eur":  0.00093702240000000006
+    },
+    {
+        "model":  "gpt-6-astra",
+        "n":  5,
+        "input_tokens":  15666.2,
+        "cached_input_tokens":  6144,
+        "output_tokens":  316.6,
+        "normalized_eur":  0.24180300000000002,
+        "normalized_year_eur":  23.213088000000003,
+        "cold_eur":  0.15524280000000001,
+        "cold_month_eur":  1.2419424000000001,
+        "cold_year_eur":  14.903308800000001,
+        "observed_cache_eur":  0.1054764
+    }
+]

@@ -1,0 +1,4 @@
+# Lokale documenten, Canvas-export en geheimen van de bachelorproef horen niet in de cursusrepo.
+Bachelorproef/
+Git-*.exe
+build/week-05-lokaal/
