@@ -35,3 +35,5 @@ Ongeveer 10 plaatsbezoeken per maand (huidig volume bij Jasper, volgens mij).
 
 ## Conclusie
 Bij het huidige volume is de kost verwaarloosbaar. Pas bij 1.000× volume en een duurder model wordt het een bedrag.
+
+Gecontroleerd in week 5: in week 4 al gemeten en gerekend met Haiku 5.5 ($0,10 / $0,50), geen correctie nodig.

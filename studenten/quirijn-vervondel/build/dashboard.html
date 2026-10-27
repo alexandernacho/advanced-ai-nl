@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stuklijst-tool: mijn cijfers</title>
+<style>
+  :root {
+    --bg: #f6f7f9;
+    --card: #ffffff;
+    --text: #1d2330;
+    --muted: #5b6474;
+    --line: #dde1e8;
+    --accent: #1f6feb;
+    --warn: #b54708;
+    --ok: #067647;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #12151b;
+      --card: #1b2029;
+      --text: #e7eaf0;
+      --muted: #9aa3b2;
+      --line: #2c3340;
+      --accent: #6ea8fe;
+      --warn: #f79009;
+      --ok: #47cd89;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #12151b;
+    --card: #1b2029;
+    --text: #e7eaf0;
+    --muted: #9aa3b2;
+    --line: #2c3340;
+    --accent: #6ea8fe;
+    --warn: #f79009;
+    --ok: #47cd89;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.5;
+  }
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 16px;
+  }
+  h1 { font-size: 1.5rem; margin: 8px 0 4px; }
+  h2 { font-size: 1.15rem; margin: 0 0 10px; }
+  .sub { color: var(--muted); margin: 0 0 16px; }
+  section {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 14px;
+  }
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+  .stat {
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 10px;
+  }
+  .stat .label { color: var(--muted); font-size: 0.85rem; }
+  .stat .value { font-size: 1.35rem; font-weight: 700; }
+  .stat .note { color: var(--muted); font-size: 0.85rem; }
+  .table-wrap { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+  th, td {
+    text-align: left;
+    padding: 8px 6px;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+  th { color: var(--muted); font-weight: 600; }
+  td.num, th.num { text-align: right; white-space: nowrap; }
+  .tag {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 1px solid currentColor;
+  }
+  .tag.warn { color: var(--warn); }
+  .tag.ok { color: var(--ok); }
+  .choice {
+    border: 2px solid var(--accent);
+    border-radius: 10px;
+    padding: 10px 12px;
+    margin-top: 12px;
+  }
+  .muted { color: var(--muted); font-size: 0.9rem; }
+  .big { font-size: 1.6rem; font-weight: 700; color: var(--ok); }
+  footer { color: var(--muted); font-size: 0.85rem; padding: 4px 0 24px; }
+</style>
+</head>
+<body>
+<main>
+
+  <h1>Stuklijst-tool: mijn cijfers</h1>
+  <p class="sub">Week 5. Alle cijfers komen uit mijn build-bestanden. Testinputs zijn genummerd T01 tot T10. Er staan geen klantnamen of notities in deze pagina.</p>
+
+  <section>
+    <h2>1. Mijn score met de foutmarge</h2>
+    <div class="stats">
+      <div class="stat">
+        <div class="label">Score per input</div>
+        <div class="value">0 tot 2 van 10</div>
+        <div class="note">runs: 0, 2, 1. Streng: één ontbrekende rij is fout.</div>
+      </div>
+      <div class="stat">
+        <div class="label">Score per onderdeel</div>
+        <div class="value">77 tot 80 van 96</div>
+        <div class="note">runs: 77, 80, 79. T01 tot T10.</div>
+      </div>
+      <div class="stat">
+        <div class="label">T06 tot T10 per onderdeel</div>
+        <div class="value">24 tot 26 van 34</div>
+        <div class="note">de inputs van mijn week 3 claim.</div>
+      </div>
+    </div>
+    <p class="muted">Model: Claude Haiku 5.5, prompt v1 (de laatste versie). n = 10 inputs, 3 runs. v2 is gereconstrueerd uit mijn log.</p>
+
+    <p><strong>Mijn claim uit week 3:</strong> "Mijn foute v2 scoorde slechter (19 op 30)."</p>
+    <p><span class="tag warn">Ingetrokken</span></p>
+    <p class="muted">Reden: op T06 tot T10 overlappen de bereiken (v1 24 tot 26, v2 22 tot 25). Het verschil op T08 is echt: daar gaven de twee foute v2-regels een andere uitkomst. Op de andere inputs is het ruis.</p>
+  </section>
+
+  <section>
+    <h2>2. Drie setups, één run elk</h2>
+    <p class="muted">Effort medium voor alle drie. Kost per run met 2.500 input-tokens. Per jaar bij 120 runs. $1 = € 0,90.</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Setup</th>
+            <th>Model</th>
+            <th class="num">Per input</th>
+            <th class="num">Per onderdeel</th>
+            <th class="num">Output-tokens</th>
+            <th class="num">Kost per run</th>
+            <th class="num">Per jaar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>A</td>
+            <td>Sonnet 5.5</td>
+            <td class="num">1 van 10</td>
+            <td class="num">79 van 96</td>
+            <td class="num">828</td>
+            <td class="num">€ 0,012</td>
+            <td class="num">€ 1,43</td>
+          </tr>
+          <tr>
+            <td>B</td>
+            <td>Haiku 5.5</td>
+            <td class="num">0 van 10</td>
+            <td class="num">76 van 96</td>
+            <td class="num">1.630</td>
+            <td class="num">€ 0,0010</td>
+            <td class="num">€ 0,12</td>
+          </tr>
+          <tr>
+            <td>C</td>
+            <td>Opus 5.5</td>
+            <td class="num">3 van 10</td>
+            <td class="num">87 van 96</td>
+            <td class="num">971</td>
+            <td class="num">€ 0,026</td>
+            <td class="num">€ 3,18</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="muted">Binnen mijn foutmarge (77 tot 80 van 96): A ja, B net niet (76), C niet (87). Eén run per setup.</p>
+
+    <div class="choice">
+      <strong>Mijn keuze: Opus 5.5, effort medium.</strong>
+      <p class="muted" style="margin:6px 0 0">Kost per run €0,026, per jaar €3,18.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>3. Value chain per jaar</h2>
+    <div class="stats">
+      <div class="stat">
+        <div class="label">Netto per jaar</div>
+        <div class="value big">€ 5.568</div>
+        <div class="note">bij 78,5 van 96 (midden foutmarge)</div>
+      </div>
+      <div class="stat">
+        <div class="label">Bereik</div>
+        <div class="value">€ 5.456 tot € 5.681</div>
+        <div class="note">bij 77 tot 80 van 96</div>
+      </div>
+      <div class="stat">
+        <div class="label">Met Opus, 87 van 96</div>
+        <div class="value">€ 6.206</div>
+        <div class="note">één run</div>
+      </div>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <tbody>
+          <tr><th>Handtijd per plaatsbezoek</th><td class="num">2 u = 120 min (schatting, nog niet gemeten)</td></tr>
+          <tr><th>&nbsp;&nbsp;Notities teruglezen</th><td class="num">15 min (geschat door mij)</td></tr>
+          <tr><th>&nbsp;&nbsp;Lengtes berekenen</th><td class="num">40 min (geschat door mij)</td></tr>
+          <tr><th>&nbsp;&nbsp;Bochten en kabelgoten tellen</th><td class="num">35 min (geschat door mij)</td></tr>
+          <tr><th>&nbsp;&nbsp;Uittypen en nakijken</th><td class="num">30 min (geschat door mij)</td></tr>
+          <tr><th>Met de tool per plaatsbezoek</th><td class="num">27,1 min</td></tr>
+          <tr><th>Winst per plaatsbezoek</th><td class="num">92,9 min</td></tr>
+          <tr><th>Uren per jaar (120 plaatsbezoeken)</th><td class="num">185,7 u</td></tr>
+          <tr><th>Uurkost voor de werkgever</th><td class="num">€ 30 (aanname)</td></tr>
+          <tr><th>Waarde per jaar</th><td class="num">€ 5.572</td></tr>
+          <tr><th>Kost van de tool per jaar</th><td class="num">€ 3,18</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>Zwakste cijfer: de handtijd.</strong> Is die 1 u in plaats van 2 u, dan is het netto € 2.625 per jaar. Dat is € 2.944 minder. De foutmarge geeft een spreiding van € 225. De handtijd telt dus ruim 13 keer zwaarder.</p>
+    <p class="muted">Nog niet gemeten: de handtijd zelf, de uitsplitsing in vier stappen (geschat door mij) en het aantal plaatsbezoeken per maand.</p>
+  </section>
+
+  <footer>Bronnen: build/foutmarge.md, build/modellen.md, build/kosten.md, build/value-chain.md.</footer>
+</main>
+</body>
+</html>
