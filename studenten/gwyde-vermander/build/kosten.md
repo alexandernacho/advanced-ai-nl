@@ -23,3 +23,13 @@ Ander model, zelfde volume (1.440 runs, 13,4k input + 1,1k output per run):
 | Opus 5.5 | € 0,068 | € 97,98 |
 
 Volume voor Sporza (scenario vanaf 14 oktober 2026): ± 950 renners, één beoordeling per jaar vóór het voorjaarsspel (bron: Sporza, 900 tot 1.000 renners). Kost: 950 × € 0,017 = ± € 16 per jaar (lage schatting: € 8). Bij 10× (9.500 runs): ± € 162. Bij 1.000× (950.000 runs): ± € 16.150. Het volume 'eigen gebruik' hierboven hoort bij mijn eerste scenario.
+
+## Gecorrigeerd in week 5 (21 oktober 2026)
+
+In week 4 rekende ik met de prijs van Haiku 4.5, maar /cost toonde claude-haiku-5-5. Haiku 5.5 kost een tiende: input $ 0,10, output $ 0,50 per miljoen tokens (prijstabel week 5). De dollars in /cost waren ook fout: Claude Code rekende Haiku 5.5 aan de prijs van Opus.
+
+| Model | Mijn deel | Kost per run | Sporza per jaar (950 runs) | 10× | 1.000× |
+|---|---:|---:|---:|---:|---:|
+| Haiku 5.5 (gecorrigeerd) | 14,5k (± 13,4k input, 1,1k output) | $ 0,00189 = € 0,0017 | ± € 1,62 | ± € 16 | ± € 1.615 |
+
+Lage schatting (3,2k input + 1,1k output): $ 0,00087 = € 0,0008 per run.

@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>
+:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{margin:0;font:14px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+img{max-width:100%}
+[hidden]{display:none!important}
+</style>
+<title>Vorm uit nieuwsberichten</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+</head>
+<body>
+<style>
+/* Layout: één kolom, tegels bovenaan, daarna secties met tabellen. Max 62rem. */
+:root{
+  --paper:#f2f5f7; --surface:#ffffff; --surface-2:#e9eef2;
+  --ink:#14202a; --ink-soft:#55646f; --line:#d3dbe2;
+  --accent:#1f5f8b; --accent-soft:#e2edf4;
+  --good:#2b7a4b; --bad:#a63e3d;
+  --f-ui:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --f-num:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#0f151a; --surface:#172028; --surface-2:#1f2a33;
+    --ink:#e3eaef; --ink-soft:#97a6b2; --line:#2a353f;
+    --accent:#72b4de; --accent-soft:#1a2a35;
+    --good:#3f7d57; --bad:#e08280;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0f151a; --surface:#172028; --surface-2:#1f2a33;
+  --ink:#e3eaef; --ink-soft:#97a6b2; --line:#2a353f;
+  --accent:#72b4de; --accent-soft:#1a2a35;
+  --good:#3f7d57; --bad:#e08280;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-ui);line-height:1.55;font-size:15px}
+.wrap{max-width:62rem;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 48px;display:flex;flex-direction:column;gap:30px}
+h1,h2,h3{text-wrap:balance;margin:0;line-height:1.2}
+h1{font-size:1.75rem;letter-spacing:-.02em;font-weight:700}
+h2{font-size:1.1rem;letter-spacing:-.01em;font-weight:700}
+h3{font-size:.95rem;font-weight:650;margin-bottom:4px}
+p{margin:0}
+code{font-family:var(--f-num);font-size:.86em}
+.kicker{font-size:.72rem;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-soft);font-weight:650}
+.lede{color:var(--ink-soft);max-width:62ch}
+header.mast{display:flex;flex-direction:column;gap:9px;border-bottom:2px solid var(--ink);padding-bottom:18px}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:3px}
+.chip{font-size:.74rem;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:3px 10px;color:var(--ink-soft)}
+.chip strong{color:var(--ink);font-weight:650}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(13.5rem,1fr));gap:12px}
+.tile{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 15px;display:flex;flex-direction:column;gap:5px;min-width:0}
+.tile .lab{font-size:.74rem;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-soft);font-weight:650}
+.big{font-family:var(--f-num);font-size:1.8rem;font-variant-numeric:tabular-nums;letter-spacing:-.02em;line-height:1.05}
+.tile .sub{font-size:.8rem;color:var(--ink-soft)}
+.verdict{display:flex;gap:13px;align-items:flex-start;background:var(--surface);border:1px solid var(--line);border-left:5px solid var(--bad);border-radius:8px;padding:14px 16px}
+.stamp{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--bad);border:1.5px solid var(--bad);border-radius:5px;padding:3px 8px;white-space:nowrap}
+section{display:flex;flex-direction:column;gap:12px}
+.srchead{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:7px}
+.src{font-size:.72rem;color:var(--ink-soft);font-family:var(--f-num)}
+.bars{display:flex;flex-direction:column;gap:11px}
+.bar{display:grid;grid-template-columns:8.5rem 1fr;gap:12px;align-items:center}
+.bar .nm{font-size:.84rem;font-weight:600;min-width:0}
+.bar .nm span{display:block;font-weight:400;color:var(--ink-soft);font-size:.76rem}
+.track{position:relative;height:26px;background:var(--surface-2);border:1px solid var(--line);border-radius:5px;min-width:0}
+.track i{position:absolute;top:-1px;bottom:-1px;width:1px;background:var(--line)}
+.band{position:absolute;top:3px;bottom:3px;background:var(--accent);border-radius:3px}
+.band b{position:absolute;right:7px;top:50%;transform:translateY(-50%);font-family:var(--f-num);font-size:.72rem;color:#fff;font-weight:700;white-space:nowrap}
+.band.pt b{right:auto;left:calc(100% + 7px);color:var(--ink)}
+.scale{display:flex;justify-content:space-between;font-family:var(--f-num);font-size:.68rem;color:var(--ink-soft);padding-left:9.5rem}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:9px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:.86rem}
+th,td{text-align:left;padding:9px 11px;border-bottom:1px solid var(--line);vertical-align:top}
+thead th{font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);background:var(--surface-2);white-space:nowrap}
+tbody tr:last-child td{border-bottom:0}
+td.n,th.n{text-align:right;font-family:var(--f-num);font-variant-numeric:tabular-nums;white-space:nowrap}
+tr.tot td{font-weight:700;background:var(--accent-soft)}
+.pill{display:inline-block;font-size:.72rem;font-weight:650;border-radius:999px;padding:2px 8px;white-space:nowrap}
+.pill.ok{background:var(--accent-soft);color:var(--accent)}
+.pill.pick{background:var(--good);color:#fff}
+.note{font-size:.82rem;color:var(--ink-soft);max-width:74ch}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:15px 16px;display:flex;flex-direction:column;gap:10px}
+.pick-row{display:flex;flex-wrap:wrap;gap:9px;align-items:center}
+.pick-row .big{font-size:1.3rem}
+.verd{font-weight:650;max-width:74ch}
+footer{border-top:1px solid var(--line);padding-top:14px;font-size:.78rem;color:var(--ink-soft);display:flex;flex-direction:column;gap:5px}
+@media (max-width:460px){
+  h1{font-size:1.45rem}
+  .bar{grid-template-columns:1fr;gap:5px}
+  .scale{padding-left:0}
+  .big{font-size:1.55rem}
+}
+</style>
+
+<div class="wrap">
+
+<header class="mast">
+  <p class="kicker">Dashboard week 5 &middot; bijgewerkt 27 oktober 2026</p>
+  <h1>Vorm uit nieuwsberichten</h1>
+  <p class="lede">De tool leest twee tot vier gedateerde nieuwsberichten over één wielrenner en geeft precies één label voor de fysieke toestand van die renner nu: uitgeschakeld, in herstel, vermoeid, goed of geen info.</p>
+  <div class="chips">
+    <span class="chip">Model in productie <strong>Sonnet 5.5</strong></span>
+    <span class="chip">Effort <strong>medium</strong></span>
+    <span class="chip">Prompt <strong>v3</strong></span>
+    <span class="chip">Testset <strong>n = 20</strong></span>
+  </div>
+</header>
+
+<div class="tiles">
+  <div class="tile">
+    <span class="lab">Score, model in productie</span>
+    <span class="big">14/20</span>
+    <span class="sub">Bereik 14 tot 14 &middot; n = 20 &middot; 3 runs &middot; Sonnet 5.5 &middot; bij n = 10 was dit 8/10</span>
+  </div>
+  <div class="tile">
+    <span class="lab">Netto per jaar</span>
+    <span class="big">± € 1.935</span>
+    <span class="sub">Bereik € 1.751 tot € 1.935 met mijn foutmarge &middot; bij n = 10 was dit ± € 2.307</span>
+  </div>
+  <div class="tile">
+    <span class="lab">Kost van de tool</span>
+    <span class="big">€ 24,55</span>
+    <span class="sub">Per jaar bij 950 runs &middot; € 0,0258 per run</span>
+  </div>
+</div>
+
+<div class="verdict">
+  <span class="stamp">Ingetrokken</span>
+  <div>
+    <h3>Mijn claim: "v3 werkt beter dan v2"</h3>
+    <p class="note">De bereiken overlappen volledig: v2 haalt 13 tot 14 op 20, v3 haalt 13 tot 14 op 20 (n = 20, 3 runs per versie, Opus 5.5). Bij n = 10 was dat 7 tot 8 op 10 voor beide. Tien inputs meer maken het verschil dus niet aantoonbaar, en de claim blijft ingetrokken.</p>
+  </div>
+</div>
+
+<section>
+  <div class="srchead">
+    <h2>Foutmarge: hoeveel schommelt mijn score vanzelf?</h2>
+    <span class="src">foutmarge.md</span>
+  </div>
+  <div class="bars">
+    <div class="bar">
+      <span class="nm">Prompt v2<span>Opus 5.5 &middot; 3 runs</span></span>
+      <div class="track"><i style="left:10%"></i><i style="left:20%"></i><i style="left:30%"></i><i style="left:40%"></i><i style="left:50%"></i><i style="left:60%"></i><i style="left:70%"></i><i style="left:80%"></i><i style="left:90%"></i><div class="band" style="left:65%;right:30%"><b>13 &ndash; 14</b></div></div>
+    </div>
+    <div class="bar">
+      <span class="nm">Prompt v3<span>Opus 5.5 &middot; 3 runs</span></span>
+      <div class="track"><i style="left:10%"></i><i style="left:20%"></i><i style="left:30%"></i><i style="left:40%"></i><i style="left:50%"></i><i style="left:60%"></i><i style="left:70%"></i><i style="left:80%"></i><i style="left:90%"></i><div class="band" style="left:65%;right:30%"><b>13 &ndash; 14</b></div></div>
+    </div>
+    <div class="bar">
+      <span class="nm">v3 op Sonnet 5.5<span>in productie &middot; 3 runs</span></span>
+      <div class="track"><i style="left:10%"></i><i style="left:20%"></i><i style="left:30%"></i><i style="left:40%"></i><i style="left:50%"></i><i style="left:60%"></i><i style="left:70%"></i><i style="left:80%"></i><i style="left:90%"></i><div class="band pt" style="left:69%;right:29%"><b>14</b></div></div>
+    </div>
+  </div>
+  <div class="scale"><span>0</span><span>10</span><span>20</span></div>
+  <p class="note">Mijn foutmarge is 1 punt op 20: dezelfde prompt op dezelfde twintig inputs geeft niet elke keer hetzelfde cijfer. Een verschil van 1 punt is dus geen verschil. Sonnet 5.5 haalde drie keer 14 op 20, maar wisselde wel van antwoord per input (T02 en T03): een stabiel cijfer is niet hetzelfde als een stabiel antwoord.</p>
+  <p class="note">De tien nieuwe inputs zijn moeilijker: elke opstelling haalt daar 6 op 10, in elke run. Alle verschillen tussen de versies en de modellen op n = 20 komen dus van de eerste tien inputs.</p>
+  <p class="note">Wat de score tegenhoudt: op de nieuwe tien zijn T12, T16, T17 en T19 fout in alle 12 runs van 27 oktober, bij elk model en bij beide promptversies. Op de eerste tien bleef T09 in 11 van de 12 runs fout. Dat is geen schommeling, dat is mijn prompt of mijn eigen antwoord.</p>
+</section>
+
+<section>
+  <div class="srchead">
+    <h2>Vier inputs waar het model en ik niet overeenkomen</h2>
+    <span class="src">foutmarge.md &middot; modellen.md</span>
+  </div>
+  <div class="box">
+    <div class="tw">
+      <table>
+        <thead><tr><th>Input</th><th>Mijn juiste antwoord</th><th>Wat de modellen gaven</th><th class="n">Fout in</th></tr></thead>
+        <tbody>
+          <tr><td>T12 Raccagni</td><td>in herstel</td><td>uitgeschakeld</td><td class="n">12 / 12</td></tr>
+          <tr><td>T16 Jorgenson</td><td>goed</td><td>geen info</td><td class="n">12 / 12</td></tr>
+          <tr><td>T17 Mollema</td><td>geen info</td><td>vermoeid</td><td class="n">12 / 12</td></tr>
+          <tr><td>T19 Nieuwenhuis</td><td>in herstel</td><td>geen info (10 &times;), vermoeid (2 &times;)</td><td class="n">12 / 12</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="verd">Op deze vier inputs gaven Haiku 5.5, Sonnet 5.5 en Opus 5.5 in elke run hetzelfde andere label dan mijn juiste antwoord, bij beide promptversies.</p>
+    <p class="note">Twaalf runs per input: 3 runs &times; v2 op Opus, v3 op Opus, v3 op Haiku en v3 op Sonnet. Dat alle drie de modellen hier hetzelfde kiezen, wijst eerder op mijn kant dan op het model: mijn juiste antwoord of mijn labeldefinitie is hier mogelijk niet duidelijk genoeg. Ik heb mijn antwoorden niet aangepast voor deze run. Volgende stap: vóór de volgende run T12, T16, T17 en T19 en mijn labeldefinities herbekijken.</p>
+  </div>
+</section>
+
+<section>
+  <div class="srchead">
+    <h2>Drie setups: score tegenover kost</h2>
+    <span class="src">modellen.md</span>
+  </div>
+  <div class="tw">
+    <table>
+      <thead>
+        <tr>
+          <th>Setup</th><th>Model</th><th>Effort</th>
+          <th class="n">Bereik n = 20 (3 runs)</th><th class="n">Bereik n = 10</th>
+          <th>Binnen foutmarge</th><th class="n">Output-tokens</th>
+          <th class="n">Kost per run</th><th class="n">Per jaar (950 runs)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>A</td><td>Sonnet 5.5 <span class="pill pick">keuze</span></td><td>medium</td><td class="n">14 &ndash; 14</td><td class="n">8 &ndash; 8</td><td><span class="pill ok">ja</span></td><td class="n">191</td><td class="n">€ 0,0258</td><td class="n">€ 24,55</td></tr>
+        <tr><td>B</td><td>Haiku 5.5</td><td>medium</td><td class="n">13 &ndash; 14</td><td class="n">7 &ndash; 8</td><td><span class="pill ok">ja</span></td><td class="n">498</td><td class="n">€ 0,0015</td><td class="n">€ 1,41</td></tr>
+        <tr><td>C</td><td>Opus 5.5</td><td>standaard</td><td class="n">13 &ndash; 14</td><td class="n">7 &ndash; 8</td><td><span class="pill ok">ja</span></td><td class="n">236</td><td class="n">€ 0,0525</td><td class="n">€ 49,89</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note">Alle drie vallen binnen mijn foutmarge van 13 tot 14 op 20. Opus 5.5 kost 35 keer meer dan Haiku 5.5 en levert geen betere score. De output-tokens zijn gemeten op de nieuwe inputs T11 tot T20, gemiddeld per input over drie runs; de kost per run komt uit de meting van 21 oktober en is niet herrekend. Kost per run = 13.400 input-tokens &times; de inputprijs + de gemiddelde output-tokens &times; de outputprijs, met 1 dollar = 0,90 euro; zelf gerekend, niet overgenomen uit <code>/cost</code>.</p>
+  <p class="note">De Opus-runs zijn gedraaid zonder <code>--effort medium</code>, dus met de standaard effort. Op dat ene punt zijn de drie reeksen niet identiek.</p>
+</section>
+
+<section>
+  <div class="srchead">
+    <h2>Mijn keuze</h2>
+    <span class="src">modellen.md &middot; kosten.md</span>
+  </div>
+  <div class="box">
+    <div class="pick-row">
+      <span class="big">Sonnet 5.5</span>
+      <span class="chip">effort <strong>medium</strong></span>
+      <span class="chip">€ 0,0258 per run</span>
+      <span class="chip">€ 24,55 per jaar</span>
+    </div>
+    <p class="note">Sonnet 5.5 haalt in 3 runs telkens 14 op 20, en haalde bij n = 10 telkens 8 op 10, al wisselt het per input bij T02 en T03. Haiku 5.5 haalt 7 tot 8 op 10 en is 17 keer goedkoper, maar ik wil een model dat consequenter scoort. Voor Sporza is het verschil in kost klein: ± € 24,55 per jaar tegenover ± € 1,41 bij 950 runs.</p>
+    <p class="note">Mijn gok vóór de runs was dat Opus het best zou scoren. Dat klopte niet: Sonnet scoorde even goed of beter, voor de helft van de prijs. Dat Sonnet goed genoeg zou zijn, klopte wel.</p>
+    <p class="note">Correctie uit week 4: ik rekende toen met de prijs van Haiku 4.5, terwijl ik Haiku 5.5 kreeg. Gecorrigeerd kost Haiku 5.5 ± € 0,0017 per run en ± € 1,62 per jaar, gerekend op 13,4k input en 1,1k output. In de tabel hierboven staat Haiku op gemeten output-tokens, vandaar € 1,41.</p>
+  </div>
+</section>
+
+<section>
+  <div class="srchead">
+    <h2>Value chain met n = 20</h2>
+    <span class="src">waarde.md</span>
+  </div>
+  <div class="tw">
+    <table>
+      <thead>
+        <tr><th>Schakel</th><th>Bij 14/20 (Sonnet)</th><th>Bij 13/20 (ondergrens)</th><th>Bron</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1. Met de hand</td><td>600 s (zoeken 120 + lezen 450 + label 30)</td><td>600 s</td><td>geschat</td></tr>
+        <tr><td>Score</td><td>14/20 (3 runs)</td><td>13/20 (laagste uit foutmarge)</td><td>gemeten</td></tr>
+        <tr><td>Fouten herstellen</td><td>30% &times; 480 s = 144 s</td><td>35% &times; 480 s = 168 s</td><td>geschat</td></tr>
+        <tr><td>2. Met de tool</td><td class="n">346 s</td><td class="n">370 s</td><td>gemeten en geschat</td></tr>
+        <tr><td>3. Winst per renner</td><td class="n">254 s</td><td class="n">230 s</td><td></td></tr>
+        <tr><td>4. Volume</td><td class="n">950 per jaar</td><td class="n">950</td><td>Sporza</td></tr>
+        <tr><td>5. Uren gewonnen</td><td class="n">± 67 u</td><td class="n">± 61 u</td><td></td></tr>
+        <tr><td>6. Uurkost werkgever</td><td>€ 19,50 bruto &times; 1,5 = € 29,25</td><td>idem</td><td>aanname</td></tr>
+        <tr><td>Waarde</td><td class="n">€ 1.960</td><td class="n">€ 1.775</td><td></td></tr>
+        <tr><td>7. Kost van de tool</td><td class="n">± € 24,55</td><td class="n">idem</td><td>gemeten</td></tr>
+        <tr class="tot"><td>8. Netto per jaar</td><td class="n">± € 1.935</td><td class="n">± € 1.751</td><td></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note">Een fout herstellen = 480 s (lezen 450 + label 30): het zoeken is bij de tool al gebeurd. Uurkost voor de werkgever = bruto &times; 1,5, de vuistregel voor vakantiegeld, dertiende maand en sociale bijdragen.</p>
+  <p class="note"><strong>Bereik.</strong> Met mijn foutmarge op n = 20: ± € 1.751 tot ± € 1.935 per jaar. Bij n = 10 was dat ± € 1.935 tot ± € 2.307 per jaar.</p>
+</section>
+
+<section>
+  <div class="srchead">
+    <h2>Mijn zwakste cijfer</h2>
+    <span class="src">waarde.md</span>
+  </div>
+  <div class="box">
+    <div class="tw">
+      <table>
+        <thead><tr><th>Wat verandert</th><th class="n">Effect op het netto (bij 14/20)</th></tr></thead>
+        <tbody>
+          <tr><td>Foutmarge: 14/20 naar 13/20</td><td class="n">&minus; € 184</td></tr>
+          <tr><td>Leestijd de helft (225 s in plaats van 450 s)</td><td class="n">&minus; € 1.215 (naar ± € 720)</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="verd">De leestijd beweegt het netto ruim zes keer meer dan de foutmarge. De leestijd blijft dus mijn zwakste cijfer, niet mijn score.</p>
+    <p class="note">Waarom ik met 10 minuten met de hand reken: om een heel goed antwoord te krijgen moet je verschillende artikels lezen, en dat is ook wat de tool doet (twee tot vier berichten). De meeste mensen lezen maar één artikel. Dat kost de helft van de tijd, maar geeft een minder accuraat antwoord. De vergelijking met de helft van de leestijd is dus eigenlijk een vergelijking met slechter werk.</p>
+    <p class="note">De grootste open vraag blijft of Sporza vandaag al iemand de vorm van renners laat opvolgen.</p>
+  </div>
+</section>
+
+<footer>
+  <p>Gwyde Vermander &middot; Advanced AI for Business &middot; Arteveldehogeschool &middot; week 5, bijgewerkt 27 oktober 2026</p>
+  <p>Alle cijfers komen uit <code>build/foutmarge.md</code>, <code>build/modellen.md</code>, <code>build/kosten.md</code> en <code>build/waarde.md</code>. De hoofdcijfers zijn die van n = 20 (27 oktober 2026); waar het nuttig is staat het cijfer van n = 10 (21 oktober 2026) erbij. De testinputs staan hier niet op, alleen de ID's T01 tot T20.</p>
+</footer>
+
+</div>
+</body>
+</html>
