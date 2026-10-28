@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard kookkeuzehulp — week 5</title>
+  <style>
+    :root { --ink:#19222a; --muted:#5d6871; --paper:#f7f8f5; --card:#fff; --line:#d9dfda; --good:#116149; --bad:#9c2d2d; --accent:#e8a52c; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--paper); color:var(--ink); font:16px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif; }
+    main { max-width:760px; margin:auto; padding:24px 16px 48px; }
+    h1 { font-size:2rem; line-height:1.1; margin:0 0 6px; }
+    h2 { font-size:1.25rem; margin:0 0 12px; }
+    .sub, .note { color:var(--muted); }
+    .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; margin:20px 0; }
+    .card, section { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:18px; margin:16px 0; }
+    .label { color:var(--muted); font-size:.84rem; margin:0; }
+    .number { font-size:1.7rem; font-weight:750; margin:2px 0 0; }
+    .good { color:var(--good); } .bad { color:var(--bad); }
+    table { width:100%; border-collapse:collapse; font-size:.92rem; }
+    th, td { padding:10px 7px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; }
+    th { color:var(--muted); font-weight:650; }
+    .scroll { overflow-x:auto; }
+    blockquote { margin:12px 0 0; padding:10px 14px; background:#fff8e7; border-left:4px solid var(--accent); }
+    footer { color:var(--muted); font-size:.85rem; margin-top:22px; }
+    @media (max-width:480px) { .grid { grid-template-columns:1fr; } main { padding:18px 12px 36px; } h1 { font-size:1.7rem; } }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="sub">Week 5 · 28 oktober 2026</p>
+      <h1>Kookkeuzehulp: wat zeggen mijn cijfers?</h1>
+      <p class="sub">Dashboard met mijn foutmarge, modeltest, kosten en value chain.</p>
+    </header>
+
+    <div class="grid">
+      <article class="card">
+        <p class="label">Laatste prompt — foutmarge</p>
+        <p class="number">3–3 / 5</p>
+        <p class="note">n = 5 · 3 runs · GPT-6 Instant</p>
+      </article>
+      <article class="card">
+        <p class="label">Netto waarde</p>
+        <p class="number">€210,61</p>
+        <p class="note">per jaar · bereik: €210,61</p>
+      </article>
+    </div>
+
+    <section>
+      <h2>Mijn foutmarge</h2>
+      <div class="scroll">
+        <table>
+          <thead><tr><th>Versie</th><th>Run 1</th><th>Run 2</th><th>Run 3</th><th>Bereik</th></tr></thead>
+          <tbody>
+            <tr><td>v1, vorige prompt</td><td>1/5</td><td>1/5</td><td>1/5</td><td>1–1/5</td></tr>
+            <tr><td>v2, laatste prompt</td><td>3/5</td><td>3/5</td><td>3/5</td><td>3–3/5</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <blockquote><strong class="good">Claim bevestigd.</strong> De laagste score van v2 (3/5) ligt hoger dan de hoogste score van v1 (1/5).</blockquote>
+    </section>
+
+    <section>
+      <h2>Model en effort</h2>
+      <p class="note">Mijn gok was dat GPT-6 High het best zou scoren. Dat klopte niet.</p>
+      <div class="scroll">
+        <table>
+          <thead><tr><th>Setup</th><th>Model</th><th>Effort</th><th>Score</th><th>Foutmarge</th><th>Kost</th></tr></thead>
+          <tbody>
+            <tr><td>A</td><td>GPT-6</td><td>Medium</td><td>7/10</td><td>Ja: 3/5 op T01–T05</td><td>nog niet gemeten</td></tr>
+            <tr><td>B</td><td>GPT-5.6 Sol</td><td>Instant</td><td>8/10</td><td>Ja: 3/5 op T01–T05</td><td>nog niet gemeten</td></tr>
+            <tr><td>C</td><td>GPT-6</td><td>High</td><td>4/10</td><td class="bad">Nee: 1/5 op T01–T05</td><td>nog niet gemeten</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h2>Kostmeting</h2>
+      <p><strong>GPT-5.6 Terra, medium:</strong> €0,025 per run · €0,30 per maand bij 12 runs · €299,54 bij 12.000 runs.</p>
+      <p class="note">Gemeten: 36.869 invoertokens, 28.544 cache-gelezen tokens en 448 uitvoertokens. De kostmeting is apart van de GPT-5.6 Sol-modeltest.</p>
+    </section>
+
+    <section>
+      <h2>Mijn value chain</h2>
+      <div class="scroll">
+        <table>
+          <tbody>
+            <tr><th>Zonder tool</th><td>5 min ingrediënten bekijken en recepten vergelijken</td></tr>
+            <tr><th>Met tool</th><td>10 s draaien + 5 s nakijken + 40% × 5 min fouten herstellen = 2 min 15 s</td></tr>
+            <tr><th>Winst per taak</th><td>2 min 45 s</td></tr>
+            <tr><th>Volume</th><td>3 keer per week = 156 taken per jaar</td></tr>
+            <tr><th>Uren gewonnen</th><td>7,15 uur per jaar</td></tr>
+            <tr><th>Uurkost</th><td>€30 per uur (aanname: €20 bruto × 1,5)</td></tr>
+            <tr><th>Waarde</th><td>€214,50 per jaar</td></tr>
+            <tr><th>Toolkost</th><td>€3,89 per jaar</td></tr>
+            <tr><th>Netto</th><td><strong>€210,61 per jaar</strong></td></tr>
+            <tr><th>Bereik</th><td>€210,61 bij 3/5 én 3/5</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p><strong>Zwakste cijfer:</strong> de 5 minuten zonder tool is een schatting. Als dat 2 min 30 s is, daalt het netto naar €93,61 per jaar.</p>
+    </section>
+
+    <footer>Bronnen: eigen testset en metingen, 27–28 oktober 2026. Geen namen of vertrouwelijke foto’s opgenomen.</footer>
+  </main>
+</body>
+</html>

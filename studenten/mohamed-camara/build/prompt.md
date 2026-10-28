@@ -1,4 +1,4 @@
-# v1 — prompt
+# v2 — prompt
 
 Plak deze prompt in een nieuw tijdelijk gesprek met een AI die foto's kan lezen. Vul onderaan eerst de vaste receptenlijst in en voeg daarna één foto toe.
 
