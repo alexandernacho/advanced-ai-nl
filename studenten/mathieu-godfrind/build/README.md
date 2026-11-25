@@ -1,8 +1,8 @@
-# Leveranciersproduct screenen voor bol.com
+# Leveranciersproduct screenen voor Vinted
 
 ## De taak
 
-De tool checkt één productpagina van een leverancier (bv. Alibaba) en zegt of het product veilig in te kopen is om door te verkopen op bol.com.
+De tool checkt één productpagina van een leverancier (bv. Alibaba) en zegt of het product veilig in te kopen is om door te verkopen op Vinted.
 
 ## De labels
 
@@ -19,7 +19,7 @@ De tool checkt één productpagina van een leverancier (bv. Alibaba) en zegt of 
 | A | Namaak of merkrecht |
 | B | Wettelijke eisen (bv. geen CE waar dat verplicht is) |
 | C | Moeilijk te verzenden (breekbaar, groot, vloeistof, losse batterijen) |
-| D | Verboden of beperkt op bol.com |
+| D | Verboden of beperkt op Vinted |
 
 ## Waarom `ONZEKER`?
 
