@@ -14,10 +14,10 @@ Dus 3 van de 3 was goed. Na test 3 heb ik de regel "max 20 woorden per zin" toeg
 ## Mijn connector
 Ik heb Gmail gekoppeld in Claude op claude.ai. Ik vroeg naar mijn laatste Vinted-mails. Gmail vond vooral zendingsmeldingen van een eigen aankoop, geen verkopen.
 
-Ik heb ook CoinGecko gekoppeld in Claude Code. Ik vroeg: wat kost bitcoin nu in euro? Het antwoord was €53.521, en de prijs is in 24 uur met 2,07% gedaald (25 november, rond 11:31 UTC). Zonder de koppeling kon Claude geen actuele prijs geven. Dat is het verschil.
+Ik heb ook CoinGecko gekoppeld in Claude Code. Ik vroeg: wat kost bitcoin nu in euro? Het antwoord was €53.521, en de prijs is in 24 uur met 2,07% gedaald (25 november, rond 11:31 UTC). Zonder de koppeling kon Claude geen actuele prijs geven.
 
 ## Build, Connect, Buy
-Voor mijn capstone: een boekhoudprogramma voor mijn webshop en Vinted-verkoop.
+Voor mijn capstone: een boekhoudprogramma voor mijn Vinted-verkoop.
 
 |  | Voor mijn boekhouding | Wat zit er vast? |
 |---|---|---|
