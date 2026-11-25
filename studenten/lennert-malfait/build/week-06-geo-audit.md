@@ -5,7 +5,7 @@
 
 | # | Criterium | Score (0–3) | Bewijs |
 |---|---|---:|---|
-| 1 | Gestructureerde data (URL en gedetecteerde namen) | 3 | In de HTML van de geteste URL vond ik JSON-LD met de `@type`-namen `FAQPage`, `BreadcrumbList`, `Organization`, `SoftwareApplication` en `Offer`. Handmatig in de broncode gecontroleerd; geen externe validator-run. |
+| 1 | Gestructureerde data (URL en gedetecteerde namen) | 3 | De [Schema.org-validator](https://validator.schema.org/#url=https%3A%2F%2Fwww.fyxer.com%2Fai-email-assistants%2Foutlook) vond op de geteste URL `SoftwareApplication`, `Organization`, `BreadcrumbList` en `FAQPage`: 0 fouten en 0 waarschuwingen. Een `Offer` staat genest in de productdata, maar werd niet als apart type in de validatieresultaten getoond. |
 | 2 | Leesbaar voor AI | 3 | De pagina noemt expliciet Outlook, beschrijft inboxorganisatie en e-maildrafts en bevat concrete FAQ-antwoorden. De kop “The AI email assistant for Outlook” maakt het product en platform direct duidelijk. |
 | 3 | Vermeldingen door anderen | 3 | Fyxer komt voor in onafhankelijke vergelijkings-/reviewpagina's, waaronder [Command Mail](https://commandmail.app/en/compare/best-ai-email-assistant-outlook), [GetInboxZero](https://www.getinboxzero.com/blog/post/best-ai-email-assistants) en [Pidgy](https://www.pidgy-ai.com/fyxer-ai-review). Pagina's kunnen commerciële belangen hebben. |
 | 4 | Genoemd in AI-antwoorden (Live Query) | 1 | In de twee ChatGPT-zoekruns was Fyxer zichtbaar in gevonden vergelijkingsbronnen; het was niet de hoofdconclusie. Google AI Mode noemde Fyxer niet. Zie [Live Query-log](week-06-live-query.md). |
