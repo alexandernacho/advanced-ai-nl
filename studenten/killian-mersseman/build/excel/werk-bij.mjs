@@ -21,7 +21,7 @@ const companies = [
 const metrics = ['FCF','Schuld','Omzetgroei'];
 const statuses = ['Nog te controleren','Gecontroleerd','Onzeker','Niet gevonden'];
 const types = ['Kwartaal','Halfjaar','Negen maanden','Jaar','Peildatum'];
-const headers = ['Sleutel','Ticker','Maatstaf','Begin','Einde / peildatum','Periodetype','Bronwaarde','Bronvaluta','Methode','Definitie','Rapport','Bronpagina','Bronbedragen / bewijs','Controle','Opmerking','Broneenheid','USD per bronvaluta','Koersdatum','Waarde USD / groei'];
+const headers = ['Sleutel','Ticker','Maatstaf','Begin','Einde / peildatum','Periodetype','Bronwaarde','Bronvaluta','Methode','Definitie','Rapport','Bronpagina','Bronbedragen / bewijs','Controle','Opmerking','Broneenheid','USD per bronvaluta','Koersdatum','Waarde USD / groei','Gerapporteerd kwartaal','Officieel boekjaar'];
 const dateSerial = x => x == null ? null : Math.round((new Date(`${x}T00:00:00Z`).getTime() - Date.UTC(1899,11,30))/86400000);
 const dateString = x => x == null || x === '' ? null : typeof x === 'number' ? new Date(Date.UTC(1899,11,30)+x*86400000).toISOString().slice(0,10) : x instanceof Date ? x.toISOString().slice(0,10) : String(x).slice(0,10);
 const key = r => `${r.ticker}|${r.metric}|${r.end}`;
@@ -30,6 +30,8 @@ function validate(r) {
   for (const f of ['end', ...(r.metric==='Schuld' ? [] : ['start'])]) {
     if (typeof r[f]!=='string' || !/^\d{4}-\d{2}-\d{2}$/.test(r[f]) || new Date(`${r[f]}T00:00:00Z`).toISOString().slice(0,10)!==r[f]) throw Error(`Ongeldige datum: ${f}`);
   }
+  if (r.report_quarter && !/^Q[1-4]$/.test(r.report_quarter)) throw Error('Ongeldig gerapporteerd kwartaal');
+  if (r.fiscal_year != null && (!Number.isInteger(r.fiscal_year) || r.fiscal_year < 1900 || r.fiscal_year > 9999)) throw Error('Ongeldig officieel boekjaar');
   if (r.start && r.start > r.end) throw Error('Begin valt na einde');
   if (!types.includes(r.period_type) || !statuses.includes(r.status)) throw Error('Ongeldig periodetype of controlestatus');
   if (r.metric==='Schuld' && r.period_type!=='Peildatum') throw Error('Schuld vereist Peildatum');
@@ -39,7 +41,7 @@ function validate(r) {
   if (r.value!==null && (!r.source || !r.page || !r.definition || !r.method)) throw Error('Bron, pagina, definitie en methode zijn verplicht');
   if (r.value===null && !r.note) throw Error('Ontbrekende waarde vereist uitleg');
 }
-const fromRow = a => ({ ticker:a[1],metric:a[2],start:dateString(a[3]),end:dateString(a[4]),period_type:a[5],value:a[6]===''||a[6]==null?null:a[6],currency:a[7]||null,method:a[8],definition:a[9],source:a[10],page:a[11],evidence:a[12],status:a[13],note:a[14] });
+const fromRow = a => ({ ticker:a[1],metric:a[2],start:dateString(a[3]),end:dateString(a[4]),period_type:a[5],value:a[6]===''||a[6]==null?null:a[6],currency:a[7]||null,method:a[8],definition:a[9],source:a[10],page:a[11],evidence:a[12],status:a[13],note:a[14],report_quarter:a[19]||null,fiscal_year:a[20]||null });
 let records = [];
 let existing = false;
 let savedFilters = null;
@@ -52,23 +54,35 @@ try {
   savedFilters = previous.worksheets.getItem('Grafieken').getRange('B5:B10').values;
   savedQuarterSelection=readSelection(previous.worksheets.getItem('Grafieken'));
 } catch(e) { if (existing) throw e; if (e.code!=='ENOENT') throw e; }
-let incomingPath=null,confirmTicker=null,fxFile=null;
+const incomingPaths=[];
+let confirmTicker=null,fxFile=null,graphSelection=null;
 const args=process.argv.slice(2);
 for(let i=0;i<args.length;i++){
  if(args[i]==='--bevestig')confirmTicker=args[++i];
  else if(args[i]==='--koersenbestand')fxFile=args[++i];
- else if(args[i].startsWith('--')||incomingPath)throw Error('Onbekend of dubbel argument');
- else incomingPath=args[i];
+ else if(args[i]==='--vergelijk'){
+  const match=/^(\d{4})-(Q[1-4])$/.exec(args[++i]||'');
+  if(!match)throw Error('Gebruik --vergelijk JJJJ-QN');
+  graphSelection={type:'Kwartaal',year:Number(match[1]),quarter:match[2]};
+ }
+ else if(args[i].startsWith('--'))throw Error('Onbekend argument');
+ else incomingPaths.push(args[i]);
 }
 if(confirmTicker&&!companies.some(c=>c[0]===confirmTicker))throw Error('Onbekende bevestigingsticker');
-if (incomingPath) {
+for (const incomingPath of incomingPaths) {
   const incoming = JSON.parse(await fs.readFile(path.resolve(incomingPath),'utf8')).records;
   if (!Array.isArray(incoming) || incoming.length===0) throw Error('JSON vereist een niet-lege records-lijst');
   for (const r of incoming) {
     validate(r);
     const old = records.find(x=>key(x)===key(r));
     if (old) {
-      if (JSON.stringify(toRow(old))===JSON.stringify(toRow(r))) continue;
+      if (JSON.stringify(toRow(old))===JSON.stringify(toRow(r))) {
+        for (const field of ['report_quarter','fiscal_year']) {
+          if (old[field]!=null && r[field]!=null && old[field]!==r[field]) throw Error(`Conflicterende kwartaalinformatie: ${key(r)}`);
+          old[field]??=r[field];
+        }
+        continue;
+      }
       throw Error(`Bestaande meting niet overschreven: ${key(r)}. Controleer of corrigeer deze eerst in Excel.`);
     }
     records.push(r);
@@ -107,12 +121,13 @@ for(let i=0;i<currencies.length;i++)exchange.getRange(`C${i+6}`).formulas=[[`=$B
 exchange.getRange('A:A').format.columnWidth=12;exchange.getRange('B:C').format.columnWidth=24;exchange.getRange('D:D').format.columnWidth=17;exchange.getRange('E:E').format.columnWidth=85;
 exchange.getRange(`B6:B${currencies.length+5}`).setNumberFormat('0.000000');exchange.getRange(`C6:C${currencies.length+5}`).setNumberFormat('0.00000000');exchange.getRange(`D6:D${currencies.length+5}`).setNumberFormat('dd-mm-yyyy');
 exchange.freezePanes.freezeRows(5);
-base(hist,`A1:S${Math.max(16,records.length+6)}`);hist.tabColor='#D8C5A5';
+base(hist,`A1:U${Math.max(16,records.length+6)}`);hist.tabColor='#D8C5A5';
 title(hist,'Historiek per bedrijf','Bronbedragen blijven behouden. USD-bedragen gebruiken de recentst opgehaalde ECB-koers; groei blijft ongewijzigd.');
-hist.getRange('A5:S5').values=[headers];
+hist.getRange('A5:U5').values=[headers];
 if(records.length) hist.getRange(`A6:P${records.length+5}`).values=records.map(toRow);
 for(let i=0;i<records.length;i++){
  const r=records[i],n=i+6,fxrow=currencies.indexOf(r.currency)+6;
+ hist.getRange(`T${n}:U${n}`).values=[[r.report_quarter||null,r.fiscal_year??null]];
  if(r.metric==='Omzetgroei')hist.getRange(`S${n}`).formulas=[[`=IF(G${n}="","",G${n})`]];
  else if(r.value!==null){
   hist.getRange(`Q${n}`).formulas=[[`='Wisselkoersen'!C${fxrow}`]];
@@ -120,14 +135,14 @@ for(let i=0;i<records.length;i++){
   hist.getRange(`S${n}`).formulas=[[`=IF(G${n}="","",G${n}*Q${n})`]];
  }
 }
-hist.tables.add(`A5:S${Math.max(6,records.length+5)}`,true,'KwartaalHistoriek');
-header(hist,'A5:S5');
+hist.tables.add(`A5:U${Math.max(6,records.length+5)}`,true,'KwartaalHistoriek');
+header(hist,'A5:U5');
 hist.getRange('A:A').format.columnWidth=36;hist.getRange('B:C').format.columnWidth=15;
 hist.getRange('D:E').format.columnWidth=15;hist.getRange('F:I').format.columnWidth=18;
 hist.getRange('J:J').format.columnWidth=65;hist.getRange('K:L').format.columnWidth=30;
 hist.getRange('M:M').format.columnWidth=65;hist.getRange('N:N').format.columnWidth=23;
 hist.getRange('O:O').format.columnWidth=85;hist.getRange('P:P').format.columnWidth=14;
-hist.getRange('Q:S').format.columnWidth=24;
+hist.getRange('Q:U').format.columnWidth=24;
 hist.getRange(`Q6:Q${Math.max(6,records.length+5)}`).setNumberFormat('0.00000000');
 hist.getRange(`R6:R${Math.max(6,records.length+5)}`).setNumberFormat('dd-mm-yyyy');
 hist.getRange(`S6:S${Math.max(6,records.length+5)}`).setNumberFormat('#,##0.0;(#,##0.0);"—"');
@@ -207,14 +222,6 @@ for(let i=0;i<companies.length;i++){
 }
 graphs.getRange('B49:C58').setNumberFormat('#,##0.0;(#,##0.0);"—"');graphs.getRange('D49:D58').setNumberFormat('0.0%');
 graphs.getRange('A60').values=[['#N/A in de grafiekgegevens betekent dat voor die selectie geen getal beschikbaar is; het is geen nul.']];
-for(const [col,titleText,left,right,fmt] of [['B','FCF per bedrijf (miljoen USD)','A16','I30','#,##0.0'],['C','Financiële schuld per bedrijf (miljoen USD)','J16','R30','#,##0.0'],['D','Kwartaalomzetgroei tegenover vorig jaar','A32','I46','0.0%']]) {
- const chart=graphs.charts.add('bar',[graphs.getRange('A48:A58'),graphs.getRange(`${col}48:${col}58`)]);
- chart.title=titleText;chart.titleTextStyle.typeface='Arial';chart.titleTextStyle.fontSize=13;
- chart.hasLegend=false;chart.xAxis={axisType:'textAxis',textStyle:{typeface:'Arial',fontSize:10}};
- const metric=col==='B'?'FCF':col==='C'?'Schuld':'Omzetgroei';
- chart.yAxis={min:Math.min(0,...records.filter(r=>r.metric===metric&&r.value!==null).map(r=>r.metric==='Omzetgroei'?r.value:r.value*usdRate(fx,r.currency))),numberFormatCode:fmt,numberFormatSourceLinked:false,textStyle:{typeface:'Arial',fontSize:10}};
- chart.series.items[0].fill=colors.blue;chart.setPosition(left,right);
-}
 wb.recalculate();
 console.log((await wb.inspect({kind:'region',sheetId:'Vergelijking',range:'A6:H11',maxChars:3500,tableMaxRows:6,tableMaxCols:8})).ndjson);
 console.log((await wb.inspect({kind:'match',searchTerm:'#REF!|#DIV/0!|#VALUE!|#NAME\\?|#NUM!|#NULL!|#SPILL!|#CALC!',options:{useRegex:true,maxResults:20},maxChars:1500})).ndjson);
@@ -227,7 +234,16 @@ if(seedFCF?.value!=null&&graphs.getRange('B49').values[0][0]!==seedFCF.value) th
 if(savedFilters){graphs.getRange('B6:B10').values=savedFilters.slice(1);wb.recalculate();}
 const reportYears=records.map(r=>Number(r.end.slice(0,4)));
 const firstYear=Math.min(new Date().getUTCFullYear(),...reportYears)-1,lastYear=Math.max(new Date().getUTCFullYear()+5,...reportYears);
-applyQuarterControls(wb,{selection:savedQuarterSelection||{type:'Kwartaal',year:2026,quarter:'Q2'},years:Array.from({length:lastYear-firstYear+1},(_,i)=>firstYear+i),recordCount:records.length});
+applyQuarterControls(wb,{selection:graphSelection||savedQuarterSelection||{type:'Kwartaal',year:2026,quarter:'Q2'},years:Array.from({length:lastYear-firstYear+1},(_,i)=>firstYear+i),recordCount:records.length});
+wb.recalculate();
+for(const [col,titleText,left,right,fmt] of [['B','FCF per bedrijf (miljoen USD)','A16','I30','#,##0.0'],['C','Financiële schuld per bedrijf (miljoen USD)','J16','R30','#,##0.0'],['D','Kwartaalomzetgroei tegenover vorig jaar','A32','I46','0.0%']]) {
+ const chart=graphs.charts.add('bar',[graphs.getRange('A48:A58'),graphs.getRange(`${col}48:${col}58`)]);
+ chart.title=titleText;chart.titleTextStyle.typeface='Arial';chart.titleTextStyle.fontSize=13;
+ chart.hasLegend=false;chart.xAxis={axisType:'textAxis',textStyle:{typeface:'Arial',fontSize:10}};
+ const metric=col==='B'?'FCF':col==='C'?'Schuld':'Omzetgroei';
+ chart.yAxis={min:Math.min(0,...records.filter(r=>r.metric===metric&&r.value!==null).map(r=>r.metric==='Omzetgroei'?r.value:r.value*usdRate(fx,r.currency))),numberFormatCode:fmt,numberFormatSourceLinked:false,textStyle:{typeface:'Arial',fontSize:10}};
+ chart.series.items[0].fill=colors.blue;chart.setPosition(left,right);
+}
 wb.recalculate();
 if(process.env.PREVIEW==='1') for(const [sheetName,range,file] of [['Vergelijking','A1:J17','vergelijking'],['Grafieken','A1:R46','grafieken'],['Historiek','A1:I11','historiek'],['Historiek','J5:S11','bronverwijzingen'],['Wisselkoersen','A1:E17','wisselkoersen']]) {
  const img=await wb.render({sheetName,range,scale:1,format:'png'});await fs.writeFile(path.join(out,`${file}.png`),new Uint8Array(await img.arrayBuffer()));

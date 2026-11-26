@@ -21,26 +21,23 @@ export function applyQuarterControls(wb,{selection,years,recordCount=0}={}){
  s.getRange('B6').dataValidation={rule:{type:'list',values:['Kwartaal','Halfjaar','Negen maanden','Jaar']},inCellDropDown:true};
  s.getRange('B7').dataValidation={rule:{type:'list',values:[...new Set(years)].sort((a,b)=>a-b).map(String)},inCellDropDown:true};
  s.getRange('B8').dataValidation={rule:{type:'list',values:['Q1','Q2','Q3','Q4']},inCellDropDown:true};
- s.getRange('E5:E8').values=[['FCF begin'],['FCF einde'],['Kwartaal begin'],['Einde kwartaal / schuldpeildatum']];
- s.getRange('E:E').format.columnWidth=34;s.getRange('F:F').format.columnWidth=18;
- s.getRange('F7').formulas=[['=DATE($B$7,(VALUE(RIGHT($B$8,1))-1)*3+1,1)']];
- s.getRange('F8').formulas=[['=DATE($B$7,VALUE(RIGHT($B$8,1))*3+1,0)']];
- s.getRange('F5').formulas=[['=IF($B$6="Kwartaal",F7,IF($B$6="Halfjaar",IF(OR($B$8="Q2",$B$8="Q4"),DATE($B$7,IF($B$8="Q2",1,7),1),""),IF($B$6="Negen maanden",IF($B$8="Q3",DATE($B$7,1,1),""),IF($B$6="Jaar",IF($B$8="Q4",DATE($B$7,1,1),""),""))))']];
- s.getRange('F6').formulas=[['=IF(F5="","",F8)']];
- s.getRange('F5:F8').setNumberFormat('dd-mm-yyyy');
- s.getRange('A10').values=[['Halfjaar: kies Q2 of Q4. Negen maanden: Q3. Jaar: Q4. Datums worden automatisch berekend.']];
- s.getRange('A11').formulas=[['=IF($F$5="","Geen FCF-periode voor deze combinatie. Pas kwartaal of periodetype aan.","")']];
- s.getRange('A11').format.font={name:'Arial',size:10,color:'#9C2424'};
- s.getRange('H5').values=[['Kalenderkwartalen; afwijkende fiscale datums blijven apart.']];
+ s.getRange('E5:F8').clear({applyTo:'contents'});
+ s.getRange('A10').values=[['Jaar = kalenderjaar van de einddatum. Q1–Q4 = kwartaal volgens het rapport.']];
+ s.getRange('A11').values=[['Zonder kwartaalvermelding gebruikt Excel het kalenderkwartaal van de einddatum.']];
+ s.getRange('H5').values=[['Werkelijke periodes en officieel boekjaar staan in Historiek.']];
  const end=Math.max(2005,recordCount+5),range=c=>`'Historiek'!$${c}$6:$${c}$${end}`;
- for(let r=49;r<=58;r++)for(const [col,metric,extra]of[
-  ['B','FCF',`,${range('D')},$F$5,${range('E')},$F$6,${range('F')},$B$6`],
-  ['C','Schuld',`,${range('E')},$F$8`],
-  ['D','Omzetgroei',`,${range('D')},$F$7,${range('E')},$F$8`]
+ const startYear='DATE($B$7,1,1)', nextYear='DATE($B$7+1,1,1)';
+ const quarterStart='DATE($B$7,(VALUE(RIGHT($B$8,1))-1)*3+1,1)';
+ const quarterEnd='DATE($B$7,VALUE(RIGHT($B$8,1))*3+1,1)';
+ for(let r=49;r<=58;r++)for(const [col,metric,type]of[
+  ['B','FCF','$B$6'], ['C','Schuld','"Peildatum"'], ['D','Omzetgroei','"Kwartaal"']
  ]){
-  const criteria=`${range('B')},$A${r},${range('C')},"${metric}"${extra}`;
-  const body=`IF(COUNTIFS(${criteria},${range('G')},"<>")=0,NA(),SUMIFS(${range('S')},${criteria}))`;
-  s.getRange(`${col}${r}`).formulas=[[col==='B'?`=IF($F$5="",NA(),${body})`:`=${body}`]];
+  const criteria=`${range('B')},$A${r},${range('C')},"${metric}",${range('F')},${type},${range('G')},"<>"`;
+  const reported=`${criteria},${range('T')},$B$8,${range('E')},">="&${startYear},${range('E')},"<"&${nextYear}`;
+  const fallback=`${criteria},${range('T')},"",${range('E')},">="&${quarterStart},${range('E')},"<"&${quarterEnd}`;
+  const count=`COUNTIFS(${reported})`, fallbackCount=`COUNTIFS(${fallback})`;
+  const sum=args=>`SUMIFS(${range('S')},${args})`;
+  s.getRange(`${col}${r}`).formulas=[[`=IF(${count}=1,${sum(reported)},IF(AND(${count}=0,${fallbackCount}=1),${sum(fallback)},NA()))`]];
  }
  return selection;
 }
