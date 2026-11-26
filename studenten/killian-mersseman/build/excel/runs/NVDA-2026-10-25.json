@@ -1,0 +1,58 @@
+{
+  "records": [
+    {
+      "ticker": "NVDA",
+      "end": "2026-10-25",
+      "source": "NVDA-Q3-FY27.pdf | NVIDIA 17-11-2026 | https://nvidianews.nvidia.com/_gallery/download_pdf/6afcc55b3d633299c104d103/",
+      "status": "Nog te controleren",
+      "start": "2026-07-27",
+      "period_type": "Kwartaal",
+      "currency": "USD",
+      "metric": "FCF",
+      "value": 43777,
+      "method": "Gerapporteerd",
+      "definition": "Operationele kasstroom minus aankopen en aflossingen voor materiële en immateriële vaste activa.",
+      "page": "PDF p. 8, Reconciliation of GAAP to Non-GAAP Financial Measures",
+      "evidence": "USD miljoen: 48.253 − 4.422 − 54 = 43.777.",
+      "note": "Afzonderlijke fiscale kwartaalwaarde volgens NVIDIA-definitie.",
+      "report_quarter": "Q3",
+      "fiscal_year": 2027
+    },
+    {
+      "ticker": "NVDA",
+      "end": "2026-10-25",
+      "source": "NVDA-Q3-FY27.pdf | NVIDIA 17-11-2026 | https://nvidianews.nvidia.com/_gallery/download_pdf/6afcc55b3d633299c104d103/",
+      "status": "Onzeker",
+      "start": null,
+      "period_type": "Peildatum",
+      "currency": "USD",
+      "metric": "Schuld",
+      "value": 32371,
+      "method": "Berekend",
+      "definition": "Boekwaarde van kortlopende plus langlopende financiële schuld uit de balans.",
+      "page": "PDF p. 5, Condensed Consolidated Balance Sheets",
+      "evidence": "USD miljoen: kortlopende schuld — + langlopende schuld 32.371. Langlopende operationele leaseverplichtingen 5.777 apart.",
+      "note": "Operationele leases uitgesloten. Kortlopende operationele leases, financiële leases en eventuele renteloze obligaties niet afzonderlijk gespecificeerd in deze kwartaalpublicatie.",
+      "report_quarter": "Q3",
+      "fiscal_year": 2027
+    },
+    {
+      "ticker": "NVDA",
+      "end": "2026-10-25",
+      "source": "NVDA-Q3-FY27.pdf | NVIDIA 17-11-2026 | https://nvidianews.nvidia.com/_gallery/download_pdf/6afcc55b3d633299c104d103/",
+      "status": "Nog te controleren",
+      "start": "2026-07-27",
+      "period_type": "Kwartaal",
+      "currency": null,
+      "metric": "Omzetgroei",
+      "value": 1.03,
+      "method": "Gerapporteerd",
+      "definition": "Gerapporteerde kwartaalomzetgroei tegenover dezelfde periode vorig jaar.",
+      "page": "PDF p. 1, resultaten; p. 4, Condensed Consolidated Statements of Income",
+      "evidence": "USD miljoen: 115.844 versus 57.006. Rekenkundige groei 103.2137%; gerapporteerd 103%.",
+      "note": "Geen afzonderlijk percentage in constante valuta vermeld.",
+      "report_quarter": "Q3",
+      "fiscal_year": 2027
+    }
+  ]
+}

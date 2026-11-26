@@ -1,0 +1,58 @@
+{
+  "records": [
+    {
+      "ticker": "AMD",
+      "end": "2026-09-26",
+      "status": "Nog te controleren",
+      "metric": "FCF",
+      "start": "2026-06-28",
+      "period_type": "Kwartaal",
+      "value": 554,
+      "currency": "USD",
+      "method": "Gerapporteerd",
+      "definition": "Operationele kasstroom uit voortgezette activiteiten minus investeringen in materiële vaste activa.",
+      "source": "AMD-Q3-2026-bronnen.pdf",
+      "page": "Bundel p. 88 / 8-K Exhibit 99.1, gedrukte p. 12, FCF-reconciliatie.",
+      "evidence": "USD mln: 1.202 − 648 = 554.",
+      "note": "Non-GAAP, voortgezette activiteiten. Fiscaal kwartaal.",
+      "report_quarter": "Q3",
+      "fiscal_year": 2026
+    },
+    {
+      "ticker": "AMD",
+      "end": "2026-09-26",
+      "status": "Nog te controleren",
+      "metric": "Schuld",
+      "start": null,
+      "period_type": "Peildatum",
+      "value": 7079,
+      "currency": "USD",
+      "method": "Berekend",
+      "definition": "Boekwaarde van kortlopende plus langlopende financiële schuld.",
+      "source": "AMD-Q3-2026-bronnen.pdf",
+      "page": "Bundel p. 5, 18–19 / 10-Q Balans en noten 9–10.",
+      "evidence": "USD mln: 0 + 7.079. Enkel rentedragende notes: 7.125 hoofdsom minus 46 korting en emissiekosten.",
+      "note": "Operationele leases apart: 295 kortlopend + 1.837 langlopend (USD mln). Financiële leases zijn niet apart vermeld in de leasevoetnoot. Geen renteloze obligaties in de schuldstaat.",
+      "report_quarter": "Q3",
+      "fiscal_year": 2026
+    },
+    {
+      "ticker": "AMD",
+      "end": "2026-09-26",
+      "status": "Nog te controleren",
+      "metric": "Omzetgroei",
+      "start": "2026-06-28",
+      "period_type": "Kwartaal",
+      "value": 0.45,
+      "currency": null,
+      "method": "Gerapporteerd",
+      "definition": "Geconsolideerde omzetgroei tegenover hetzelfde fiscale kwartaal een jaar eerder.",
+      "source": "AMD-Q3-2026-bronnen.pdf",
+      "page": "Bundel p. 78 / 8-K Exhibit 99.1, gedrukte p. 2, GAAP Quarterly Financial Results.",
+      "evidence": "USD mln: 13.377 / 9.246 − 1 = 44.68%; gerapporteerd +45%.",
+      "note": "Gerapporteerd percentage circa 0,32 procentpunt hoger dan controleberekening. Fiscaal kwartaal.",
+      "report_quarter": "Q3",
+      "fiscal_year": 2026
+    }
+  ]
+}

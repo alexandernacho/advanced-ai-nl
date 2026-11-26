@@ -1,0 +1,59 @@
+{
+  "records": [
+    {
+      "metric": "FCF",
+      "start": "2026-07-01",
+      "period_type": "Kwartaal",
+      "value": 1413,
+      "currency": "USD",
+      "method": "Gerapporteerd",
+      "definition": "Operationele kasstroom voortgezette activiteiten min investeringsuitgaven en uitkeringen aan minderheidsbelangen",
+      "page": "3Q 2026 Earnings Supplemental Disclosure, dia 7, Non-GAAP adjustments",
+      "evidence": "1.560 - 40 - 107 = 1.413 miljoen USD",
+      "status": "Nog te controleren",
+      "note": "Bedrijfsdefinitie op basis van voortgezette activiteiten. Afzonderlijk kwartaal staat in de aanvullende cijfers.",
+      "ticker": "SPGI",
+      "end": "2026-09-30",
+      "source": "S&P Global 3Q 2026 Earnings Supplemental Disclosure (2026-10-27) | https://www.marketscreener.com/news/s-p-global-third-quarter-2026-supplemental-ce785cddda89f621",
+      "report_quarter": "Q3",
+      "fiscal_year": 2026
+    },
+    {
+      "metric": "Schuld",
+      "start": null,
+      "period_type": "Peildatum",
+      "value": 13062,
+      "currency": "USD",
+      "method": "Gerapporteerd",
+      "definition": "Boekwaarde kortlopende plus langlopende financiële schuld",
+      "page": "Gedrukte p. 6 Consolidated Balance Sheets en p. 31 leases",
+      "evidence": "2.448 + 10.614 = 13.062 miljoen USD",
+      "status": "Nog te controleren",
+      "note": "Operationele leases 118 kortlopend en 403 langlopend apart. Geen aparte financiële leasebedragen in leasenoot; geen apart opgegeven renteloze schuld in schuldnoot.",
+      "ticker": "SPGI",
+      "end": "2026-09-30",
+      "source": "SPGI-10-Q.pdf | https://www.sec.gov/Archives/edgar/data/64040/000006404026000058/spgi-20260930.htm",
+      "report_quarter": "Q3",
+      "fiscal_year": 2026
+    },
+    {
+      "metric": "Omzetgroei",
+      "start": "2026-07-01",
+      "period_type": "Kwartaal",
+      "value": 0.07,
+      "currency": null,
+      "method": "Gerapporteerd",
+      "definition": "Omzetgroei voortgezette activiteiten tegenover hetzelfde kwartaal vorig jaar",
+      "page": "Gedrukte p. 38, Consolidated Review",
+      "evidence": "3.678 / 3.443 - 1 = 6,83%; 7% gerapporteerd (verschil afgerond 0,17 procentpunt)",
+      "status": "Nog te controleren",
+      "note": "Historische omzet herwerkt voor afgestoten Mobility; constante valuta niet gebruikt.",
+      "ticker": "SPGI",
+      "end": "2026-09-30",
+      "source": "SPGI-10-Q.pdf | https://www.sec.gov/Archives/edgar/data/64040/000006404026000058/spgi-20260930.htm",
+      "report_quarter": "Q3",
+      "fiscal_year": 2026
+    }
+  ],
+  "publication_date": "2026-10-28"
+}

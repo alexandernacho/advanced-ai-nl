@@ -7,15 +7,17 @@ Bestand: `../../outputs/kwartaalopvolging/kwartaalopvolging.xlsx`.
 1. Geef één nieuw rapport met ticker aan de AI en gebruik `../prompt-v3-enkel-bedrijf.md`.
 2. De AI extraheert drie maatstaven, schrijft een JSON-run en voert `werk-bij.mjs` uit. Sluit het Excel-bestand tijdens de update.
 3. Open Excel en controleer de cijfers op de genoemde bronpagina’s. Zet de status per meting op `Gecontroleerd` in **Historiek**. Sla het bestand op vóór de volgende update.
-4. Bekijk **Vergelijking** voor de laatst aangeleverde periode per bedrijf en maatstaf in miljoen USD. Kies in **Grafieken** het FCF-periodetype (B6), jaar (B7) en kwartaal Q1–Q4 (B8). De datums in F5:F8 worden automatisch berekend. Schuld gebruikt het einde van het gekozen kwartaal; omzetgroei het gekozen kwartaal. Handmatig datums invullen is niet nodig.
+4. Bekijk **Vergelijking** voor de laatst aangeleverde periode per bedrijf en maatstaf in miljoen USD. Kies in **Grafieken** het FCF-periodetype (B6), jaar (B7) en kwartaal Q1–Q4 (B8). De selectie geldt voor alle drie de grafieken. Alleen vrije kasstroom gebruikt ook het gekozen FCF-periodetype.
 
-De kwartaalkeuze gebruikt kalenderkwartalen. Rapporten met afwijkende fiscale begin- of einddatums blijven correct gedateerd in Historiek en worden niet ongemerkt aan een ander kalenderkwartaal toegewezen. Alleen exact passende perioden verschijnen. Halfjaar-FCF kan bij Q2 (januari–juni) of Q4 (juli–december); negen maanden bij Q3 en jaar bij Q4. Een ongeldige combinatie krijgt een zichtbare melding en toont geen FCF, terwijl schuld en kwartaalgroei hun eigen kwartaal blijven volgen. Jaar en kwartaal blijven behouden bij volgende imports.
+Het jaarfilter gebruikt het kalenderjaar van de einddatum. Het kwartaalfilter gebruikt het kwartaal zoals het bedrijf het rapporteert. NVIDIA Q3 boekjaar 2027, afgesloten op 25 oktober 2026, verschijnt dus bij 2026 · Q3. Historiek bewaart de werkelijke datums, het gerapporteerde kwartaal en het officiële boekjaar. Oudere rijen zonder kwartaalvermelding gebruiken het kalenderkwartaal van de einddatum. Wanneer meerdere waarden voor dezelfde maatstaf en selectie overblijven, toont de grafiek een lege waarde om dubbeltelling te voorkomen.
 
 ## Automatisering
 
 ```sh
 node build/excel/werk-bij.mjs build/excel/runs/<nieuwe-run>.json
 ```
+
+Gebruik bij nieuwe runs `report_quarter` (Q1–Q4) en `fiscal_year` (het officiële boekjaar) zodra de bron die vermeldt. Voor meerdere runs mag je meerdere JSON-paden in één commando doorgeven. Met `--vergelijk 2026-Q3` open je de werkmap meteen op die vergelijking.
 
 De bestaande historiek en controlestatussen worden ingelezen. De sleutel is ticker + maatstaf + einddatum. Nieuwe sleutels worden toegevoegd; conflicten worden geweigerd zonder het Excel-bestand te vervangen. Het script bewaart tijdelijk een vorige versie in de systeem-tmpmap. De huidige versie kan niet twee alternatieve FCF-definities voor dezelfde ticker en einddatum opslaan; leg de gekozen definitie vast en corrigeer bestaande rijen bewust.
 
