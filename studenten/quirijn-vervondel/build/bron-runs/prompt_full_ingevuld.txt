@@ -1,0 +1,115 @@
+# Prompt v1 + bron: notities plaatsbezoek naar stuklijst
+
+Dit is een uitbreiding van `build/prompt.md` (v1). Het verschil zit alleen in de regels over de bron en de kolom Bron. Alle rekenregels en de uitvoertabel blijven gelijk.
+
+Je krijgt de getypte notities van een plaatsbezoek voor een airco- of warmtepompinstallatie. Maak er een stuklijst met hoeveelheden van.
+
+Je krijgt ook een technisch document als bron, tussen `<bron>` en `</bron>`. Gebruik het alleen om technische gegevens in te vullen die de notities niet geven, zoals leidingdiameter, isolatie, elektrische kabel en condensafvoer. Het vervangt de rekenregels niet.
+
+## Regels
+- Gebruik alleen wat in de notities staat, wat in het document staat, of wat volgt uit de rekenregels hieronder. Verzin geen afstanden, aantallen, types of onderdelen.
+- Staat iets niet in de notities, het document, en volgt het niet uit een rekenregel? Schrijf dan: `onbekend, na te vragen`.
+- Gebruik het document alleen voor het model dat erin staat. Staat er een ander model of een andere installatie in de notities? Gebruik het document dan niet, en schrijf `onbekend, na te vragen`.
+- Leidingen of onderdelen die hergebruikt worden, komen niet op de stuklijst.
+- Rond elke hoeveelheid naar boven af op een heel getal.
+- Wat je aansnijdt, reken je volledig aan. Een overschot wordt ook aangerekend.
+
+## Rekenregels
+- Koelleiding: in meter, één lengte per leidingpaar (vloeistof- en gasleiding samen). Geef per binnenunit de lengte naar de buitenunit, en daaronder het totaal.
+- Communicatiekabel: in meter, altijd gelijk aan het totaal van de koelleiding.
+- Voedingskabel: in meter. Er is geen vaste regel. Vul alleen in als de lengte in de notities staat.
+- Aansluitpunt voeding: `zekeringkast` of `stopcontact`, zoals in de notities staat.
+- Elektriciteitsbuis: in meter, zoals in de notities staat.
+- Kabelgoot: in stuks. Eén stuk is 2 meter. Aantal stuks = meters kabelgoot gedeeld door 2, naar boven afgerond. Voorbeeld: 7 meter kabelgoot is 4 stuks.
+- Bochten en tussenstukken: per soort, bijvoorbeeld bocht 90 graden, T-stuk, dakrandstuk. Neem alleen soorten en aantallen over die in de notities staan. Staat er een route maar geen aantal? Schrijf `onbekend, na te vragen`.
+- Condensafvoer: lengte in meter, en het type: `gravitair naar buiten` of `druk-PVC`. Neem het type alleen over als het in de notities staat. Kies het niet zelf.
+
+## Uitvoer
+Geef alleen deze tabel, niets anders. Voeg per binnenunit een rij koelleiding toe, en per soort bocht of tussenstuk een rij.
+
+| Onderdeel | Hoeveelheid | Eenheid | Bron |
+|---|---|---|---|
+| Koelleiding unit 1 | | m | |
+| Koelleiding unit 2 | | m | |
+| Koelleiding totaal | | m | |
+| Communicatiekabel | | m | |
+| Voedingskabel | | m | |
+| Aansluitpunt voeding | | - | |
+| Elektriciteitsbuis | | m | |
+| Kabelgoot | | stuks | |
+| Condensafvoer lengte | | m | |
+| Condensafvoer type | | - | |
+| Leidingdiameter vloeistofleiding | | mm | |
+| Isolatiedikte gasleiding (minimum) | | mm | |
+| Verbindingskabel binnen-buiten | | - | |
+| Muurgat diameter (FTXTM30R2V1B) | | mm | |
+| Maximale koelleidinglengte | | m | |
+| <soort bocht of tussenstuk> | | stuks | |
+
+Voor de rijen Leidingdiameter, Isolatiedikte, Verbindingskabel, Muurgat en Maximale koelleidinglengte geldt: vul ze alleen in uit het document, en zet dan het document als bron. Staat het niet in het document, schrijf `onbekend, na te vragen`.
+
+Bron:
+- `notities` als het letterlijk in de notities staat.
+- `rekenregel` als je het afleidde met een rekenregel.
+- `document, p. <nummer> (sectie <nummer>)` als het uit het brondocument komt. Geef het paginanummer en het sectienummer van het document.
+- Leeg bij `onbekend, na te vragen`.
+
+## Bron
+<bron>
+# Bron: Daikin installatiehandleiding FTXTM-R (binnenunit)
+
+**Document:** Installation manual, Daikin room air conditioner, Engels
+**Documentnummer:** 3P697375-4, revisie 2022.05 (dit is de bron die gebruikt wordt)
+**Andere revisie:** 3P482320-13U, 2021.03. De kerngegevens hieronder staan in beide revisies gelijk.
+**Modellen in dit document:** FTXTM30R2V1B (Class 30) en FTXTM40R2V1B (Class 40)
+**Bron-URL:** https://www.daikin.eu/en_us/products/product.html/ftxtm-r.html (productpagina, links naar de handleiding)
+**Doelgroep:** erkende installateurs
+
+**Let op:** dit document geldt alleen voor de modellen hierboven. Gegevens niet overnemen voor andere FTXTM-R-modellen of andere merken.
+
+Paginanummers verwijzen naar de paginanummers in het PDF-document. Sectienummers staan tussen haakjes.
+
+## Koelleiding
+- Leidingdiameter: vloeistofleiding Ø6,4 mm, gasleiding Ø9,5 mm. Gelijk aan de aansluitingen op de buitenunit. (p. 7, sectie 6.1.1)
+- Materiaal: fosforzuur gedesoxideerd naadloos koper. Flensverbindingen alleen met gegloeid materiaal. (p. 7, sectie 6.1.1)
+- Wanddikte: minimaal 0,8 mm voor Ø6,4 mm, gegloeid. (p. 7, sectie 6.1.1)
+- Isolatie: Ø6,4 mm leiding, isolatie minimaal 10 mm dik. Ø9,5 mm leiding, isolatie minimaal 13 mm dik. (p. 7, sectie 6.1.2)
+- Isolatie minimaal 20 mm als de temperatuur boven 30 °C en de luchtvochtigheid boven 80% is. (p. 7, sectie 6.1.2)
+- Leidinglengte: "Keep refrigerant piping as short as possible." Er staat geen maximale lengte in dit document. (p. 7, sectie 6.2.1)
+- Muurdoorvoer: boring van Ø65 mm (Class 30) of Ø80 mm (Class 40), met helling naar buiten. (p. 5, sectie 5.2.2)
+
+## Condensafvoer
+- De afvoerslang wordt aan de onderkant van de koelleidingen bevestigd en samen ermee geïsoleerd. (p. 6, sectie 5.3.1)
+- Bij linkse aansluiting wordt de afvoerslang anders gemonteerd en vastgeschroefd. (p. 6, sectie 5.3.2)
+- Waterlektest: ongeveer 1 liter water in de afvoerbak gieten en controleren op lekkage. (p. 6, sectie 5.3.3)
+- Controle bij inbedrijfname: de afvoer moet goed doorlopen. (p. 9, sectie 10.1)
+- Er staat geen valhoogte of helling voor de afvoerslang in dit document.
+
+## Elektrische aansluiting
+- Verbindingskabel binnen-buiten: 4-aderig, 1,5 mm² tot 2,5 mm², geschikt voor 220 tot 240 V, type H05RN-F. (p. 8, sectie 7.1)
+- Voedingskabels: altijd meeraderige kabel. (p. 3 en p. 7, sectie 3 en 7)
+- Scheiding: voedingsleiding en transmissieleiding minimaal 50 mm uit elkaar, mogen elkaar kruisen maar niet parallel lopen. (p. 8, sectie 7.2)
+- Stroomonderbreker: alpolige onderbreker met minimaal 3 mm contactopening, overspanningscategorie III. (p. 3 en p. 7, sectie 3 en 7)
+- Waarschuwing in het document: "Do NOT connect the power supply to the indoor unit." (p. 3 en p. 7). Dit moet nog door een installateur worden uitgelegd voor de voedingsaansluiting. Het document zegt niet waar de voeding wel aangesloten wordt.
+- Er staat geen stroomsterkte of zekeringwaarde in dit document. Er staat wel: "Install the required fuses or circuit breakers." (p. 3)
+
+## Installatieonderdelen in dit document
+- Montageplaat, met schroeven M4×25L voor bevestiging aan de muur (p. 4, sectie 5.2.1)
+- Binnenunit met bevestigingsschroeven M4×12L (2 stuks, meegeleverd) (p. 9, sectie 8.3)
+- Muurdoorvoerbuis en wandafdekking (p. 5, sectie 5.2.2)
+- Afdekking van de leidingopening (p. 6, sectie 5.2.3)
+- Afdichting van de muurdoorvoer met putty (p. 5 tot 6, sectie 5.2.2 en 9, sectie 8.2)
+- Vinyltape op de leidingaansluiting (p. 7, sectie 6.2.1) en isolatietape om leidingen, verbindingskabel en afvoerslang samen (p. 8, sectie 8.1)
+
+## Niet in dit document (niet afleiden)
+- Maximale koelleidinglengte of maximaal hoogteverschil
+- Helling of valhoogte van de condensafvoer
+- Zekeringwaarde of stroomsterkte van de onderbreker
+- Kabeldikte van de voedingskabel (alleen de verbindingskabel staat erin)
+- Aantal bochten of toegestane koppelstukken
+- Hoeveelheid koelmiddel
+
+</bron>
+
+## Notities
+Plaatsbezoek testnotitie. Binnenunit Daikin FTXTM30R2V1B, muur naar buiten. Koelleiding 5 m naar de buitenunit. Condensafvoer 1 m, gravitair naar buiten. Verder geen gegevens.
