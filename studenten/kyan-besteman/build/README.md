@@ -51,3 +51,4 @@ Het label en de velden zijn juist of fout. Twee mensen kunnen dat los van elkaar
 |---|---|---|---|
 | v1 | 2026-10-17 | Eerste prompt: één label en één zin waarom | Start |
 | v2 | 2026-10-19 | Vier velden erbij, elke regel met een "want", nieuw label `geen geldig vervoersbewijs`, regel vergeten of vervallen, drie voorbeelden | T02 en T05 uit v1, en minder tijd kwijt aan klantinfo opzoeken |
+| bron | 2026-11-26 | `prompt-bron.md`: v2 + document `bronnen/nmbs-regularisatie-in-de-trein.md`, twee velden erbij (wat de regel zegt, wat de klant moet doen), met het deel van het document | Week 6: de tool leest een bron. Getest met `test-set-bron.md` (B01–B05) |
